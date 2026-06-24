@@ -3,29 +3,28 @@ message: "If you use gpbiometrics, please cite it as below."
 title: "gpbiometrics: Process and Report Gazepoint Biometrics Data"
 type: software
 authors:
-
-* family-names: "Balaskas"
-  given-names: "Stefanos"
-  email: "[s.balaskas@ac.upatras.gr](mailto:s.balaskas@ac.upatras.gr)"
-  version: "0.1.0"
-  date-released: "2026-06-24"
-  license: "MIT"
-  repository-code: "https://github.com/stefanosbalaskas/gpbiometrics"
-  url: "https://github.com/stefanosbalaskas/gpbiometrics"
-  abstract: >-
+  - family-names: "Balaskas"
+    given-names: "Stefanos"
+    email: "s.balaskas@ac.upatras.gr"
+version: "0.1.0"
+date-released: "2026-06-24"
+license: MIT
+repository-code: "https://github.com/stefanosbalaskas/gpbiometrics"
+url: "https://github.com/stefanosbalaskas/gpbiometrics"
+abstract: >-
   gpbiometrics provides R tools for importing, validating, preprocessing,
   quality-checking, synchronising, analysing, plotting, and reporting
   Gazepoint Biometrics exports. It supports workflows for GSR/EDA, heart rate,
   interbeat intervals, pulse waveform, engagement dial, TTL markers, AOI-linked
   biometric summaries, readiness checks, report bundles, and reproducible
   synthetic examples.
-  keywords:
-* R
-* Gazepoint
-* biometrics
-* electrodermal activity
-* GSR
-* heart rate
-* IBI
-* TTL
-* reproducible research
+keywords:
+  - R
+  - Gazepoint
+  - biometrics
+  - electrodermal activity
+  - GSR
+  - heart rate
+  - IBI
+  - TTL
+  - reproducible research
