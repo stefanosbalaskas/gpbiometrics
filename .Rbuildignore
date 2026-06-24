@@ -1,0 +1,12 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^gpbiometrics\.Rproj$
+^LICENSE\.md$
+^README\.Rmd$
+^README\.html$
+^README\.docx$
+^.*\.tar\.gz$
+^.*\.bak$
+^\.Rhistory$
+^data-raw$
+^paper-showcase$

@@ -1,0 +1,449 @@
+---
+
+title: "gpbiometrics synthetic kiosk showcase"
+subtitle: "A reproducible demonstration using fully synthetic Gazepoint-like biometric exports"
+author: "Stefanos Balaskas"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output:
+html_document:
+toc: true
+toc_depth: 3
+number_sections: true
+---------------------
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE
+)
+
+knitr::opts_knit$set(
+  root.dir = normalizePath(file.path(".."), winslash = "/", mustWork = TRUE)
+)
+```
+
+# Overview
+
+This showcase demonstrates an end-to-end `gpbiometrics` workflow using a fully synthetic public-service kiosk usability dataset.
+
+The dataset is artificial and is included only for package demonstration, examples, testing, and software-paper workflows. It is not derived from real participants, private data, or any submitted manuscript dataset.
+
+The synthetic task crosses two design factors:
+
+```text
+interface complexity: simple vs. dense
+feedback clarity: clear vs. ambiguous
+```
+
+The workflow demonstrates:
+
+```text
+import
+readiness checks
+workflow summary
+signal quality
+sampling audit
+TTL extraction
+window summaries
+feature inventory
+report bundle export
+conservative interpretation
+```
+
+# Load package
+
+```{r load-package}
+library(gpbiometrics)
+```
+
+# Locate synthetic demo exports
+
+```{r locate-demo}
+demo_dir <- file.path(
+  "inst",
+  "extdata",
+  "gazepoint_biometrics_kiosk_demo_exports"
+)
+
+if (!dir.exists(demo_dir)) {
+  demo_dir <- system.file(
+    "extdata",
+    "gazepoint_biometrics_kiosk_demo_exports",
+    package = "gpbiometrics"
+  )
+}
+
+stopifnot(dir.exists(demo_dir))
+
+demo_files <- list.files(
+  demo_dir,
+  pattern = "_all_gaze\\.csv$",
+  full.names = TRUE
+)
+
+length(demo_files)
+head(basename(demo_files))
+```
+
+# Dataset overview
+
+```{r dataset-overview}
+overview_file <- file.path(demo_dir, "synthetic_kiosk_overview.csv")
+trial_design_file <- file.path(demo_dir, "synthetic_kiosk_trial_design.csv")
+
+demo_overview <- utils::read.csv(overview_file)
+trial_design <- utils::read.csv(trial_design_file)
+
+demo_overview
+head(trial_design)
+```
+
+```{r design-table}
+design_summary <- aggregate(
+  participant_id ~ interface_complexity + feedback_clarity,
+  data = trial_design,
+  FUN = length
+)
+
+names(design_summary)[names(design_summary) == "participant_id"] <- "task_count"
+
+design_summary
+```
+
+# Import synthetic Gazepoint-like exports
+
+```{r import-demo}
+demo_data <- import_gazepoint_biometric_folder(
+  path = demo_dir,
+  include_all_gaze = TRUE,
+  include_fixations = FALSE,
+  include_other_csv = FALSE
+)
+
+dim(demo_data)
+names(demo_data)
+```
+
+# Readiness gate
+
+```{r readiness}
+readiness <- run_gazepoint_biometrics_real_data_readiness(demo_data)
+
+readiness$overview
+readiness$checks
+```
+
+The readiness gate should be interpreted as a reproducibility and quality-control check. A passing result confirms that the synthetic data are structurally usable for demonstration; it does not imply anything about real physiology.
+
+# Run the main workflow
+
+```{r workflow}
+analysis_groups <- c(
+  "participant_id",
+  "task_order",
+  "interface_complexity",
+  "feedback_clarity"
+)
+
+analysis_groups <- analysis_groups[analysis_groups %in% names(demo_data)]
+
+workflow <- tryCatch(
+  run_gazepoint_biometrics_workflow(
+    path = demo_dir,
+    group_columns = analysis_groups,
+    include_all_gaze = TRUE,
+    include_fixations = FALSE,
+    include_other_csv = FALSE,
+    expected_sampling_rate_hz = 60
+  ),
+  error = function(e) {
+    message("Window-level workflow failed; rerunning core workflow only: ", conditionMessage(e))
+
+    run_gazepoint_biometrics_workflow(
+      path = demo_dir,
+      include_all_gaze = TRUE,
+      include_fixations = FALSE,
+      include_other_csv = FALSE,
+      expected_sampling_rate_hz = 60
+    )
+  }
+)
+
+workflow$overview
+
+workflow_summary <- summarise_gazepoint_biometrics_workflow(workflow)
+
+workflow_summary
+```
+
+# Validation and active channels
+
+```{r validation}
+workflow$validation$overview
+workflow$validation$active_channels
+workflow$validation$issues
+```
+
+The raw `HRV` column is treated as a vendor/validity-like field in this package workflow. HRV features should be derived from genuine IBI/RR intervals rather than from the raw `HRV` export column.
+
+# Missingness and signal quality
+
+```{r missingness-quality}
+head(workflow$missingness, 20)
+workflow$quality
+```
+
+# Sampling audit
+
+```{r sampling}
+head(workflow$sampling, 20)
+
+sampling_status <- aggregate(
+  n_rows ~ rate_status,
+  data = workflow$sampling,
+  FUN = length
+)
+
+names(sampling_status)[names(sampling_status) == "n_rows"] <- "group_count"
+
+sampling_status
+```
+
+# TTL events
+
+```{r ttl-events}
+dim(workflow$ttl_events)
+head(workflow$ttl_events, 20)
+
+ttl_summary <- aggregate(
+  event_order ~ ttl_channel,
+  data = workflow$ttl_events,
+  FUN = length
+)
+
+names(ttl_summary)[names(ttl_summary) == "event_order"] <- "event_count"
+
+ttl_summary
+```
+
+TTL outputs identify synthetic event markers and transitions in the demo data. They should be used for alignment and reporting, not as psychological evidence.
+
+# Optional window summaries
+
+```{r window-summaries}
+if (!is.null(workflow$windows)) {
+  dim(workflow$windows)
+  head(workflow$windows, 20)
+} else {
+  data.frame(
+    status = "window_summaries_not_created",
+    detail = "No window summaries were returned by this workflow call."
+  )
+}
+```
+
+```{r exclusion-recommendations}
+if (!is.null(workflow$exclusion_recommendations)) {
+  head(workflow$exclusion_recommendations, 20)
+} else {
+  data.frame(
+    status = "exclusion_recommendations_not_created",
+    detail = "No exclusion recommendations were returned by this workflow call."
+  )
+}
+```
+
+# Feature inventory
+
+```{r feature-inventory}
+inventory <- create_gazepoint_biometrics_feature_inventory()
+
+formatted_inventory <- format_gazepoint_biometrics_feature_inventory(
+  inventory
+)
+
+inventory_summary <- summarise_gazepoint_biometrics_feature_inventory(
+  formatted_inventory
+)
+
+inventory$overview
+inventory_summary$domain_summary
+head(formatted_inventory, 20)
+```
+
+The feature inventory is used here as a transparent coverage table. It documents the available workflow domains without requiring every specialised helper to be executed in one manuscript-style example.
+
+# Synthetic signal summaries by condition
+
+```{r condition-summaries}
+condition_summary <- aggregate(
+  cbind(GSR_US, HR, IBI, LPMM, RPMM, DIAL) ~ interface_complexity + feedback_clarity,
+  data = demo_data,
+  FUN = mean
+)
+
+condition_summary
+```
+
+These are known synthetic differences from the data-generating process. They are useful for demonstrating package workflows, not for making claims about real users.
+
+# AOI exposure summary
+
+```{r aoi-summary}
+aoi_summary <- aggregate(
+  CNT ~ interface_complexity + feedback_clarity + AOI,
+  data = demo_data,
+  FUN = length
+)
+
+names(aoi_summary)[names(aoi_summary) == "CNT"] <- "sample_count"
+
+aoi_summary <- aoi_summary[order(
+  aoi_summary$interface_complexity,
+  aoi_summary$feedback_clarity,
+  -aoi_summary$sample_count
+), ]
+
+head(aoi_summary, 30)
+```
+
+AOI counts describe visual allocation in the synthetic display layout. They do not prove comprehension, preference, or cognitive evaluation.
+
+# Example report bundle export
+
+```{r report-bundle}
+showcase_output <- file.path("paper-showcase", "output")
+bundle_dir <- file.path(showcase_output, "report_bundle")
+
+dir.create(bundle_dir, recursive = TRUE, showWarnings = FALSE)
+
+bundle_export <- export_gazepoint_biometrics_report_bundle(
+  bundle = workflow,
+  output_dir = bundle_dir,
+  prefix = "kiosk_showcase",
+  include_readme = TRUE,
+  include_session_info = TRUE,
+  overwrite = TRUE
+)
+
+bundle_export$overview
+head(bundle_export$manifest, 20)
+```
+
+# Simple visual summaries
+
+```{r aggregate-time-series}
+time_summary <- aggregate(
+  cbind(GSR_US, HR, LPMM, DIAL) ~ TIME + interface_complexity + feedback_clarity,
+  data = demo_data,
+  FUN = mean
+)
+
+head(time_summary)
+```
+
+```{r gsr-plot, fig.width=8, fig.height=5}
+if (requireNamespace("ggplot2", quietly = TRUE)) {
+  ggplot2::ggplot(
+    time_summary,
+    ggplot2::aes(
+      x = TIME,
+      y = GSR_US,
+      linetype = feedback_clarity
+    )
+  ) +
+    ggplot2::geom_line() +
+    ggplot2::facet_wrap(~ interface_complexity) +
+    ggplot2::labs(
+      title = "Synthetic GSR/EDA by kiosk condition",
+      x = "Task time (s)",
+      y = "GSR_US",
+      linetype = "Feedback clarity"
+    ) +
+    ggplot2::theme_minimal()
+}
+```
+
+```{r hr-plot, fig.width=8, fig.height=5}
+if (requireNamespace("ggplot2", quietly = TRUE)) {
+  ggplot2::ggplot(
+    time_summary,
+    ggplot2::aes(
+      x = TIME,
+      y = HR,
+      linetype = feedback_clarity
+    )
+  ) +
+    ggplot2::geom_line() +
+    ggplot2::facet_wrap(~ interface_complexity) +
+    ggplot2::labs(
+      title = "Synthetic heart-rate signal by kiosk condition",
+      x = "Task time (s)",
+      y = "HR",
+      linetype = "Feedback clarity"
+    ) +
+    ggplot2::theme_minimal()
+}
+```
+
+# Export compact showcase tables
+
+```{r export-showcase-tables}
+dir.create(
+  file.path("paper-showcase", "output", "tables"),
+  recursive = TRUE,
+  showWarnings = FALSE
+)
+
+utils::write.csv(
+  demo_overview,
+  file.path("paper-showcase", "output", "tables", "demo_overview.csv"),
+  row.names = FALSE
+)
+
+utils::write.csv(
+  workflow_summary,
+  file.path("paper-showcase", "output", "tables", "workflow_summary.csv"),
+  row.names = FALSE
+)
+
+utils::write.csv(
+  readiness$checks,
+  file.path("paper-showcase", "output", "tables", "readiness_checks.csv"),
+  row.names = FALSE
+)
+
+utils::write.csv(
+  inventory_summary$domain_summary,
+  file.path("paper-showcase", "output", "tables", "feature_inventory_domain_summary.csv"),
+  row.names = FALSE
+)
+
+utils::write.csv(
+  condition_summary,
+  file.path("paper-showcase", "output", "tables", "condition_signal_summary.csv"),
+  row.names = FALSE
+)
+
+utils::write.csv(
+  aoi_summary,
+  file.path("paper-showcase", "output", "tables", "aoi_exposure_summary.csv"),
+  row.names = FALSE
+)
+
+list.files(file.path("paper-showcase", "output", "tables"))
+```
+
+# Methods-text draft
+
+```{r methods-text}
+workflow$methods_text
+```
+
+# Interpretation note
+
+This showcase demonstrates software functionality, data structures, and reproducible reporting. The dataset is fully synthetic. Differences between conditions are created by the simulation logic and should not be interpreted as empirical evidence about real users.
+
+For real studies, biometric and eye-tracking outputs should be interpreted relative to study design, signal quality, preprocessing decisions, and preregistered hypotheses. EDA/GSR/SCR features describe electrodermal dynamics; HR/IBI/HRV features describe cardiovascular or signal-derived dynamics; pupil measures can reflect luminance and visual context; and AOI/gaze outputs describe visual timing and allocation rather than direct cognitive evaluation.

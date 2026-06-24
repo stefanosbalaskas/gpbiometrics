@@ -1,0 +1,19 @@
+Package: gpbiometrics
+Type: Package
+Title: Process and Report Gazepoint Biometrics Data
+Version: 0.1.0
+Authors@R: person(given = "Stefanos", family = "Balaskas", email = "s.balaskas@ac.upatras.gr", role = c("aut", "cre"))
+Description: Tools for importing, validating, quality-checking, preprocessing, summarising, synchronising, modelling, plotting, and reporting Gazepoint Biometrics exports. The package focuses on Gazepoint-specific biometric channels such as GSR/EDA, heart rate, interbeat intervals, pulse signal, engagement dial, TTL markers, and synchronisation fields that can be combined with Gazepoint GP3 and GP3 HD eye-tracking workflows.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr
+Suggests:
+    ggplot2,
+    knitr,
+    reticulate,
+    rmarkdown,
+    shiny,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0

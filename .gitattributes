@@ -1,0 +1,12 @@
+*.R text eol=lf
+*.Rmd text eol=lf
+*.md text eol=lf
+*.Rd text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+DESCRIPTION text eol=lf
+NAMESPACE text eol=lf
+NEWS.md text eol=lf
+*.Rproj text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
