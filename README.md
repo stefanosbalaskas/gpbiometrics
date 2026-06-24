@@ -1,7 +1,3 @@
-------------------------------------------------------------------------
-
-output: html_document: default word_document: default github_document:
-toc: false html_preview: true ——————-
 
 # gpbiometrics
 
