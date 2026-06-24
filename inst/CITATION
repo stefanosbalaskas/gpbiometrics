@@ -1,12 +1,13 @@
 bibentry(
-bibtype = "Manual",
-title = "gpbiometrics: Process and Report Gazepoint Biometrics Data",
-author = person(
-given = "Stefanos",
-family = "Balaskas",
-email = "[s.balaskas@ac.upatras.gr](mailto:s.balaskas@ac.upatras.gr)"
-),
-year = "2026",
-note = "R package version 0.1.0",
-url = "https://github.com/stefanosbalaskas/gpbiometrics"
+  bibtype = "Manual",
+  title = "gpbiometrics: Process and Report Gazepoint Biometrics Data",
+  author = person(
+    given = "Stefanos",
+    family = "Balaskas",
+    email = "s.balaskas@ac.upatras.gr"
+  ),
+  year = "2026",
+  note = "R package version 0.1.0",
+  doi = "10.5281/zenodo.20836725",
+  url = "https://github.com/stefanosbalaskas/gpbiometrics"
 )

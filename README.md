@@ -5,6 +5,8 @@ toc: false html_preview: true ——————-
 
 # gpbiometrics
 
+[![DOI](https://zenodo.org/badge/1279519183.svg)](https://doi.org/10.5281/zenodo.20836724)
+
 `gpbiometrics` provides reproducible tools for importing, checking,
 preprocessing, summarising, modelling, and reporting Gazepoint
 Biometrics and Gazepoint GP3 biometric exports. It is designed for
@@ -329,5 +331,5 @@ If you use `gpbiometrics`, please cite the package with:
 citation("gpbiometrics")
 ```
 
-A formal archived software DOI will be added after the stable GitHub
-release is archived through Zenodo.
+The archived software release is available at DOI:
+`10.5281/zenodo.20836725`.
