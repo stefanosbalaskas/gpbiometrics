@@ -266,3 +266,12 @@ The recurring Quarto/TMPDIR message can appear during local checks. It is treate
 ## Citation
 
 If you use `gpbiometrics`, cite the package version, repository or archive DOI if available, and the specific Gazepoint hardware/software context used in your study. Also cite the original methodological sources for specialised analyses such as cvxEDA, Ledalab, PsPM, RHRV, entropy, point-process, or signal-decomposition methods when those helpers are used.
+
+If you use `gpbiometrics`, please cite the package with:
+
+```r
+citation("gpbiometrics")
+```
+
+A formal archived software DOI will be added after the stable GitHub release is archived through Zenodo.
+

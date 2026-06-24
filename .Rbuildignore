@@ -10,3 +10,5 @@
 ^\.Rhistory$
 ^data-raw$
 ^paper-showcase$
+^\.github$
+^CITATION\.cff$

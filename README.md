@@ -322,3 +322,12 @@ context used in your study. Also cite the original methodological
 sources for specialised analyses such as cvxEDA, Ledalab, PsPM, RHRV,
 entropy, point-process, or signal-decomposition methods when those
 helpers are used.
+
+If you use `gpbiometrics`, please cite the package with:
+
+``` r
+citation("gpbiometrics")
+```
+
+A formal archived software DOI will be added after the stable GitHub
+release is archived through Zenodo.
