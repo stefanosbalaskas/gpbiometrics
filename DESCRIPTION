@@ -6,6 +6,7 @@ Authors@R: person(given = "Stefanos", family = "Balaskas", email = "s.balaskas@a
 Description: Tools for importing, validating, quality-checking, preprocessing, summarising, synchronising, modelling, plotting, and reporting Gazepoint Biometrics exports. The package focuses on Gazepoint-specific biometric channels such as GSR/EDA, heart rate, interbeat intervals, pulse signal, engagement dial, TTL markers, and synchronisation fields that can be combined with Gazepoint GP3 and GP3 HD eye-tracking workflows.
 License: MIT + file LICENSE
 Encoding: UTF-8
+Language: en-US
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
 Suggests:
