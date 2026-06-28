@@ -276,8 +276,8 @@ For private Gazepoint exports, keep raw data outside the package
 repository.
 
 ``` r
-private_folder <- "C:/Users/Stefanos-PC/Desktop/gp3_test_exports"
-private_output <- "C:/Users/Stefanos-PC/Desktop/gpbiometrics_real_check"
+private_folder <- "path/to/private_gazepoint_exports"
+private_output <- file.path(tempdir(), "gpbiometrics_real_check")
 
 workflow <- run_gazepoint_biometrics_workflow(
   path = private_folder,

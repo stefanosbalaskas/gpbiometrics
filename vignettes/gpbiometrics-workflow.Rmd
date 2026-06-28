@@ -217,7 +217,7 @@ A report bundle can export tables, plots, and text summaries for reproducible do
 ```{r}
 bundle <- export_gazepoint_biometrics_report_bundle(
   workflow,
-  output_dir = "gpbiometrics_report_bundle"
+  output_dir = file.path(tempdir(), "gpbiometrics_report_bundle")
 )
 ```
 
@@ -254,9 +254,9 @@ head(formatted_inventory)
 
 For private smoke tests, keep data and outputs outside the package repository.
 
-```{r}
-private_folder <- "C:/Users/Stefanos-PC/Desktop/gp3_test_exports"
-private_output <- "C:/Users/Stefanos-PC/Desktop/gpbiometrics_real_check"
+```{r, eval=FALSE}
+private_folder <- "path/to/private_gazepoint_exports"
+private_output <- file.path(tempdir(), "gpbiometrics_real_check")
 
 workflow <- run_gazepoint_biometrics_workflow(
   path = private_folder,

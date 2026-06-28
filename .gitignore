@@ -13,10 +13,9 @@ README.docx
 04_render_full_function_audit.R
 gpbiometrics_function_inventory.csv
 paper-showcase/
-
 paper-showcase/output/
 paper-showcase/*_files/
 paper-showcase/*.html
-
-.DS_Store
 Thumbs.db
+*.bak_*
+*.Rcheck/
