@@ -2,6 +2,11 @@
 
 ## gpbiometrics 0.1.2
 
+- Added remaining roadmap helpers for SCR habituation/recovery,
+  event-related pupil summaries, tracking ratios, pupil-luminance
+  audits, PPG morphology, segment-level PPG quality, generic event-log
+  import, event-to-biometric matching, column validation, and
+  reproducibility metadata.
 - Added
   [`import_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_data.md)
   as a single-entry helper for importing Gazepoint session folders into

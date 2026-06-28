@@ -920,6 +920,34 @@ The archived software release is available at DOI:
 - [`validate_gazepoint_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_biometrics.md)
   : Validate a Gazepoint Biometrics export
 
+## Remaining roadmap helpers
+
+Final roadmap helpers for SCR recovery, pupil events, tracking, PPG
+quality, event alignment, validation, and reproducibility metadata.
+
+- [`compute_gazepoint_scr_habituation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_scr_habituation.md)
+  : Compute SCR habituation across trials
+- [`summarize_gazepoint_scr_recovery()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_scr_recovery.md)
+  : Summarize SCR recovery around events
+- [`summarize_gazepoint_pupil_events()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_pupil_events.md)
+  : Summarize event-related pupil responses
+- [`summarize_gazepoint_tracking()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_tracking.md)
+  : Summarize Gazepoint tracking validity
+- [`audit_gazepoint_pupil_luminance()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_pupil_luminance.md)
+  : Audit pupil-luminance confounding
+- [`extract_gazepoint_ppg_morphology()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_ppg_morphology.md)
+  : Extract simple PPG pulse morphology metrics
+- [`flag_gazepoint_ppg_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flag_gazepoint_ppg_quality.md)
+  : Flag segment-level PPG quality
+- [`import_gazepoint_event_log()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_event_log.md)
+  : Import a generic Gazepoint-compatible event log
+- [`match_gazepoint_events_to_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/match_gazepoint_events_to_biometrics.md)
+  : Match events to biometric windows
+- [`assert_gazepoint_columns()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/assert_gazepoint_columns.md)
+  : Assert that required Gazepoint columns are present
+- [`gpbiometrics_info()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/gpbiometrics_info.md)
+  : Print gpbiometrics reproducibility information
+
 # Articles
 
 ### All vignettes
