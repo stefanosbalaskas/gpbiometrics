@@ -17,6 +17,71 @@ Use `gpbiometrics` when you need to:
 * export reproducible report bundles and readiness summaries;
 * run optional advanced signal-processing and interoperability checks.
 
+
+## HeartPy-style pulse and PPG workflows
+
+`gpbiometrics` includes native HeartPy-style helpers for Gazepoint pulse/PPG
+exports. These functions are designed for reproducible preprocessing,
+peak detection, peak rejection, HR/IBI-style summary measures, breathing-rate
+estimation from interval frequency content, plotting, and optional cross-checking
+against the Python `heartpy` package when it is available through `reticulate`.
+
+The implementation is Gazepoint-aware and conservative. It prepares and checks
+pulse/PPG-style biometric exports, but it does not make clinical or diagnostic
+claims.
+
+Key helpers include:
+
+- `prepare_gazepoint_heartpy_input()`
+- `export_gazepoint_heartpy_input()`
+- `detect_gazepoint_ppg_peaks()`
+- `reject_gazepoint_ppg_peaks()`
+- `compute_gazepoint_ppg_measures()`
+- `plot_gazepoint_ppg_peak_detection()`
+- `estimate_gazepoint_breathing_rate_from_ibi()`
+- `reconstruct_gazepoint_ppg_clipping()`
+- `enhance_gazepoint_ppg_peaks()`
+- `filter_gazepoint_ppg_butterworth()`
+- `correct_gazepoint_ppg_hampel()`
+- `create_gazepoint_heartpy_report()`
+- `run_gazepoint_heartpy_crosscheck()`
+
+```{r heartpy-style-pulse-demo, eval=FALSE}
+fs <- 100
+time_s <- seq(0, 20, by = 1 / fs)
+pulse <- sin(2 * pi * 1.2 * time_s)^8
+
+pulse_data <- data.frame(
+  participant = "P01",
+  trial = "T01",
+  time_s = time_s,
+  pulse = pulse
+)
+
+heartpy_input <- prepare_gazepoint_heartpy_input(
+  pulse_data,
+  signal_col = "pulse",
+  time_col = "time_s",
+  group_cols = c("participant", "trial")
+)
+
+detected <- detect_gazepoint_ppg_peaks(
+  pulse_data,
+  signal_col = "pulse",
+  time_col = "time_s",
+  group_cols = c("participant", "trial"),
+  sampling_rate_hz = fs
+)
+
+accepted_peaks <- reject_gazepoint_ppg_peaks(detected$peaks)
+measures <- compute_gazepoint_ppg_measures(accepted_peaks)
+
+report <- create_gazepoint_heartpy_report(
+  detected,
+  output_dir = file.path(tempdir(), "gpbiometrics_heartpy_report")
+)
+```
+
 ## Installation
 
 ```{r install, eval = FALSE}

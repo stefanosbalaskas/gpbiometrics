@@ -1,5 +1,11 @@
 # gpbiometrics 0.1.0
 
+- Added HeartPy-style Gazepoint pulse/PPG workflows, including input preparation,
+  clipping reconstruction, peak enhancement, Butterworth-style filtering, Hampel
+  correction, adaptive peak detection, peak rejection, HR/IBI-style measures,
+  breathing-rate estimation, plotting, report-table generation, and optional
+  Python HeartPy cross-checking through `reticulate`.
+
 ## Overview
 
 * Initial validated development release of `gpbiometrics`, an R package for importing, validating, quality-checking, preprocessing, synchronising, summarising, modelling, plotting, and reporting Gazepoint Biometrics and Gazepoint GP3 biometric exports.

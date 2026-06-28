@@ -6,9 +6,11 @@ Authors@R: person(given = "Stefanos", family = "Balaskas", email = "s.balaskas@a
 Description: Imports, validates, quality-checks, preprocesses, summarises, synchronises,
         models, plots, and reports Gazepoint Biometrics exports. The package focuses
         on Gazepoint-specific biometric channels such as GSR/EDA, heart rate,
-        interbeat intervals, pulse signals, engagement dial, TTL markers, and
+        interbeat intervals, pulse and PPG signals, engagement dial, TTL markers, and
         synchronisation fields that can be combined with Gazepoint GP3 and GP3 HD
-        eye-tracking workflows.
+        eye-tracking workflows. It also includes Gazepoint-aware HR/IBI/HRV and
+        HeartPy-style pulse/PPG preparation, peak-detection, quality-control, and
+        reporting helpers.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en-US
