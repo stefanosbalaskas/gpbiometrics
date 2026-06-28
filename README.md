@@ -30,6 +30,32 @@ Use `gpbiometrics` when you need to:
 - export reproducible report bundles and readiness summaries;
 - run optional advanced signal-processing and interoperability checks.
 
+
+<!-- gpbiometrics-extended-workflows-start -->
+
+## Extended physiology-toolbox-style workflows
+
+`gpbiometrics` now includes Gazepoint-native helpers inspired by several
+widely used physiological-analysis toolchains. These helpers are implemented
+in R for Gazepoint-style exports and should be described as toolbox-style
+workflows, not as exact clones or wrappers around the original packages.
+
+| Workflow layer | Main helpers | Purpose |
+|---|---|---|
+| HeartPy-style PPG/pulse workflows | `prepare_gazepoint_heartpy_input()`, `detect_gazepoint_ppg_peaks()`, `process_gazepoint_ppg_heartpy_style()`, `process_gazepoint_ppg_segmentwise()`, `create_gazepoint_heartpy_report()` | Pulse/PPG preparation, filtering, peak detection, segmentwise processing, quality checks, plots, and reports. |
+| pyHRV-style HRV workflows | `run_gazepoint_pyhrv_style()`, `compute_gazepoint_pyhrv_time_domain()`, `compute_gazepoint_pyhrv_frequency_domain()`, `compute_gazepoint_pyhrv_nonlinear()`, `compute_gazepoint_pyhrv_poincare()`, `compute_gazepoint_pyhrv_sample_entropy()`, `compute_gazepoint_pyhrv_dfa()` | Time-domain, frequency-domain, nonlinear, Poincare, entropy, DFA, PSD, tachogram, and export/import HRV helpers. |
+| BioSPPy-style biosignal workflows | `run_gazepoint_biosppy_eda()`, `run_gazepoint_biosppy_ppg()`, `extract_gazepoint_eda_events_biosppy_style()`, `extract_gazepoint_ppg_templates()`, `detect_gazepoint_ppg_onsets()`, `correct_gazepoint_rri_artifacts_local()` | EDA events and recovery, PPG onsets/templates, RRI correction/detrending, and generic signal tools. |
+| PsPM-style preprocessing and GLM workflows | `extract_gazepoint_markerinfo_pspm_style()`, `combine_gazepoint_marker_channels_pspm_style()`, `preprocess_gazepoint_scr_pspm_style()`, `extract_gazepoint_segments_pspm_style()`, `create_gazepoint_pspm_glm_design()`, `fit_gazepoint_convolution_glm()`, `export_gazepoint_pspm_model_estimates()` | Marker extraction, marker-channel combination, SCR preprocessing/QC, segment extraction, and compact event-related convolution GLM modelling. |
+| Generic signal tools | `compute_gazepoint_signal_power_spectrum()`, `compute_gazepoint_signal_band_power()`, `compute_gazepoint_signal_phase_locking()`, `compute_gazepoint_signal_correlation()` | Power spectra, band power, phase locking, lagged correlation, and multimodal synchrony checks. |
+
+Recommended wording: `gpbiometrics` provides Gazepoint-native HeartPy-style,
+pyHRV-style, BioSPPy-style, and PsPM-style workflows for reproducible
+physiological preprocessing, feature extraction, modelling, and reporting.
+Avoid claiming that the package implements all functions from those external
+toolboxes.
+
+<!-- gpbiometrics-extended-workflows-end -->
+
 ## Installation
 
 ``` r

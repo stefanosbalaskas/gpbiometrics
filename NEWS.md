@@ -1,3 +1,24 @@
+# gpbiometrics 0.1.1
+
+- Added Gazepoint-native pyHRV-style HRV workflows, including time-domain,
+  frequency-domain, nonlinear, Poincare, sample-entropy, DFA, PSD, tachogram,
+  radar-chart, export/import, and all-in-one HRV helpers.
+- Added BioSPPy-style Gazepoint biosignal workflows for EDA event extraction,
+  EDA recovery-time estimation, PPG/BVP processing, PPG pulse templates,
+  PPG onset detection, local RRI artifact correction, RRI detrending, power
+  spectra, band power, phase locking, and signal correlation.
+- Added PsPM-style Gazepoint preprocessing and modelling workflows for marker
+  extraction, marker-channel combination, trimming, session splitting,
+  recording merging, SCR preprocessing/QC, event-centred segment extraction,
+  convolution-GLM design creation, GLM fitting, and model-estimate export.
+- Extended HeartPy-style PPG support with segmentwise processing, signal
+  scaling, filtering, smoothing, clipping reconstruction, binary-quality
+  checks, breathing-rate visualisation, Poincare plotting, and frequency
+  measures.
+- Updated package metadata and README to describe the new Gazepoint-native
+  toolbox-style workflow layers without claiming exact external-toolbox
+  equivalence.
+
 # gpbiometrics 0.1.0
 
 - Added HeartPy-style Gazepoint pulse/PPG workflows, including input preparation,

@@ -1,16 +1,19 @@
 Package: gpbiometrics
 Type: Package
 Title: Process and Report Gazepoint Biometrics Data
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person(given = "Stefanos", family = "Balaskas", email = "s.balaskas@ac.upatras.gr", role = c("aut", "cre"))
-Description: Imports, validates, quality-checks, preprocesses, summarises, synchronises,
-        models, plots, and reports Gazepoint Biometrics exports. The package focuses
-        on Gazepoint-specific biometric channels such as GSR/EDA, heart rate,
-        interbeat intervals, pulse and PPG signals, engagement dial, TTL markers, and
-        synchronisation fields that can be combined with Gazepoint GP3 and GP3 HD
-        eye-tracking workflows. It also includes Gazepoint-aware HR/IBI/HRV and
-        HeartPy-style pulse/PPG preparation, peak-detection, quality-control, and
-        reporting helpers.
+Description: Provides reproducible workflows for importing, validating, preprocessing,
+    summarising, modelling, visualising, and reporting Gazepoint Biometrics
+    and GP3-derived physiological exports. Supported workflows include
+    heart-rate, inter-beat-interval, heart-rate-variability, pupil, gaze,
+    GSR/EDA, PPG/pulse, respiration-oriented, signal-quality, synchronisation,
+    windowing, artifact-detection, and multimodal reporting helpers. The
+    package includes Gazepoint-native HeartPy-style pulse/PPG workflows,
+    pyHRV-style HRV summaries, BioSPPy-style EDA/PPG/RRI/signal-processing
+    helpers, and PsPM-style marker, SCR preprocessing, segment-extraction,
+    and event-related convolution-GLM workflows, while also providing
+    interoperability helpers for external psychophysiology toolchains.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en-US
