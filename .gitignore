@@ -19,3 +19,4 @@ paper-showcase/*.html
 Thumbs.db
 *.bak_*
 *.Rcheck/
+dev/
