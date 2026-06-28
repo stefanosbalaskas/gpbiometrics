@@ -105,6 +105,7 @@ measures.
 Useful links:
 \itemize{
   \item \url{https://github.com/stefanosbalaskas/gpbiometrics}
+  \item \url{https://stefanosbalaskas.github.io/gpbiometrics/}
   \item Report bugs at \url{https://github.com/stefanosbalaskas/gpbiometrics/issues}
 }
 

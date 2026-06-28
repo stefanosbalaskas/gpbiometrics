@@ -111,6 +111,8 @@ Useful links:
 
 - <https://github.com/stefanosbalaskas/gpbiometrics>
 
+- <https://stefanosbalaskas.github.io/gpbiometrics/>
+
 - Report bugs at
   <https://github.com/stefanosbalaskas/gpbiometrics/issues>
 

@@ -29,5 +29,6 @@ Suggests:
 Config/testthat/edition: 3
 Config/roxygen2/version: 8.0.0
 VignetteBuilder: knitr
-URL: https://github.com/stefanosbalaskas/gpbiometrics
+URL: https://github.com/stefanosbalaskas/gpbiometrics,
+    https://stefanosbalaskas.github.io/gpbiometrics/
 BugReports: https://github.com/stefanosbalaskas/gpbiometrics/issues
