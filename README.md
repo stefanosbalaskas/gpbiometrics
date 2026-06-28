@@ -1,6 +1,7 @@
 
 # gpbiometrics
 
+[![R-CMD-check](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml)
 [![DOI](https://zenodo.org/badge/1279519183.svg)](https://doi.org/10.5281/zenodo.20836724)
 
 `gpbiometrics` provides reproducible tools for importing, checking,
