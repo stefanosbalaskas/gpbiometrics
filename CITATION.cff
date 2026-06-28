@@ -6,8 +6,8 @@ authors:
   - family-names: "Balaskas"
     given-names: "Stefanos"
     email: "s.balaskas@ac.upatras.gr"
-version: "0.1.0"
-date-released: "2026-06-24"
+version: 0.1.2
+date-released: '2026-06-29'
 doi: "10.5281/zenodo.20836725"
 license: MIT
 repository-code: "https://github.com/stefanosbalaskas/gpbiometrics"

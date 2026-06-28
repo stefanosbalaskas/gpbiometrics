@@ -82,6 +82,60 @@ report <- create_gazepoint_heartpy_report(
 )
 ```
 
+
+<!-- gpbiometrics-recent-additions-start -->
+## Recent additions
+
+`gpbiometrics` now includes a broader Gazepoint-native workflow layer for
+session import, missing-value imputation, pupil/blink preprocessing, gaze
+filtering, fixation summaries, SCR epoching, RR outlier flagging, engagement
+dial summaries, trial-level regressors, data-quality reports, full-session
+preprocessing, and synthetic eye-data generation.
+
+```r
+library(gpbiometrics)
+
+# Import a Gazepoint session folder
+session <- import_gazepoint_data("path/to/session", session = "P01")
+
+# Run a conservative beginner-friendly preprocessing pass
+cleaned <- preprocess_gazepoint_all(session)
+
+# Generate reviewer-friendly quality summaries
+qc <- report_gazepoint_data_quality(cleaned, output_dir = "gp_quality_report")
+
+# Create trial-level regressors for downstream GLM/LMM workflows
+trial_features <- create_gazepoint_trial_regressors(
+  data = cleaned[[1]],
+  design = data.frame(trial = "T1", onset = 5),
+  pre = 1,
+  post = 5
+)
+```
+<!-- gpbiometrics-recent-additions-end -->
+
+
+<!-- gpbiometrics-function-map-start -->
+## Function map
+
+| Task | Main helpers |
+|---|---|
+| Import Gazepoint session folders | `import_gazepoint_data()` |
+| Impute short missing signal gaps | `impute_gazepoint_missing()` |
+| Detect and clean pupil blinks | `detect_gazepoint_pupil_blinks()`, `clean_gazepoint_pupil_signal()` |
+| Filter gaze samples and summarize fixations | `filter_gazepoint_gaze()`, `summarize_gazepoint_fixations()` |
+| Event-related SCR analysis | `epoch_gazepoint_scr()`, `normalize_gazepoint_scr()` |
+| RR/IBI quality control | `flag_gazepoint_rr_outliers()` |
+| Engagement-dial summaries | `compute_gazepoint_engagement_index()` |
+| Trial-level modeling tables | `create_gazepoint_trial_regressors()` |
+| Quality reports and beginner pipeline | `report_gazepoint_data_quality()`, `preprocess_gazepoint_all()` |
+| Synthetic eye-tracking fixtures | `simulate_gazepoint_eye_data()` |
+| Toolbox-style workflows | HeartPy-style, pyHRV-style, BioSPPy-style, and PsPM-style Gazepoint-native helpers |
+
+The toolbox-style helpers are workflow-inspired interfaces for Gazepoint-derived
+exports; they are not intended to be full clones of external packages.
+<!-- gpbiometrics-function-map-end -->
+
 ## Installation
 
 ```{r install, eval = FALSE}

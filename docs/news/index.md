@@ -1,0 +1,283 @@
+# Changelog
+
+## gpbiometrics 0.1.2
+
+- Added
+  [`import_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_data.md)
+  as a single-entry helper for importing Gazepoint session folders into
+  named lists of data frames.
+- Added
+  [`impute_gazepoint_missing()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/impute_gazepoint_missing.md)
+  for CRAN-safe interpolation of short missing gaps in continuous
+  Gazepoint signals.
+- Added pupil and gaze helpers:
+  [`detect_gazepoint_pupil_blinks()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_pupil_blinks.md),
+  [`clean_gazepoint_pupil_signal()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/clean_gazepoint_pupil_signal.md),
+  [`filter_gazepoint_gaze()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/filter_gazepoint_gaze.md),
+  and
+  [`summarize_gazepoint_fixations()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_fixations.md).
+- Added event-level physiology helpers:
+  [`epoch_gazepoint_scr()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/epoch_gazepoint_scr.md),
+  [`normalize_gazepoint_scr()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/normalize_gazepoint_scr.md),
+  [`flag_gazepoint_rr_outliers()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flag_gazepoint_rr_outliers.md),
+  and
+  [`compute_gazepoint_engagement_index()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_engagement_index.md).
+- Added workflow helpers for modeling and reporting:
+  [`create_gazepoint_trial_regressors()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_trial_regressors.md),
+  [`report_gazepoint_data_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/report_gazepoint_data_quality.md),
+  and
+  [`preprocess_gazepoint_all()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/preprocess_gazepoint_all.md).
+- Added
+  [`simulate_gazepoint_eye_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/simulate_gazepoint_eye_data.md)
+  for synthetic Gazepoint-style gaze, fixation, pupil, blink, and
+  validity data for teaching, tests, vignettes, and smoke tests.
+- Updated package metadata, README, and pkgdown configuration to reflect
+  the expanded Gazepoint-native workflow surface.
+
+## gpbiometrics 0.1.1
+
+- Added Gazepoint-native pyHRV-style HRV workflows, including
+  time-domain, frequency-domain, nonlinear, Poincare, sample-entropy,
+  DFA, PSD, tachogram, radar-chart, export/import, and all-in-one HRV
+  helpers.
+- Added BioSPPy-style Gazepoint biosignal workflows for EDA event
+  extraction, EDA recovery-time estimation, PPG/BVP processing, PPG
+  pulse templates, PPG onset detection, local RRI artifact correction,
+  RRI detrending, power spectra, band power, phase locking, and signal
+  correlation.
+- Added PsPM-style Gazepoint preprocessing and modelling workflows for
+  marker extraction, marker-channel combination, trimming, session
+  splitting, recording merging, SCR preprocessing/QC, event-centred
+  segment extraction, convolution-GLM design creation, GLM fitting, and
+  model-estimate export.
+- Extended HeartPy-style PPG support with segmentwise processing, signal
+  scaling, filtering, smoothing, clipping reconstruction, binary-quality
+  checks, breathing-rate visualisation, Poincare plotting, and frequency
+  measures.
+- Updated package metadata and README to describe the new
+  Gazepoint-native toolbox-style workflow layers without claiming exact
+  external-toolbox equivalence.
+
+## gpbiometrics 0.1.0
+
+- Added HeartPy-style Gazepoint pulse/PPG workflows, including input
+  preparation, clipping reconstruction, peak enhancement,
+  Butterworth-style filtering, Hampel correction, adaptive peak
+  detection, peak rejection, HR/IBI-style measures, breathing-rate
+  estimation, plotting, report-table generation, and optional Python
+  HeartPy cross-checking through `reticulate`.
+
+### Overview
+
+- Initial validated development release of `gpbiometrics`, an R package
+  for importing, validating, quality-checking, preprocessing,
+  synchronising, summarising, modelling, plotting, and reporting
+  Gazepoint Biometrics and Gazepoint GP3 biometric exports.
+- The package focuses on Gazepoint-specific biometric channels,
+  including GSR/EDA, heart rate, interbeat intervals, pulse signal,
+  engagement dial, TTL markers, pupil-related columns, AOI fields, and
+  synchronisation variables.
+- The current feature inventory contains 155 available user-facing
+  helpers across 11 complete workflow domains.
+- Interpretation is intentionally conservative: biometric features are
+  treated as physiological descriptors, quality-control outputs, or
+  analysis-ready signals, not direct labels for emotion, stress,
+  cognition, preference, health status, or diagnosis.
+
+### Import, schema, and workflow infrastructure
+
+- Added import helpers for single files and export folders, including
+  [`import_gazepoint_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_biometrics.md),
+  [`import_gazepoint_biometric_folder()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_biometric_folder.md),
+  [`import_gazepoint_data_summary()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_data_summary.md),
+  and
+  [`import_gazepoint_lsl_xdf()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_lsl_xdf.md).
+- Added Gazepoint schema and channel-detection helpers, including
+  [`check_gazepoint_biometric_columns()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_biometric_columns.md),
+  [`detect_gazepoint_biometric_schema()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_biometric_schema.md),
+  [`detect_gazepoint_time_columns()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_time_columns.md),
+  [`detect_active_biometric_channels()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_active_biometric_channels.md),
+  and
+  [`standardise_gazepoint_biometric_names()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_biometric_names.md).
+- Added the main workflow wrapper
+  [`run_gazepoint_biometrics_workflow()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_biometrics_workflow.md)
+  and summary/diagnostic helpers, including
+  [`summarise_gazepoint_biometrics_workflow()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_biometrics_workflow.md)
+  and
+  [`diagnose_gazepoint_biometrics_workflow()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/diagnose_gazepoint_biometrics_workflow.md).
+- Added synthetic data generation with
+  [`simulate_gazepoint_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/simulate_gazepoint_biometrics.md)
+  for examples, teaching, and controlled validation.
+
+### Quality control and readiness
+
+- Added validation, missingness, sampling, signal-activity, time-reset,
+  dropout, distributional-drift, and real-data readiness checks.
+- Added
+  [`run_gazepoint_biometrics_real_data_readiness()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_biometrics_real_data_readiness.md)
+  as a final readiness gate for real Gazepoint exports.
+- Added exclusion-recommendation helpers for participant-level and
+  window-level biometric quality decisions.
+- Added artifact-detection helpers, including MAD-based, Kleckner-style,
+  and SVM-feature workflows.
+- Added
+  [`audit_gazepoint_gsr_units()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_gsr_units.md)
+  to help distinguish conductance-like and resistance-like GSR columns
+  before downstream EDA/SCR processing.
+- Added
+  [`audit_gazepoint_stabilization_period()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_stabilization_period.md)
+  for flagging or trimming the initial electrode-stabilisation period.
+
+### Preprocessing and signal correction
+
+- Added baseline correction, smoothing, within-unit standardisation,
+  z-score/range correction, adaptive EMA smoothing, wavelet denoising,
+  quantisation-noise handling, and optional autoencoder-denoising
+  bridges.
+- Added EDA/GSR unit auditing and conductance-conversion helpers.
+- Added environmental and stimulus-confound controls, including
+  [`correct_gazepoint_eda_temperature()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_eda_temperature.md),
+  [`audit_gazepoint_stabilization_period()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_stabilization_period.md),
+  and
+  [`regress_gazepoint_pupil_luminance()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/regress_gazepoint_pupil_luminance.md).
+- Added both British and American spelling aliases where useful,
+  including standardise/standardize variants.
+
+### EDA, GSR, and SCR analysis
+
+- Added EDA/GSR quality audits, tonic/phasic summaries, SCR event and
+  peak detection, SCR event-window summaries, nonresponder screening,
+  threshold-sensitivity checks, and SCR multiverse workflows.
+- Added SCR recovery-time extraction with
+  [`extract_gazepoint_scr_recovery_times()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_scr_recovery_times.md),
+  including half-recovery and 63 percent recovery-time summaries.
+- Added advanced EDA helpers for spectral power, complexity,
+  TVSymp-style analysis, bilateral EDA asymmetry, skin-potential
+  analysis, AC admittance/susceptance, stochastic change-point
+  screening, and EDA-gram-style visualisation.
+- Added external EDA interoperability helpers for Ledalab, PsPM, cvxEDA,
+  NeuroKit-style input, and DCM/CTSI-oriented bridges.
+- Added
+  [`run_gazepoint_automated_statistics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_automated_statistics.md)
+  for exploratory group comparisons with normality screening,
+  ANOVA/Kruskal-Wallis selection, post-hoc testing, and multiplicity
+  correction.
+
+### Pulse, IBI, HR, HRV, and respiration
+
+- Added HR, IBI, and HRV quality and consistency checks.
+- Added HR/IBI window summaries and IBI-derived HRV feature extraction.
+- Added nonlinear and geometric HRV descriptors, including RQA,
+  fragmentation, asymmetry, FuzzyEn/CSI, RCMSE, surrogate nonlinearity
+  testing, and IPFM-style impulse-train modelling.
+- Added Gazepoint pulse beat-candidate extraction with
+  [`extract_gazepoint_beats_kmeans()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_beats_kmeans.md).
+- Added respiration-related helpers, including PPG-derived respiration,
+  ECG-derived respiration PCA bridges, CEEMDAN-style respiration
+  extraction, RSA proxy calculation, and Kalman fusion of respiration
+  proxy streams.
+- Added point-process and cardiorespiratory directionality helpers for
+  advanced exploratory analysis.
+
+### TTL, synchronisation, windows, and model-ready data
+
+- Added TTL event extraction and TTL alignment helpers.
+- Added signal-lag estimation and synchronisation-drift diagnostics.
+- Added multimodal time-window summaries and model-ready table
+  preparation helpers for biometric, AOI-linked, and LME-style analyses.
+- Added chunking and online design-optimisation decision-support helpers
+  for advanced experimental workflows.
+- Added helpers for synchronising Gazepoint Biometrics outputs with
+  Gazepoint eye-tracking master tables.
+
+### AOI-linked biometrics and plotting
+
+- Added AOI-linked biometric summaries, AOI-biometric model data
+  preparation, and AOI-biometric plotting.
+- Added biometric signal plots, quality plots, decomposition plots, SCR
+  plots, multimodal timelines, activity/time-reset plots, report
+  dashboards, SCR specification-curve plots, saccade main-sequence
+  plots, and EDA-gram-style plots.
+- Added plot-contract helpers to store plot data, settings, and
+  interpretation metadata for reproducibility.
+
+### Reporting, feature inventory, and documentation
+
+- Added checklist, methods-text, report-table, report-bundle,
+  preregistration-template, and Shiny/annotator helpers.
+- Added
+  [`create_gazepoint_biometrics_feature_inventory()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_feature_inventory.md)
+  for programmatic workflow coverage checks.
+- Added formatted inventory helpers,
+  [`format_gazepoint_biometrics_feature_inventory()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/format_gazepoint_biometrics_feature_inventory.md)
+  and
+  [`summarise_gazepoint_biometrics_feature_inventory()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_biometrics_feature_inventory.md).
+- Added a compact user-facing README and the first workflow vignette,
+  `vignettes/gpbiometrics-workflow.Rmd`.
+- Updated workflow documentation to use the current
+  `run_gazepoint_biometrics_workflow(path = ...)` API and to export
+  report bundles through
+  [`export_gazepoint_biometrics_report_bundle()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_biometrics_report_bundle.md).
+- Added a public, fully synthetic Gazepoint-like kiosk demo dataset
+  under `inst/extdata/gazepoint_biometrics_kiosk_demo_exports/`.
+- The demo dataset contains 36 synthetic participants, four kiosk tasks
+  per participant, 69,120 rows, 36 all-gaze CSV exports, task metadata,
+  gaze/AOI fields, pupil columns, GSR/EDA, HR, IBI, pulse waveform,
+  engagement dial, and TTL markers.
+- Added `data-raw/create_gazepoint_biometrics_kiosk_demo_exports.R` to
+  regenerate the synthetic demo exports reproducibly.
+- Added package tests to ensure the synthetic kiosk demo remains
+  available, importable, and schema-valid.
+
+### Interoperability and optional external methods
+
+- Added RHRV, pyPPG, NeuroKit2, Ledalab, PsPM, cvxEDA, DCM, and
+  CTSI-oriented preparation/export bridges.
+- External-method bridges remain optional and do not make external
+  software a hard dependency.
+- Advanced bridge functions prepare or structure data for external
+  workflows unless explicit cross-check execution is requested and
+  available.
+
+### Validation
+
+- Current local validation passed with:
+
+``` r
+
+devtools::test()
+# FAIL 0 | WARN 0 | SKIP 0 | PASS 1662
+
+devtools::check()
+# 0 errors | 0 warnings | 0 notes
+```
+
+- The workflow vignette builds during
+  [`devtools::check()`](https://devtools.r-lib.org/reference/check.html).
+- A private real-data smoke test on a local Gazepoint export folder
+  passed import, readiness, workflow, summary, and report-bundle export
+  checks.
+- The private workflow used 6 source files, 7340 imported all-gaze rows,
+  70 columns, 1323 TTL events, 0 validation issues, and 3 active signal
+  groups.
+- The private report-bundle export wrote 81 files with 0 skipped items.
+- Private data and private smoke-test outputs remain outside the package
+  repository.
+
+### Interpretation safeguards
+
+- EDA/GSR/SCR features describe electrodermal dynamics and
+  arousal-related physiology; they do not directly infer emotion,
+  stress, cognition, health status, or diagnosis.
+- HR, IBI, HRV, pulse, and respiration-proxy features describe
+  cardiovascular or signal-derived dynamics; they are not clinical
+  labels.
+- Pupil outputs are affected by luminance and visual context;
+  luminance-adjusted residuals are not proof of cognitive-load-only
+  effects.
+- AOI-linked biometric summaries describe signal values during AOI
+  exposure and do not establish emotional valence, preference, or
+  cognitive evaluation by themselves.
+- Automated statistics and advanced models are exploratory/reporting
+  aids unless matched to a preregistered design and reviewed
+  analytically.

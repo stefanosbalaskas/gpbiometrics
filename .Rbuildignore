@@ -17,3 +17,6 @@
 ^dev$
 ^dev/visual-smoke-output$
 ^dev/visual-smoke-output/.*$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

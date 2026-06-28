@@ -1,3 +1,24 @@
+# gpbiometrics 0.1.2
+
+* Added `import_gazepoint_data()` as a single-entry helper for importing
+  Gazepoint session folders into named lists of data frames.
+* Added `impute_gazepoint_missing()` for CRAN-safe interpolation of short
+  missing gaps in continuous Gazepoint signals.
+* Added pupil and gaze helpers: `detect_gazepoint_pupil_blinks()`,
+  `clean_gazepoint_pupil_signal()`, `filter_gazepoint_gaze()`, and
+  `summarize_gazepoint_fixations()`.
+* Added event-level physiology helpers: `epoch_gazepoint_scr()`,
+  `normalize_gazepoint_scr()`, `flag_gazepoint_rr_outliers()`, and
+  `compute_gazepoint_engagement_index()`.
+* Added workflow helpers for modeling and reporting:
+  `create_gazepoint_trial_regressors()`, `report_gazepoint_data_quality()`,
+  and `preprocess_gazepoint_all()`.
+* Added `simulate_gazepoint_eye_data()` for synthetic Gazepoint-style gaze,
+  fixation, pupil, blink, and validity data for teaching, tests, vignettes,
+  and smoke tests.
+* Updated package metadata, README, and pkgdown configuration to reflect the
+  expanded Gazepoint-native workflow surface.
+
 # gpbiometrics 0.1.1
 
 - Added Gazepoint-native pyHRV-style HRV workflows, including time-domain,

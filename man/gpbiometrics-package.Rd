@@ -101,6 +101,14 @@ demands, artefact handling, and complementary behavioural or self-report
 measures.
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/stefanosbalaskas/gpbiometrics}
+  \item Report bugs at \url{https://github.com/stefanosbalaskas/gpbiometrics/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Stefanos Balaskas \email{s.balaskas@ac.upatras.gr}
 

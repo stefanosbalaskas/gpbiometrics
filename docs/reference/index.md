@@ -1,0 +1,557 @@
+# Package index
+
+## Data import, cleaning, and simulation
+
+- [`import_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_data.md)
+  : Import Gazepoint export files from a session folder
+- [`impute_gazepoint_missing()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/impute_gazepoint_missing.md)
+  : Impute missing values in Gazepoint signals
+- [`simulate_gazepoint_eye_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/simulate_gazepoint_eye_data.md)
+  : Simulate Gazepoint-style gaze and pupil data
+
+## Pupil, gaze, and fixation workflows
+
+- [`detect_gazepoint_pupil_blinks()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_pupil_blinks.md)
+  : Detect blink intervals from Gazepoint pupil data
+- [`clean_gazepoint_pupil_signal()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/clean_gazepoint_pupil_signal.md)
+  : Clean Gazepoint pupil signal
+- [`filter_gazepoint_gaze()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/filter_gazepoint_gaze.md)
+  : Filter implausible Gazepoint gaze samples
+- [`summarize_gazepoint_fixations()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_fixations.md)
+  : Summarize Gazepoint fixation metrics
+
+## EDA, SCR, RR, and engagement indices
+
+- [`epoch_gazepoint_scr()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/epoch_gazepoint_scr.md)
+  : Epoch Gazepoint SCR/EDA data around events
+- [`normalize_gazepoint_scr()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/normalize_gazepoint_scr.md)
+  : Normalize Gazepoint SCR amplitudes
+- [`flag_gazepoint_rr_outliers()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flag_gazepoint_rr_outliers.md)
+  : Flag outlying Gazepoint RR/IBI intervals
+- [`compute_gazepoint_engagement_index()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_engagement_index.md)
+  : Compute engagement-dial summary indices
+
+## Modeling, reports, and workflow pipelines
+
+- [`create_gazepoint_trial_regressors()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_trial_regressors.md)
+  : Create Gazepoint trial-level regressors for modeling
+- [`report_gazepoint_data_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/report_gazepoint_data_quality.md)
+  : Report Gazepoint data quality
+- [`preprocess_gazepoint_all()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/preprocess_gazepoint_all.md)
+  : Preprocess all available Gazepoint channels
+
+## Toolbox-style and interoperability workflows
+
+- [`check_gazepoint_pyhrv_interval()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_pyhrv_interval.md)
+  : Check whether NN intervals are inside a plausible interval
+- [`combine_gazepoint_marker_channels_pspm_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/combine_gazepoint_marker_channels_pspm_style.md)
+  : Combine multiple Gazepoint marker channels PsPM-style
+- [`compare_gazepoint_pyhrv_psd_methods()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_pyhrv_psd_methods.md)
+  : Compare pyHRV-style PSD methods
+- [`compute_gazepoint_pyhrv_ar_psd()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_ar_psd.md)
+  : Compute pyHRV-style autoregressive PSD
+- [`compute_gazepoint_pyhrv_dfa()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_dfa.md)
+  : Compute detrended fluctuation analysis
+- [`compute_gazepoint_pyhrv_frequency_domain()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_frequency_domain.md)
+  : Compute pyHRV-style frequency-domain summary
+- [`compute_gazepoint_pyhrv_heart_rate()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_heart_rate.md)
+  : Compute heart rate from NN intervals
+- [`compute_gazepoint_pyhrv_hr_parameters()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_hr_parameters.md)
+  : Compute pyHRV-style heart-rate parameters
+- [`compute_gazepoint_pyhrv_lomb_psd()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_lomb_psd.md)
+  : Compute pyHRV-style Lomb PSD
+- [`compute_gazepoint_pyhrv_nn_diff()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_nn_diff.md)
+  : Compute NN interval differences
+- [`compute_gazepoint_pyhrv_nn20()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_nn20.md)
+  : Compute NN20 and pNN20
+- [`compute_gazepoint_pyhrv_nn50()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_nn50.md)
+  : Compute NN50 and pNN50
+- [`compute_gazepoint_pyhrv_nni_differences_parameters()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_nni_differences_parameters.md)
+  : Compute pyHRV-style NNI difference parameters
+- [`compute_gazepoint_pyhrv_nni_parameters()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_nni_parameters.md)
+  : Compute pyHRV-style NNI parameters
+- [`compute_gazepoint_pyhrv_nnxx()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_nnxx.md)
+  : Compute NNxx and pNNxx
+- [`compute_gazepoint_pyhrv_nonlinear()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_nonlinear.md)
+  : Compute pyHRV-style nonlinear summary
+- [`compute_gazepoint_pyhrv_poincare()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_poincare.md)
+  : Compute pyHRV-style Poincare measures
+- [`compute_gazepoint_pyhrv_psd_waterfall()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_psd_waterfall.md)
+  : Compute pyHRV-style PSD waterfall over segments
+- [`compute_gazepoint_pyhrv_rmssd()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_rmssd.md)
+  : Compute RMSSD
+- [`compute_gazepoint_pyhrv_sample_entropy()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_sample_entropy.md)
+  : Compute sample entropy
+- [`compute_gazepoint_pyhrv_sdann()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_sdann.md)
+  : Compute SDANN
+- [`compute_gazepoint_pyhrv_sdnn()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_sdnn.md)
+  : Compute SDNN
+- [`compute_gazepoint_pyhrv_sdnn_index()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_sdnn_index.md)
+  : Compute SDNN index
+- [`compute_gazepoint_pyhrv_sdsd()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_sdsd.md)
+  : Compute SDSD
+- [`compute_gazepoint_pyhrv_time_domain()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_time_domain.md)
+  : Compute pyHRV-style time-domain summary
+- [`compute_gazepoint_pyhrv_tinn()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_tinn.md)
+  : Compute TINN
+- [`compute_gazepoint_pyhrv_triangular_index()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_triangular_index.md)
+  : Compute triangular index
+- [`compute_gazepoint_pyhrv_welch_psd()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_welch_psd.md)
+  : Compute pyHRV-style Welch PSD
+- [`create_gazepoint_heartpy_report()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_heartpy_report.md)
+  : Create HeartPy-style report tables for Gazepoint pulse/PPG data
+- [`create_gazepoint_pspm_glm_design()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_pspm_glm_design.md)
+  : Create PsPM-style convolution GLM design matrix
+- [`create_gazepoint_pyhrv_time_vector()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_pyhrv_time_vector.md)
+  : Create a time vector from NN intervals
+- [`export_gazepoint_biometrics_report_bundle()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_biometrics_report_bundle.md)
+  : Export a Gazepoint biometrics report bundle
+- [`export_gazepoint_heartpy_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_heartpy_input.md)
+  : Export Gazepoint pulse/PPG data for HeartPy-style workflows
+- [`export_gazepoint_pspm_model_estimates()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_pspm_model_estimates.md)
+  : Export PsPM-style Gazepoint model estimates
+- [`export_gazepoint_pyhrv_results()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_pyhrv_results.md)
+  : Export pyHRV-style results
+- [`export_gazepoint_rhrv_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_rhrv_input.md)
+  : Export Gazepoint IBI data for RHRV-style workflows
+- [`extract_gazepoint_eda_events_biosppy_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_eda_events_biosppy_style.md)
+  : Extract BioSPPy-style EDA events from Gazepoint GSR/EDA data
+- [`extract_gazepoint_markerinfo_pspm_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_markerinfo_pspm_style.md)
+  : Extract PsPM-style marker information from Gazepoint biometrics data
+- [`extract_gazepoint_pyhrv_nn_intervals()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_pyhrv_nn_intervals.md)
+  : Extract NN intervals from peak timestamps
+- [`extract_gazepoint_segments_pspm_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_segments_pspm_style.md)
+  : Extract event-centred Gazepoint segments PsPM-style
+- [`import_gazepoint_pyhrv_results()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_pyhrv_results.md)
+  : Import pyHRV-style results
+- [`merge_gazepoint_recordings_pspm_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/merge_gazepoint_recordings_pspm_style.md)
+  : Merge multiple Gazepoint recordings PsPM-style
+- [`optimize_gazepoint_cvxeda_tau()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/optimize_gazepoint_cvxeda_tau.md)
+  : Optimise subject-specific cvxEDA slow time constant
+- [`plot_gazepoint_pyhrv_hr_heatplot()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_pyhrv_hr_heatplot.md)
+  : Plot pyHRV-style heart-rate heatplot
+- [`plot_gazepoint_pyhrv_radar_chart()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_pyhrv_radar_chart.md)
+  : Plot pyHRV-style radar chart
+- [`plot_gazepoint_pyhrv_tachogram()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_pyhrv_tachogram.md)
+  : Plot pyHRV-style tachogram
+- [`prepare_gazepoint_aoi_biometrics_model_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_aoi_biometrics_model_data.md)
+  : Prepare AOI-biometric model data
+- [`prepare_gazepoint_artifact_svm_features()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_artifact_svm_features.md)
+  : Prepare EDA artifact-classifier segment features
+- [`prepare_gazepoint_biometrics_lme_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_biometrics_lme_data.md)
+  : Prepare Gazepoint biometric summaries for mixed-model analysis
+- [`prepare_gazepoint_ctsi_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_ctsi_input.md)
+  : Prepare Gazepoint EDA data for CTSI sparse deconvolution workflows
+- [`prepare_gazepoint_cvxeda_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_cvxeda_input.md)
+  : Prepare Gazepoint EDA input for external cvxEDA-style workflows
+- [`prepare_gazepoint_heartpy_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_heartpy_input.md)
+  : Prepare Gazepoint pulse/PPG data for HeartPy-style workflows
+- [`prepare_gazepoint_ledalab_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_ledalab_input.md)
+  : Prepare Gazepoint EDA input for external Ledalab-style workflows
+- [`prepare_gazepoint_multimodal_model_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_multimodal_model_data.md)
+  : Prepare Gazepoint multimodal model data
+- [`prepare_gazepoint_neurokit_eda_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_neurokit_eda_input.md)
+  : Prepare Gazepoint EDA input for NeuroKit2-style workflows
+- [`prepare_gazepoint_pspm_dcm_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_pspm_dcm_input.md)
+  : Prepare Gazepoint EDA data for PsPM DCM workflows
+- [`prepare_gazepoint_pspm_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_pspm_input.md)
+  : Prepare Gazepoint EDA input for external PsPM-style workflows
+- [`prepare_gazepoint_pyppg_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_pyppg_input.md)
+  : Prepare Gazepoint HRP/PPG waveform input for pyPPG
+- [`prepare_gazepoint_rhrv_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_rhrv_input.md)
+  : Prepare Gazepoint IBI/RR data for RHRV
+- [`prepare_gazepoint_scr_hurdle_model_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_scr_hurdle_model_data.md)
+  : Prepare Gazepoint SCR hurdle-model data
+- [`preprocess_gazepoint_scr_pspm_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/preprocess_gazepoint_scr_pspm_style.md)
+  : Preprocess Gazepoint SCR/GSR data PsPM-style
+- [`process_gazepoint_ppg_heartpy_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/process_gazepoint_ppg_heartpy_style.md)
+  : Run a full HeartPy-style Gazepoint pulse/PPG process
+- [`run_gazepoint_biosppy_eda()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_biosppy_eda.md)
+  : Run BioSPPy-style Gazepoint EDA processing
+- [`run_gazepoint_biosppy_ppg()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_biosppy_ppg.md)
+  : Run BioSPPy-style Gazepoint PPG/BVP processing
+- [`run_gazepoint_heartpy_crosscheck()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_heartpy_crosscheck.md)
+  : Run a Gazepoint pulse/PPG cross-check against HeartPy when available
+- [`run_gazepoint_neurokit_eda_crosscheck()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_neurokit_eda_crosscheck.md)
+  : Optionally run a NeuroKit2 EDA cross-check
+- [`run_gazepoint_pyhrv_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_pyhrv_style.md)
+  : Run pyHRV-style Gazepoint HRV analysis
+- [`segment_gazepoint_pyhrv_nni()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/segment_gazepoint_pyhrv_nni.md)
+  : Segment NN intervals into time windows
+- [`split_gazepoint_sessions_pspm_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/split_gazepoint_sessions_pspm_style.md)
+  : Split Gazepoint recordings into PsPM-style sessions
+- [`trim_gazepoint_biometrics_pspm_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/trim_gazepoint_biometrics_pspm_style.md)
+  : Trim Gazepoint biometrics data PsPM-style
+
+## Quality control, diagnostics, and plots
+
+- [`assess_gazepoint_hrp_waveform_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/assess_gazepoint_hrp_waveform_quality.md)
+  : Assess Gazepoint HRP waveform quality
+- [`audit_gazepoint_biometric_missingness()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_missingness.md)
+  : Audit missingness in Gazepoint biometric channels
+- [`audit_gazepoint_biometric_sampling()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_sampling.md)
+  : Audit Gazepoint biometric sampling and timing
+- [`audit_gazepoint_biometric_sync_drift()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_sync_drift.md)
+  : Audit Gazepoint biometric synchronization drift
+- [`audit_gazepoint_distributional_drift()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_distributional_drift.md)
+  : Audit distributional drift across sessions or ordered blocks
+- [`audit_gazepoint_eda_artifacts()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_eda_artifacts.md)
+  : Audit Gazepoint EDA/GSR artifacts
+- [`audit_gazepoint_engagement_dial()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_engagement_dial.md)
+  : Audit Gazepoint engagement-dial signal quality
+- [`audit_gazepoint_gsr_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_gsr_quality.md)
+  : Audit Gazepoint GSR/EDA signal quality
+- [`audit_gazepoint_gsr_units()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_gsr_units.md)
+  : Audit likely GSR/EDA units
+- [`audit_gazepoint_hr_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_hr_quality.md)
+  : Audit Gazepoint heart-rate signal quality
+- [`audit_gazepoint_ibi_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_ibi_quality.md)
+  : Audit IBI/RR interval quality
+- [`audit_gazepoint_signal_activity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_signal_activity.md)
+  : Audit Gazepoint biometric signal activity
+- [`audit_gazepoint_stabilization_period()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_stabilization_period.md)
+  : Audit or trim the EDA electrode stabilization period
+- [`audit_gazepoint_time_resets()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_time_resets.md)
+  : Audit Gazepoint biometric time resets
+- [`check_gazepoint_plot_contract()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_plot_contract.md)
+  : Check a Gazepoint plot return contract
+- [`check_gazepoint_ppg_binary_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_ppg_binary_quality.md)
+  : Check binary quality of Gazepoint pulse/PPG analysis results
+- [`create_gazepoint_biometrics_report()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_report.md)
+  : Create a Gazepoint Biometrics report
+- [`create_gazepoint_biometrics_report_tables()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_report_tables.md)
+  : Create Gazepoint Biometrics report tables
+- [`create_gazepoint_heartpy_report()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_heartpy_report.md)
+  : Create HeartPy-style report tables for Gazepoint pulse/PPG data
+- [`diagnose_gazepoint_biometrics_workflow()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/diagnose_gazepoint_biometrics_workflow.md)
+  : Diagnose a Gazepoint Biometrics workflow
+- [`export_gazepoint_biometrics_report_bundle()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_biometrics_report_bundle.md)
+  : Export a Gazepoint biometrics report bundle
+- [`flag_gazepoint_artifacts_svm()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flag_gazepoint_artifacts_svm.md)
+  : Flag EDA artifacts with a user-supplied SVM-style model
+- [`flag_gazepoint_biometric_dropouts()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flag_gazepoint_biometric_dropouts.md)
+  : Flag biometric dropouts and flatline periods
+- [`flag_gazepoint_mad_artifacts()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flag_gazepoint_mad_artifacts.md)
+  : Flag MAD-based EDA wearable artifacts
+- [`flag_gazepoint_rr_outliers()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flag_gazepoint_rr_outliers.md)
+  : Flag outlying Gazepoint RR/IBI intervals
+- [`flag_kleckner_eda_artifacts()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flag_kleckner_eda_artifacts.md)
+  : Flag EDA artifacts using transparent Kleckner-style heuristics
+- [`get_gazepoint_plot_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/get_gazepoint_plot_data.md)
+  : Extract stored plot data
+- [`get_gazepoint_plot_settings()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/get_gazepoint_plot_settings.md)
+  : Extract stored plot settings
+- [`plot_gazepoint_aoi_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_aoi_biometrics.md)
+  : Plot AOI-linked biometric summaries
+- [`plot_gazepoint_biometric_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_biometric_quality.md)
+  : Plot Gazepoint biometric quality indicators
+- [`plot_gazepoint_biometric_report_dashboard()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_biometric_report_dashboard.md)
+  : Create a lightweight Gazepoint biometric QC plot dashboard
+- [`plot_gazepoint_biometric_signals()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_biometric_signals.md)
+  : Plot Gazepoint biometric signal time series
+- [`plot_gazepoint_eda_decomposition()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_eda_decomposition.md)
+  : Plot Gazepoint EDA decomposition channels
+- [`plot_gazepoint_eda_gram()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_eda_gram.md)
+  : Plot an EDA-gram-style time-frequency representation
+- [`plot_gazepoint_multimodal_timeline()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_multimodal_timeline.md)
+  : Plot multimodal Gazepoint biometric timelines
+- [`plot_gazepoint_ppg_breathing()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_ppg_breathing.md)
+  : Plot breathing-rate spectrum from Gazepoint RR/IBI intervals
+- [`plot_gazepoint_ppg_peak_detection()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_ppg_peak_detection.md)
+  : Plot Gazepoint pulse/PPG peak detection results
+- [`plot_gazepoint_ppg_poincare()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_ppg_poincare.md)
+  : Plot a Poincare plot from Gazepoint pulse/PPG peaks or RR intervals
+- [`plot_gazepoint_ppg_segmentwise()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_ppg_segmentwise.md)
+  : Plot segmentwise Gazepoint pulse/PPG measures
+- [`plot_gazepoint_pyhrv_hr_heatplot()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_pyhrv_hr_heatplot.md)
+  : Plot pyHRV-style heart-rate heatplot
+- [`plot_gazepoint_pyhrv_radar_chart()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_pyhrv_radar_chart.md)
+  : Plot pyHRV-style radar chart
+- [`plot_gazepoint_pyhrv_tachogram()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_pyhrv_tachogram.md)
+  : Plot pyHRV-style tachogram
+- [`plot_gazepoint_saccade_main_sequence()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_saccade_main_sequence.md)
+  : Plot Gazepoint saccade main-sequence diagnostics
+- [`plot_gazepoint_scr_events()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_scr_events.md)
+  : Plot Gazepoint SCR events on an EDA signal
+- [`plot_gazepoint_scr_specification_curve()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_scr_specification_curve.md)
+  : Plot an SCR specification curve
+- [`plot_gazepoint_signal_activity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_signal_activity.md)
+  : Plot Gazepoint biometric signal activity
+- [`plot_gazepoint_time_resets()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_time_resets.md)
+  : Plot Gazepoint time resets and time-order flags
+- [`recommend_gazepoint_biometric_exclusions()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/recommend_gazepoint_biometric_exclusions.md)
+  : Recommend Gazepoint biometric exclusions
+- [`report_gazepoint_data_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/report_gazepoint_data_quality.md)
+  : Report Gazepoint data quality
+- [`standardise_gazepoint_plot_contract()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_plot_contract.md)
+  : Standardise a Gazepoint plot return contract
+- [`standardize_gazepoint_plot_contracts()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardize_gazepoint_plot_contracts.md)
+  : Standardize Gazepoint plot return contracts
+- [`write_gazepoint_biometrics_report_tables()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_biometrics_report_tables.md)
+  : Write Gazepoint Biometrics report tables
+
+## Other exported helpers
+
+- [`align_gazepoint_biometrics_to_ttl()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/align_gazepoint_biometrics_to_ttl.md)
+  : Align Gazepoint biometric samples to TTL events
+- [`analyze_gazepoint_ac_susceptance()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/analyze_gazepoint_ac_susceptance.md)
+  : Analyse AC EDA admittance and susceptance recordings
+- [`analyze_gazepoint_cardiorespiratory_causality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/analyze_gazepoint_cardiorespiratory_causality.md)
+  : Analyse cardiorespiratory Granger-style directionality
+- [`analyze_gazepoint_skin_potential()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/analyze_gazepoint_skin_potential.md)
+  : Analyse endosomatic skin-potential recordings
+- [`baseline_correct_gazepoint_gsr()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/baseline_correct_gazepoint_gsr.md)
+  : Baseline-correct Gazepoint GSR/EDA
+- [`baseline_correct_gazepoint_hr()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/baseline_correct_gazepoint_hr.md)
+  : Baseline-correct Gazepoint heart rate
+- [`baseline_correct_gazepoint_pupil()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/baseline_correct_gazepoint_pupil.md)
+  : Baseline-correct Gazepoint pupil size
+- [`calculate_gazepoint_rsa()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/calculate_gazepoint_rsa.md)
+  : Calculate respiration-informed RSA proxy features
+- [`check_gazepoint_biometric_columns()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_biometric_columns.md)
+  : Check Gazepoint biometric columns
+- [`chunk_gazepoint_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/chunk_gazepoint_biometrics.md)
+  : Chunk Gazepoint biometric data into fixed analysis episodes
+- [`classify_gazepoint_eda_response_pattern()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/classify_gazepoint_eda_response_pattern.md)
+  : Classify descriptive Gazepoint EDA response patterns
+- [`classify_gazepoint_scr_intervals()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/classify_gazepoint_scr_intervals.md)
+  : Classify SCRs into FIR, SIR, and TIR latency intervals
+- [`clean_gazepoint_rr_intervals()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/clean_gazepoint_rr_intervals.md)
+  : Clean RR or IBI intervals using HeartPy-style methods
+- [`compare_gazepoint_hr_ibi_consistency()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_hr_ibi_consistency.md)
+  : Compare Gazepoint HR and IBI-derived heart rate
+- [`compute_gazepoint_ppg_frequency_measures()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_ppg_frequency_measures.md)
+  : Compute Gazepoint pulse/PPG frequency-domain measures
+- [`compute_gazepoint_ppg_measures()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_ppg_measures.md)
+  : Compute HeartPy-style pulse/PPG measures
+- [`compute_gazepoint_signal_band_power()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_signal_band_power.md)
+  : Compute signal band power
+- [`compute_gazepoint_signal_correlation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_signal_correlation.md)
+  : Compute correlation between two Gazepoint signals
+- [`compute_gazepoint_signal_phase_locking()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_signal_phase_locking.md)
+  : Compute phase-locking value between two signals
+- [`compute_gazepoint_signal_power_spectrum()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_signal_power_spectrum.md)
+  : Compute signal power spectrum
+- [`convert_gazepoint_gsr_to_conductance()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/convert_gazepoint_gsr_to_conductance.md)
+  : Convert Gazepoint GSR resistance to conductance
+- [`correct_gazepoint_eda_temperature()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_eda_temperature.md)
+  : Correct EDA for ambient or body temperature
+- [`correct_gazepoint_ppg_hampel()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_ppg_hampel.md)
+  : Apply Hampel-style correction to raw pulse/PPG data
+- [`correct_gazepoint_rri_artifacts_local()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_rri_artifacts_local.md)
+  : Correct local RRI/IBI artifacts
+- [`create_gazepoint_biometrics_checklist()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_checklist.md)
+  : Create a Gazepoint Biometrics reporting checklist
+- [`create_gazepoint_biometrics_feature_inventory()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_feature_inventory.md)
+  : Create a gpbiometrics feature inventory
+- [`create_gazepoint_biometrics_methods_text()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_methods_text.md)
+  : Create Gazepoint Biometrics methods text
+- [`create_gazepoint_eda_analysis_pipeline()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_eda_analysis_pipeline.md)
+  : Create a Gazepoint EDA analysis pipeline guide
+- [`create_gazepoint_preregistration_template()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_preregistration_template.md)
+  : Create a Gazepoint biometrics preregistration template
+- [`decompose_gazepoint_eda()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/decompose_gazepoint_eda.md)
+  : Decompose Gazepoint GSR/EDA into tonic and phasic components
+- [`denoise_gazepoint_eda_autoencoder()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/denoise_gazepoint_eda_autoencoder.md)
+  : Denoise EDA using a user-supplied autoencoder reconstruction model
+- [`denoise_gazepoint_eda_wavelet()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/denoise_gazepoint_eda_wavelet.md)
+  : Denoise EDA using dependency-light Haar wavelet shrinkage
+- [`denoise_gazepoint_ppg_autoencoder()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/denoise_gazepoint_ppg_autoencoder.md)
+  : Denoise PPG using a user-supplied autoencoder reconstruction model
+- [`denoise_gazepoint_quantization_noise()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/denoise_gazepoint_quantization_noise.md)
+  : Add small uniform noise to reduce quantization overlap
+- [`detect_active_biometric_channels()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_active_biometric_channels.md)
+  : Detect active Gazepoint biometric channels
+- [`detect_gazepoint_biometric_schema()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_biometric_schema.md)
+  : Detect the schema of Gazepoint biometric data
+- [`detect_gazepoint_biometric_timebase()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_biometric_timebase.md)
+  : Detect the likely timebase of Gazepoint biometric data
+- [`detect_gazepoint_doubly_stochastic_changepoints()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_doubly_stochastic_changepoints.md)
+  : Detect stochastic change points in noisy biometric signals
+- [`detect_gazepoint_ppg_onsets()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_ppg_onsets.md)
+  : Detect BioSPPy-style PPG pulse onsets
+- [`detect_gazepoint_ppg_peaks()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_ppg_peaks.md)
+  : Detect HeartPy-style pulse/PPG peaks in Gazepoint exports
+- [`detect_gazepoint_scr_events()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_scr_events.md)
+  : Detect SCR-like events in Gazepoint GSR/EDA data
+- [`detect_gazepoint_scr_peaks()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_scr_peaks.md)
+  : Detect Gazepoint SCR peaks
+- [`detect_gazepoint_time_columns()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_time_columns.md)
+  : Detect Gazepoint biometric time columns
+- [`detrend_gazepoint_rri_window()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detrend_gazepoint_rri_window.md)
+  : Detrend RRI/IBI intervals in windows
+- [`enhance_gazepoint_ppg_peaks()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/enhance_gazepoint_ppg_peaks.md)
+  : Enhance pulse/PPG peaks using repeated local baseline removal
+- [`estimate_gazepoint_breathing_rate_from_ibi()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_breathing_rate_from_ibi.md)
+  : Estimate breathing rate from RR/IBI frequency content
+- [`estimate_gazepoint_eda_recovery_times()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_eda_recovery_times.md)
+  : Estimate BioSPPy-style EDA recovery times
+- [`estimate_gazepoint_samplerate_datetime()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_samplerate_datetime.md)
+  : Estimate sampling rate from datetime stamps
+- [`estimate_gazepoint_samplerate_mstimer()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_samplerate_mstimer.md)
+  : Estimate sampling rate from a millisecond timer
+- [`estimate_gazepoint_signal_lag()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_signal_lag.md)
+  : Estimate lag between two Gazepoint biometric signals
+- [`extract_gazepoint_beats_kmeans()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_beats_kmeans.md)
+  : Extract heartbeat candidates from Gazepoint pulse using k-means
+- [`extract_gazepoint_bilateral_eda_asymmetry()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_bilateral_eda_asymmetry.md)
+  : Extract bilateral EDA asymmetry features
+- [`extract_gazepoint_eda_complexity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_eda_complexity.md)
+  : Extract EDA complexity features
+- [`extract_gazepoint_eda_spectral_power()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_eda_spectral_power.md)
+  : Extract frequency-domain EDA spectral power
+- [`extract_gazepoint_eda_tvsymp()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_eda_tvsymp.md)
+  : Extract time-varying spectral EDA features
+- [`extract_gazepoint_edr_pca()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_edr_pca.md)
+  : Extract ECG-derived respiration using PCA
+- [`extract_gazepoint_hrv_asymmetry()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_hrv_asymmetry.md)
+  : Extract heart-rate asymmetry features
+- [`extract_gazepoint_hrv_features()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_hrv_features.md)
+  : Extract time-domain HRV features from Gazepoint IBI intervals
+- [`extract_gazepoint_hrv_fragmentation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_hrv_fragmentation.md)
+  : Extract heart-rate fragmentation features
+- [`extract_gazepoint_hrv_fuzzy_csi()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_hrv_fuzzy_csi.md)
+  : Extract FuzzyEn and Lorenz-plot CSI HRV features
+- [`extract_gazepoint_hrv_geometric()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_hrv_geometric.md)
+  : Extract geometric HRV features
+- [`extract_gazepoint_hrv_nonlinear()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_hrv_nonlinear.md)
+  : Extract nonlinear HRV features from IBI/RR intervals
+- [`extract_gazepoint_hrv_rcmse()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_hrv_rcmse.md)
+  : Extract refined composite multiscale entropy from HRV intervals
+- [`extract_gazepoint_hrv_rqa()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_hrv_rqa.md)
+  : Extract HRV recurrence quantification analysis features
+- [`extract_gazepoint_pdr_signals()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_pdr_signals.md)
+  : Extract PPG-derived respiration proxy signals
+- [`extract_gazepoint_ppg_templates()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_ppg_templates.md)
+  : Extract BioSPPy-style PPG pulse templates
+- [`extract_gazepoint_respiration_ceemdan()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_respiration_ceemdan.md)
+  : Extract respiration proxy using a CEEMDAN-style bridge
+- [`extract_gazepoint_scr_recovery_times()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_scr_recovery_times.md)
+  : Extract SCR recovery times
+- [`extract_gazepoint_ttl_events()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/extract_gazepoint_ttl_events.md)
+  : Extract Gazepoint TTL marker events
+- [`filter_gazepoint_ibi_implausible()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/filter_gazepoint_ibi_implausible.md)
+  : Filter implausible Gazepoint IBI values
+- [`filter_gazepoint_ppg_butterworth()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/filter_gazepoint_ppg_butterworth.md)
+  : Apply a second-order Butterworth-style low-pass filter to pulse/PPG
+  data
+- [`filter_gazepoint_ppg_signal()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/filter_gazepoint_ppg_signal.md)
+  : Apply generic filtering to Gazepoint pulse/PPG data
+- [`fit_gazepoint_convolution_glm()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/fit_gazepoint_convolution_glm.md)
+  : Fit PsPM-style event-related convolution GLM
+- [`flip_gazepoint_ppg_signal()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flip_gazepoint_ppg_signal.md)
+  : Flip a Gazepoint pulse/PPG signal
+- [`format_gazepoint_biometrics_feature_inventory()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/format_gazepoint_biometrics_feature_inventory.md)
+  : Format the gpbiometrics feature inventory for users
+- [`fuse_gazepoint_respiration_kalman()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/fuse_gazepoint_respiration_kalman.md)
+  : Fuse respiration proxies using a Kalman filter
+- [`import_gazepoint_biometric_folder()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_biometric_folder.md)
+  : Import a folder of Gazepoint Biometrics exports
+- [`import_gazepoint_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_biometrics.md)
+  : Import a Gazepoint Biometrics export
+- [`import_gazepoint_data_summary()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_data_summary.md)
+  : Import a Gazepoint Data Summary export
+- [`import_gazepoint_lsl_xdf()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_lsl_xdf.md)
+  : Import Gazepoint-related streams from an LSL/XDF file
+- [`join_gazepoint_biometrics_to_gp3tools()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/join_gazepoint_biometrics_to_gp3tools.md)
+  : Join Gazepoint Biometrics data to gp3tools-style eye-tracking data
+- [`join_gazepoint_biometrics_to_master()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/join_gazepoint_biometrics_to_master.md)
+  : Join Gazepoint Biometrics to a master table
+- [`model_gazepoint_eda_point_process()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/model_gazepoint_eda_point_process.md)
+  : Model EDA events as a dependency-light point process
+- [`model_gazepoint_hr_point_process()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/model_gazepoint_hr_point_process.md)
+  : Model heartbeats as a dependency-light point process
+- [`model_gazepoint_hrv_ipfm()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/model_gazepoint_hrv_ipfm.md)
+  : Model heartbeat timing using an IPFM-style impulse train
+- [`process_gazepoint_ppg_segmentwise()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/process_gazepoint_ppg_segmentwise.md)
+  : Process Gazepoint pulse/PPG data in overlapping HeartPy-style
+  segments
+- [`reconstruct_gazepoint_ppg_clipping()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/reconstruct_gazepoint_ppg_clipping.md)
+  : Detect and reconstruct clipped pulse/PPG samples
+- [`regress_gazepoint_pupil_luminance()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/regress_gazepoint_pupil_luminance.md)
+  : Regress stimulus luminance from pupil diameter
+- [`reject_gazepoint_ppg_peaks()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/reject_gazepoint_ppg_peaks.md)
+  : Reject implausible pulse/PPG peaks using RR-interval thresholds
+- [`remove_gazepoint_ppg_baseline_wander()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/remove_gazepoint_ppg_baseline_wander.md)
+  : Remove baseline wander from Gazepoint pulse/PPG data
+- [`run_gazepoint_automated_statistics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_automated_statistics.md)
+  : Run automated exploratory statistics for Gazepoint feature tables
+- [`run_gazepoint_biometrics_real_data_readiness()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_biometrics_real_data_readiness.md)
+  : Run a final real-data readiness gate for Gazepoint biometrics data
+- [`run_gazepoint_biometrics_workflow()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_biometrics_workflow.md)
+  : Run a Gazepoint Biometrics workflow
+- [`run_gazepoint_eda_analysis_pipeline()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_eda_analysis_pipeline.md)
+  : Run a six-phase Gazepoint EDA/GSR analysis pipeline
+- [`run_gazepoint_online_design_optimization()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_online_design_optimization.md)
+  : Run blockwise online design optimization decision support
+- [`run_gazepoint_scr_multiverse()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_scr_multiverse.md)
+  : Run a multiverse of SCR scoring specifications
+- [`run_gazepoint_scr_threshold_sensitivity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_scr_threshold_sensitivity.md)
+  : Run Gazepoint SCR threshold sensitivity checks
+- [`run_gpbiometrics_shiny()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gpbiometrics_shiny.md)
+  : Launch a lightweight gpbiometrics Shiny dashboard
+- [`run_gpbiometrics_shiny_annotator()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gpbiometrics_shiny_annotator.md)
+  : Launch a lightweight gpbiometrics Shiny peak/artifact annotator
+- [`scale_gazepoint_ppg_sections()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/scale_gazepoint_ppg_sections.md)
+  : Scale Gazepoint pulse/PPG signals within sections
+- [`scale_gazepoint_ppg_signal()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/scale_gazepoint_ppg_signal.md)
+  : Scale a Gazepoint pulse/PPG signal
+- [`screen_gazepoint_eda_nonresponders()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/screen_gazepoint_eda_nonresponders.md)
+  : Screen Gazepoint EDA/SCR nonresponders
+- [`simulate_gazepoint_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/simulate_gazepoint_biometrics.md)
+  : Simulate Gazepoint-style biometric signals
+- [`smooth_gazepoint_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/smooth_gazepoint_biometrics.md)
+  : Smooth a Gazepoint biometric signal
+- [`smooth_gazepoint_ppg_signal()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/smooth_gazepoint_ppg_signal.md)
+  : Smooth a Gazepoint pulse/PPG signal
+- [`standardise_gazepoint_adaptive_ema()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_adaptive_ema.md)
+  [`standardize_gazepoint_adaptive_ema()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_adaptive_ema.md)
+  : Adaptive EMA normalization for non-stationary EDA
+- [`standardise_gazepoint_biometric_names()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_biometric_names.md)
+  : Standardise Gazepoint biometric column names
+- [`standardize_gazepoint_biometrics_within_unit()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardize_gazepoint_biometrics_within_unit.md)
+  [`standardise_gazepoint_biometrics_within_unit()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardize_gazepoint_biometrics_within_unit.md)
+  : Standardize biometric signals within participant or other analysis
+  units
+- [`standardise_gazepoint_range_correction()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_range_correction.md)
+  [`standardize_gazepoint_range_correction()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_range_correction.md)
+  : Standardise SCR or SCL using within-participant range correction
+- [`standardise_gazepoint_zscore()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_zscore.md)
+  [`standardize_gazepoint_zscore()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_zscore.md)
+  : Standardise SCR or SCL using intra-individual z-scoring
+- [`summarise_gazepoint_aoi_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_aoi_biometrics.md)
+  : Summarise biometric signals by AOI
+- [`summarise_gazepoint_biometric_validity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_biometric_validity.md)
+  : Summarise validity and availability of Gazepoint biometric signals
+- [`summarise_gazepoint_biometrics_feature_inventory()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_biometrics_feature_inventory.md)
+  : Summarise the formatted gpbiometrics feature inventory
+- [`summarise_gazepoint_biometrics_workflow()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_biometrics_workflow.md)
+  : Summarise a Gazepoint Biometrics workflow object
+- [`summarise_gazepoint_dial_windows()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_dial_windows.md)
+  : Summarise Gazepoint engagement-dial windows
+- [`summarise_gazepoint_engagement_windows()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_engagement_windows.md)
+  : Summarise Gazepoint engagement-dial windows
+- [`summarise_gazepoint_full_biometric_windows()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_full_biometric_windows.md)
+  : Summarise full Gazepoint biometric windows
+- [`summarise_gazepoint_gsr_tonic_phasic()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_gsr_tonic_phasic.md)
+  : Summarise tonic and phasic GSR/EDA components
+- [`summarise_gazepoint_gsr_windows()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_gsr_windows.md)
+  : Summarise Gazepoint GSR/EDA windows
+- [`summarise_gazepoint_hr_windows()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_hr_windows.md)
+  : Summarise Gazepoint heart-rate windows
+- [`summarise_gazepoint_hrv_features()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_hrv_features.md)
+  : Summarise time-domain HRV features from Gazepoint IBI/RR intervals
+- [`summarise_gazepoint_ibi_hrv_windows()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_ibi_hrv_windows.md)
+  : Summarise Gazepoint IBI-derived HRV windows
+- [`summarise_gazepoint_ibi_windows()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_ibi_windows.md)
+  : Summarise IBI/RR windows
+- [`summarise_gazepoint_multimodal_windows()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_multimodal_windows.md)
+  : Summarise Gazepoint multimodal biometric windows
+- [`summarise_gazepoint_scr_event_windows()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_scr_event_windows.md)
+  : Summarise Gazepoint SCR responses in event windows
+- [`sync_gazepoint_biometrics_with_gaze()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/sync_gazepoint_biometrics_with_gaze.md)
+  : Synchronise Gazepoint Biometrics with gaze data
+- [`test_gazepoint_hrv_nonlinearity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/test_gazepoint_hrv_nonlinearity.md)
+  : Test HRV nonlinearity using surrogate data
+- [`validate_gazepoint_biometrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_biometrics.md)
+  : Validate a Gazepoint Biometrics export

@@ -1,19 +1,19 @@
 Package: gpbiometrics
 Type: Package
 Title: Process and Report Gazepoint Biometrics Data
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person(given = "Stefanos", family = "Balaskas", email = "s.balaskas@ac.upatras.gr", role = c("aut", "cre"))
-Description: Provides reproducible workflows for importing, validating, preprocessing,
-    summarising, modelling, visualising, and reporting Gazepoint Biometrics
-    and GP3-derived physiological exports. Supported workflows include
-    heart-rate, inter-beat-interval, heart-rate-variability, pupil, gaze,
-    GSR/EDA, PPG/pulse, respiration-oriented, signal-quality, synchronisation,
-    windowing, artifact-detection, and multimodal reporting helpers. The
-    package includes Gazepoint-native HeartPy-style pulse/PPG workflows,
-    pyHRV-style HRV summaries, BioSPPy-style EDA/PPG/RRI/signal-processing
-    helpers, and PsPM-style marker, SCR preprocessing, segment-extraction,
-    and event-related convolution-GLM workflows, while also providing
-    interoperability helpers for external psychophysiology toolchains.
+Description: Gazepoint-native tools for reproducible analysis and reporting of Gazepoint
+    Biometrics and GP3-derived physiological, gaze, pupil, fixation, AOI,
+    marker, and event-level exports. The package supports import, validation,
+    preprocessing, missing-value imputation, EDA/GSR, SCR epoching, IBI/RR/HRV,
+    PPG/pulse workflows, pupil blink detection and cleaning, gaze filtering,
+    fixation summaries, engagement-dial indices, multimodal trial regressors,
+    quality reports, exclusion and QC recommendations, synthetic eye-data
+    generation, and interoperability or workflow-inspired helpers for common
+    psychophysiology toolchains. The package is designed for transparent,
+    CRAN-safe, scriptable analysis rather than as a full clone of external
+    commercial or open-source toolboxes.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en-US
@@ -29,3 +29,5 @@ Suggests:
 Config/testthat/edition: 3
 Config/roxygen2/version: 8.0.0
 VignetteBuilder: knitr
+URL: https://github.com/stefanosbalaskas/gpbiometrics
+BugReports: https://github.com/stefanosbalaskas/gpbiometrics/issues
