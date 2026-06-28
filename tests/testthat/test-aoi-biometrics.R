@@ -290,6 +290,7 @@ test_that("AOI-biometric helpers validate inputs", {
     "`standardise_within = \"signal\"` requires a `signal` column"
   )
 
+  testthat::skip_if_not_installed("ggplot2")
   expect_error(
     plot_gazepoint_aoi_biometrics(dat, value_col = "missing"),
     "Required plotting columns"

@@ -15,13 +15,14 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE)
-VignetteBuilder: knitr
 Suggests:
-    ggplot2,
     knitr,
-    reticulate,
     rmarkdown,
-    shiny,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    reticulate,
+    jsonlite,
+    ggplot2,
+    shiny
 Config/testthat/edition: 3
 Config/roxygen2/version: 8.0.0
+VignetteBuilder: knitr
