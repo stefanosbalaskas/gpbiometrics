@@ -12,3 +12,5 @@
 ^paper-showcase$
 ^\.github$
 ^CITATION\.cff$
+^04_render_full_function_audit\.R$
+^gpbiometrics_function_inventory\.csv$
