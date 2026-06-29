@@ -660,3 +660,20 @@ outcomes.
 
 - [`compare_gazepoint_conditions_bootstrap()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_conditions_bootstrap.md)
   : Bootstrap condition comparisons for Gazepoint-derived outcomes
+
+## Roadmap compatibility aliases
+
+Short-name aliases and lightweight wrappers for roadmap discoverability.
+
+- [`standardize_gazepoint_columns()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardize_gazepoint_columns.md)
+  : Standardize Gazepoint column names
+- [`validate_gazepoint_format()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_format.md)
+  : Validate a Gazepoint-format data frame
+- [`clean_gazepoint_pupil()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/clean_gazepoint_pupil.md)
+  : Clean Gazepoint pupil data
+- [`interpolate_gazepoint_pupil_blinks()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/interpolate_gazepoint_pupil_blinks.md)
+  : Interpolate Gazepoint pupil blink/dropout spans
+- [`respiration_from_ppg()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/respiration_from_ppg.md)
+  : Estimate respiration from PPG
+- [`prepare_gazepoint_mixed_model_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_mixed_model_data.md)
+  : Prepare Gazepoint data for mixed-model analysis

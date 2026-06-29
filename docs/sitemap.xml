@@ -43,6 +43,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/chunk_gazepoint_biometrics.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/classify_gazepoint_eda_response_pattern.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/classify_gazepoint_scr_intervals.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/clean_gazepoint_pupil.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/clean_gazepoint_pupil_signal.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/clean_gazepoint_rr_intervals.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/combine_gazepoint_marker_channels_pspm_style.html</loc></url>
@@ -187,6 +188,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_pyhrv_results.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/impute_gazepoint_missing.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/interpolate_gazepoint_pupil_blinks.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/join_gazepoint_biometrics_to_gp3tools.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/join_gazepoint_biometrics_to_master.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/match_gazepoint_events_to_biometrics.html</loc></url>
@@ -222,6 +224,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_cvxeda_input.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_heartpy_input.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_ledalab_input.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_mixed_model_data.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_multimodal_model_data.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_neurokit_eda_input.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_pspm_dcm_input.html</loc></url>
@@ -239,6 +242,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/reject_gazepoint_ppg_peaks.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/remove_gazepoint_ppg_baseline_wander.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/report_gazepoint_data_quality.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/respiration_from_ppg.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_automated_statistics.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_biometrics_real_data_readiness.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_biometrics_workflow.html</loc></url>
@@ -269,6 +273,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_range_correction.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/standardise_gazepoint_zscore.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/standardize_gazepoint_biometrics_within_unit.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/standardize_gazepoint_columns.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/standardize_gazepoint_column_names.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/standardize_gazepoint_plot_contracts.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_aoi_biometrics.html</loc></url>
@@ -298,6 +303,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/test_gazepoint_hrv_nonlinearity.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/trim_gazepoint_biometrics_pspm_style.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_biometrics.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_format.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_biometrics_report_tables.html</loc></url>
 </urlset>
 

@@ -351,3 +351,12 @@ reference:
 - title: Bootstrap condition comparisons
   desc: Lightweight percentile-bootstrap comparisons for Gazepoint-derived outcomes.
   contents: compare_gazepoint_conditions_bootstrap
+- title: Roadmap compatibility aliases
+  desc: Short-name aliases and lightweight wrappers for roadmap discoverability.
+  contents:
+  - standardize_gazepoint_columns
+  - validate_gazepoint_format
+  - clean_gazepoint_pupil
+  - interpolate_gazepoint_pupil_blinks
+  - respiration_from_ppg
+  - prepare_gazepoint_mixed_model_data

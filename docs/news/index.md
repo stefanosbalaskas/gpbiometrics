@@ -2,6 +2,10 @@
 
 ## gpbiometrics 0.1.2
 
+- Added roadmap compatibility aliases and discoverability wrappers for
+  column standardization, format validation, pupil
+  cleaning/interpolation, PPG-derived respiration estimation, and
+  mixed-model data preparation.
 - Added
   [`compare_gazepoint_conditions_bootstrap()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_conditions_bootstrap.md)
   for lightweight percentile-bootstrap condition comparisons of
