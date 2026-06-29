@@ -1,6 +1,8 @@
 
 # gpbiometrics
 
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
+
 [![R-CMD-check](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml)
 [![DOI](https://zenodo.org/badge/1279519183.svg)](https://doi.org/10.5281/zenodo.20836724)
 
@@ -55,6 +57,17 @@ Avoid claiming that the package implements all functions from those external
 toolboxes.
 
 <!-- gpbiometrics-extended-workflows-end -->
+
+
+## Lifecycle
+
+`gpbiometrics` is currently in a maturing development stage. The main
+Gazepoint-native import, validation, preprocessing, quality-control,
+physiology, gaze/pupil, event-alignment, reporting, and roadmap-closure
+helpers are implemented and tested, but the exported API may still receive
+minor refinements before a formal CRAN submission.
+
+See [`ROADMAP_STATUS.md`](ROADMAP_STATUS.md) for the current roadmap-closure and release-readiness summary.
 
 ## Installation
 

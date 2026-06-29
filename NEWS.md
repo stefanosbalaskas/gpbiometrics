@@ -1,4 +1,4 @@
-# gpbiometrics 0.1.2
+# gpbiometrics 0.2.0
 
 * Added roadmap compatibility aliases and discoverability wrappers for
   column standardization, format validation, pupil cleaning/interpolation,

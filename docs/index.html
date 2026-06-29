@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">gpbiometrics</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,6 +52,7 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="gpbiometrics">gpbiometrics<a class="anchor" aria-label="anchor" href="#gpbiometrics"></a>
 </h1></div>
+<p><a href="https://lifecycle.r-lib.org/articles/stages.html#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></p>
 <p><a href="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://doi.org/10.5281/zenodo.20836724" class="external-link"><img src="https://zenodo.org/badge/1279519183.svg" alt="DOI"></a></p>
 <p><code>gpbiometrics</code> provides reproducible tools for importing, checking, preprocessing, summarising, modelling, and reporting Gazepoint Biometrics and Gazepoint GP3 biometric exports. It is designed for researchers working with electrodermal activity, pulse/heart-rate channels, interbeat intervals, TTL markers, stimulus/event timing, and multimodal Gazepoint workflows.</p>
 <p>The package focuses on transparent preprocessing, quality control, analysis-ready tables, reporting outputs, and conservative physiological interpretation. It does not infer emotion, stress, cognition, preference, health status, or diagnosis directly from biometric signals.</p>
@@ -125,6 +126,12 @@
 </table>
 <p>Recommended wording: <code>gpbiometrics</code> provides Gazepoint-native HeartPy-style, pyHRV-style, BioSPPy-style, and PsPM-style workflows for reproducible physiological preprocessing, feature extraction, modelling, and reporting. Avoid claiming that the package implements all functions from those external toolboxes.</p>
 <!-- gpbiometrics-extended-workflows-end -->
+</div>
+<div class="section level2">
+<h2 id="lifecycle">Lifecycle<a class="anchor" aria-label="anchor" href="#lifecycle"></a>
+</h2>
+<p><code>gpbiometrics</code> is currently in a maturing development stage. The main Gazepoint-native import, validation, preprocessing, quality-control, physiology, gaze/pupil, event-alignment, reporting, and roadmap-closure helpers are implemented and tested, but the exported API may still receive minor refinements before a formal CRAN submission.</p>
+<p>See <a href="ROADMAP_STATUS.html"><code>ROADMAP_STATUS.md</code></a> for the current roadmap-closure and release-readiness summary.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
