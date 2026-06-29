@@ -652,3 +652,11 @@ and exploratory PPG-derived respiration estimation.
   : Compute a pairwise signal-lag matrix
 - [`estimate_gazepoint_respiration_from_ppg()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_respiration_from_ppg.md)
   : Estimate respiration rate from PPG
+
+## Bootstrap condition comparisons
+
+Lightweight percentile-bootstrap comparisons for Gazepoint-derived
+outcomes.
+
+- [`compare_gazepoint_conditions_bootstrap()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_conditions_bootstrap.md)
+  : Bootstrap condition comparisons for Gazepoint-derived outcomes

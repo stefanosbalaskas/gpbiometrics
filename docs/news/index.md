@@ -2,6 +2,11 @@
 
 ## gpbiometrics 0.1.2
 
+- Added
+  [`compare_gazepoint_conditions_bootstrap()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_conditions_bootstrap.md)
+  for lightweight percentile-bootstrap condition comparisons of
+  Gazepoint-derived trial-level, event-locked, or participant-level
+  outcomes.
 - Added physiology/QC refinement helpers for HRV segment quality flags,
   SCR latency metrics, pairwise multimodal signal-lag screening, and
   exploratory PPG-derived respiration-rate estimation.

@@ -348,3 +348,6 @@ reference:
   - compute_gazepoint_scr_latency
   - compute_gazepoint_signal_lag_matrix
   - estimate_gazepoint_respiration_from_ppg
+- title: Bootstrap condition comparisons
+  desc: Lightweight percentile-bootstrap comparisons for Gazepoint-derived outcomes.
+  contents: compare_gazepoint_conditions_bootstrap
