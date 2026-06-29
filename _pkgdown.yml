@@ -332,3 +332,11 @@ reference:
   - audit_gazepoint_biometrics_file
   - summarize_gazepoint_missingness
   - detrend_gazepoint_signal
+- title: Alignment, AOI, event-locked synthesis, and dashboard
+  desc: Event-based stream alignment, AOI time-course preparation, multimodal event-locked
+    summaries, and quality-dashboard exports.
+  contents:
+  - align_gazepoint_streams_by_events
+  - build_gazepoint_aoi_timecourse
+  - summarize_gazepoint_eventlocked_multimodal
+  - create_gazepoint_quality_dashboard

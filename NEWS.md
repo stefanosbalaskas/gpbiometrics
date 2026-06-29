@@ -1,5 +1,8 @@
 # gpbiometrics 0.1.2
 
+* Added alignment, AOI time-course, event-locked synthesis, and dashboard
+  helpers for event-based stream alignment, binned AOI proportions,
+  multimodal event-locked summaries, and compact quality-dashboard exports.
 * Added front-door audit and missingness helpers: unified Gazepoint
   biometrics preflight audit, dedicated missingness/gap summaries, and
   generic signal detrending for slow drift in biometric or pupil signals.
