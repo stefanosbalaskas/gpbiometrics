@@ -2,6 +2,7 @@
 
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
+[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0)
 
 [![R-CMD-check](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml)
 [![DOI](https://zenodo.org/badge/1279519183.svg)](https://doi.org/10.5281/zenodo.20836724)
@@ -54,7 +55,13 @@ reproducible physiological preprocessing, feature extraction, modelling,
 and reporting. Avoid claiming that the package implements all functions
 from those external toolboxes.
 
-## Lifecycle
+## Release status
+
+`gpbiometrics` 0.2.0 is the current roadmap-closure release. It adds
+standalone roadmap helpers, compatibility aliases, documentation
+updates, pkgdown pages, and release-readiness notes while keeping the
+package Gazepoint-native and conservative in physiological
+interpretation. \## Lifecycle
 
 `gpbiometrics` is currently in a maturing development stage. The main
 Gazepoint-native import, validation, preprocessing, quality-control,
@@ -344,14 +351,17 @@ Do not commit private Gazepoint exports or private smoke-test outputs.
 
 ## Validation status
 
-Current local validation after the advanced development branches:
+Current local validation for the v0.2.0 roadmap-closure release:
 
 ``` text
 devtools::test()
-# FAIL 0 | WARN 0 | SKIP 0 | PASS 1649
+# FAIL 0 | WARN 0 | SKIP 0 | PASS 2113
 
-devtools::check()
+devtools::check(args = "--as-cran")
 # 0 errors | 0 warnings | 0 notes
+
+urlchecker::url_check()
+# All URLs are correct
 ```
 
 The recurring Quarto/TMPDIR message can appear during local checks. It
@@ -359,6 +369,9 @@ is treated as harmless only when the final `R CMD check` summary reports
 0 errors, 0 warnings, and 0 notes.
 
 ## Citation
+
+Current release tag:
+[`v0.2.0`](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0).
 
 If you use `gpbiometrics`, cite the package version, repository or
 archive DOI if available, and the specific Gazepoint hardware/software
