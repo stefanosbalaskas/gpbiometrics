@@ -79,5 +79,6 @@ a logical vector marking blink samples is returned.
 ``` r
 dat <- data.frame(time_s = 0:4, LPD = c(3, NA, NA, 3.1, 3.2))
 detect_gazepoint_pupil_blinks(dat, pupil_cols = "LPD", time_col = "time_s")
-#> Error in detect_gazepoint_pupil_blinks(dat, pupil_cols = "LPD", time_col = "time_s"): could not find function "detect_gazepoint_pupil_blinks"
+#>   blink_id start_index end_index onset_time offset_time duration_s n_samples
+#> 1        1           2         3          1           2          1         2
 ```

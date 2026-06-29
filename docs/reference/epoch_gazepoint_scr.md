@@ -88,5 +88,10 @@ Data frame with one row per event and event-level SCR metrics.
 ``` r
 eda <- data.frame(time_s = seq(0, 10, by = .1), GSR = sin(seq(0, 10, by = .1)) / 20)
 epoch_gazepoint_scr(eda, events = 5, pre = 1, post = 3)
-#> Error in epoch_gazepoint_scr(eda, events = 5, pre = 1, post = 3): could not find function "epoch_gazepoint_scr"
+#>   event_id event_time n_samples baseline_mean epoch_mean response_mean
+#> 1        1          5        41   -0.04646868 0.04041877    0.05340942
+#>   response_auc scr_count scr_max_amplitude scr_mean_amplitude
+#> 1    0.1608463         1        0.09789328         0.09789328
+#>   scr_total_amplitude first_scr_latency_s
+#> 1          0.09789328                 2.9
 ```

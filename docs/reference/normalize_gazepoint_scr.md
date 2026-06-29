@@ -51,5 +51,5 @@ Numeric vector for vector input, or data frame for data-frame input.
 
 ``` r
 normalize_gazepoint_scr(c(0.1, 0.2, 0.3), method = "percent_max")
-#> Error in normalize_gazepoint_scr(c(0.1, 0.2, 0.3), method = "percent_max"): could not find function "normalize_gazepoint_scr"
+#> [1]  33.33333  66.66667 100.00000
 ```

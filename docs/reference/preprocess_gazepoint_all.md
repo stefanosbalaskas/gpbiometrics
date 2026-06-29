@@ -65,5 +65,18 @@ A preprocessed object of the same basic structure as `data`, with a
 ``` r
 dat <- data.frame(time_s = 1:5, GSR = c(1, NA, 3, 4, 5))
 preprocess_gazepoint_all(dat)
-#> Error in preprocess_gazepoint_all(dat): could not find function "preprocess_gazepoint_all"
+#>   table           step  status
+#> 1  data impute_missing      ok
+#> 2  data    clean_pupil skipped
+#> 3  data    filter_gaze skipped
+#>                                             message
+#> 1                                      Columns: GSR
+#> 2          No pupil columns or cleaner unavailable.
+#> 3 No gaze coordinate columns or filter unavailable.
+#>   time_s GSR GSR_was_imputed
+#> 1      1   1           FALSE
+#> 2      2   2            TRUE
+#> 3      3   3           FALSE
+#> 4      4   4           FALSE
+#> 5      5   5           FALSE
 ```

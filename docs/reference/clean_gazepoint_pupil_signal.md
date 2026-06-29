@@ -86,5 +86,10 @@ attribute.
 ``` r
 dat <- data.frame(time_s = 0:4, LPD = c(3, NA, 3.2, 40, 3.1))
 clean_gazepoint_pupil_signal(dat, pupil_cols = "LPD", time_col = "time_s")
-#> Error in clean_gazepoint_pupil_signal(dat, pupil_cols = "LPD", time_col = "time_s"): could not find function "clean_gazepoint_pupil_signal"
+#>   time_s  LPD LPD_clean LPD_was_blink LPD_was_spike LPD_was_pupil_imputed
+#> 1      0  3.0      3.00         FALSE         FALSE                 FALSE
+#> 2      1   NA      3.10          TRUE         FALSE                  TRUE
+#> 3      2  3.2      3.20         FALSE         FALSE                 FALSE
+#> 4      3 40.0      3.15         FALSE          TRUE                  TRUE
+#> 5      4  3.1      3.10         FALSE         FALSE                 FALSE
 ```

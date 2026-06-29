@@ -79,9 +79,14 @@ Object of the same basic type as `data`. Data-frame outputs include an
 ``` r
 x <- c(1, NA, 3, 4)
 impute_gazepoint_missing(x)
-#> Error in impute_gazepoint_missing(x): could not find function "impute_gazepoint_missing"
+#> [1] 1 2 3 4
 
 dat <- data.frame(time_s = 1:5, GSR = c(1, NA, 3, NA, 5))
 impute_gazepoint_missing(dat, cols = "GSR", time_col = "time_s")
-#> Error in impute_gazepoint_missing(dat, cols = "GSR", time_col = "time_s"): could not find function "impute_gazepoint_missing"
+#>   time_s GSR GSR_was_imputed
+#> 1      1   1           FALSE
+#> 2      2   2            TRUE
+#> 3      3   3           FALSE
+#> 4      4   4            TRUE
+#> 5      5   5           FALSE
 ```

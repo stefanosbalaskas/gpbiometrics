@@ -68,5 +68,12 @@ x/y columns.
 ``` r
 gaze <- data.frame(time_s = 1:3, BPOGX = c(.1, .2, 2), BPOGY = c(.2, .3, .4))
 filter_gazepoint_gaze(gaze, screen_bounds = c(0, 1, 0, 1))
-#> Error in filter_gazepoint_gaze(gaze, screen_bounds = c(0, 1, 0, 1)): could not find function "filter_gazepoint_gaze"
+#>   time_s BPOGX BPOGY gaze_in_bounds gaze_velocity gaze_velocity_ok gaze_valid
+#> 1      1   0.1   0.2           TRUE            NA             TRUE       TRUE
+#> 2      2   0.2   0.3           TRUE     0.1414214             TRUE       TRUE
+#> 3      3   2.0   0.4          FALSE     1.8027756             TRUE      FALSE
+#>   gaze_filter_reason BPOGX_filtered BPOGY_filtered
+#> 1              valid            0.1            0.2
+#> 2              valid            0.2            0.3
+#> 3     outside_screen             NA             NA
 ```

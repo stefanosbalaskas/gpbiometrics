@@ -56,5 +56,5 @@ frame with reason columns.
 
 ``` r
 flag_gazepoint_rr_outliers(c(800, 810, 3000, 790))
-#> Error in flag_gazepoint_rr_outliers(c(800, 810, 3000, 790)): could not find function "flag_gazepoint_rr_outliers"
+#> [1] FALSE FALSE  TRUE FALSE
 ```

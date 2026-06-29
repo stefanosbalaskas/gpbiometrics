@@ -27,6 +27,7 @@ columns are available."></head><body>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/gpbiometrics-workflow.html">gpbiometrics workflow</a></li>
+    <li><a class="dropdown-item" href="../articles/plot-gallery.html">Plot gallery</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><a class="external-link nav-link" href="https://github.com/stefanosbalaskas/gpbiometrics/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
@@ -111,7 +112,20 @@ columns are available.</p>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>time_s <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, GSR <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">preprocess_gazepoint_all</span><span class="op">(</span><span class="va">dat</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in preprocess_gazepoint_all(dat):</span> could not find function "preprocess_gazepoint_all"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   table           step  status</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  data impute_missing      ok</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  data    clean_pupil skipped</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  data    filter_gaze skipped</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                             message</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                      Columns: GSR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          No pupil columns or cleaner unavailable.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 No gaze coordinate columns or filter unavailable.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   time_s GSR GSR_was_imputed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1      1   1           FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2      2   2            TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      3   3           FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4      4   4           FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5      5   5           FALSE</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

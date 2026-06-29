@@ -35,7 +35,26 @@ A data frame with Gazepoint-style columns, including `time_s`,
 
 ``` r
 dat <- simulate_gazepoint_eye_data(list(n = 120, seed = 1))
-#> Error in simulate_gazepoint_eye_data(list(n = 120, seed = 1)): could not find function "simulate_gazepoint_eye_data"
 head(dat)
-#> Error: object 'dat' not found
+#>   participant trial sample_id     time_s MSTIMER     BPOGX     BPOGY     FPOGX
+#> 1         P01   T01         1 0.00000000       0 0.6477806 0.4054987 0.6477806
+#> 2         P01   T01         2 0.01666667      17 0.6238787 0.4196097 0.6238787
+#> 3         P01   T01         3 0.03333333      33 0.6739732 0.3976877 0.6739732
+#> 4         P01   T01         4 0.05000000      50 0.6564252 0.4050446 0.6564252
+#> 5         P01   T01         5 0.06666667      67 0.6568563 0.3984225 0.6568563
+#> 6         P01   T01         6 0.08333333      83 0.6712567 0.3785737 0.6712567
+#>       FPOGY      LPD      RPD LPV RPV fixation_id in_blink blink_id
+#> 1 0.4054987 3.163688 3.163990   1   1           1    FALSE       NA
+#> 2 0.4196097 3.120282 3.122715   1   1           1    FALSE       NA
+#> 3 0.3976877 3.160074 3.186528   1   1           1    FALSE       NA
+#> 4 0.4050446 3.203904 3.123088   1   1           1    FALSE       NA
+#> 5 0.3984225 3.330903 3.304102   1   1           1    FALSE       NA
+#> 6 0.3785737 3.148419 3.137793   1   1           1    FALSE       NA
+#>   gaze_valid_simulated
+#> 1                 TRUE
+#> 2                 TRUE
+#> 3                 TRUE
+#> 4                 TRUE
+#> 5                 TRUE
+#> 6                 TRUE
 ```

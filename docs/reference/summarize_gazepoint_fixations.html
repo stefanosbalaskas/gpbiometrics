@@ -21,6 +21,7 @@ user-specified grouping columns."></head><body>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/gpbiometrics-workflow.html">gpbiometrics workflow</a></li>
+    <li><a class="dropdown-item" href="../articles/plot-gallery.html">Plot gallery</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><a class="external-link nav-link" href="https://github.com/stefanosbalaskas/gpbiometrics/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
@@ -109,7 +110,12 @@ trial, and AOI columns.</p></dd>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">fix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>trial <span class="op">=</span> <span class="st">"T1"</span>, AOI <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"A"</span><span class="op">)</span>, FPOGD <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">.2</span>, <span class="fl">.3</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>                  FPOGX <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">.1</span>, <span class="fl">.2</span><span class="op">)</span>, FPOGY <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">.3</span>, <span class="fl">.4</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">summarize_gazepoint_fixations</span><span class="op">(</span><span class="va">fix</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in summarize_gazepoint_fixations(fix):</span> could not find function "summarize_gazepoint_fixations"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   trial AOI n_fixations total_duration_s mean_duration_s median_duration_s</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    T1   A           2              0.5            0.25              0.25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   sd_duration_s min_duration_s max_duration_s x_dispersion y_dispersion</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    0.07071068            0.2            0.3          0.1          0.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   spatial_dispersion bbox_area</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                0.2      0.01</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
