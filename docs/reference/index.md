@@ -583,3 +583,30 @@ quality, event alignment, validation, and reproducibility metadata.
   : Assert that required Gazepoint columns are present
 - [`gpbiometrics_info()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/gpbiometrics_info.md)
   : Print gpbiometrics reproducibility information
+
+## Exact roadmap backlog helpers
+
+Schema standardization, export-schema audit, multimodal simulation,
+sampling and sync QC, AOI/scanpath summaries, manifests, PPG template
+quality, and HRV wavelet-style summaries.
+
+- [`standardize_gazepoint_column_names()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/standardize_gazepoint_column_names.md)
+  : Standardize common Gazepoint column names
+- [`audit_gazepoint_export_schema()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_export_schema.md)
+  : Audit a Gazepoint export schema
+- [`simulate_gazepoint_multimodal_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/simulate_gazepoint_multimodal_data.md)
+  : Simulate a small multimodal Gazepoint-style dataset
+- [`assess_gazepoint_sampling_irregularity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/assess_gazepoint_sampling_irregularity.md)
+  : Assess sampling irregularity in Gazepoint time series
+- [`diagnose_gazepoint_sync_drift()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/diagnose_gazepoint_sync_drift.md)
+  : Diagnose synchronization drift between two time bases
+- [`summarize_gazepoint_aoi_dwell()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_aoi_dwell.md)
+  : Summarize AOI dwell time and entries
+- [`summarize_gazepoint_scanpath_metrics()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_scanpath_metrics.md)
+  : Summarize simple scanpath metrics
+- [`create_gazepoint_analysis_manifest()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_analysis_manifest.md)
+  : Create a Gazepoint analysis manifest
+- [`compute_gazepoint_ppg_template_similarity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_ppg_template_similarity.md)
+  : Compute PPG beat-template similarity
+- [`compute_gazepoint_hrv_wavelet_psd()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_hrv_wavelet_psd.md)
+  : Compute a simple Haar-style HRV wavelet PSD summary

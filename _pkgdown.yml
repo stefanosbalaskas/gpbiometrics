@@ -310,3 +310,18 @@ reference:
   - match_gazepoint_events_to_biometrics
   - assert_gazepoint_columns
   - gpbiometrics_info
+- title: Exact roadmap backlog helpers
+  desc: Schema standardization, export-schema audit, multimodal simulation, sampling
+    and sync QC, AOI/scanpath summaries, manifests, PPG template quality, and HRV
+    wavelet-style summaries.
+  contents:
+  - standardize_gazepoint_column_names
+  - audit_gazepoint_export_schema
+  - simulate_gazepoint_multimodal_data
+  - assess_gazepoint_sampling_irregularity
+  - diagnose_gazepoint_sync_drift
+  - summarize_gazepoint_aoi_dwell
+  - summarize_gazepoint_scanpath_metrics
+  - create_gazepoint_analysis_manifest
+  - compute_gazepoint_ppg_template_similarity
+  - compute_gazepoint_hrv_wavelet_psd

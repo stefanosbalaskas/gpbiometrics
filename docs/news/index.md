@@ -2,6 +2,11 @@
 
 ## gpbiometrics 0.1.2
 
+- Added exact roadmap backlog helpers for schema standardization, export
+  schema auditing, multimodal simulation, sampling-irregularity QC,
+  sync-drift diagnostics, AOI dwell summaries, scanpath metrics,
+  analysis manifests, PPG template-similarity QC, and Haar-style HRV
+  wavelet PSD summaries.
 - Added remaining roadmap helpers for SCR habituation/recovery,
   event-related pupil summaries, tracking ratios, pupil-luminance
   audits, PPG morphology, segment-level PPG quality, generic event-log
