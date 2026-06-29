@@ -2,6 +2,9 @@
 
 ## gpbiometrics 0.1.2
 
+- Added physiology/QC refinement helpers for HRV segment quality flags,
+  SCR latency metrics, pairwise multimodal signal-lag screening, and
+  exploratory PPG-derived respiration-rate estimation.
 - Added alignment, AOI time-course, event-locked synthesis, and
   dashboard helpers for event-based stream alignment, binned AOI
   proportions, multimodal event-locked summaries, and compact

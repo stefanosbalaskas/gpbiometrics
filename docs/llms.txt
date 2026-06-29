@@ -1003,6 +1003,20 @@ event-locked summaries, and quality-dashboard exports.
 - [`create_gazepoint_quality_dashboard()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_quality_dashboard.md)
   : Create a compact Gazepoint quality dashboard object
 
+## Physiology and QC refinements
+
+HRV segment QC, SCR latency metrics, multimodal signal-lag screening,
+and exploratory PPG-derived respiration estimation.
+
+- [`flag_gazepoint_hrv_segments()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/flag_gazepoint_hrv_segments.md)
+  : Flag HRV/RR segments for quality review
+- [`compute_gazepoint_scr_latency()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_scr_latency.md)
+  : Compute SCR latency metrics from event-locked EDA
+- [`compute_gazepoint_signal_lag_matrix()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_signal_lag_matrix.md)
+  : Compute a pairwise signal-lag matrix
+- [`estimate_gazepoint_respiration_from_ppg()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_respiration_from_ppg.md)
+  : Estimate respiration rate from PPG
+
 # Articles
 
 ### All vignettes

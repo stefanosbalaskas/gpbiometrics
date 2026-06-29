@@ -340,3 +340,11 @@ reference:
   - build_gazepoint_aoi_timecourse
   - summarize_gazepoint_eventlocked_multimodal
   - create_gazepoint_quality_dashboard
+- title: Physiology and QC refinements
+  desc: HRV segment QC, SCR latency metrics, multimodal signal-lag screening, and
+    exploratory PPG-derived respiration estimation.
+  contents:
+  - flag_gazepoint_hrv_segments
+  - compute_gazepoint_scr_latency
+  - compute_gazepoint_signal_lag_matrix
+  - estimate_gazepoint_respiration_from_ppg
