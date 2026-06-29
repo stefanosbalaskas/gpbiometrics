@@ -14,6 +14,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/assert_gazepoint_columns.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/assess_gazepoint_hrp_waveform_quality.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/assess_gazepoint_sampling_irregularity.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometrics_file.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_missingness.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_sampling.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_sync_drift.html</loc></url>
@@ -112,6 +113,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_scr_peaks.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_time_columns.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/detrend_gazepoint_rri_window.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/detrend_gazepoint_signal.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/diagnose_gazepoint_biometrics_workflow.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/diagnose_gazepoint_sync_drift.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/enhance_gazepoint_ppg_peaks.html</loc></url>
@@ -278,6 +280,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_scr_event_windows.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_aoi_dwell.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_fixations.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_missingness.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_pupil_events.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_scanpath_metrics.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_scr_recovery.html</loc></url>

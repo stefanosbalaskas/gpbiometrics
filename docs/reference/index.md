@@ -610,3 +610,17 @@ quality, and HRV wavelet-style summaries.
   : Compute PPG beat-template similarity
 - [`compute_gazepoint_hrv_wavelet_psd()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_hrv_wavelet_psd.md)
   : Compute a simple Haar-style HRV wavelet PSD summary
+
+## Front-door audit and missingness
+
+Preflight audit, missingness/gap summaries, and generic signal
+detrending for messy Gazepoint exports.
+
+- [`audit_gazepoint_biometrics_file()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometrics_file.md)
+  [`print(`*`<gazepoint_biometrics_audit>`*`)`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometrics_file.md)
+  [`summary(`*`<gazepoint_biometrics_audit>`*`)`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometrics_file.md)
+  : Audit a Gazepoint biometrics file before analysis
+- [`summarize_gazepoint_missingness()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_missingness.md)
+  : Summarize missingness and gap structure in Gazepoint data
+- [`detrend_gazepoint_signal()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detrend_gazepoint_signal.md)
+  : Detrend a Gazepoint signal

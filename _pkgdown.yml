@@ -325,3 +325,10 @@ reference:
   - create_gazepoint_analysis_manifest
   - compute_gazepoint_ppg_template_similarity
   - compute_gazepoint_hrv_wavelet_psd
+- title: Front-door audit and missingness
+  desc: Preflight audit, missingness/gap summaries, and generic signal detrending
+    for messy Gazepoint exports.
+  contents:
+  - audit_gazepoint_biometrics_file
+  - summarize_gazepoint_missingness
+  - detrend_gazepoint_signal

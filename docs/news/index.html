@@ -36,7 +36,8 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.2" id="gpbiometrics-012">gpbiometrics 0.1.2<a class="anchor" aria-label="anchor" href="#gpbiometrics-012"></a></h2>
-<ul><li>Added exact roadmap backlog helpers for schema standardization, export schema auditing, multimodal simulation, sampling-irregularity QC, sync-drift diagnostics, AOI dwell summaries, scanpath metrics, analysis manifests, PPG template-similarity QC, and Haar-style HRV wavelet PSD summaries.</li>
+<ul><li>Added front-door audit and missingness helpers: unified Gazepoint biometrics preflight audit, dedicated missingness/gap summaries, and generic signal detrending for slow drift in biometric or pupil signals.</li>
+<li>Added exact roadmap backlog helpers for schema standardization, export schema auditing, multimodal simulation, sampling-irregularity QC, sync-drift diagnostics, AOI dwell summaries, scanpath metrics, analysis manifests, PPG template-similarity QC, and Haar-style HRV wavelet PSD summaries.</li>
 <li>Added remaining roadmap helpers for SCR habituation/recovery, event-related pupil summaries, tracking ratios, pupil-luminance audits, PPG morphology, segment-level PPG quality, generic event-log import, event-to-biometric matching, column validation, and reproducibility metadata.</li>
 <li>Added <code><a href="../reference/import_gazepoint_data.html">import_gazepoint_data()</a></code> as a single-entry helper for importing Gazepoint session folders into named lists of data frames.</li>
 <li>Added <code><a href="../reference/impute_gazepoint_missing.html">impute_gazepoint_missing()</a></code> for CRAN-safe interpolation of short missing gaps in continuous Gazepoint signals.</li>
