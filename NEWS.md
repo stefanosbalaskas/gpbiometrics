@@ -1,3 +1,11 @@
+# gpbiometrics 0.2.0.9000
+
+## Experimental statistical extensions
+
+* Added an experimental within-subject, two-condition cluster-based permutation prototype for Gazepoint-derived time-course signals.
+* Added `prepare_gazepoint_timecourse_test_data()`, `run_gazepoint_cluster_permutation()`, `summarize_gazepoint_time_clusters()`, and `plot_gazepoint_cluster_permutation()`.
+* Added an experimental pkgdown article describing the prototype and emphasizing that cluster timing should be interpreted descriptively rather than as precise onset or offset evidence.
+
 # gpbiometrics 0.2.0
 
 * Added roadmap compatibility aliases and discoverability wrappers for
