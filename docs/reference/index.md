@@ -1,5 +1,21 @@
 # Package index
 
+## Experimental statistical extensions
+
+Experimental helpers for conservative time-course inference on
+Gazepoint-derived signals. These functions are exploratory and should
+not be interpreted as finalized inferential tooling.
+
+- [`prepare_gazepoint_timecourse_test_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_timecourse_test_data.md)
+  : Prepare Gazepoint time-course data for cluster permutation testing
+- [`run_gazepoint_cluster_permutation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_cluster_permutation.md)
+  : Run a conservative cluster-based permutation test for Gazepoint time
+  courses
+- [`summarize_gazepoint_time_clusters()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_time_clusters.md)
+  : Summarize Gazepoint time clusters
+- [`plot_gazepoint_cluster_permutation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_cluster_permutation.md)
+  : Plot Gazepoint cluster permutation results
+
 ## Data import, cleaning, and simulation
 
 - [`import_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/import_gazepoint_data.md)

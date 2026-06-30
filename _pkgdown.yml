@@ -13,6 +13,16 @@ navbar:
     - news
     right: github
 reference:
+- title: "Experimental statistical extensions"
+  desc: >
+    Experimental helpers for conservative time-course inference on
+    Gazepoint-derived signals. These functions are exploratory and should
+    not be interpreted as finalized inferential tooling.
+  contents:
+  - prepare_gazepoint_timecourse_test_data
+  - run_gazepoint_cluster_permutation
+  - summarize_gazepoint_time_clusters
+  - plot_gazepoint_cluster_permutation
 - title: Data import, cleaning, and simulation
   contents:
   - import_gazepoint_data
