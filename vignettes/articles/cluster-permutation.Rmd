@@ -1,0 +1,131 @@
+---
+title: "Experimental cluster-permutation prototype"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Experimental cluster-permutation prototype}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 8,
+  fig.height = 4.8
+)
+```
+
+# Purpose
+
+This article demonstrates the experimental cluster-permutation prototype in gpbiometrics.
+
+The implementation is deliberately narrow. It currently supports two-condition, within-subject, one-dimensional time-course comparisons using participant-level condition time courses.
+
+# Interpretation warning
+
+A significant cluster indicates evidence against the global null of no condition difference anywhere in the tested time range under the permutation scheme.
+
+It does not identify a precise onset, offset, latency, or physiological event boundary. Cluster timing should be treated as descriptive.
+
+# Synthetic example
+
+```{r}
+library(gpbiometrics)
+
+set.seed(123)
+
+dat <- expand.grid(
+  participant = sprintf("P%02d", 1:12),
+  condition = c("A", "B"),
+  time = 1:60,
+  KEEP.OUT.ATTRS = FALSE,
+  stringsAsFactors = FALSE
+)
+
+subject_shift <- rnorm(12, 0, 0.15)
+names(subject_shift) <- sprintf("P%02d", 1:12)
+
+effect_window <- dat$condition == "A" & dat$time >= 25 & dat$time <= 38
+
+dat$value <- subject_shift[dat$participant] +
+  rnorm(nrow(dat), 0, 0.18) +
+  ifelse(effect_window, 1.20, 0)
+```
+
+# Prepare data
+
+```{r}
+prepared <- prepare_gazepoint_timecourse_test_data(
+  data = dat,
+  outcome_col = "value",
+  time_col = "time",
+  condition_col = "condition",
+  participant_col = "participant",
+  condition_a = "A",
+  condition_b = "B"
+)
+
+head(prepared)
+```
+
+# Run the test
+
+```{r}
+result <- run_gazepoint_cluster_permutation(
+  data = prepared,
+  outcome_col = "value",
+  time_col = "time",
+  condition_col = "condition",
+  participant_col = "participant",
+  condition_a = "A",
+  condition_b = "B",
+  n_permutations = 199,
+  cluster_forming_alpha = 0.05,
+  cluster_alpha = 0.05,
+  seed = 123
+)
+
+result
+```
+
+# Summarize clusters
+
+```{r}
+summarize_gazepoint_time_clusters(result)
+```
+
+# Plot result
+
+```{r}
+plot_gazepoint_cluster_permutation(result)
+```
+
+# Current limitations
+
+This prototype does not yet support:
+
+- between-subject designs
+- more than two conditions
+- factorial designs
+- mixed-effects permutation models
+- threshold-free cluster enhancement
+- exact onset or offset inference
+- trial-level exchangeability schemes
+- irregular or incomplete time grids
+
+
+
+# Recommended wording
+
+Use cautious wording such as:
+
+> The cluster-based permutation test indicated evidence of a condition difference in the tested time course.
+
+Avoid stronger wording such as:
+
+> The effect began at time X.
+
+# Development status
+
+This article documents an experimental branch prototype. It should not be interpreted as a finalized inferential layer until additional validation, review, and documentation are completed.

@@ -2,9 +2,10 @@ pandoc: 3.8.3
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
+  articles/cluster-permutation: cluster-permutation.html
   gpbiometrics-workflow: gpbiometrics-workflow.html
   articles/plot-gallery: plot-gallery.html
-last_built: 2026-06-29T23:27Z
+last_built: 2026-06-30T23:15Z
 urls:
   reference: https://stefanosbalaskas.github.io/gpbiometrics/reference
   article: https://stefanosbalaskas.github.io/gpbiometrics/articles
