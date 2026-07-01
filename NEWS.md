@@ -1,5 +1,7 @@
 # gpbiometrics 0.2.0.9000
 
+* Added cluster-permutation diagnostics, reporting, sensitivity, simulation, null-distribution plotting, and export helpers: `audit_gazepoint_timecourse_grid()`, `diagnose_gazepoint_cluster_design()`, `plot_gazepoint_cluster_null_distribution()`, `report_gazepoint_cluster_permutation()`, `run_gazepoint_cluster_threshold_sensitivity()`, `simulate_gazepoint_cluster_timecourse_data()`, and `export_gazepoint_cluster_results()`.
+
 ## Experimental statistical extensions
 
 * Added an experimental within-subject, two-condition cluster-based permutation prototype for Gazepoint-derived time-course signals.

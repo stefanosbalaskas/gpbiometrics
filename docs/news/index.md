@@ -1,5 +1,32 @@
 # Changelog
 
+## gpbiometrics 0.2.0.9000
+
+- Added cluster-permutation diagnostics, reporting, sensitivity,
+  simulation, null-distribution plotting, and export helpers:
+  [`audit_gazepoint_timecourse_grid()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_timecourse_grid.md),
+  [`diagnose_gazepoint_cluster_design()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/diagnose_gazepoint_cluster_design.md),
+  [`plot_gazepoint_cluster_null_distribution()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_cluster_null_distribution.md),
+  [`report_gazepoint_cluster_permutation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/report_gazepoint_cluster_permutation.md),
+  [`run_gazepoint_cluster_threshold_sensitivity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_cluster_threshold_sensitivity.md),
+  [`simulate_gazepoint_cluster_timecourse_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/simulate_gazepoint_cluster_timecourse_data.md),
+  and
+  [`export_gazepoint_cluster_results()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_cluster_results.md).
+
+### Experimental statistical extensions
+
+- Added an experimental within-subject, two-condition cluster-based
+  permutation prototype for Gazepoint-derived time-course signals.
+- Added
+  [`prepare_gazepoint_timecourse_test_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_timecourse_test_data.md),
+  [`run_gazepoint_cluster_permutation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_cluster_permutation.md),
+  [`summarize_gazepoint_time_clusters()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_time_clusters.md),
+  and
+  [`plot_gazepoint_cluster_permutation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_cluster_permutation.md).
+- Added an experimental pkgdown article describing the prototype and
+  emphasizing that cluster timing should be interpreted descriptively
+  rather than as precise onset or offset evidence.
+
 ## gpbiometrics 0.2.0
 
 - Added roadmap compatibility aliases and discoverability wrappers for
