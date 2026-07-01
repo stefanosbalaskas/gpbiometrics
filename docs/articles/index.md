@@ -2,8 +2,8 @@
 
 ### All vignettes
 
-- [Experimental cluster-permutation
-  prototype](https://stefanosbalaskas.github.io/gpbiometrics/articles/cluster-permutation.md):
+- [Cluster-permutation
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/cluster-permutation.md):
 
 - [gpbiometrics
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/gpbiometrics-workflow.md):
