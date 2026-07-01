@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Experimental cluster-permutation prototype • gpbiometrics</title>
+<title>Cluster-permutation workflow • gpbiometrics</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Experimental cluster-permutation prototype">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Cluster-permutation workflow">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -33,7 +33,7 @@
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/cluster-permutation.html">Experimental cluster-permutation prototype</a></li>
+<li><a class="dropdown-item" href="../articles/cluster-permutation.html">Cluster-permutation workflow</a></li>
     <li><a class="dropdown-item" href="../articles/gpbiometrics-workflow.html">gpbiometrics workflow</a></li>
     <li><a class="dropdown-item" href="../articles/plot-gallery.html">Plot gallery</a></li>
   </ul>
@@ -55,7 +55,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
 
-      <h1>Experimental cluster-permutation prototype</h1>
+      <h1>Cluster-permutation workflow</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/stefanosbalaskas/gpbiometrics/blob/HEAD/vignettes/articles/cluster-permutation.Rmd" class="external-link"><code>vignettes/articles/cluster-permutation.Rmd</code></a></small>
@@ -67,80 +67,158 @@
 <div class="section level2">
 <h2 id="purpose">Purpose<a class="anchor" aria-label="anchor" href="#purpose"></a>
 </h2>
-<p>This article demonstrates the experimental cluster-permutation
-prototype in gpbiometrics.</p>
-<p>The implementation is deliberately narrow. It currently supports
-two-condition, within-subject, one-dimensional time-course comparisons
-using participant-level condition time courses.</p>
+<p>This article demonstrates the conservative cluster-permutation
+workflow in <code>gpbiometrics</code> for two-condition, one-dimensional
+time-course data.</p>
+<p>The workflow is intentionally narrow: participant-level time courses,
+two conditions, one temporal dimension, cluster mass based on time-wise
+test statistics, permutation-based global inference, and descriptive
+interpretation of cluster timing.</p>
+<p>The goal is not to replace specialist EEG, MEG, pupillometry, or
+mixed-model permutation toolboxes. The goal is to provide a transparent,
+reproducible, and guarded workflow for Gazepoint-derived time-course
+signals.</p>
 </div>
 <div class="section level2">
 <h2 id="interpretation-warning">Interpretation warning<a class="anchor" aria-label="anchor" href="#interpretation-warning"></a>
 </h2>
-<p>A significant cluster indicates evidence against the global null of
-no condition difference anywhere in the tested time range under the
-permutation scheme.</p>
-<p>It does not identify a precise onset, offset, latency, or
-physiological event boundary. Cluster timing should be treated as
-descriptive.</p>
+<p>A significant cluster-permutation result indicates evidence against
+the global null hypothesis of no condition difference anywhere in the
+tested time range, under the implemented permutation scheme.</p>
+<p>It does <strong>not</strong> prove that an effect begins or ends
+exactly at the reported cluster boundaries. Cluster timing should be
+described as a descriptive interval, not as a precise physiological,
+attentional, or cognitive onset or offset.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/stefanosbalaskas/gpbiometrics" class="external-link">gpbiometrics</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="synthetic-example">Synthetic example<a class="anchor" aria-label="anchor" href="#synthetic-example"></a>
+<h2 id="simulate-example-data">Simulate example data<a class="anchor" aria-label="anchor" href="#simulate-example-data"></a>
 </h2>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/stefanosbalaskas/gpbiometrics" class="external-link">gpbiometrics</a></span><span class="op">)</span></span>
+<p>We first create a small synthetic two-condition time-course data set.
+The example is deliberately synthetic so that the vignette can run
+without private participant data.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html" class="external-link">expand.grid</a></span><span class="op">(</span></span>
-<span>  participant <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sprintf.html" class="external-link">sprintf</a></span><span class="op">(</span><span class="st">"P%02d"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">12</span><span class="op">)</span>,</span>
-<span>  condition <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span><span class="op">)</span>,</span>
-<span>  time <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">60</span>,</span>
-<span>  KEEP.OUT.ATTRS <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simulate_gazepoint_cluster_timecourse_data.html">simulate_gazepoint_cluster_timecourse_data</a></span><span class="op">(</span></span>
+<span>  n_subjects <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  n_time <span class="op">=</span> <span class="fl">60</span>,</span>
+<span>  effect_start <span class="op">=</span> <span class="fl">25</span>,</span>
+<span>  effect_end <span class="op">=</span> <span class="fl">38</span>,</span>
+<span>  seed <span class="op">=</span> <span class="fl">123</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">subject_shift</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">12</span>, <span class="fl">0</span>, <span class="fl">0.15</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">subject_shift</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sprintf.html" class="external-link">sprintf</a></span><span class="op">(</span><span class="st">"P%02d"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">12</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">effect_window</span> <span class="op">&lt;-</span> <span class="va">dat</span><span class="op">$</span><span class="va">condition</span> <span class="op">==</span> <span class="st">"A"</span> <span class="op">&amp;</span> <span class="va">dat</span><span class="op">$</span><span class="va">time</span> <span class="op">&gt;=</span> <span class="fl">25</span> <span class="op">&amp;</span> <span class="va">dat</span><span class="op">$</span><span class="va">time</span> <span class="op">&lt;=</span> <span class="fl">38</span></span>
-<span></span>
-<span><span class="va">dat</span><span class="op">$</span><span class="va">value</span> <span class="op">&lt;-</span> <span class="va">subject_shift</span><span class="op">[</span><span class="va">dat</span><span class="op">$</span><span class="va">participant</span><span class="op">]</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">dat</span><span class="op">)</span>, <span class="fl">0</span>, <span class="fl">0.18</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">effect_window</span>, <span class="fl">1.20</span>, <span class="fl">0</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">dat</span><span class="op">)</span></span>
+<span><span class="co">#&gt;   subject condition time true_effect       value</span></span>
+<span><span class="co">#&gt; 1     S01         A    1           0  0.02018967</span></span>
+<span><span class="co">#&gt; 2     S02         A    1           0 -0.01327129</span></span>
+<span><span class="co">#&gt; 3     S03         A    1           0  0.16734062</span></span>
+<span><span class="co">#&gt; 4     S04         A    1           0  0.73239235</span></span>
+<span><span class="co">#&gt; 5     S05         A    1           0  0.23146213</span></span>
+<span><span class="co">#&gt; 6     S06         A    1           0 -0.35788062</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="prepare-data">Prepare data<a class="anchor" aria-label="anchor" href="#prepare-data"></a>
+<h2 id="audit-the-time-course-grid">Audit the time-course grid<a class="anchor" aria-label="anchor" href="#audit-the-time-course-grid"></a>
 </h2>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<p>Cluster-permutation tests require a consistent
+participant-by-condition-by-time grid. The audit helper checks whether
+the expected cells are present and whether duplicate cells exist.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">grid_audit</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/audit_gazepoint_timecourse_grid.html">audit_gazepoint_timecourse_grid</a></span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">dat</span>,</span>
+<span>  subject <span class="op">=</span> <span class="st">"subject"</span>,</span>
+<span>  condition <span class="op">=</span> <span class="st">"condition"</span>,</span>
+<span>  time <span class="op">=</span> <span class="st">"time"</span>,</span>
+<span>  value <span class="op">=</span> <span class="st">"value"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">grid_audit</span></span>
+<span><span class="co">#&gt; Gazepoint time-course grid audit</span></span>
+<span><span class="co">#&gt; --------------------------------</span></span>
+<span><span class="co">#&gt;  n_rows n_subjects n_conditions n_time_bins expected_cells</span></span>
+<span><span class="co">#&gt;    1440         12            2          60           1440</span></span>
+<span><span class="co">#&gt;  observed_unique_cells missing_cells duplicate_cells missing_values</span></span>
+<span><span class="co">#&gt;                   1440             0               0              0</span></span>
+<span><span class="co">#&gt;  complete_grid</span></span>
+<span><span class="co">#&gt;           TRUE</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; The grid is complete.</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="diagnose-the-design">Diagnose the design<a class="anchor" aria-label="anchor" href="#diagnose-the-design"></a>
+</h2>
+<p>The design diagnostic is a pre-analysis guardrail. It checks whether
+the data match the current supported scope: two conditions, repeated
+participant observations, and a common time grid.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">design_diagnostic</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/diagnose_gazepoint_cluster_design.html">diagnose_gazepoint_cluster_design</a></span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">dat</span>,</span>
+<span>  subject <span class="op">=</span> <span class="st">"subject"</span>,</span>
+<span>  condition <span class="op">=</span> <span class="st">"condition"</span>,</span>
+<span>  time <span class="op">=</span> <span class="st">"time"</span>,</span>
+<span>  value <span class="op">=</span> <span class="st">"value"</span>,</span>
+<span>  design <span class="op">=</span> <span class="st">"within"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">design_diagnostic</span></span>
+<span><span class="co">#&gt; Gazepoint cluster-permutation design diagnostic</span></span>
+<span><span class="co">#&gt; ------------------------------------------------</span></span>
+<span><span class="co">#&gt; Design: within </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;                              check passed severity</span></span>
+<span><span class="co">#&gt;                     two_conditions   TRUE       ok</span></span>
+<span><span class="co">#&gt;                      complete_grid   TRUE       ok</span></span>
+<span><span class="co">#&gt;                   minimum_subjects   TRUE       ok</span></span>
+<span><span class="co">#&gt;  within_subject_condition_presence   TRUE       ok</span></span>
+<span><span class="co">#&gt;        supported_by_current_runner   TRUE       ok</span></span>
+<span><span class="co">#&gt;                                                                                      message</span></span>
+<span><span class="co">#&gt;                                                          Exactly two conditions are present.</span></span>
+<span><span class="co">#&gt;                               Every participant-condition-time cell is present exactly once.</span></span>
+<span><span class="co">#&gt;                                                        At least 10 participants are present.</span></span>
+<span><span class="co">#&gt;                                                Every participant appears in every condition.</span></span>
+<span><span class="co">#&gt;  The current runner supports the diagnosed within-subject, two-condition time-course design.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; No blocking design errors were detected.</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="prepare-participant-level-time-course-data">Prepare participant-level time-course data<a class="anchor" aria-label="anchor" href="#prepare-participant-level-time-course-data"></a>
+</h2>
+<p>The preparation helper keeps the analysis at the
+participant-by-condition-by-time level. If raw trial-level samples are
+supplied, repeated cells can be aggregated before the cluster test.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">prepared</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_gazepoint_timecourse_test_data.html">prepare_gazepoint_timecourse_test_data</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">dat</span>,</span>
 <span>  outcome_col <span class="op">=</span> <span class="st">"value"</span>,</span>
 <span>  time_col <span class="op">=</span> <span class="st">"time"</span>,</span>
 <span>  condition_col <span class="op">=</span> <span class="st">"condition"</span>,</span>
-<span>  participant_col <span class="op">=</span> <span class="st">"participant"</span>,</span>
-<span>  condition_a <span class="op">=</span> <span class="st">"A"</span>,</span>
-<span>  condition_b <span class="op">=</span> <span class="st">"B"</span></span>
+<span>  participant_col <span class="op">=</span> <span class="st">"subject"</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">prepared</span><span class="op">)</span></span>
 <span><span class="co">#&gt;   participant condition time       value</span></span>
-<span><span class="co">#&gt; 1         P01         A    1 -0.01193249</span></span>
-<span><span class="co">#&gt; 2         P01         A    2  0.01563383</span></span>
-<span><span class="co">#&gt; 3         P01         A    3 -0.01573624</span></span>
-<span><span class="co">#&gt; 4         P01         A    4 -0.12375893</span></span>
-<span><span class="co">#&gt; 5         P01         A    5 -0.15251212</span></span>
-<span><span class="co">#&gt; 6         P01         A    6 -0.07664942</span></span></code></pre></div>
+<span><span class="co">#&gt; 1         S01         A    1  0.02018967</span></span>
+<span><span class="co">#&gt; 2         S01         A    2  0.09739217</span></span>
+<span><span class="co">#&gt; 3         S01         A    3  0.04344428</span></span>
+<span><span class="co">#&gt; 4         S01         A    4 -0.18120203</span></span>
+<span><span class="co">#&gt; 5         S01         A    5 -0.23022769</span></span>
+<span><span class="co">#&gt; 6         S01         A    6 -0.04747587</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="run-the-test">Run the test<a class="anchor" aria-label="anchor" href="#run-the-test"></a>
+<h2 id="run-the-cluster-permutation-test">Run the cluster-permutation test<a class="anchor" aria-label="anchor" href="#run-the-cluster-permutation-test"></a>
 </h2>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/run_gazepoint_cluster_permutation.html">run_gazepoint_cluster_permutation</a></span><span class="op">(</span></span>
+<p>The example uses a small number of permutations so the vignette
+builds quickly. For real analyses, use more permutations and report the
+exact settings.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">cluster_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/run_gazepoint_cluster_permutation.html">run_gazepoint_cluster_permutation</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">prepared</span>,</span>
 <span>  outcome_col <span class="op">=</span> <span class="st">"value"</span>,</span>
 <span>  time_col <span class="op">=</span> <span class="st">"time"</span>,</span>
 <span>  condition_col <span class="op">=</span> <span class="st">"condition"</span>,</span>
 <span>  participant_col <span class="op">=</span> <span class="st">"participant"</span>,</span>
+<span>  design <span class="op">=</span> <span class="st">"within"</span>,</span>
 <span>  condition_a <span class="op">=</span> <span class="st">"A"</span>,</span>
 <span>  condition_b <span class="op">=</span> <span class="st">"B"</span>,</span>
 <span>  n_permutations <span class="op">=</span> <span class="fl">199</span>,</span>
@@ -149,7 +227,7 @@ descriptive.</p>
 <span>  seed <span class="op">=</span> <span class="fl">123</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">result</span></span>
+<span><span class="va">cluster_result</span></span>
 <span><span class="co">#&gt; Gazepoint cluster permutation test</span></span>
 <span><span class="co">#&gt; Design: within </span></span>
 <span><span class="co">#&gt; Conditions: A - B </span></span>
@@ -158,67 +236,195 @@ descriptive.</p>
 <span><span class="co">#&gt; Permutations: 199 </span></span>
 <span><span class="co">#&gt; Cluster-forming alpha: 0.05 </span></span>
 <span><span class="co">#&gt; Cluster-level alpha: 0.05 </span></span>
-<span><span class="co">#&gt; Clusters: 2 </span></span>
-<span><span class="co">#&gt;  cluster_id direction start_time end_time n_timepoints       mass p_value</span></span>
-<span><span class="co">#&gt;           1  positive         25       38           14 222.631208   0.005</span></span>
-<span><span class="co">#&gt;           2  positive         53       53            1   2.647591   0.685</span></span>
+<span><span class="co">#&gt; Clusters: 3 </span></span>
+<span><span class="co">#&gt;  cluster_id direction start_time end_time n_timepoints      mass p_value</span></span>
+<span><span class="co">#&gt;           1  positive         53       53            1  2.647591   0.735</span></span>
+<span><span class="co">#&gt;           2  negative         25       25            1  2.815247   0.655</span></span>
+<span><span class="co">#&gt;           3  negative         27       38           12 40.347172   0.005</span></span>
 <span><span class="co">#&gt;  significant</span></span>
-<span><span class="co">#&gt;         TRUE</span></span>
-<span><span class="co">#&gt;        FALSE</span></span></code></pre></div>
+<span><span class="co">#&gt;        FALSE</span></span>
+<span><span class="co">#&gt;        FALSE</span></span>
+<span><span class="co">#&gt;         TRUE</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="summarize-clusters">Summarize clusters<a class="anchor" aria-label="anchor" href="#summarize-clusters"></a>
 </h2>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/summarize_gazepoint_time_clusters.html">summarize_gazepoint_time_clusters</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span>
+<p>The cluster summary reports detected clusters, cluster mass, and
+permutation p-values. The time range is useful for description, but it
+should not be interpreted as an exact onset or offset.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">cluster_summary</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/summarize_gazepoint_time_clusters.html">summarize_gazepoint_time_clusters</a></span><span class="op">(</span><span class="va">cluster_result</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">cluster_summary</span></span>
 <span><span class="co">#&gt;   cluster_id direction start_index end_index start_time end_time n_timepoints</span></span>
-<span><span class="co">#&gt; 1          1  positive          25        38         25       38           14</span></span>
-<span><span class="co">#&gt; 2          2  positive          53        53         53       53            1</span></span>
-<span><span class="co">#&gt;   signed_mass       mass p_value significant</span></span>
-<span><span class="co">#&gt; 1  222.631208 222.631208   0.005        TRUE</span></span>
-<span><span class="co">#&gt; 2    2.647591   2.647591   0.685       FALSE</span></span></code></pre></div>
+<span><span class="co">#&gt; 1          1  positive          53        53         53       53            1</span></span>
+<span><span class="co">#&gt; 2          2  negative          25        25         25       25            1</span></span>
+<span><span class="co">#&gt; 3          3  negative          27        38         27       38           12</span></span>
+<span><span class="co">#&gt;   signed_mass      mass p_value significant</span></span>
+<span><span class="co">#&gt; 1    2.647591  2.647591   0.735       FALSE</span></span>
+<span><span class="co">#&gt; 2   -2.815247  2.815247   0.655       FALSE</span></span>
+<span><span class="co">#&gt; 3  -40.347172 40.347172   0.005        TRUE</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="plot-result">Plot result<a class="anchor" aria-label="anchor" href="#plot-result"></a>
+<h2 id="plot-the-result">Plot the result<a class="anchor" aria-label="anchor" href="#plot-the-result"></a>
 </h2>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_gazepoint_cluster_permutation.html">plot_gazepoint_cluster_permutation</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
-<p><img src="cluster-permutation_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" alt="" width="768"></p>
+<p>The plotting helper overlays the two time courses and the detected
+cluster information. Use the plot to communicate the pattern, not to
+claim exact temporal localization.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_gazepoint_cluster_permutation.html">plot_gazepoint_cluster_permutation</a></span><span class="op">(</span><span class="va">cluster_result</span><span class="op">)</span></span></code></pre></div>
+<p><img src="cluster-permutation_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" alt="" width="672"></p>
 </div>
 <div class="section level2">
-<h2 id="current-limitations">Current limitations<a class="anchor" aria-label="anchor" href="#current-limitations"></a>
+<h2 id="inspect-the-null-distribution">Inspect the null distribution<a class="anchor" aria-label="anchor" href="#inspect-the-null-distribution"></a>
 </h2>
-<p>This prototype does not yet support:</p>
-<ul>
-<li>between-subject designs</li>
-<li>more than two conditions</li>
-<li>factorial designs</li>
-<li>mixed-effects permutation models</li>
-<li>threshold-free cluster enhancement</li>
-<li>exact onset or offset inference</li>
-<li>trial-level exchangeability schemes</li>
-<li>irregular or incomplete time grids</li>
-</ul>
+<p>The null-distribution plot shows the permutation distribution of the
+maximum cluster mass. This helps users understand the family-wise
+comparison used to evaluate observed clusters.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_gazepoint_cluster_null_distribution.html">plot_gazepoint_cluster_null_distribution</a></span><span class="op">(</span><span class="va">cluster_result</span><span class="op">)</span></span></code></pre></div>
+<p><img src="cluster-permutation_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" alt="" width="672"></p>
+</div>
+<div class="section level2">
+<h2 id="check-threshold-sensitivity">Check threshold sensitivity<a class="anchor" aria-label="anchor" href="#check-threshold-sensitivity"></a>
+</h2>
+<p>Cluster-forming thresholds affect which adjacent time points enter
+clusters. A sensitivity check helps document whether the conclusion is
+highly dependent on one arbitrary threshold.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">threshold_sensitivity</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/run_gazepoint_cluster_threshold_sensitivity.html">run_gazepoint_cluster_threshold_sensitivity</a></span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">prepared</span>,</span>
+<span>  dv <span class="op">=</span> <span class="st">"value"</span>,</span>
+<span>  time <span class="op">=</span> <span class="st">"time"</span>,</span>
+<span>  condition <span class="op">=</span> <span class="st">"condition"</span>,</span>
+<span>  subject <span class="op">=</span> <span class="st">"participant"</span>,</span>
+<span>  thresholds <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.025</span>, <span class="fl">0.05</span>, <span class="fl">0.10</span><span class="op">)</span>,</span>
+<span>  cluster_alpha <span class="op">=</span> <span class="fl">0.05</span>,</span>
+<span>  seed <span class="op">=</span> <span class="fl">123</span>,</span>
+<span>  design <span class="op">=</span> <span class="st">"within"</span>,</span>
+<span>  condition_a <span class="op">=</span> <span class="st">"A"</span>,</span>
+<span>  condition_b <span class="op">=</span> <span class="st">"B"</span>,</span>
+<span>  n_permutations <span class="op">=</span> <span class="fl">99</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">threshold_sensitivity</span></span>
+<span><span class="co">#&gt; Gazepoint cluster-permutation threshold sensitivity</span></span>
+<span><span class="co">#&gt; ----------------------------------------------------</span></span>
+<span><span class="co">#&gt;  threshold n_clusters min_p_value n_significant</span></span>
+<span><span class="co">#&gt;      0.025          6        0.01             3</span></span>
+<span><span class="co">#&gt;      0.050          3        0.01             1</span></span>
+<span><span class="co">#&gt;      0.100          2        0.01             1</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="generate-conservative-report-text">Generate conservative report text<a class="anchor" aria-label="anchor" href="#generate-conservative-report-text"></a>
+</h2>
+<p>The reporting helper produces cautious wording. It avoids treating
+cluster boundaries as precise onsets or offsets.</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">cluster_report</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/report_gazepoint_cluster_permutation.html">report_gazepoint_cluster_permutation</a></span><span class="op">(</span><span class="va">cluster_result</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">cluster_report</span></span>
+<span><span class="co">#&gt; The cluster-based permutation test indicated cluster-level evidence of a condition difference in the tested time course: cluster 3 (descriptive time range: 27 to 38, p = .005). The temporal extent of any detected cluster should be interpreted descriptively. The test evaluates evidence against the global null of no condition difference anywhere in the tested time range; it does not provide a precise estimate of effect onset, offset, latency, physiological event boundary, emotion, stress, cognition, diagnosis, or mechanism. Assumptions checked/reported: two-condition comparison; participant-level time courses; common participant-condition-time grid; permutation scheme matched to the supported design; cluster timing interpreted descriptively.</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="export-results">Export results<a class="anchor" aria-label="anchor" href="#export-results"></a>
+</h2>
+<p>For reproducibility, the result object can be exported to a temporary
+folder. In a real project, use a project-level output folder such as
+<code>outputs/cluster_permutation/</code>.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">export_dir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span><span class="st">"gpbiometrics_cluster_export_"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/files2.html" class="external-link">dir.create</a></span><span class="op">(</span><span class="va">export_dir</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">exported_files</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/export_gazepoint_cluster_results.html">export_gazepoint_cluster_results</a></span><span class="op">(</span></span>
+<span>  <span class="va">cluster_result</span>,</span>
+<span>  path <span class="op">=</span> <span class="va">export_dir</span>,</span>
+<span>  prefix <span class="op">=</span> <span class="st">"cluster_example"</span>,</span>
+<span>  overwrite <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">exported_files</span></span>
+<span><span class="co">#&gt;   component</span></span>
+<span><span class="co">#&gt; 1  clusters</span></span>
+<span><span class="co">#&gt; 2  timewise</span></span>
+<span><span class="co">#&gt; 3      null</span></span>
+<span><span class="co">#&gt; 4    params</span></span>
+<span><span class="co">#&gt; 5    report</span></span>
+<span><span class="co">#&gt;                                                                                                                                      file</span></span>
+<span><span class="co">#&gt; 1            C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_clusters.csv</span></span>
+<span><span class="co">#&gt; 2 C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_timewise_statistics.csv</span></span>
+<span><span class="co">#&gt; 3   C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_null_distribution.csv</span></span>
+<span><span class="co">#&gt; 4          C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_parameters.csv</span></span>
+<span><span class="co">#&gt; 5              C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_report.txt</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="external-interoperability">External interoperability<a class="anchor" aria-label="anchor" href="#external-interoperability"></a>
+</h2>
+<p><code>gpbiometrics</code> also includes export helpers for users who
+need to continue in specialist software. These helpers prepare data and
+metadata; they do not claim to run or validate external models.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mne_input</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/export_gazepoint_mne_cluster_input.html">export_gazepoint_mne_cluster_input</a></span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">prepared</span>,</span>
+<span>  outcome_col <span class="op">=</span> <span class="st">"value"</span>,</span>
+<span>  time_col <span class="op">=</span> <span class="st">"time"</span>,</span>
+<span>  condition_col <span class="op">=</span> <span class="st">"condition"</span>,</span>
+<span>  participant_col <span class="op">=</span> <span class="st">"participant"</span>,</span>
+<span>  condition_a <span class="op">=</span> <span class="st">"A"</span>,</span>
+<span>  condition_b <span class="op">=</span> <span class="st">"B"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">mne_input</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "long"              "difference_matrix" "metadata"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">mne_input</span><span class="op">$</span><span class="va">difference_matrix</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">mne_input</span><span class="op">$</span><span class="va">difference_matrix</span><span class="op">)</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="co">#&gt;   participant difference.1 difference.2 difference.3 difference.4 difference.5</span></span>
+<span><span class="co">#&gt; 1         S01   -0.4103243  0.090418986   0.25043962    0.9631278   0.19914925</span></span>
+<span><span class="co">#&gt; 2         S02   -0.7189504 -0.008582942  -0.08275092    0.4803315  -0.74658849</span></span>
+<span><span class="co">#&gt; 3         S03    0.5574513  0.223712471  -0.14192049   -0.5330157   0.03391581</span></span>
+<span><span class="co">#&gt; 4         S04   -0.6534160  0.140769698   0.81765870   -0.5846410  -0.34562261</span></span>
+<span><span class="co">#&gt; 5         S05   -0.6543950  0.260734609   0.31480729   -0.1537900   1.38469789</span></span>
+<span><span class="co">#&gt; 6         S06    1.2881728  0.630607825  -0.60969854   -0.3567696  -0.23855517</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="advanced-guardrails">Advanced guardrails<a class="anchor" aria-label="anchor" href="#advanced-guardrails"></a>
+</h2>
+<p>Some advanced function names are exported deliberately as guardrails.
+They fail safely instead of pretending to provide validated ANOVA,
+mixed-model, TFCE, multidimensional, covariate-adjusted, parallel, or
+onset/offset cluster inference.</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu"><a href="../reference/run_gazepoint_tfce.html">run_gazepoint_tfce</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error : `run_gazepoint_tfce()` is not implemented as a runnable inferential engine in gpbiometrics yet.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; TFCE avoids a fixed cluster-forming threshold but introduces additional parameters and validation requirements. It should not be added until the fixed-threshold cluster workflow has been reviewed and validated.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; The current validated scope is the conservative within-subject, two-condition, one-dimensional time-course workflow implemented in `run_gazepoint_cluster_permutation()`.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Recommended alternative: Use `run_gazepoint_cluster_threshold_sensitivity()` to inspect sensitivity to fixed cluster-forming thresholds.</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="recommended-wording">Recommended wording<a class="anchor" aria-label="anchor" href="#recommended-wording"></a>
 </h2>
-<p>Use cautious wording such as:</p>
+<p>Prefer wording such as:</p>
 <blockquote>
-<p>The cluster-based permutation test indicated evidence of a condition
-difference in the tested time course.</p>
+<p>A two-condition cluster-permutation test indicated evidence of a
+condition difference in the tested time course. The reported cluster
+interval is descriptive and should not be interpreted as a precise onset
+or offset estimate.</p>
 </blockquote>
-<p>Avoid stronger wording such as:</p>
+<p>Avoid wording such as:</p>
 <blockquote>
-<p>The effect began at time X.</p>
+<p>The effect began exactly at time point X and ended exactly at time
+point Y.</p>
 </blockquote>
 </div>
 <div class="section level2">
-<h2 id="development-status">Development status<a class="anchor" aria-label="anchor" href="#development-status"></a>
+<h2 id="current-scope">Current scope<a class="anchor" aria-label="anchor" href="#current-scope"></a>
 </h2>
-<p>This article documents an experimental branch prototype. It should
-not be interpreted as a finalized inferential layer until additional
-validation, review, and documentation are completed.</p>
+<p>The current validated workflow is suitable for conservative
+two-condition time-course analyses. More complex designs should be
+handled with specialist tools or treated as future methodological work,
+not as automatic extensions of this workflow.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
