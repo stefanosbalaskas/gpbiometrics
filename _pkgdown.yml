@@ -16,8 +16,9 @@ reference:
 - title: "Experimental statistical extensions"
   desc: >
     Experimental helpers for conservative time-course inference on
-    Gazepoint-derived signals. These functions are exploratory and should
-    be interpreted cautiously.
+    Gazepoint-derived signals. Advanced functions in this section include
+    guardrails and export helpers; they should not be interpreted as
+    validated advanced inferential engines.
   contents:
   - prepare_gazepoint_timecourse_test_data
   - run_gazepoint_cluster_permutation
@@ -30,6 +31,17 @@ reference:
   - run_gazepoint_cluster_threshold_sensitivity
   - simulate_gazepoint_cluster_timecourse_data
   - export_gazepoint_cluster_results
+  - run_gazepoint_cluster_permutation_anova
+  - run_gazepoint_cluster_permutation_lmer
+  - run_gazepoint_tfce
+  - run_gazepoint_multidimensional_cluster_permutation
+  - estimate_gazepoint_cluster_onset
+  - estimate_gazepoint_cluster_offset
+  - run_gazepoint_cluster_permutation_covariate_adjusted
+  - run_gazepoint_cluster_permutation_parallel
+  - export_gazepoint_mne_cluster_input
+  - export_gazepoint_permuco_cluster_input
+  - export_gazepoint_permutes_cluster_input
 - title: Data import, cleaning, and simulation
   contents:
   - import_gazepoint_data

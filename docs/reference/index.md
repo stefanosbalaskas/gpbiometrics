@@ -3,8 +3,9 @@
 ## Experimental statistical extensions
 
 Experimental helpers for conservative time-course inference on
-Gazepoint-derived signals. These functions are exploratory and should be
-interpreted cautiously.
+Gazepoint-derived signals. Advanced functions in this section include
+guardrails and export helpers; they should not be interpreted as
+validated advanced inferential engines.
 
 - [`prepare_gazepoint_timecourse_test_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_timecourse_test_data.md)
   : Prepare Gazepoint time-course data for cluster permutation testing
@@ -32,6 +33,28 @@ interpreted cautiously.
   examples
 - [`export_gazepoint_cluster_results()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_cluster_results.md)
   : Export cluster-permutation result components
+- [`run_gazepoint_cluster_permutation_anova()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_cluster_permutation_anova.md)
+  : Guardrail for cluster-permutation ANOVA
+- [`run_gazepoint_cluster_permutation_lmer()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_cluster_permutation_lmer.md)
+  : Guardrail for mixed-model cluster permutation
+- [`run_gazepoint_tfce()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_tfce.md)
+  : Guardrail for threshold-free cluster enhancement
+- [`run_gazepoint_multidimensional_cluster_permutation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_multidimensional_cluster_permutation.md)
+  : Guardrail for multidimensional cluster permutation
+- [`estimate_gazepoint_cluster_onset()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_cluster_onset.md)
+  : Guardrail against exact cluster-onset estimation
+- [`estimate_gazepoint_cluster_offset()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_cluster_offset.md)
+  : Guardrail against exact cluster-offset estimation
+- [`run_gazepoint_cluster_permutation_covariate_adjusted()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_cluster_permutation_covariate_adjusted.md)
+  : Guardrail for covariate-adjusted cluster permutation
+- [`run_gazepoint_cluster_permutation_parallel()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_cluster_permutation_parallel.md)
+  : Guardrail for high-performance cluster permutation
+- [`export_gazepoint_mne_cluster_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_mne_cluster_input.md)
+  : Export time-course data for MNE cluster-permutation workflows
+- [`export_gazepoint_permuco_cluster_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_permuco_cluster_input.md)
+  : Export time-course data for permuco cluster workflows
+- [`export_gazepoint_permutes_cluster_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_permutes_cluster_input.md)
+  : Export time-course data for permutes cluster workflows
 
 ## Data import, cleaning, and simulation
 

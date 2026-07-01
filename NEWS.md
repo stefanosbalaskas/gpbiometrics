@@ -1,5 +1,7 @@
 # gpbiometrics 0.2.0.9000
 
+* Added advanced cluster-permutation guardrails and external export helpers. The guardrail functions explicitly prevent unsupported ANOVA, mixed-model, TFCE, multidimensional, covariate-adjusted, parallel, and onset/offset cluster claims while directing users back to the validated two-condition time-course workflow. Added export helpers for MNE-, permuco-, and permutes-style external workflows.
+
 * Added cluster-permutation diagnostics, reporting, sensitivity, simulation, null-distribution plotting, and export helpers: `audit_gazepoint_timecourse_grid()`, `diagnose_gazepoint_cluster_design()`, `plot_gazepoint_cluster_null_distribution()`, `report_gazepoint_cluster_permutation()`, `run_gazepoint_cluster_threshold_sensitivity()`, `simulate_gazepoint_cluster_timecourse_data()`, and `export_gazepoint_cluster_results()`.
 
 ## Experimental statistical extensions
