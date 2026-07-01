@@ -17,12 +17,19 @@ reference:
   desc: >
     Experimental helpers for conservative time-course inference on
     Gazepoint-derived signals. These functions are exploratory and should
-    not be interpreted as finalized inferential tooling.
+    be interpreted cautiously.
   contents:
   - prepare_gazepoint_timecourse_test_data
   - run_gazepoint_cluster_permutation
   - summarize_gazepoint_time_clusters
   - plot_gazepoint_cluster_permutation
+  - audit_gazepoint_timecourse_grid
+  - diagnose_gazepoint_cluster_design
+  - plot_gazepoint_cluster_null_distribution
+  - report_gazepoint_cluster_permutation
+  - run_gazepoint_cluster_threshold_sensitivity
+  - simulate_gazepoint_cluster_timecourse_data
+  - export_gazepoint_cluster_results
 - title: Data import, cleaning, and simulation
   contents:
   - import_gazepoint_data

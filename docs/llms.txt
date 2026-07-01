@@ -395,8 +395,8 @@ The archived software release is available at DOI:
 ## Experimental statistical extensions
 
 Experimental helpers for conservative time-course inference on
-Gazepoint-derived signals. These functions are exploratory and should
-not be interpreted as finalized inferential tooling.
+Gazepoint-derived signals. These functions are exploratory and should be
+interpreted cautiously.
 
 - [`prepare_gazepoint_timecourse_test_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_timecourse_test_data.md)
   : Prepare Gazepoint time-course data for cluster permutation testing
@@ -407,6 +407,23 @@ not be interpreted as finalized inferential tooling.
   : Summarize Gazepoint time clusters
 - [`plot_gazepoint_cluster_permutation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_cluster_permutation.md)
   : Plot Gazepoint cluster permutation results
+- [`audit_gazepoint_timecourse_grid()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_timecourse_grid.md)
+  : Audit the participant-condition-time grid for cluster-permutation
+  analysis
+- [`diagnose_gazepoint_cluster_design()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/diagnose_gazepoint_cluster_design.md)
+  : Diagnose whether a design is suitable for cluster-permutation
+  analysis
+- [`plot_gazepoint_cluster_null_distribution()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_cluster_null_distribution.md)
+  : Plot the cluster-permutation null distribution
+- [`report_gazepoint_cluster_permutation()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/report_gazepoint_cluster_permutation.md)
+  : Create conservative reporting text for a cluster-permutation result
+- [`run_gazepoint_cluster_threshold_sensitivity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_cluster_threshold_sensitivity.md)
+  : Run threshold-sensitivity checks for cluster-permutation analysis
+- [`simulate_gazepoint_cluster_timecourse_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/simulate_gazepoint_cluster_timecourse_data.md)
+  : Simulate two-condition time-course data for cluster-permutation
+  examples
+- [`export_gazepoint_cluster_results()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_cluster_results.md)
+  : Export cluster-permutation result components
 
 ## Data import, cleaning, and simulation
 
