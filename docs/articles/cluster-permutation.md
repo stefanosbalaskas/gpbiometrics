@@ -84,7 +84,7 @@ grid_audit
 #>                   1440             0               0              0
 #>  complete_grid
 #>           TRUE
-#>
+#> 
 #> The grid is complete.
 ```
 
@@ -108,8 +108,8 @@ design_diagnostic <- diagnose_gazepoint_cluster_design(
 design_diagnostic
 #> Gazepoint cluster-permutation design diagnostic
 #> ------------------------------------------------
-#> Design: within
-#>
+#> Design: within 
+#> 
 #>                              check passed severity
 #>                     two_conditions   TRUE       ok
 #>                      complete_grid   TRUE       ok
@@ -122,7 +122,7 @@ design_diagnostic
 #>                                                        At least 10 participants are present.
 #>                                                Every participant appears in every condition.
 #>  The current runner supports the diagnosed within-subject, two-condition time-course design.
-#>
+#> 
 #> No blocking design errors were detected.
 ```
 
@@ -177,14 +177,14 @@ cluster_result <- run_gazepoint_cluster_permutation(
 
 cluster_result
 #> Gazepoint cluster permutation test
-#> Design: within
-#> Conditions: A - B
-#> Participants: 12
-#> Time points: 60
-#> Permutations: 199
-#> Cluster-forming alpha: 0.05
-#> Cluster-level alpha: 0.05
-#> Clusters: 3
+#> Design: within 
+#> Conditions: A - B 
+#> Participants: 12 
+#> Time points: 60 
+#> Permutations: 199 
+#> Cluster-forming alpha: 0.05 
+#> Cluster-level alpha: 0.05 
+#> Clusters: 3 
 #>  cluster_id direction start_time end_time n_timepoints      mass p_value
 #>           1  positive         53       53            1  2.647591   0.735
 #>           2  negative         25       25            1  2.815247   0.655
@@ -312,12 +312,12 @@ exported_files
 #> 3      null
 #> 4    params
 #> 5    report
-#>                                                                                                                                      file
-#> 1            C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_clusters.csv
-#> 2 C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_timewise_statistics.csv
-#> 3   C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_null_distribution.csv
-#> 4          C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_parameters.csv
-#> 5              C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpE7jjhm\\gpbiometrics_cluster_export_5df463d918ca/cluster_example_report.txt
+#>                                                                                                                                     file
+#> 1            C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpYVObz5\\gpbiometrics_cluster_export_9e1c6e23cf0/cluster_example_clusters.csv
+#> 2 C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpYVObz5\\gpbiometrics_cluster_export_9e1c6e23cf0/cluster_example_timewise_statistics.csv
+#> 3   C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpYVObz5\\gpbiometrics_cluster_export_9e1c6e23cf0/cluster_example_null_distribution.csv
+#> 4          C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpYVObz5\\gpbiometrics_cluster_export_9e1c6e23cf0/cluster_example_parameters.csv
+#> 5              C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpYVObz5\\gpbiometrics_cluster_export_9e1c6e23cf0/cluster_example_report.txt
 ```
 
 ## External interoperability
@@ -361,11 +361,11 @@ onset/offset cluster inference.
 
 try(run_gazepoint_tfce())
 #> Error : `run_gazepoint_tfce()` is not implemented as a runnable inferential engine in gpbiometrics yet.
-#>
+#> 
 #> TFCE avoids a fixed cluster-forming threshold but introduces additional parameters and validation requirements. It should not be added until the fixed-threshold cluster workflow has been reviewed and validated.
-#>
+#> 
 #> The current validated scope is the conservative within-subject, two-condition, one-dimensional time-course workflow implemented in `run_gazepoint_cluster_permutation()`.
-#>
+#> 
 #> Recommended alternative: Use `run_gazepoint_cluster_threshold_sensitivity()` to inspect sensitivity to fixed cluster-forming thresholds.
 ```
 

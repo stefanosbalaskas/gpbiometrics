@@ -1126,6 +1126,50 @@ Short-name aliases and lightweight wrappers for roadmap discoverability.
 - [`prepare_gazepoint_mixed_model_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_mixed_model_data.md)
   : Prepare Gazepoint data for mixed-model analysis
 
+## Export-folder intelligence
+
+Helpers for profiling Gazepoint export folders before full workflow
+execution.
+
+- [`profile_gazepoint_export_folder()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/profile_gazepoint_export_folder.md)
+  : Profile a Gazepoint export folder before analysis
+- [`compare_gazepoint_export_profiles()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_export_profiles.md)
+  : Compare Gazepoint export-folder profiles
+- [`write_gazepoint_export_profile()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_export_profile.md)
+  : Write a Gazepoint export-folder profile to disk
+- [`plot_gazepoint_export_profile()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_export_profile.md)
+  : Plot a Gazepoint export-folder profile
+
+## Analysis decision logs
+
+Helpers for recording exclusions, preprocessing choices, thresholds,
+model settings, cluster-permutation settings, and reviewer-facing
+workflow decisions.
+
+- [`create_gazepoint_analysis_decision_log()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_analysis_decision_log.md)
+  : Create a Gazepoint analysis decision log
+- [`add_gazepoint_decision()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/add_gazepoint_decision.md)
+  : Add a decision to a Gazepoint analysis decision log
+- [`summarise_gazepoint_decision_log()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_decision_log.md)
+  : Summarise a Gazepoint analysis decision log
+- [`write_gazepoint_decision_log()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_decision_log.md)
+  : Write a Gazepoint analysis decision log to disk
+
+## Design and event coverage audits
+
+Helpers for checking participant, trial, condition, session, and event
+coverage before modelling, event-window analysis, or time-course
+workflows.
+
+- [`audit_gazepoint_experiment_design()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_experiment_design.md)
+  : Audit Gazepoint experiment design structure
+- [`audit_gazepoint_event_coverage()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_event_coverage.md)
+  : Audit Gazepoint event coverage
+- [`audit_gazepoint_condition_balance()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_condition_balance.md)
+  : Audit Gazepoint condition balance
+- [`plot_gazepoint_design_coverage()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_design_coverage.md)
+  : Plot Gazepoint design and event-coverage audits
+
 # Articles
 
 ### All vignettes

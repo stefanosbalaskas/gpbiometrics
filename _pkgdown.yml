@@ -389,3 +389,32 @@ reference:
   - interpolate_gazepoint_pupil_blinks
   - respiration_from_ppg
   - prepare_gazepoint_mixed_model_data
+
+- title: Export-folder intelligence
+  desc: >
+    Helpers for profiling Gazepoint export folders before full workflow execution.
+  contents:
+  - profile_gazepoint_export_folder
+  - compare_gazepoint_export_profiles
+  - write_gazepoint_export_profile
+  - plot_gazepoint_export_profile
+
+- title: Analysis decision logs
+  desc: >
+    Helpers for recording exclusions, preprocessing choices, thresholds, model settings,
+    cluster-permutation settings, and reviewer-facing workflow decisions.
+  contents:
+  - create_gazepoint_analysis_decision_log
+  - add_gazepoint_decision
+  - summarise_gazepoint_decision_log
+  - write_gazepoint_decision_log
+
+- title: Design and event coverage audits
+  desc: >
+    Helpers for checking participant, trial, condition, session, and event coverage
+    before modelling, event-window analysis, or time-course workflows.
+  contents:
+  - audit_gazepoint_experiment_design
+  - audit_gazepoint_event_coverage
+  - audit_gazepoint_condition_balance
+  - plot_gazepoint_design_coverage

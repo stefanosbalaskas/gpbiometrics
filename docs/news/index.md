@@ -124,6 +124,8 @@
 
 ## gpbiometrics 0.1.0
 
+CRAN release: 2026-07-04
+
 - Added HeartPy-style Gazepoint pulse/PPG workflows, including input
   preparation, clipping reconstruction, peak enhancement,
   Butterworth-style filtering, Hampel correction, adaptive peak

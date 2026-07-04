@@ -9,6 +9,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/LICENSE-text.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/LICENSE.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/news/index.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/add_gazepoint_decision.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/align_gazepoint_biometrics_to_ttl.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/align_gazepoint_streams_by_events.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/analyze_gazepoint_ac_susceptance.html</loc></url>
@@ -21,9 +22,12 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_missingness.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_sampling.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_sync_drift.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_condition_balance.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_distributional_drift.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_eda_artifacts.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_engagement_dial.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_event_coverage.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_experiment_design.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_export_schema.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_gsr_quality.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_gsr_units.html</loc></url>
@@ -51,6 +55,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/clean_gazepoint_rr_intervals.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/combine_gazepoint_marker_channels_pspm_style.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_conditions_bootstrap.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_export_profiles.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_hr_ibi_consistency.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_gazepoint_pyhrv_psd_methods.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_engagement_index.html</loc></url>
@@ -94,6 +99,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_eda_temperature.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_ppg_hampel.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_rri_artifacts_local.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_analysis_decision_log.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_analysis_manifest.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_checklist.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_feature_inventory.html</loc></url>
@@ -214,8 +220,10 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_biometric_signals.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_cluster_null_distribution.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_cluster_permutation.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_design_coverage.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_eda_decomposition.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_eda_gram.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_export_profile.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_multimodal_timeline.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_ppg_breathing.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_ppg_peak_detection.html</loc></url>
@@ -249,6 +257,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/preprocess_gazepoint_scr_pspm_style.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/process_gazepoint_ppg_heartpy_style.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/process_gazepoint_ppg_segmentwise.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/profile_gazepoint_export_folder.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/recommend_gazepoint_biometric_exclusions.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/reconstruct_gazepoint_ppg_clipping.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/regress_gazepoint_pupil_luminance.html</loc></url>
@@ -303,6 +312,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_biometrics_feature_inventory.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_biometrics_workflow.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_biometric_validity.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_decision_log.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_dial_windows.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_engagement_windows.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_full_biometric_windows.html</loc></url>
@@ -329,6 +339,8 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_biometrics.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_format.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_biometrics_report_tables.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_decision_log.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_export_profile.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/ROADMAP_STATUS.html</loc></url>
 </urlset>
 
