@@ -437,3 +437,7 @@ reference:
   - smooth_gazepoint_pupil
   - plot_gazepoint_missingness
   - validate_gazepoint_metadata
+  - compute_gazepoint_signal_quality
+  - classify_gazepoint_signal_quality
+  - summarize_gazepoint_signal_quality
+  - plot_gazepoint_signal_quality

@@ -806,3 +806,11 @@ missingness visualization, and metadata validation.
   : Plot missingness across Gazepoint signal columns
 - [`validate_gazepoint_metadata()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_metadata.md)
   : Validate Gazepoint metadata and required columns
+- [`compute_gazepoint_signal_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_signal_quality.md)
+  : Compute transparent signal-quality indicators
+- [`classify_gazepoint_signal_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/classify_gazepoint_signal_quality.md)
+  : Classify signal-quality rows using transparent threshold rules
+- [`summarize_gazepoint_signal_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_signal_quality.md)
+  : Summarize signal-quality indicators
+- [`plot_gazepoint_signal_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_signal_quality.md)
+  : Plot signal-quality diagnostics
