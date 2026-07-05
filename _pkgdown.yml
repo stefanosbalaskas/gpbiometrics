@@ -428,3 +428,12 @@ reference:
   - audit_gazepoint_condition_balance
   - plot_gazepoint_design_coverage
 
+- title: Pupil quality-control and metadata reporting
+  desc: >
+    Helpers for conservative pupil-dropout detection, pupil smoothing,
+    missingness visualization, and metadata validation.
+  contents:
+  - detect_gazepoint_blinks
+  - smooth_gazepoint_pupil
+  - plot_gazepoint_missingness
+  - validate_gazepoint_metadata

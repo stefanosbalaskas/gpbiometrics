@@ -1185,6 +1185,20 @@ workflows.
 - [`plot_gazepoint_design_coverage()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_design_coverage.md)
   : Plot Gazepoint design and event-coverage audits
 
+## Pupil quality-control and metadata reporting
+
+Helpers for conservative pupil-dropout detection, pupil smoothing,
+missingness visualization, and metadata validation.
+
+- [`detect_gazepoint_blinks()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_blinks.md)
+  : Detect likely blink or pupil-dropout samples
+- [`smooth_gazepoint_pupil()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/smooth_gazepoint_pupil.md)
+  : Smooth Gazepoint pupil columns
+- [`plot_gazepoint_missingness()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_missingness.md)
+  : Plot missingness across Gazepoint signal columns
+- [`validate_gazepoint_metadata()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_metadata.md)
+  : Validate Gazepoint metadata and required columns
+
 # Articles
 
 ### All vignettes
