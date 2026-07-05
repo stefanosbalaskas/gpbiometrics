@@ -101,6 +101,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_rri_artifacts_local.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_analysis_decision_log.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_analysis_manifest.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_audit_report_section.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_checklist.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_feature_inventory.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_methods_text.html</loc></url>
@@ -108,10 +109,13 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_report_tables.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_eda_analysis_pipeline.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_heartpy_report.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_methods_section.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_preregistration_template.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_pspm_glm_design.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_pyhrv_time_vector.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_qc_supplement.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_quality_dashboard.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_reproducibility_statement.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_trial_regressors.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/decompose_gazepoint_eda.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/denoise_gazepoint_eda_autoencoder.html</loc></url>

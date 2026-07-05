@@ -392,6 +392,21 @@ The archived software release is available at DOI:
 
 # Package index
 
+## Reviewer and manuscript report templates
+
+Helpers for generating conservative manuscript-ready methods,
+quality-control, reproducibility, and audit-summary text from Gazepoint
+workflow objects.
+
+- [`create_gazepoint_methods_section()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_methods_section.md)
+  : Create a compact Gazepoint methods section
+- [`create_gazepoint_qc_supplement()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_qc_supplement.md)
+  : Create a Gazepoint quality-control supplement section
+- [`create_gazepoint_reproducibility_statement()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_reproducibility_statement.md)
+  : Create a Gazepoint reproducibility statement
+- [`create_gazepoint_audit_report_section()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_audit_report_section.md)
+  : Create a Gazepoint audit-report section
+
 ## Experimental statistical extensions
 
 Experimental helpers for conservative time-course inference on

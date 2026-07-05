@@ -13,6 +13,15 @@ navbar:
     - news
     right: github
 reference:
+- title: Reviewer and manuscript report templates
+  desc: >
+    Helpers for generating conservative manuscript-ready methods, quality-control,
+    reproducibility, and audit-summary text from Gazepoint workflow objects.
+  contents:
+  - create_gazepoint_methods_section
+  - create_gazepoint_qc_supplement
+  - create_gazepoint_reproducibility_statement
+  - create_gazepoint_audit_report_section
 - title: "Experimental statistical extensions"
   desc: >
     Experimental helpers for conservative time-course inference on
@@ -418,3 +427,4 @@ reference:
   - audit_gazepoint_event_coverage
   - audit_gazepoint_condition_balance
   - plot_gazepoint_design_coverage
+
