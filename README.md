@@ -5,7 +5,7 @@
 [![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0)
 
 [![R-CMD-check](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml)
-[![DOI](https://zenodo.org/badge/1279519183.svg)](https://doi.org/10.5281/zenodo.20836724)
+[DOI: 10.5281/zenodo.20836724](https://doi.org/10.5281/zenodo.20836724)
 
 `gpbiometrics` provides reproducible tools for importing, checking,
 preprocessing, summarising, modelling, and reporting Gazepoint
