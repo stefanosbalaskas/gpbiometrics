@@ -441,3 +441,7 @@ reference:
   - classify_gazepoint_signal_quality
   - summarize_gazepoint_signal_quality
   - plot_gazepoint_signal_quality
+  - simulate_gazepoint_artifact
+  - generate_gazepoint_manifest
+  - create_gazepoint_dictionary
+  - anonymize_gazepoint_data

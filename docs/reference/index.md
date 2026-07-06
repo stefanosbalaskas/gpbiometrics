@@ -814,3 +814,11 @@ missingness visualization, and metadata validation.
   : Summarize signal-quality indicators
 - [`plot_gazepoint_signal_quality()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_signal_quality.md)
   : Plot signal-quality diagnostics
+- [`simulate_gazepoint_artifact()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/simulate_gazepoint_artifact.md)
+  : Inject simple synthetic artifacts into signal columns
+- [`generate_gazepoint_manifest()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/generate_gazepoint_manifest.md)
+  : Generate a reproducibility manifest
+- [`create_gazepoint_dictionary()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_dictionary.md)
+  : Create a simple Gazepoint data dictionary
+- [`anonymize_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/anonymize_gazepoint_data.md)
+  : Pseudonymize participant or record identifiers
