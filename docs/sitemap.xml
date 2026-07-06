@@ -35,6 +35,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_gsr_units.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_hr_quality.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_ibi_quality.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_preregistration_consistency.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_pupil_luminance.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_session_comparability.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_signal_activity.html</loc></url>
@@ -118,6 +119,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_eda_analysis_pipeline.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_heartpy_report.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_methods_section.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_preregistration_checklist.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_preregistration_template.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_pspm_glm_design.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_pyhrv_time_vector.html</loc></url>
@@ -350,6 +352,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_fixations.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_missingness.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_nonwear.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_preregistration_readiness.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_pupil_events.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_qc_overview.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_scanpath_metrics.html</loc></url>

@@ -455,3 +455,6 @@ reference:
   - compute_gazepoint_quality_index
   - audit_gazepoint_session_comparability
   - summarize_gazepoint_qc_overview
+  - create_gazepoint_preregistration_checklist
+  - audit_gazepoint_preregistration_consistency
+  - summarize_gazepoint_preregistration_readiness

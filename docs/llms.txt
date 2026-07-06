@@ -1234,6 +1234,12 @@ missingness visualization, and metadata validation.
   : Audit session comparability across QC metrics
 - [`summarize_gazepoint_qc_overview()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_qc_overview.md)
   : Summarize QC overview tables
+- [`create_gazepoint_preregistration_checklist()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_preregistration_checklist.md)
+  : Create a Gazepoint preregistration checklist
+- [`audit_gazepoint_preregistration_consistency()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_preregistration_consistency.md)
+  : Audit preregistration checklist consistency
+- [`summarize_gazepoint_preregistration_readiness()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_preregistration_readiness.md)
+  : Summarize preregistration readiness
 
 # Articles
 
