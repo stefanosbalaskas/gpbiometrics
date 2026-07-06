@@ -1222,6 +1222,12 @@ missingness visualization, and metadata validation.
   : Apply lightweight preprocessing to signal columns
 - [`upsample_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/upsample_gazepoint_data.md)
   : Regularize signal data to an evenly spaced time grid
+- [`audit_gazepoint_beats()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_beats.md)
+  : Audit beat or IBI sequences
+- [`correct_gazepoint_beats()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_beats.md)
+  : Apply conservative rule-based IBI corrections
+- [`summarize_gazepoint_beat_corrections()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_beat_corrections.md)
+  : Summarize beat-correction logs
 
 # Articles
 

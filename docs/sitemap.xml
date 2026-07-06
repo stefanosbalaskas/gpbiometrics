@@ -19,6 +19,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/assert_gazepoint_columns.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/assess_gazepoint_hrp_waveform_quality.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/assess_gazepoint_sampling_irregularity.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_beats.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometrics_file.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_missingness.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_sampling.html</loc></url>
@@ -99,6 +100,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_signal_power_spectrum.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_signal_quality.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/convert_gazepoint_gsr_to_conductance.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_beats.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_eda_temperature.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_ppg_hampel.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_rri_artifacts_local.html</loc></url>
@@ -341,6 +343,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_multimodal_windows.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_scr_event_windows.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_aoi_dwell.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_beat_corrections.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_eventlocked_multimodal.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_fixations.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_missingness.html</loc></url>

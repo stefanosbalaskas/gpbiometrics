@@ -449,3 +449,6 @@ reference:
   - summarize_gazepoint_nonwear
   - filter_gazepoint_signal
   - upsample_gazepoint_data
+  - audit_gazepoint_beats
+  - correct_gazepoint_beats
+  - summarize_gazepoint_beat_corrections
