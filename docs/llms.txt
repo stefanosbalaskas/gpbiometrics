@@ -1214,6 +1214,14 @@ missingness visualization, and metadata validation.
   : Create a simple Gazepoint data dictionary
 - [`anonymize_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/anonymize_gazepoint_data.md)
   : Pseudonymize participant or record identifiers
+- [`detect_gazepoint_nonwear()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_nonwear.md)
+  : Detect long signal-dropout intervals
+- [`summarize_gazepoint_nonwear()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_nonwear.md)
+  : Summarize signal-dropout detections
+- [`filter_gazepoint_signal()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/filter_gazepoint_signal.md)
+  : Apply lightweight preprocessing to signal columns
+- [`upsample_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/upsample_gazepoint_data.md)
+  : Regularize signal data to an evenly spaced time grid
 
 # Articles
 

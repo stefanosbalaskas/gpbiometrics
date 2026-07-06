@@ -445,3 +445,7 @@ reference:
   - generate_gazepoint_manifest
   - create_gazepoint_dictionary
   - anonymize_gazepoint_data
+  - detect_gazepoint_nonwear
+  - summarize_gazepoint_nonwear
+  - filter_gazepoint_signal
+  - upsample_gazepoint_data
