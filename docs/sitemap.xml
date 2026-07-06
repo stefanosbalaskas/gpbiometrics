@@ -36,6 +36,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_hr_quality.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_ibi_quality.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_pupil_luminance.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_session_comparability.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_signal_activity.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_stabilization_period.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_timecourse_grid.html</loc></url>
@@ -91,6 +92,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_tinn.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_triangular_index.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_pyhrv_welch_psd.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_quality_index.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_scr_habituation.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_scr_latency.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_signal_band_power.html</loc></url>
@@ -349,6 +351,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_missingness.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_nonwear.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_pupil_events.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_qc_overview.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_scanpath_metrics.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_scr_recovery.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_signal_quality.html</loc></url>

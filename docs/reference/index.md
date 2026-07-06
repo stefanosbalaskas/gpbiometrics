@@ -836,3 +836,9 @@ missingness visualization, and metadata validation.
   : Apply conservative rule-based IBI corrections
 - [`summarize_gazepoint_beat_corrections()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_beat_corrections.md)
   : Summarize beat-correction logs
+- [`compute_gazepoint_quality_index()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compute_gazepoint_quality_index.md)
+  : Compute a heuristic QC quality index
+- [`audit_gazepoint_session_comparability()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_session_comparability.md)
+  : Audit session comparability across QC metrics
+- [`summarize_gazepoint_qc_overview()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_qc_overview.md)
+  : Summarize QC overview tables

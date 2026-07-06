@@ -452,3 +452,6 @@ reference:
   - audit_gazepoint_beats
   - correct_gazepoint_beats
   - summarize_gazepoint_beat_corrections
+  - compute_gazepoint_quality_index
+  - audit_gazepoint_session_comparability
+  - summarize_gazepoint_qc_overview
