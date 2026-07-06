@@ -848,3 +848,9 @@ missingness visualization, and metadata validation.
   : Audit preregistration checklist consistency
 - [`summarize_gazepoint_preregistration_readiness()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_preregistration_readiness.md)
   : Summarize preregistration readiness
+- [`summarize_gazepoint_export_inventory()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_export_inventory.md)
+  : Summarize Gazepoint export inventory
+- [`audit_gazepoint_dataset_structure()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_dataset_structure.md)
+  : Audit Gazepoint dataset structure
+- [`create_gazepoint_sidecar_template()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_sidecar_template.md)
+  : Create a Gazepoint sidecar metadata template

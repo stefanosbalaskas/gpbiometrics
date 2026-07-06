@@ -25,6 +25,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_sampling.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_biometric_sync_drift.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_condition_balance.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_dataset_structure.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_distributional_drift.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_eda_artifacts.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_engagement_dial.html</loc></url>
@@ -126,6 +127,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_qc_supplement.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_quality_dashboard.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_reproducibility_statement.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_sidecar_template.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_trial_regressors.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/decompose_gazepoint_eda.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/denoise_gazepoint_eda_autoencoder.html</loc></url>
@@ -349,6 +351,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_aoi_dwell.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_beat_corrections.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_eventlocked_multimodal.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_export_inventory.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_fixations.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_missingness.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_nonwear.html</loc></url>

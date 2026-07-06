@@ -458,3 +458,6 @@ reference:
   - create_gazepoint_preregistration_checklist
   - audit_gazepoint_preregistration_consistency
   - summarize_gazepoint_preregistration_readiness
+  - summarize_gazepoint_export_inventory
+  - audit_gazepoint_dataset_structure
+  - create_gazepoint_sidecar_template
