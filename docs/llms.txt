@@ -1252,6 +1252,12 @@ missingness visualization, and metadata validation.
   : Audit Gazepoint pipeline steps
 - [`export_gazepoint_pipeline_dot()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_pipeline_dot.md)
   : Export a Gazepoint pipeline map as DOT text
+- [`create_gazepoint_audit_index()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_audit_index.md)
+  : Create a Gazepoint audit index
+- [`summarize_gazepoint_audit_trail()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_audit_trail.md)
+  : Summarize a Gazepoint audit trail
+- [`export_gazepoint_audit_trail_markdown()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_audit_trail_markdown.md)
+  : Export a Gazepoint audit trail as Markdown
 
 # Articles
 

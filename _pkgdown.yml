@@ -464,3 +464,6 @@ reference:
   - create_gazepoint_pipeline_map
   - audit_gazepoint_pipeline_steps
   - export_gazepoint_pipeline_dot
+  - create_gazepoint_audit_index
+  - summarize_gazepoint_audit_trail
+  - export_gazepoint_audit_trail_markdown

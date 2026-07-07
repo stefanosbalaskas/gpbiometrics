@@ -111,6 +111,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/correct_gazepoint_rri_artifacts_local.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_analysis_decision_log.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_analysis_manifest.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_audit_index.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_audit_report_section.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_checklist.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_biometrics_feature_inventory.html</loc></url>
@@ -163,6 +164,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_samplerate_datetime.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_samplerate_mstimer.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_signal_lag.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_audit_trail_markdown.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_biometrics_report_bundle.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_cluster_results.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_heartpy_input.html</loc></url>
@@ -352,6 +354,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_multimodal_windows.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_scr_event_windows.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_aoi_dwell.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_audit_trail.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_beat_corrections.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_eventlocked_multimodal.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_export_inventory.html</loc></url>
