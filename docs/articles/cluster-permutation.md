@@ -313,11 +313,11 @@ exported_files
 #> 4    params
 #> 5    report
 #>                                                                                                                                     file
-#> 1            C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpEX41hS\\gpbiometrics_cluster_export_5224427a352/cluster_example_clusters.csv
-#> 2 C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpEX41hS\\gpbiometrics_cluster_export_5224427a352/cluster_example_timewise_statistics.csv
-#> 3   C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpEX41hS\\gpbiometrics_cluster_export_5224427a352/cluster_example_null_distribution.csv
-#> 4          C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpEX41hS\\gpbiometrics_cluster_export_5224427a352/cluster_example_parameters.csv
-#> 5              C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpEX41hS\\gpbiometrics_cluster_export_5224427a352/cluster_example_report.txt
+#> 1            C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpCIkRIC\\gpbiometrics_cluster_export_7f48cc42f4c/cluster_example_clusters.csv
+#> 2 C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpCIkRIC\\gpbiometrics_cluster_export_7f48cc42f4c/cluster_example_timewise_statistics.csv
+#> 3   C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpCIkRIC\\gpbiometrics_cluster_export_7f48cc42f4c/cluster_example_null_distribution.csv
+#> 4          C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpCIkRIC\\gpbiometrics_cluster_export_7f48cc42f4c/cluster_example_parameters.csv
+#> 5              C:\\Users\\STEFAN~1\\AppData\\Local\\Temp\\RtmpCIkRIC\\gpbiometrics_cluster_export_7f48cc42f4c/cluster_example_report.txt
 ```
 
 ## External interoperability

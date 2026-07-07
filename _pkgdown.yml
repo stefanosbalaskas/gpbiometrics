@@ -467,3 +467,6 @@ reference:
   - create_gazepoint_audit_index
   - summarize_gazepoint_audit_trail
   - export_gazepoint_audit_trail_markdown
+  - audit_gazepoint_release_readiness
+  - summarize_gazepoint_feature_coverage
+  - create_gazepoint_release_checklist

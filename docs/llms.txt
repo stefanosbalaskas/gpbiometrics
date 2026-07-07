@@ -1258,6 +1258,12 @@ missingness visualization, and metadata validation.
   : Summarize a Gazepoint audit trail
 - [`export_gazepoint_audit_trail_markdown()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_audit_trail_markdown.md)
   : Export a Gazepoint audit trail as Markdown
+- [`audit_gazepoint_release_readiness()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_release_readiness.md)
+  : Audit gpbiometrics release readiness
+- [`summarize_gazepoint_feature_coverage()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_feature_coverage.md)
+  : Summarize gpbiometrics feature coverage
+- [`create_gazepoint_release_checklist()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_release_checklist.md)
+  : Create a gpbiometrics release checklist
 
 # Articles
 
