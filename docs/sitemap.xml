@@ -36,6 +36,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_gsr_units.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_hr_quality.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_ibi_quality.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_pipeline_steps.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_preregistration_consistency.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_pupil_luminance.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_session_comparability.html</loc></url>
@@ -120,6 +121,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_eda_analysis_pipeline.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_heartpy_report.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_methods_section.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_pipeline_map.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_preregistration_checklist.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_preregistration_template.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_pspm_glm_design.html</loc></url>
@@ -167,6 +169,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_mne_cluster_input.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_permuco_cluster_input.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_permutes_cluster_input.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_pipeline_dot.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_pspm_model_estimates.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_pyhrv_results.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_rhrv_input.html</loc></url>

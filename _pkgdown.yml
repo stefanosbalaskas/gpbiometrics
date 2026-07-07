@@ -461,3 +461,6 @@ reference:
   - summarize_gazepoint_export_inventory
   - audit_gazepoint_dataset_structure
   - create_gazepoint_sidecar_template
+  - create_gazepoint_pipeline_map
+  - audit_gazepoint_pipeline_steps
+  - export_gazepoint_pipeline_dot

@@ -854,3 +854,9 @@ missingness visualization, and metadata validation.
   : Audit Gazepoint dataset structure
 - [`create_gazepoint_sidecar_template()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_sidecar_template.md)
   : Create a Gazepoint sidecar metadata template
+- [`create_gazepoint_pipeline_map()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_pipeline_map.md)
+  : Create a Gazepoint pipeline map
+- [`audit_gazepoint_pipeline_steps()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_pipeline_steps.md)
+  : Audit Gazepoint pipeline steps
+- [`export_gazepoint_pipeline_dot()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_pipeline_dot.md)
+  : Export a Gazepoint pipeline map as DOT text
