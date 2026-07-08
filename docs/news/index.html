@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">gpbiometrics</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,14 +37,16 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="0.2.0.9000" id="gpbiometrics-0209000">gpbiometrics 0.2.0.9000<a class="anchor" aria-label="anchor" href="#gpbiometrics-0209000"></a></h2>
+<h2 class="pkg-version" data-toc-text="0.3.0" id="gpbiometrics-030">gpbiometrics 0.3.0<a class="anchor" aria-label="anchor" href="#gpbiometrics-030"></a></h2>
 <ul><li><p>Added advanced cluster-permutation guardrails and external export helpers. The guardrail functions explicitly prevent unsupported ANOVA, mixed-model, TFCE, multidimensional, covariate-adjusted, parallel, and onset/offset cluster claims while directing users back to the validated two-condition time-course workflow. Added export helpers for MNE-, permuco-, and permutes-style external workflows.</p></li>
 <li><p>Added cluster-permutation diagnostics, reporting, sensitivity, simulation, null-distribution plotting, and export helpers: <code><a href="../reference/audit_gazepoint_timecourse_grid.html">audit_gazepoint_timecourse_grid()</a></code>, <code><a href="../reference/diagnose_gazepoint_cluster_design.html">diagnose_gazepoint_cluster_design()</a></code>, <code><a href="../reference/plot_gazepoint_cluster_null_distribution.html">plot_gazepoint_cluster_null_distribution()</a></code>, <code><a href="../reference/report_gazepoint_cluster_permutation.html">report_gazepoint_cluster_permutation()</a></code>, <code><a href="../reference/run_gazepoint_cluster_threshold_sensitivity.html">run_gazepoint_cluster_threshold_sensitivity()</a></code>, <code><a href="../reference/simulate_gazepoint_cluster_timecourse_data.html">simulate_gazepoint_cluster_timecourse_data()</a></code>, and <code><a href="../reference/export_gazepoint_cluster_results.html">export_gazepoint_cluster_results()</a></code>.</p></li>
 </ul><div class="section level3">
-<h3 id="experimental-statistical-extensions-0-2-0-9000">Experimental statistical extensions<a class="anchor" aria-label="anchor" href="#experimental-statistical-extensions-0-2-0-9000"></a></h3>
-<ul><li>Added an experimental within-subject, two-condition cluster-based permutation prototype for Gazepoint-derived time-course signals.</li>
-<li>Added <code><a href="../reference/prepare_gazepoint_timecourse_test_data.html">prepare_gazepoint_timecourse_test_data()</a></code>, <code><a href="../reference/run_gazepoint_cluster_permutation.html">run_gazepoint_cluster_permutation()</a></code>, <code><a href="../reference/summarize_gazepoint_time_clusters.html">summarize_gazepoint_time_clusters()</a></code>, and <code><a href="../reference/plot_gazepoint_cluster_permutation.html">plot_gazepoint_cluster_permutation()</a></code>.</li>
-<li>Added an experimental pkgdown article describing the prototype and emphasizing that cluster timing should be interpreted descriptively rather than as precise onset or offset evidence.</li>
+<h3 id="experimental-statistical-extensions-0-3-0">Experimental statistical extensions<a class="anchor" aria-label="anchor" href="#experimental-statistical-extensions-0-3-0"></a></h3>
+<ul><li><p>Added an experimental within-subject, two-condition cluster-based permutation prototype for Gazepoint-derived time-course signals.</p></li>
+<li><p>Added <code><a href="../reference/prepare_gazepoint_timecourse_test_data.html">prepare_gazepoint_timecourse_test_data()</a></code>, <code><a href="../reference/run_gazepoint_cluster_permutation.html">run_gazepoint_cluster_permutation()</a></code>, <code><a href="../reference/summarize_gazepoint_time_clusters.html">summarize_gazepoint_time_clusters()</a></code>, and <code><a href="../reference/plot_gazepoint_cluster_permutation.html">plot_gazepoint_cluster_permutation()</a></code>.</p></li>
+<li><p>Added an experimental pkgdown article describing the prototype and emphasizing that cluster timing should be interpreted descriptively rather than as precise onset or offset evidence.</p></li>
+<li><p>Added release-preparation and auditability helpers for preregistration readiness, dataset-structure review, pipeline mapping, audit-trail summaries, and conservative release-readiness checks.</p></li>
+<li><p>Added pkgdown reference coverage for the new audit, checklist, pipeline, preregistration, dataset-inventory, and release-readiness helpers.</p></li>
 </ul></div>
 </div>
     <div class="section level2">

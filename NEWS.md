@@ -1,4 +1,4 @@
-# gpbiometrics 0.2.0.9000
+# gpbiometrics 0.3.0
 
 * Added advanced cluster-permutation guardrails and external export helpers. The guardrail functions explicitly prevent unsupported ANOVA, mixed-model, TFCE, multidimensional, covariate-adjusted, parallel, and onset/offset cluster claims while directing users back to the validated two-condition time-course workflow. Added export helpers for MNE-, permuco-, and permutes-style external workflows.
 
@@ -9,6 +9,12 @@
 * Added an experimental within-subject, two-condition cluster-based permutation prototype for Gazepoint-derived time-course signals.
 * Added `prepare_gazepoint_timecourse_test_data()`, `run_gazepoint_cluster_permutation()`, `summarize_gazepoint_time_clusters()`, and `plot_gazepoint_cluster_permutation()`.
 * Added an experimental pkgdown article describing the prototype and emphasizing that cluster timing should be interpreted descriptively rather than as precise onset or offset evidence.
+
+* Added release-preparation and auditability helpers for preregistration
+  readiness, dataset-structure review, pipeline mapping, audit-trail
+  summaries, and conservative release-readiness checks.
+* Added pkgdown reference coverage for the new audit, checklist, pipeline,
+  preregistration, dataset-inventory, and release-readiness helpers.
 
 # gpbiometrics 0.2.0
 
