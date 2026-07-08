@@ -16,5 +16,8 @@
 
   Rendered examples of all exported gpbiometrics plot helpers.
 
+- [Pupil and gaze quality-control
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/pupil-qc-workflow.md):
+
 - [Quality-control
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/qc-workflow.md):
