@@ -1,6 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
 * Development version.
+* Added a pupil and gaze quality-control workflow article covering missingness, blink detection, smoothing, interpolation, baseline correction, gaze filtering, QC summaries, and reporting.
 * Added an article roadmap for planned workflow, showcase, plotting, reporting, and reproducibility articles.
 * Added a quality-control workflow article linking dataset-layout checks, metadata validation, missingness summaries, signal-quality flags, exclusion recommendations, dashboard summaries, and reproducibility outputs.
 * Added `pipeline_comparison_dashboard()` for static reviewer-facing summaries of QC, missingness, quality, rule-failure, exclusion, and audit indicators.

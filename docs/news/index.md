@@ -4,6 +4,10 @@
 
 - Development version.
 
+- Added a pupil and gaze quality-control workflow article covering
+  missingness, blink detection, smoothing, interpolation, baseline
+  correction, gaze filtering, QC summaries, and reporting.
+
 - Added an article roadmap for planned workflow, showcase, plotting,
   reporting, and reproducibility articles.
 
