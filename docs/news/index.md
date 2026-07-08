@@ -4,6 +4,9 @@
 
 - Development version.
 
+- Added an article roadmap for planned workflow, showcase, plotting,
+  reporting, and reproducibility articles.
+
 - Added a quality-control workflow article linking dataset-layout
   checks, metadata validation, missingness summaries, signal-quality
   flags, exclusion recommendations, dashboard summaries, and

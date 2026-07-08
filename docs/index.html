@@ -35,7 +35,8 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/cluster-permutation.html">Cluster-permutation workflow</a></li>
+<li><a class="dropdown-item" href="articles/article-roadmap.html">Article roadmap</a></li>
+    <li><a class="dropdown-item" href="articles/cluster-permutation.html">Cluster-permutation workflow</a></li>
     <li><a class="dropdown-item" href="articles/gpbiometrics-workflow.html">gpbiometrics workflow</a></li>
     <li><a class="dropdown-item" href="articles/plot-gallery.html">Plot gallery</a></li>
     <li><a class="dropdown-item" href="articles/qc-workflow.html">Quality-control workflow</a></li>
@@ -55,7 +56,7 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="gpbiometrics">gpbiometrics<a class="anchor" aria-label="anchor" href="#gpbiometrics"></a>
 </h1></div>
-<p><a href="https://lifecycle.r-lib.org/articles/stages.html#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a> <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0" class="external-link"><img src="https://img.shields.io/badge/version-0.2.0-blue.svg" alt="Version"></a></p>
+<p><a href="https://lifecycle.r-lib.org/articles/stages.html#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a> <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.3.0" class="external-link"><img src="https://img.shields.io/badge/version-0.3.0-blue.svg" alt="Version"></a></p>
 <p><a href="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://doi.org/10.5281/zenodo.20836724" class="external-link">DOI: 10.5281/zenodo.20836724</a></p>
 <p><code>gpbiometrics</code> provides reproducible tools for importing, checking, preprocessing, summarising, modelling, and reporting Gazepoint Biometrics and Gazepoint GP3 biometric exports. It is designed for researchers working with electrodermal activity, pulse/heart-rate channels, interbeat intervals, TTL markers, stimulus/event timing, and multimodal Gazepoint workflows.</p>
 <p>The package focuses on transparent preprocessing, quality control, analysis-ready tables, reporting outputs, and conservative physiological interpretation. It does not infer emotion, stress, cognition, preference, health status, or diagnosis directly from biometric signals.</p>
@@ -133,7 +134,7 @@
 <div class="section level2">
 <h2 id="release-status">Release status<a class="anchor" aria-label="anchor" href="#release-status"></a>
 </h2>
-<p><code>gpbiometrics</code> 0.2.0 is the current roadmap-closure release. It adds standalone roadmap helpers, compatibility aliases, documentation updates, pkgdown pages, and release-readiness notes while keeping the package Gazepoint-native and conservative in physiological interpretation. ## Lifecycle</p>
+<p><code>gpbiometrics</code> 0.3.0 is the current release. It adds standalone roadmap helpers, compatibility aliases, documentation updates, pkgdown pages, and release-readiness notes while keeping the package Gazepoint-native and conservative in physiological interpretation. ## Lifecycle</p>
 <p><code>gpbiometrics</code> is currently in a maturing development stage. The main Gazepoint-native import, validation, preprocessing, quality-control, physiology, gaze/pupil, event-alignment, reporting, and roadmap-closure helpers are implemented and tested, but the exported API may still receive minor refinements before a formal CRAN submission.</p>
 <p>See <a href="ROADMAP_STATUS.html"><code>ROADMAP_STATUS.md</code></a> for the current roadmap-closure and release-readiness summary.</p>
 </div>
@@ -383,9 +384,9 @@
 <div class="section level2">
 <h2 id="validation-status">Validation status<a class="anchor" aria-label="anchor" href="#validation-status"></a>
 </h2>
-<p>Current local validation for the v0.2.0 roadmap-closure release:</p>
+<p>Current local validation for the v0.3.0 release:</p>
 <pre class="text"><code><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/test.html" class="external-link">test</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co"># FAIL 0 | WARN 0 | SKIP 0 | PASS 2113</span></span>
+<span><span class="co"># FAIL 0 | WARN 0 | SKIP 0 | PASS 2966</span></span>
 <span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/check.html" class="external-link">check</a></span><span class="op">(</span>args <span class="op">=</span> <span class="st">"--as-cran"</span><span class="op">)</span></span>
 <span><span class="co"># 0 errors | 0 warnings | 0 notes</span></span>
@@ -397,7 +398,7 @@
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
-<p>Current release tag: <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0" class="external-link"><code>v0.2.0</code></a>.</p>
+<p>Current release tag: <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.3.0" class="external-link"><code>v0.3.0</code></a>.</p>
 <p>If you use <code>gpbiometrics</code>, cite the package version, repository or archive DOI if available, and the specific Gazepoint hardware/software context used in your study. Also cite the original methodological sources for specialised analyses such as cvxEDA, Ledalab, PsPM, RHRV, entropy, point-process, or signal-decomposition methods when those helpers are used.</p>
 <p>If you use <code>gpbiometrics</code>, please cite the package with:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
