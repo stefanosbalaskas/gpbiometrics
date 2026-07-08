@@ -19,6 +19,9 @@
 
   Rendered examples of all exported gpbiometrics plot helpers.
 
+- [PPG, IBI, HRV, and respiration
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/ppg-hrv-workflow.md):
+
 - [Pupil and gaze quality-control
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/pupil-qc-workflow.md):
 

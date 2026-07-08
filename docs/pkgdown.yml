@@ -7,9 +7,10 @@ articles:
   articles/eda-scr-workflow: eda-scr-workflow.html
   gpbiometrics-workflow: gpbiometrics-workflow.html
   articles/plot-gallery: plot-gallery.html
+  articles/ppg-hrv-workflow: ppg-hrv-workflow.html
   articles/pupil-qc-workflow: pupil-qc-workflow.html
   articles/qc-workflow: qc-workflow.html
-last_built: 2026-07-08T23:17Z
+last_built: 2026-07-08T23:41Z
 urls:
   reference: https://stefanosbalaskas.github.io/gpbiometrics/reference
   article: https://stefanosbalaskas.github.io/gpbiometrics/articles
