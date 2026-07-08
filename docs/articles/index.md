@@ -8,6 +8,9 @@
 - [Cluster-permutation
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/cluster-permutation.md):
 
+- [EDA, GSR, and SCR
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/eda-scr-workflow.md):
+
 - [gpbiometrics
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/gpbiometrics-workflow.md):
 
