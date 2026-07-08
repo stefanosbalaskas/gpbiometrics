@@ -2,6 +2,9 @@
 
 ### All vignettes
 
+- [Article
+  roadmap](https://stefanosbalaskas.github.io/gpbiometrics/articles/article-roadmap.md):
+
 - [Cluster-permutation
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/cluster-permutation.md):
 

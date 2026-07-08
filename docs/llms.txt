@@ -2,7 +2,7 @@
 
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
-[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0)
+[![Version](https://img.shields.io/badge/version-0.3.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.3.0)
 
 [![R-CMD-check](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml)
 [DOI: 10.5281/zenodo.20836724](https://doi.org/10.5281/zenodo.20836724)
@@ -57,11 +57,10 @@ from those external toolboxes.
 
 ## Release status
 
-`gpbiometrics` 0.2.0 is the current roadmap-closure release. It adds
-standalone roadmap helpers, compatibility aliases, documentation
-updates, pkgdown pages, and release-readiness notes while keeping the
-package Gazepoint-native and conservative in physiological
-interpretation. \## Lifecycle
+`gpbiometrics` 0.3.0 is the current release. It adds standalone roadmap
+helpers, compatibility aliases, documentation updates, pkgdown pages,
+and release-readiness notes while keeping the package Gazepoint-native
+and conservative in physiological interpretation. \## Lifecycle
 
 `gpbiometrics` is currently in a maturing development stage. The main
 Gazepoint-native import, validation, preprocessing, quality-control,
@@ -351,11 +350,11 @@ Do not commit private Gazepoint exports or private smoke-test outputs.
 
 ## Validation status
 
-Current local validation for the v0.2.0 roadmap-closure release:
+Current local validation for the v0.3.0 release:
 
 ``` text
 devtools::test()
-# FAIL 0 | WARN 0 | SKIP 0 | PASS 2113
+# FAIL 0 | WARN 0 | SKIP 0 | PASS 2966
 
 devtools::check(args = "--as-cran")
 # 0 errors | 0 warnings | 0 notes
@@ -371,7 +370,7 @@ is treated as harmless only when the final `R CMD check` summary reports
 ## Citation
 
 Current release tag:
-[`v0.2.0`](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0).
+[`v0.3.0`](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.3.0).
 
 If you use `gpbiometrics`, cite the package version, repository or
 archive DOI if available, and the specific Gazepoint hardware/software
@@ -1272,6 +1271,9 @@ missingness visualization, and metadata validation.
 # Articles
 
 ### All vignettes
+
+- [Article
+  roadmap](https://stefanosbalaskas.github.io/gpbiometrics/articles/article-roadmap.md):
 
 - [Cluster-permutation
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/cluster-permutation.md):
