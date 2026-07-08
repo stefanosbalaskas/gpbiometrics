@@ -75,7 +75,7 @@ include `overview` and `settings`.
 df <- data.frame(CNT = 1:10, GSR_US = seq(1, 2, length.out = 10))
 out <- decompose_gazepoint_eda(df, signal_col = "GSR_US", window_size = 3)
 names(out)
-#> [1] "CNT"                      "GSR_US"                  
-#> [3] "eda_tonic"                "eda_phasic"              
+#> [1] "CNT"                      "GSR_US"
+#> [3] "eda_tonic"                "eda_phasic"
 #> [5] "eda_decomposition_method"
 ```

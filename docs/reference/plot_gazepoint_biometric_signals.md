@@ -107,7 +107,7 @@ plot_gazepoint_biometric_signals(df, time_col = "CNT", plot = FALSE)
 #> 1      5            5                   2      CNT      <NA>          NA
 #>   standardize plot_created               status
 #> 1       FALSE        FALSE signal_plot_prepared
-#> 
+#>
 #> $plot_data
 #>   .row_id .x GSR HR
 #> 1       1  1 1.0 70
@@ -115,7 +115,7 @@ plot_gazepoint_biometric_signals(df, time_col = "CNT", plot = FALSE)
 #> 3       3  3 1.2 72
 #> 4       4  4 1.1 71
 #> 5       5  5 1.0 70
-#> 
+#>
 #> $signal_summary
 #>   column signal_type n n_missing missing_rate n_non_missing n_finite
 #> 1    GSR     gsr_eda 5         0            0             5        5
@@ -123,30 +123,30 @@ plot_gazepoint_biometric_signals(df, time_col = "CNT", plot = FALSE)
 #>   finite_rate n_unique_finite  mean median       sd min  max        status
 #> 1           1               3  1.08    1.1 0.083666   1  1.2 active_signal
 #> 2           1               3 70.80   71.0 0.836660  70 72.0 active_signal
-#> 
+#>
 #> $settings
 #> $settings$signal_cols
-#> [1] "GSR" "HR" 
-#> 
+#> [1] "GSR" "HR"
+#>
 #> $settings$time_col
 #> [1] "CNT"
-#> 
+#>
 #> $settings$group_col
 #> NULL
-#> 
+#>
 #> $settings$max_points
 #> [1] 5000
-#> 
+#>
 #> $settings$standardize
 #> [1] FALSE
-#> 
+#>
 #> $settings$type
 #> [1] "line"
-#> 
+#>
 #> $settings$note
 #> [1] "Signal plots describe biometric time-series patterns only; they do not establish emotional valence, cognition, or HRV."
-#> 
-#> 
+#>
+#>
 #> attr(,"class")
-#> [1] "gazepoint_biometric_signal_plot" "list"                           
+#> [1] "gazepoint_biometric_signal_plot" "list"
 ```

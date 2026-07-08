@@ -71,5 +71,9 @@ validate_gazepoint_metadata(
   id_cols = "participant",
   time_col = "time"
 )
-#> Error in validate_gazepoint_metadata(d, required_cols = c("participant",     "time"), id_cols = "participant", time_col = "time"): could not find function "validate_gazepoint_metadata"
+#> Gazepoint metadata validation: pass
+#>  n_rows n_columns n_required_columns n_missing_required n_expected_columns
+#>       2         3                  2                  0                  0
+#>  n_missing_expected n_problems n_warnings
+#>                   0          0          0
 ```

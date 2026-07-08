@@ -83,7 +83,7 @@ summarise_gazepoint_hrv_features(df, group_cols = "participant")
 #> 1      5     IBI           1            1                             1
 #>   groups_with_insufficient_ibi total_valid_ibi                 status
 #> 1                            0               5 hrv_features_available
-#> 
+#>
 #> $features
 #>   group n_total_ibi n_missing_ibi n_out_of_range_ibi n_valid_ibi valid_ibi_rate
 #> 1    P1           5             0                  0           5              1
@@ -91,33 +91,33 @@ summarise_gazepoint_hrv_features(df, group_cols = "participant")
 #> 1       seconds         990          1000 74.16198 90.13878            75
 #>   mean_hr_bpm_from_ibi min_ibi_ms max_ibi_ms                status
 #> 1             60.60606        900       1100 hrv_features_computed
-#> 
+#>
 #> $settings
 #> $settings$ibi_col
 #> [1] "IBI"
-#> 
+#>
 #> $settings$group_cols
 #> [1] "participant"
-#> 
+#>
 #> $settings$time_col
 #> NULL
-#> 
+#>
 #> $settings$ibi_unit
 #> [1] "auto"
-#> 
+#>
 #> $settings$min_ibi_ms
 #> [1] 300
-#> 
+#>
 #> $settings$max_ibi_ms
 #> [1] 2000
-#> 
+#>
 #> $settings$min_valid_ibi
 #> [1] 3
-#> 
+#>
 #> $settings$note
 #> [1] "Time-domain HRV features are derived from IBI/RR intervals only. The raw Gazepoint HRV column is treated as a validity/vendor flag."
-#> 
-#> 
+#>
+#>
 #> attr(,"class")
-#> [1] "gazepoint_hrv_features" "list"                  
+#> [1] "gazepoint_hrv_features" "list"
 ```

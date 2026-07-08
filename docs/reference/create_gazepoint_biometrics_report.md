@@ -128,5 +128,5 @@ df <- data.frame(
 report <- create_gazepoint_biometrics_report(df)
 names(report)
 #> [1] "overview"    "sections"    "tables"      "objects"     "output_file"
-#> [6] "settings"   
+#> [6] "settings"
 ```

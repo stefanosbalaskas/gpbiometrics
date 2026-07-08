@@ -76,43 +76,43 @@ detect_gazepoint_scr_events(df, phasic_col = "GSR_US_PHASIC", time_col = "CNT")
 #> 1     20           1 GSR_US_PHASIC              FALSE        NA
 #>   min_peak_distance n_events              status
 #> 1                10        1 scr_events_detected
-#> 
+#>
 #> $events
 #>   event_id group row_index time peak_value threshold    phasic_col
 #> 1        1   all         7    7        0.8 0.5540283 GSR_US_PHASIC
 #>             detection_method
 #> 1 local_peak_above_threshold
-#> 
+#>
 #> $group_summary
 #>   group n_samples threshold n_events event_rate_per_1000_samples
 #> 1   all        20 0.5540283        1                          50
-#> 
+#>
 #> $settings
 #> $settings$phasic_col
 #> [1] "GSR_US_PHASIC"
-#> 
+#>
 #> $settings$signal_col
 #> NULL
-#> 
+#>
 #> $settings$time_col
 #> [1] "CNT"
-#> 
+#>
 #> $settings$group_cols
 #> NULL
-#> 
+#>
 #> $settings$threshold
 #> NULL
-#> 
+#>
 #> $settings$min_peak_distance
 #> [1] 10
-#> 
+#>
 #> $settings$window_size
 #> [1] 31
-#> 
+#>
 #> $settings$note
 #> [1] "SCR events are simple SCR-like local peaks. Use specialised biosignal software for confirmatory SCR event detection."
-#> 
-#> 
+#>
+#>
 #> attr(,"class")
-#> [1] "gazepoint_scr_events" "list"                
+#> [1] "gazepoint_scr_events" "list"
 ```

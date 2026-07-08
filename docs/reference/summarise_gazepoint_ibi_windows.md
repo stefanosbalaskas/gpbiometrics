@@ -91,7 +91,7 @@ summarise_gazepoint_ibi_windows(df, group_cols = "USER")
 #> 1                         0                TRUE             2
 #>                   status
 #> 1 ibi_windows_summarised
-#> 
+#>
 #> $windows
 #>   group n_rows n_ibi n_valid_ibi valid_ibi_rate n_excluded_for_quality
 #> 1    P1      4     4           4              1                      0
@@ -105,7 +105,7 @@ summarise_gazepoint_ibi_windows(df, group_cols = "USER")
 #>                  status
 #> 1 sufficient_ibi_window
 #> 2 sufficient_ibi_window
-#> 
+#>
 #> $samples
 #>   row_id group ibi_raw ibi_ms missing_ibi nonfinite_ibi nonpositive_ibi
 #> 1      1    P1     800    800       FALSE         FALSE           FALSE
@@ -134,40 +134,40 @@ summarise_gazepoint_ibi_windows(df, group_cols = "USER")
 #> 6 valid_ibi               TRUE
 #> 7 valid_ibi               TRUE
 #> 8 valid_ibi               TRUE
-#> 
+#>
 #> $settings
 #> $settings$ibi_col
 #> [1] "IBI"
-#> 
+#>
 #> $settings$group_cols
 #> [1] "USER"
-#> 
+#>
 #> $settings$time_col
 #> NULL
-#> 
+#>
 #> $settings$unit
 #> [1] "auto"
-#> 
+#>
 #> $settings$resolved_unit
 #> [1] "milliseconds"
-#> 
+#>
 #> $settings$min_ibi_ms
 #> [1] 300
-#> 
+#>
 #> $settings$max_ibi_ms
 #> [1] 2000
-#> 
+#>
 #> $settings$max_jump_ms
 #> [1] 500
-#> 
+#>
 #> $settings$exclude_large_jumps
 #> [1] TRUE
-#> 
+#>
 #> $settings$min_valid_ibi
 #> [1] 2
-#> 
+#>
 #> $settings$note
 #> [1] "Window summaries are derived from genuine IBI/RR intervals only. They are not calculated from raw HRV validity/vendor columns."
-#> 
-#> 
+#>
+#>
 ```

@@ -39,7 +39,7 @@ detect_gazepoint_biometric_timebase(df)
 #> 1      5                TIME         timestamp seconds      0.01666667
 #>   sampling_rate_hz counter_column n_valid_intervals            status
 #> 1               60            CNT                 4 timebase_detected
-#> 
+#>
 #> $time_columns
 #>   column standard_name           role unit_hint confidence
 #> 1    CNT           CNT sample_counter   samples       1.00
@@ -47,14 +47,14 @@ detect_gazepoint_biometric_timebase(df)
 #>                                           reason
 #> 1              Recognised sample counter column.
 #> 2 Recognised time column with seconds-like name.
-#> 
+#>
 #> $interval_summary
 #>      unit n_intervals n_valid_intervals n_zero_or_negative_intervals
 #> 1 seconds           4                 4                            0
 #>   min_interval median_interval mean_interval max_interval
 #> 1   0.01666667      0.01666667    0.01666667   0.01666667
-#> 
+#>
 #> $warnings
 #> character(0)
-#> 
+#>
 ```

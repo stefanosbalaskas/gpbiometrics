@@ -87,5 +87,7 @@ d <- data.frame(
   pupil_left = c(3.1, 3.2, 0, 3.2, 8.5, 3.1, NA, 3.0)
 )
 detect_gazepoint_blinks(d, pupil_cols = "pupil_left")
-#> Error in detect_gazepoint_blinks(d, pupil_cols = "pupil_left"): could not find function "detect_gazepoint_blinks"
+#> Gazepoint blink/dropout audit
+#>   pupil_col n_samples n_flagged prop_flagged
+#>  pupil_left         8         2         0.25
 ```

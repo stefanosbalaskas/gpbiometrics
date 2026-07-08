@@ -80,7 +80,7 @@ audit_gazepoint_ibi_quality(df, group_cols = "USER")
 #> 1                0           8              1                 0
 #>   quality_flag_rate         status
 #> 1                 0 ibi_quality_ok
-#> 
+#>
 #> $samples
 #>   row_id group ibi_raw ibi_ms missing_ibi nonfinite_ibi nonpositive_ibi
 #> 1      1    P1     800    800       FALSE         FALSE           FALSE
@@ -109,7 +109,7 @@ audit_gazepoint_ibi_quality(df, group_cols = "USER")
 #> 6 valid_ibi
 #> 7 valid_ibi
 #> 8 valid_ibi
-#> 
+#>
 #> $group_summary
 #>   group n_rows n_valid_ibi valid_ibi_rate n_quality_flagged quality_flag_rate
 #> 1    P1      4           4              1                 0                 0
@@ -117,34 +117,34 @@ audit_gazepoint_ibi_quality(df, group_cols = "USER")
 #>   mean_ibi_ms median_ibi_ms mean_hr_bpm  sdnn_ms rmssd_ms pnn50         status
 #> 1      801.25         802.5    74.88940 8.539126 15.54563     0 sufficient_ibi
 #> 2      908.75         907.5    66.02912 8.539126 10.80123     0 sufficient_ibi
-#> 
+#>
 #> $settings
 #> $settings$ibi_col
 #> [1] "IBI"
-#> 
+#>
 #> $settings$group_cols
 #> [1] "USER"
-#> 
+#>
 #> $settings$time_col
 #> NULL
-#> 
+#>
 #> $settings$unit
 #> [1] "auto"
-#> 
+#>
 #> $settings$resolved_unit
 #> [1] "milliseconds"
-#> 
+#>
 #> $settings$min_ibi_ms
 #> [1] 300
-#> 
+#>
 #> $settings$max_ibi_ms
 #> [1] 2000
-#> 
+#>
 #> $settings$max_jump_ms
 #> [1] 500
-#> 
+#>
 #> $settings$note
 #> [1] "IBI quality and HRV-style summaries are based only on the selected IBI/RR interval column, not on raw HRV validity/vendor columns."
-#> 
-#> 
+#>
+#>
 ```

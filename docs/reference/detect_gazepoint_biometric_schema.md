@@ -44,7 +44,7 @@ detect_gazepoint_biometric_schema(df)
 #> 1      FALSE                  FALSE             FALSE                   2
 #>                      status
 #> 1 biometric_schema_detected
-#> 
+#>
 #> $columns
 #>   column standard_name             signal_group present active n_non_missing
 #> 1    CNT           CNT                   timing    TRUE   TRUE             5
@@ -64,7 +64,7 @@ detect_gazepoint_biometric_schema(df)
 #> 3                GSR/EDA unit interpretation depends on export documentation and column naming.
 #> 4                                                                                          <NA>
 #> 5 Treat as a validity/vendor flag unless documentation proves this column contains HRV metrics.
-#> 
+#>
 #> $time_columns
 #>   column standard_name           role unit_hint confidence
 #> 1    CNT           CNT sample_counter   samples       1.00
@@ -72,14 +72,14 @@ detect_gazepoint_biometric_schema(df)
 #>                                           reason
 #> 1              Recognised sample counter column.
 #> 2 Recognised time column with seconds-like name.
-#> 
+#>
 #> $timebase
 #> $timebase$overview
 #>   n_rows primary_time_column primary_time_role    unit median_interval
 #> 1      5                TIME         timestamp seconds      0.01666667
 #>   sampling_rate_hz counter_column n_valid_intervals            status
 #> 1               60            CNT                 4 timebase_detected
-#> 
+#>
 #> $timebase$time_columns
 #>   column standard_name           role unit_hint confidence
 #> 1    CNT           CNT sample_counter   samples       1.00
@@ -87,17 +87,17 @@ detect_gazepoint_biometric_schema(df)
 #>                                           reason
 #> 1              Recognised sample counter column.
 #> 2 Recognised time column with seconds-like name.
-#> 
+#>
 #> $timebase$interval_summary
 #>      unit n_intervals n_valid_intervals n_zero_or_negative_intervals
 #> 1 seconds           4                 4                            0
 #>   min_interval median_interval mean_interval max_interval
 #> 1   0.01666667      0.01666667    0.01666667   0.01666667
-#> 
+#>
 #> $timebase$warnings
 #> character(0)
-#> 
-#> 
+#>
+#>
 #> $name_map
 #>   original_name standard_name changed
 #> 1           CNT           CNT   FALSE
@@ -105,10 +105,10 @@ detect_gazepoint_biometric_schema(df)
 #> 3           GSR           GSR   FALSE
 #> 4            HR            HR   FALSE
 #> 5           HRV           HRV   FALSE
-#> 
+#>
 #> $notes
-#> [1] "Treat raw HRV columns as validity or vendor flags unless documentation proves they contain HRV metrics." 
-#> [2] "IBI-derived HRV summaries should be computed only from genuine IBI/RR interval columns."                 
+#> [1] "Treat raw HRV columns as validity or vendor flags unless documentation proves they contain HRV metrics."
+#> [2] "IBI-derived HRV summaries should be computed only from genuine IBI/RR interval columns."
 #> [3] "GSR/EDA units should not be overclaimed unless the export column or study documentation identifies them."
-#> 
+#>
 ```

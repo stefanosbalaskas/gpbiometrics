@@ -44,9 +44,9 @@ original names to standardised names.
 
 ``` r
 standardise_gazepoint_biometric_names(c("time ms", "heart rate", "eda uS"))
-#> [1] "TIME_MS" "HR"      "GSR_US" 
+#> [1] "TIME_MS" "HR"      "GSR_US"
 
 df <- data.frame(`time ms` = 1:3, `heart rate` = c(70, 72, 71))
 names(standardise_gazepoint_biometric_names(df))
-#> [1] "TIME_MS" "HR"     
+#> [1] "TIME_MS" "HR"
 ```

@@ -63,5 +63,22 @@ if (nzchar(demo_dir)) {
   profile <- profile_gazepoint_export_folder(demo_dir, max_files = 2)
   profile
 }
-#> Error in profile_gazepoint_export_folder(demo_dir, max_files = 2): could not find function "profile_gazepoint_export_folder"
+#> Gazepoint export folder profile
+#> --------------------------------
+#>                                                                                                                                      path
+#>  C:/Users/Stefanos-PC/AppData/Local/Temp/RtmpQP25DY/temp_libpath45b81f1c14d5/gpbiometrics/extdata/gazepoint_biometrics_kiosk_demo_exports
+#>  n_files n_readable_files n_read_errors total_rows_profiled total_size_bytes
+#>        2                2             0                1921           887560
+#>  n_unique_extensions n_unique_column_sets any_time_columns any_ttl_columns
+#>                    1                    2             TRUE            TRUE
+#>  any_aoi_columns any_signal_columns
+#>             TRUE               TRUE
+#>
+#> Warnings
+#>  severity                    issue
+#>      info     multiple_column_sets
+#>      info all_zero_numeric_columns
+#>                                        message
+#>   Readable files contain 2 unique column sets.
+#>  5 numeric column occurrence(s) were all zero.
 ```

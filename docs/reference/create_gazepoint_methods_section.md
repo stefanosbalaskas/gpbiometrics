@@ -70,7 +70,10 @@ A character vector with class `"gazepoint_report_text"`.
 
 ``` r
 log <- create_gazepoint_analysis_decision_log(study_id = "demo")
-#> Error in create_gazepoint_analysis_decision_log(study_id = "demo"): could not find function "create_gazepoint_analysis_decision_log"
 create_gazepoint_methods_section(decision_log = log)
-#> Error in create_gazepoint_methods_section(decision_log = log): could not find function "create_gazepoint_methods_section"
+#> Gazepoint biometric workflow processing was conducted using gpbiometrics 0.3.0.9000, an R package designed for importing, checking, preprocessing, summarising, and reporting Gazepoint Biometrics and GP3-derived biometric exports.
+#>
+#> Workflow decisions were recorded in a structured analysis decision log. The log contained 0 decision record(s), covering exclusions, preprocessing choices, quality-control decisions, analysis settings, or reviewer-facing notes where applicable.
+#>
+#> All biometric, gaze-linked, and time-course outputs were treated as workflow descriptors. They were not interpreted as direct measures of emotion, stress, cognition, preference, health status, diagnosis, mechanism, or precise temporal onset.
 ```

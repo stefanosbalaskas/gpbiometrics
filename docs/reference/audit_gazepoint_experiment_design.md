@@ -69,5 +69,12 @@ audit_gazepoint_experiment_design(
   condition_col = "condition",
   expected_conditions = c("A", "B")
 )
-#> Error in audit_gazepoint_experiment_design(dat, participant_col = "participant",     trial_col = "trial", condition_col = "condition", expected_conditions = c("A",         "B")): could not find function "audit_gazepoint_experiment_design"
+#> Gazepoint experiment design audit
+#> ---------------------------------
+#>  n_rows n_participants n_trials n_unique_participant_trials n_conditions
+#>      16              4        4                          16            2
+#>  n_sessions has_trial_column has_condition_column has_session_column
+#>          NA             TRUE                 TRUE              FALSE
+#>
+#> No design warnings detected.
 ```

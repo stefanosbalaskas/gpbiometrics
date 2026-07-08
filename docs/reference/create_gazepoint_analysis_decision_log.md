@@ -39,7 +39,6 @@ log <- create_gazepoint_analysis_decision_log(
   study_id = "demo_study",
   analyst = "analyst"
 )
-#> Error in create_gazepoint_analysis_decision_log(study_id = "demo_study",     analyst = "analyst"): could not find function "create_gazepoint_analysis_decision_log"
 
 log <- add_gazepoint_decision(
   log,
@@ -52,8 +51,24 @@ log <- add_gazepoint_decision(
   parameter = "baseline_window",
   value = "-1000_to_0_ms"
 )
-#> Error in add_gazepoint_decision(log, stage = "preprocessing", object_type = "signal",     object_id = "GSR", decision = "baseline_corrected", reason = "Pre-event baseline window available",     function_name = "baseline_correct_gazepoint_gsr", parameter = "baseline_window",     value = "-1000_to_0_ms"): could not find function "add_gazepoint_decision"
 
 summarise_gazepoint_decision_log(log)
-#> Error in summarise_gazepoint_decision_log(log): could not find function "summarise_gazepoint_decision_log"
+#> Gazepoint analysis decision log summary
+#> ---------------------------------------
+#>    study_id analyst description               created_at package_version
+#>  demo_study analyst        <NA> 2026-07-08 13:00:26 EEST      0.3.0.9000
+#>  n_decisions
+#>            1
+#>
+#> By stage
+#>          stage n
+#>  preprocessing 1
+#>
+#> By object type
+#>  object_type n
+#>       signal 1
+#>
+#> By decision
+#>            decision n
+#>  baseline_corrected 1
 ```
