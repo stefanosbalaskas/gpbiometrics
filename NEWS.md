@@ -1,6 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
 * Development version.
+* Added `pipeline_comparison_dashboard()` for static reviewer-facing summaries of QC, missingness, quality, rule-failure, exclusion, and audit indicators.
 
 * Added `check_gazepoint_bids()` for conservative BIDS-like Gazepoint dataset layout audits.
 
