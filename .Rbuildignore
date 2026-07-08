@@ -21,3 +21,4 @@
 ^docs$
 ^pkgdown$
 ^ROADMAP_STATUS[.]md$
+^ROADMAP_COVERAGE\.md$
