@@ -54,5 +54,4 @@ d <- data.frame(
   eda = c(1, 1.1, NA, 1.2, 1.3)
 )
 plot_gazepoint_missingness(d, cols = c("pupil_left", "eda"), time_col = "time")
-#> Error in plot_gazepoint_missingness(d, cols = c("pupil_left", "eda"),     time_col = "time"): could not find function "plot_gazepoint_missingness"
 ```

@@ -61,5 +61,7 @@ d <- data.frame(
   pupil_left = c(3.0, 3.2, 3.4, NA, 3.3, 3.1)
 )
 smooth_gazepoint_pupil(d, pupil_cols = "pupil_left", window = 3)
-#> Error in smooth_gazepoint_pupil(d, pupil_cols = "pupil_left", window = 3): could not find function "smooth_gazepoint_pupil"
+#> Gazepoint pupil smoothing
+#>   pupil_col        output_col n_samples n_smoothed_nonmissing
+#>  pupil_left pupil_left_smooth         6                     6
 ```

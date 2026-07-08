@@ -87,15 +87,15 @@ plot_gazepoint_biometric_quality(df, signal_cols = "GSR", plot = FALSE)
 #> 1      5            5                    1      <NA>          NA
 #>   derived_from_signals plot_created                status
 #> 1                FALSE        FALSE quality_flags_present
-#> 
+#>
 #> $quality_summary
 #>     column n n_flagged flag_rate n_missing missing_rate         source
 #> 1 HR_valid 5         1       0.2         0            0 quality_column
-#> 
+#>
 #> $group_summary
-#> [1] group     column    n         n_flagged flag_rate source   
+#> [1] group     column    n         n_flagged flag_rate source
 #> <0 rows> (or 0-length row.names)
-#> 
+#>
 #> $plot_data
 #>   .row_id HR_valid
 #> 1       1        1
@@ -103,33 +103,33 @@ plot_gazepoint_biometric_quality(df, signal_cols = "GSR", plot = FALSE)
 #> 3       3        0
 #> 4       4        1
 #> 5       5        1
-#> 
+#>
 #> $settings
 #> $settings$quality_cols
 #> [1] "HR_valid"
-#> 
+#>
 #> $settings$signal_cols
 #> [1] "GSR"
-#> 
+#>
 #> $settings$time_col
 #> NULL
-#> 
+#>
 #> $settings$group_col
 #> NULL
-#> 
+#>
 #> $settings$dropout_prefix
 #> [1] "biometric_dropout"
-#> 
+#>
 #> $settings$max_points
 #> [1] 5000
-#> 
+#>
 #> $settings$derived_from_signals
 #> [1] FALSE
-#> 
+#>
 #> $settings$note
 #> [1] "Quality plots summarise availability, validity, dropout, or missingness indicators; they are not physiological interpretations."
-#> 
-#> 
+#>
+#>
 #> attr(,"class")
-#> [1] "gazepoint_biometric_quality_plot" "list"                            
+#> [1] "gazepoint_biometric_quality_plot" "list"
 ```

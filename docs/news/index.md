@@ -4,6 +4,11 @@
 
 - Development version.
 
+- Added a quality-control workflow article linking dataset-layout
+  checks, metadata validation, missingness summaries, signal-quality
+  flags, exclusion recommendations, dashboard summaries, and
+  reproducibility outputs.
+
 - Added
   [`pipeline_comparison_dashboard()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/pipeline_comparison_dashboard.md)
   for static reviewer-facing summaries of QC, missingness, quality,

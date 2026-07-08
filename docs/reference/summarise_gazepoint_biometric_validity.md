@@ -70,7 +70,7 @@ summarise_gazepoint_biometric_validity(df, group_cols = "USER")
 #> 1                     0                          1                  1
 #>                        status
 #> 1 biometric_signals_available
-#> 
+#>
 #> $signals
 #>   column signal_type n n_missing missing_rate n_non_missing n_finite
 #> 1    GSR     gsr_eda 8         1        0.125             7        7
@@ -78,7 +78,7 @@ summarise_gazepoint_biometric_validity(df, group_cols = "USER")
 #>   finite_rate n_unique_finite      mean median        sd min max        status
 #> 1       0.875               3  2.142857      2 0.8997354   1   4 active_signal
 #> 2       0.875               7 77.000000     80 5.7154761  70  83 active_signal
-#> 
+#>
 #> $validity_flags
 #>   column standard_name n n_missing missing_rate n_valid_like valid_like_rate
 #> 1    HRV           HRV 8         0            0            7           0.875
@@ -86,7 +86,7 @@ summarise_gazepoint_biometric_validity(df, group_cols = "USER")
 #> 1              1             0.125
 #>                                        interpretation_note
 #> 1 Treated as a validity/vendor flag, not as an HRV metric.
-#> 
+#>
 #> $group_summary
 #>   group n_rows signal_column_count active_signal_count
 #> 1    P1      4                   2                   2
@@ -94,24 +94,24 @@ summarise_gazepoint_biometric_validity(df, group_cols = "USER")
 #>                                      status
 #> 1                signals_available_in_group
 #> 2 some_signals_inactive_or_limited_in_group
-#> 
+#>
 #> $settings
 #> $settings$signal_cols
-#> [1] "GSR" "HR" 
-#> 
+#> [1] "GSR" "HR"
+#>
 #> $settings$validity_cols
 #> [1] "HRV"
-#> 
+#>
 #> $settings$group_cols
 #> [1] "USER"
-#> 
+#>
 #> $settings$active_min_unique
 #> [1] 2
-#> 
+#>
 #> $settings$notes
-#> [1] "GSR/EDA availability does not identify emotional valence."                                           
-#> [2] "Heart-rate availability requires baseline/task context for interpretation."                          
+#> [1] "GSR/EDA availability does not identify emotional valence."
+#> [2] "Heart-rate availability requires baseline/task context for interpretation."
 #> [3] "Raw HRV columns are treated as validity/vendor flags unless independently documented as HRV metrics."
-#> 
-#> 
+#>
+#>
 ```

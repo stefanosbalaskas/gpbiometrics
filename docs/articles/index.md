@@ -12,3 +12,6 @@
   gallery](https://stefanosbalaskas.github.io/gpbiometrics/articles/plot-gallery.md):
 
   Rendered examples of all exported gpbiometrics plot helpers.
+
+- [Quality-control
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/qc-workflow.md):

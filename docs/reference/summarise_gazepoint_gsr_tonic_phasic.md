@@ -84,7 +84,7 @@ summarise_gazepoint_gsr_tonic_phasic(df, window_n = 3)
 #> 8    8    1.1      1.10       0.00           FALSE                   0.14826
 #> 9    9    1.0      1.10      -0.10           FALSE                   0.14826
 #> 10  10    1.1      1.05       0.05           FALSE                   0.14826
-#> 
+#>
 #> $summary
 #>   group n_rows source_column n_signal_finite mean_signal median_signal
 #> 1   all     10        GSR_US              10         1.2           1.1
@@ -92,40 +92,40 @@ summarise_gazepoint_gsr_tonic_phasic(df, window_n = 3)
 #> 1       1.14          1.1        0.06             0        0.7       -0.1
 #>   positive_phasic_sum n_phasic_peaks peak_threshold
 #> 1                0.85              1        0.14826
-#> 
+#>
 #> $settings
 #> $settings$gsr_col
 #> [1] "GSR_US"
-#> 
+#>
 #> $settings$group_cols
 #> NULL
-#> 
+#>
 #> $settings$time_col
 #> NULL
-#> 
+#>
 #> $settings$window_n
 #> [1] 3
-#> 
+#>
 #> $settings$peak_threshold
 #> NULL
-#> 
+#>
 #> $settings$output_prefix
 #> [1] "gsr"
-#> 
+#>
 #> $settings$tonic_col
 #> [1] "gsr_tonic"
-#> 
+#>
 #> $settings$phasic_col
 #> [1] "gsr_phasic"
-#> 
+#>
 #> $settings$peak_col
 #> [1] "gsr_phasic_peak"
-#> 
+#>
 #> $settings$threshold_col
 #> [1] "gsr_phasic_peak_threshold"
-#> 
+#>
 #> $settings$note
 #> [1] "This is a descriptive rolling-median tonic/phasic decomposition, not a full EDA deconvolution model."
-#> 
-#> 
+#>
+#>
 ```
