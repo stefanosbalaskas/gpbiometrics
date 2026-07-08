@@ -4,6 +4,11 @@
 
 - Development version.
 
+- Added a PPG, IBI, HRV, and respiration workflow article covering PPG
+  quality, filtering, peak detection, IBI audits, beat correction, HRV
+  summaries, respiration proxies, external-toolbox preparation, and
+  reporting.
+
 - Added an EDA, GSR, and SCR workflow article covering unit audits,
   signal quality, artifacts, baseline correction, tonic/phasic
   decomposition, SCR events, sensitivity checks, model-ready summaries,

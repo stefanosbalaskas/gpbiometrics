@@ -1,6 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
 * Development version.
+* Added a PPG, IBI, HRV, and respiration workflow article covering PPG quality, filtering, peak detection, IBI audits, beat correction, HRV summaries, respiration proxies, external-toolbox preparation, and reporting.
 * Added an EDA, GSR, and SCR workflow article covering unit audits, signal quality, artifacts, baseline correction, tonic/phasic decomposition, SCR events, sensitivity checks, model-ready summaries, and reporting.
 * Added a pupil and gaze quality-control workflow article covering missingness, blink detection, smoothing, interpolation, baseline correction, gaze filtering, QC summaries, and reporting.
 * Added an article roadmap for planned workflow, showcase, plotting, reporting, and reproducibility articles.
