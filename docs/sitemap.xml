@@ -50,6 +50,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/baseline_correct_gazepoint_pupil.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/build_gazepoint_aoi_timecourse.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/calculate_gazepoint_rsa.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_bids.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_biometric_columns.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_plot_contract.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_ppg_binary_quality.html</loc></url>
@@ -241,6 +242,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/model_gazepoint_hr_point_process.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/normalize_gazepoint_scr.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/optimize_gazepoint_cvxeda_tau.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/pipeline_comparison_dashboard.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_aoi_biometrics.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_biometric_quality.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/plot_gazepoint_biometric_report_dashboard.html</loc></url>
@@ -382,6 +384,7 @@
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_biometrics_report_tables.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_decision_log.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_export_profile.html</loc></url>
+<url><loc>https://stefanosbalaskas.github.io/gpbiometrics/ROADMAP_COVERAGE.html</loc></url>
 <url><loc>https://stefanosbalaskas.github.io/gpbiometrics/ROADMAP_STATUS.html</loc></url>
 </urlset>
 

@@ -1,5 +1,18 @@
 # Changelog
 
+## gpbiometrics 0.3.0.9000
+
+- Development version.
+
+- Added
+  [`pipeline_comparison_dashboard()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/pipeline_comparison_dashboard.md)
+  for static reviewer-facing summaries of QC, missingness, quality,
+  rule-failure, exclusion, and audit indicators.
+
+- Added
+  [`check_gazepoint_bids()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_bids.md)
+  for conservative BIDS-like Gazepoint dataset layout audits.
+
 ## gpbiometrics 0.3.0
 
 - Added advanced cluster-permutation guardrails and external export

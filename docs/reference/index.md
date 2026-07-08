@@ -872,3 +872,7 @@ missingness visualization, and metadata validation.
   : Summarize gpbiometrics feature coverage
 - [`create_gazepoint_release_checklist()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_release_checklist.md)
   : Create a gpbiometrics release checklist
+- [`check_gazepoint_bids()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_bids.md)
+  : Check a Gazepoint dataset for a BIDS-like layout
+- [`pipeline_comparison_dashboard()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/pipeline_comparison_dashboard.md)
+  : Create a static Gazepoint pipeline comparison dashboard

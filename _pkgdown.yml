@@ -470,3 +470,5 @@ reference:
   - audit_gazepoint_release_readiness
   - summarize_gazepoint_feature_coverage
   - create_gazepoint_release_checklist
+  - check_gazepoint_bids
+  - pipeline_comparison_dashboard
