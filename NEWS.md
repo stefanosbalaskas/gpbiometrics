@@ -2,6 +2,8 @@
 
 * Development version.
 
+* Added `check_gazepoint_bids()` for conservative BIDS-like Gazepoint dataset layout audits.
+
 # gpbiometrics 0.3.0
 
 * Added advanced cluster-permutation guardrails and external export helpers. The guardrail functions explicitly prevent unsupported ANOVA, mixed-model, TFCE, multidimensional, covariate-adjusted, parallel, and onset/offset cluster claims while directing users back to the validated two-condition time-course workflow. Added export helpers for MNE-, permuco-, and permutes-style external workflows.
