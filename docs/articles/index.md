@@ -11,6 +11,9 @@
 - [EDA, GSR, and SCR
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/eda-scr-workflow.md):
 
+- [Event alignment and AOI-linked biometric
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/event-alignment-aoi-workflow.md):
+
 - [gpbiometrics
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/gpbiometrics-workflow.md):
 

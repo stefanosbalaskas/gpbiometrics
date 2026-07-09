@@ -4,6 +4,11 @@
 
 - Development version.
 
+- Added an event-alignment and AOI-linked biometric workflow article
+  covering event extraction, timing audits, stream alignment,
+  gaze-biometric synchronization, AOI time courses, event-locked
+  summaries, model-ready tables, and reporting.
+
 - Added a PPG, IBI, HRV, and respiration workflow article covering PPG
   quality, filtering, peak detection, IBI audits, beat correction, HRV
   summaries, respiration proxies, external-toolbox preparation, and
