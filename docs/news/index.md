@@ -4,6 +4,11 @@
 
 - Development version.
 
+- Added a design-audit workflow article covering metadata validation,
+  dataset structure, condition balance, session comparability,
+  export-schema checks, event coverage, timing audits, pipeline
+  readiness, design-coverage plots, and reporting outputs.
+
 - Added a synthetic-data showcase article demonstrating validation, QC,
   event alignment, AOI-linked summaries, model-ready tables, reporting
   outputs, and reproducibility records without private data.
