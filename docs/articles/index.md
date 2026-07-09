@@ -39,3 +39,6 @@
 
 - [Synthetic data
   showcase](https://stefanosbalaskas.github.io/gpbiometrics/articles/synthetic-data-showcase.md):
+
+- [External toolbox bridges
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/toolbox-bridges-workflow.md):

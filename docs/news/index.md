@@ -4,6 +4,11 @@
 
 - Development version.
 
+- Added an external-toolbox bridges workflow article covering HeartPy,
+  pyPPG, pyHRV, RHRV, LEDALAB, PSPM, cvxEDA, NeuroKit, and BioSPPy-style
+  preparation, cross-checks, result import, export contracts, and
+  reporting.
+
 - Added a design-audit workflow article covering metadata validation,
   dataset structure, condition balance, session comparability,
   export-schema checks, event coverage, timing audits, pipeline
