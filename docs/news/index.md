@@ -4,6 +4,10 @@
 
 - Development version.
 
+- Added a synthetic-data showcase article demonstrating validation, QC,
+  event alignment, AOI-linked summaries, model-ready tables, reporting
+  outputs, and reproducibility records without private data.
+
 - Added a reporting and reproducibility workflow article covering
   decision logs, manifests, QC supplements, methods text, report-ready
   tables, audit trails, preregistration checks, and reproducibility

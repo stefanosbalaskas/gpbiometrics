@@ -33,3 +33,6 @@
 
 - [Reporting and reproducibility
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/reporting-reproducibility-workflow.md):
+
+- [Synthetic data
+  showcase](https://stefanosbalaskas.github.io/gpbiometrics/articles/synthetic-data-showcase.md):
