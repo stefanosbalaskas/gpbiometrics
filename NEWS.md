@@ -1,6 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
 * Development version.
+* Added a design-audit workflow article covering metadata validation, dataset structure, condition balance, session comparability, export-schema checks, event coverage, timing audits, pipeline readiness, design-coverage plots, and reporting outputs.
 * Added a synthetic-data showcase article demonstrating validation, QC, event alignment, AOI-linked summaries, model-ready tables, reporting outputs, and reproducibility records without private data.
 * Added a reporting and reproducibility workflow article covering decision logs, manifests, QC supplements, methods text, report-ready tables, audit trails, preregistration checks, and reproducibility statements.
 * Added an event-alignment and AOI-linked biometric workflow article covering event extraction, timing audits, stream alignment, gaze-biometric synchronization, AOI time courses, event-locked summaries, model-ready tables, and reporting.
