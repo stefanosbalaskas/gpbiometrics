@@ -1,6 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
 * Development version.
+* Added a reporting and reproducibility workflow article covering decision logs, manifests, QC supplements, methods text, report-ready tables, audit trails, preregistration checks, and reproducibility statements.
 * Added an event-alignment and AOI-linked biometric workflow article covering event extraction, timing audits, stream alignment, gaze-biometric synchronization, AOI time courses, event-locked summaries, model-ready tables, and reporting.
 * Added a PPG, IBI, HRV, and respiration workflow article covering PPG quality, filtering, peak detection, IBI audits, beat correction, HRV summaries, respiration proxies, external-toolbox preparation, and reporting.
 * Added an EDA, GSR, and SCR workflow article covering unit audits, signal quality, artifacts, baseline correction, tonic/phasic decomposition, SCR events, sensitivity checks, model-ready summaries, and reporting.

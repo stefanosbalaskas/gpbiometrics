@@ -11,7 +11,8 @@ articles:
   articles/ppg-hrv-workflow: ppg-hrv-workflow.html
   articles/pupil-qc-workflow: pupil-qc-workflow.html
   articles/qc-workflow: qc-workflow.html
-last_built: 2026-07-09T00:11Z
+  articles/reporting-reproducibility-workflow: reporting-reproducibility-workflow.html
+last_built: 2026-07-09T17:17Z
 urls:
   reference: https://stefanosbalaskas.github.io/gpbiometrics/reference
   article: https://stefanosbalaskas.github.io/gpbiometrics/articles
