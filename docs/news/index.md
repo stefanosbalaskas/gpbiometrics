@@ -4,6 +4,11 @@
 
 - Development version.
 
+- Added a reporting and reproducibility workflow article covering
+  decision logs, manifests, QC supplements, methods text, report-ready
+  tables, audit trails, preregistration checks, and reproducibility
+  statements.
+
 - Added an event-alignment and AOI-linked biometric workflow article
   covering event extraction, timing audits, stream alignment,
   gaze-biometric synchronization, AOI time courses, event-locked

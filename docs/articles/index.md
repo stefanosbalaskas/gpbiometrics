@@ -30,3 +30,6 @@
 
 - [Quality-control
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/qc-workflow.md):
+
+- [Reporting and reproducibility
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/reporting-reproducibility-workflow.md):
