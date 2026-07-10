@@ -28,6 +28,9 @@
 
   Rendered examples of all exported gpbiometrics plot helpers.
 
+- [PPG and HRV visual
+  diagnostics](https://stefanosbalaskas.github.io/gpbiometrics/articles/ppg-hrv-visual-diagnostics.md):
+
 - [PPG, IBI, HRV, and respiration
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/ppg-hrv-workflow.md):
 

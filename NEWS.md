@@ -1,6 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
 * Development version.
+* Added a plot-rich PPG/HRV visual diagnostics article with executable synthetic filtering, peak-detection, IBI-audit, Poincare-style, HRV-feature, respiration-proxy, and dashboard figures.
 * Added a plot-rich EDA/SCR visual diagnostics article with executable synthetic signal, decomposition, event-marker, latency, recovery, and threshold-sensitivity figures.
 * Added a plot-rich visual QC dashboard workflow article with executable synthetic diagnostic figures.
 * Expanded the plot gallery with additional QC, signal-processing, EDA/SCR, PPG/HRV, event-alignment, AOI, reporting, design-audit, and toolbox-bridge plotting examples.

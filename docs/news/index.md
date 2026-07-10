@@ -4,6 +4,10 @@
 
 - Development version.
 
+- Added a plot-rich PPG/HRV visual diagnostics article with executable
+  synthetic filtering, peak-detection, IBI-audit, Poincare-style,
+  HRV-feature, respiration-proxy, and dashboard figures.
+
 - Added a plot-rich EDA/SCR visual diagnostics article with executable
   synthetic signal, decomposition, event-marker, latency, recovery, and
   threshold-sensitivity figures.
