@@ -4,6 +4,10 @@
 
 - Development version.
 
+- Added a plot-rich design-release visual audit article with executable
+  synthetic condition-balance, coverage, schema, channel, sampling,
+  timebase, readiness, and dashboard figures.
+
 - Added a plot-rich multimodal event-dashboard article with executable
   synthetic event-timeline, alignment, event-locked, AOI-linked,
   synchronization-lag, coverage, and dashboard figures.
