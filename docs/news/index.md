@@ -4,6 +4,10 @@
 
 - Development version.
 
+- Added a plot-rich multimodal event-dashboard article with executable
+  synthetic event-timeline, alignment, event-locked, AOI-linked,
+  synchronization-lag, coverage, and dashboard figures.
+
 - Added a plot-rich PPG/HRV visual diagnostics article with executable
   synthetic filtering, peak-detection, IBI-audit, Poincare-style,
   HRV-feature, respiration-proxy, and dashboard figures.

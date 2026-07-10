@@ -23,6 +23,9 @@
 - [gpbiometrics
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/gpbiometrics-workflow.md):
 
+- [Multimodal event
+  dashboard](https://stefanosbalaskas.github.io/gpbiometrics/articles/multimodal-event-dashboard.md):
+
 - [Plot
   gallery](https://stefanosbalaskas.github.io/gpbiometrics/articles/plot-gallery.md):
 

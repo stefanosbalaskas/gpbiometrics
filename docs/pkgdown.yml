@@ -9,6 +9,7 @@ articles:
   articles/eda-scr-workflow: eda-scr-workflow.html
   articles/event-alignment-aoi-workflow: event-alignment-aoi-workflow.html
   gpbiometrics-workflow: gpbiometrics-workflow.html
+  articles/multimodal-event-dashboard: multimodal-event-dashboard.html
   articles/plot-gallery: plot-gallery.html
   articles/ppg-hrv-visual-diagnostics: ppg-hrv-visual-diagnostics.html
   articles/ppg-hrv-workflow: ppg-hrv-workflow.html
@@ -18,7 +19,7 @@ articles:
   articles/synthetic-data-showcase: synthetic-data-showcase.html
   articles/toolbox-bridges-workflow: toolbox-bridges-workflow.html
   articles/visual-qc-dashboard-workflow: visual-qc-dashboard-workflow.html
-last_built: 2026-07-10T09:00Z
+last_built: 2026-07-10T09:18Z
 urls:
   reference: https://stefanosbalaskas.github.io/gpbiometrics/reference
   article: https://stefanosbalaskas.github.io/gpbiometrics/articles
