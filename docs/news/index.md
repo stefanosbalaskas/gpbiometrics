@@ -4,6 +4,10 @@
 
 - Development version.
 
+- Added a plot-rich EDA/SCR visual diagnostics article with executable
+  synthetic signal, decomposition, event-marker, latency, recovery, and
+  threshold-sensitivity figures.
+
 - Added a plot-rich visual QC dashboard workflow article with executable
   synthetic diagnostic figures.
 
