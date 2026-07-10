@@ -1,6 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
 * Development version.
+* Expanded the plot gallery with additional QC, signal-processing, EDA/SCR, PPG/HRV, event-alignment, AOI, reporting, design-audit, and toolbox-bridge plotting examples.
 * Added an external-toolbox bridges workflow article covering HeartPy, pyPPG, pyHRV, RHRV, LEDALAB, PSPM, cvxEDA, NeuroKit, and BioSPPy-style preparation, cross-checks, result import, export contracts, and reporting.
 * Added a design-audit workflow article covering metadata validation, dataset structure, condition balance, session comparability, export-schema checks, event coverage, timing audits, pipeline readiness, design-coverage plots, and reporting outputs.
 * Added a synthetic-data showcase article demonstrating validation, QC, event alignment, AOI-linked summaries, model-ready tables, reporting outputs, and reproducibility records without private data.

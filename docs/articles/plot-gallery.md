@@ -95,3 +95,62 @@ as emotion, stress, cognition, preference, health status, or diagnosis.
 ### `plot_gazepoint_saccade_main_sequence()`
 
 ![](plot-gallery_files/figure-html/plot-saccade-main-sequence-1.png)
+
+## Extended QC and reporting plot examples
+
+This section adds representative plot calls for common `gpbiometrics`
+quality-control, signal-processing, event-alignment, AOI, reporting, and
+toolbox-bridge workflows.
+
+The examples are intended as plotting contracts and documentation
+patterns. They show how diagnostic and report-ready figures can be
+produced from synthetic or already processed data. They should not be
+interpreted as direct evidence of emotion, stress, attention, workload,
+clinical status, diagnosis, health condition, or psychological response.
+
+### Missingness and signal-quality plots
+
+Missingness and signal-quality plots are useful for checking coverage
+and candidate data-quality issues before modelling.
+
+### Timing and activity plots
+
+Timing and activity plots help document sample availability, active
+channels, and possible time-reset issues.
+
+### Raw and processed signal plots
+
+Signal plots should identify the plotted channel and preprocessing
+state.
+
+### EDA, GSR, and SCR plots
+
+EDA/GSR/SCR plots document preprocessing, decomposition, and candidate
+event detection.
+
+### PPG, IBI, HRV, and respiration-proxy plots
+
+PPG and interval plots document signal-processing and feature-extraction
+outputs.
+
+### Event-alignment, AOI, and multimodal plots
+
+Event-alignment and AOI-linked plots show synchronized summaries and
+should be reported as feature-engineering outputs.
+
+### Design and reporting plots
+
+Design and reporting plots support auditability and should be kept
+separate from substantive interpretation.
+
+### Toolbox-bridge output plots
+
+Toolbox-bridge plots should document algorithmic outputs and export
+contracts.
+
+## Reporting note
+
+When using these plots in articles, reports, or supplementary materials,
+describe them as diagnostic, quality-control, synchronization,
+feature-engineering, or reproducibility displays unless the study design
+and validation evidence support stronger interpretation.
