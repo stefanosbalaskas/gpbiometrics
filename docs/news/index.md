@@ -4,6 +4,10 @@
 
 - Development version.
 
+- Expanded the plot gallery with additional QC, signal-processing,
+  EDA/SCR, PPG/HRV, event-alignment, AOI, reporting, design-audit, and
+  toolbox-bridge plotting examples.
+
 - Added an external-toolbox bridges workflow article covering HeartPy,
   pyPPG, pyHRV, RHRV, LEDALAB, PSPM, cvxEDA, NeuroKit, and BioSPPy-style
   preparation, cross-checks, result import, export contracts, and
