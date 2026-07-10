@@ -4,6 +4,9 @@
 
 - Development version.
 
+- Added a plot-rich visual QC dashboard workflow article with executable
+  synthetic diagnostic figures.
+
 - Expanded the plot gallery with additional QC, signal-processing,
   EDA/SCR, PPG/HRV, event-alignment, AOI, reporting, design-audit, and
   toolbox-bridge plotting examples.
