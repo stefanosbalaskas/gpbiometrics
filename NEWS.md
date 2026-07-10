@@ -1,6 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
 * Development version.
+* Added a plot-rich toolbox-crosscheck visuals article with executable synthetic native-versus-toolbox comparison, EDA event-count, PPG peak/IBI, HRV-feature, Bland-Altman-style, rank-sensitivity, decision-map, and dashboard figures.
 * Added a plot-rich design-release visual audit article with executable synthetic condition-balance, coverage, schema, channel, sampling, timebase, readiness, and dashboard figures.
 * Added a plot-rich multimodal event-dashboard article with executable synthetic event-timeline, alignment, event-locked, AOI-linked, synchronization-lag, coverage, and dashboard figures.
 * Added a plot-rich PPG/HRV visual diagnostics article with executable synthetic filtering, peak-detection, IBI-audit, Poincare-style, HRV-feature, respiration-proxy, and dashboard figures.
