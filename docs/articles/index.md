@@ -42,3 +42,6 @@
 
 - [External toolbox bridges
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/toolbox-bridges-workflow.md):
+
+- [Visual QC dashboard
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/visual-qc-dashboard-workflow.md):
