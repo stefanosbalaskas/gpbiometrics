@@ -1,5 +1,4 @@
-
-# gpbiometrics
+# gpbiometrics <img src="man/figures/logo.png" align="right" height="139" alt="gpbiometrics logo" />
 
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
 [![Version](https://img.shields.io/badge/version-0.3.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.3.0)
