@@ -65,8 +65,8 @@ if (nzchar(demo_dir)) {
 }
 #> Gazepoint export folder profile
 #> --------------------------------
-#>                                                                                                                                      path
-#>  C:/Users/Stefanos-PC/AppData/Local/Temp/RtmpYlPyYr/temp_libpath50801514780a/gpbiometrics/extdata/gazepoint_biometrics_kiosk_demo_exports
+#>                                                                                                                                     path
+#>  C:/Users/Stefanos-PC/AppData/Local/Temp/RtmpYlPyYr/temp_libpath50802614d09/gpbiometrics/extdata/gazepoint_biometrics_kiosk_demo_exports
 #>  n_files n_readable_files n_read_errors total_rows_profiled total_size_bytes
 #>        2                2             0                1921           887560
 #>  n_unique_extensions n_unique_column_sets any_time_columns any_ttl_columns
