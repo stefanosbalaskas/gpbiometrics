@@ -11,6 +11,9 @@
 - [Design audit
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/design-audit-workflow.md):
 
+- [Design release visual
+  audit](https://stefanosbalaskas.github.io/gpbiometrics/articles/design-release-visual-audit.md):
+
 - [EDA and SCR visual
   diagnostics](https://stefanosbalaskas.github.io/gpbiometrics/articles/eda-scr-visual-diagnostics.md):
 
