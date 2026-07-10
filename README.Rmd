@@ -1,4 +1,4 @@
-# gpbiometrics
+# gpbiometrics <img src="man/figures/logo.png" align="right" height="139" alt="gpbiometrics logo" />
 [![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0)
 [![DOI](https://img.shields.io/badge/DOI-Zenodo-blue.svg)](https://doi.org/10.5281/zenodo.20836724)
 
