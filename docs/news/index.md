@@ -4,6 +4,9 @@
 
 - Development version.
 
+- Polished the pkgdown home-page DOI badge and grouped article
+  navigation into workflow categories.
+
 - Added a plot-rich toolbox-crosscheck visuals article with executable
   synthetic native-versus-toolbox comparison, EDA event-count, PPG
   peak/IBI, HRV-feature, Bland-Altman-style, rank-sensitivity,

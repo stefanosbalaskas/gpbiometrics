@@ -6,12 +6,62 @@ home:
   description: Gazepoint-native workflows for physiological and eye-tracking exports.
 navbar:
   structure:
-    left:
-    - intro
-    - reference
-    - articles
-    - news
-    right: github
+    left: [reference, articles, news]
+    right: [github]
+  components:
+    news:
+      text: Changelog
+      href: news/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Start here
+      - text: Article roadmap
+        href: articles/article-roadmap.html
+      - text: gpbiometrics workflow
+        href: articles/gpbiometrics-workflow.html
+      - text: Synthetic data showcase
+        href: articles/synthetic-data-showcase.html
+      - text: --------
+      - text: Quality control and reporting
+      - text: QC workflow
+        href: articles/qc-workflow.html
+      - text: Visual QC dashboard workflow
+        href: articles/visual-qc-dashboard-workflow.html
+      - text: Reporting and reproducibility workflow
+        href: articles/reporting-reproducibility-workflow.html
+      - text: Design audit workflow
+        href: articles/design-audit-workflow.html
+      - text: Design release visual audit
+        href: articles/design-release-visual-audit.html
+      - text: --------
+      - text: Signal-specific workflows
+      - text: Pupil QC workflow
+        href: articles/pupil-qc-workflow.html
+      - text: EDA, GSR, and SCR workflow
+        href: articles/eda-scr-workflow.html
+      - text: EDA and SCR visual diagnostics
+        href: articles/eda-scr-visual-diagnostics.html
+      - text: PPG and HRV workflow
+        href: articles/ppg-hrv-workflow.html
+      - text: PPG and HRV visual diagnostics
+        href: articles/ppg-hrv-visual-diagnostics.html
+      - text: --------
+      - text: Events, AOIs, and multimodal workflows
+      - text: Event alignment and AOI-linked biometric workflow
+        href: articles/event-alignment-aoi-workflow.html
+      - text: Multimodal event dashboard
+        href: articles/multimodal-event-dashboard.html
+      - text: --------
+      - text: Advanced analysis and toolbox crosschecks
+      - text: Cluster-permutation workflow
+        href: articles/cluster-permutation.html
+      - text: Toolbox bridges workflow
+        href: articles/toolbox-bridges-workflow.html
+      - text: Toolbox crosscheck visuals
+        href: articles/toolbox-crosscheck-visuals.html
+      - text: Plot gallery
+        href: articles/plot-gallery.html
 reference:
 - title: Reviewer and manuscript report templates
   desc: >
@@ -472,3 +522,43 @@ reference:
   - create_gazepoint_release_checklist
   - check_gazepoint_bids
   - pipeline_comparison_dashboard
+
+articles:
+- title: Start here
+  desc: Orientation, package scope, and reproducible demonstration data.
+  contents:
+  - "`articles/article-roadmap`"
+  - "`gpbiometrics-workflow`"
+  - "`articles/synthetic-data-showcase`"
+
+- title: Quality control and reporting
+  desc: Dataset checks, visual QC, reproducibility reporting, and release-readiness audits.
+  contents:
+  - "`articles/qc-workflow`"
+  - "`articles/visual-qc-dashboard-workflow`"
+  - "`articles/reporting-reproducibility-workflow`"
+  - "`articles/design-audit-workflow`"
+  - "`articles/design-release-visual-audit`"
+
+- title: Signal-specific workflows
+  desc: Pupil, EDA/SCR, PPG, IBI, and HRV diagnostic workflows.
+  contents:
+  - "`articles/pupil-qc-workflow`"
+  - "`articles/eda-scr-workflow`"
+  - "`articles/eda-scr-visual-diagnostics`"
+  - "`articles/ppg-hrv-workflow`"
+  - "`articles/ppg-hrv-visual-diagnostics`"
+
+- title: Events, AOIs, and multimodal workflows
+  desc: Event alignment, AOI-linked biometric summaries, and multimodal dashboards.
+  contents:
+  - "`articles/event-alignment-aoi-workflow`"
+  - "`articles/multimodal-event-dashboard`"
+
+- title: Advanced analysis and toolbox crosschecks
+  desc: Cluster-permutation workflows, external-toolbox bridges, sensitivity checks, and plot galleries.
+  contents:
+  - "`articles/cluster-permutation`"
+  - "`articles/toolbox-bridges-workflow`"
+  - "`articles/toolbox-crosscheck-visuals`"
+  - "`articles/plot-gallery`"

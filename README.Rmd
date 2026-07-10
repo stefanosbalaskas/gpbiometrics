@@ -1,6 +1,6 @@
 # gpbiometrics
 [![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0)
-[![DOI](https://zenodo.org/badge/1279519183.svg)](https://doi.org/10.5281/zenodo.20836724)
+[![DOI](https://img.shields.io/badge/DOI-Zenodo-blue.svg)](https://doi.org/10.5281/zenodo.20836724)
 
 `gpbiometrics` provides reproducible tools for importing, checking, preprocessing, summarising, modelling, and reporting Gazepoint Biometrics and Gazepoint GP3 biometric exports. It is designed for researchers working with electrodermal activity, pulse/heart-rate channels, interbeat intervals, TTL markers, stimulus/event timing, and multimodal Gazepoint workflows.
 

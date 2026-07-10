@@ -35,25 +35,34 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/article-roadmap.html">Article roadmap</a></li>
-    <li><a class="dropdown-item" href="articles/cluster-permutation.html">Cluster-permutation workflow</a></li>
+<li><h6 class="dropdown-header" data-toc-skip>Start here</h6></li>
+    <li><a class="dropdown-item" href="articles/article-roadmap.html">Article roadmap</a></li>
+    <li><a class="dropdown-item" href="articles/gpbiometrics-workflow.html">gpbiometrics workflow</a></li>
+    <li><a class="dropdown-item" href="articles/synthetic-data-showcase.html">Synthetic data showcase</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Quality control and reporting</h6></li>
+    <li><a class="dropdown-item" href="articles/qc-workflow.html">QC workflow</a></li>
+    <li><a class="dropdown-item" href="articles/visual-qc-dashboard-workflow.html">Visual QC dashboard workflow</a></li>
+    <li><a class="dropdown-item" href="articles/reporting-reproducibility-workflow.html">Reporting and reproducibility workflow</a></li>
     <li><a class="dropdown-item" href="articles/design-audit-workflow.html">Design audit workflow</a></li>
     <li><a class="dropdown-item" href="articles/design-release-visual-audit.html">Design release visual audit</a></li>
-    <li><a class="dropdown-item" href="articles/eda-scr-visual-diagnostics.html">EDA and SCR visual diagnostics</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Signal-specific workflows</h6></li>
+    <li><a class="dropdown-item" href="articles/pupil-qc-workflow.html">Pupil QC workflow</a></li>
     <li><a class="dropdown-item" href="articles/eda-scr-workflow.html">EDA, GSR, and SCR workflow</a></li>
-    <li><a class="dropdown-item" href="articles/event-alignment-aoi-workflow.html">Event alignment and AOI-linked biometric workflow</a></li>
-    <li><a class="dropdown-item" href="articles/gpbiometrics-workflow.html">gpbiometrics workflow</a></li>
-    <li><a class="dropdown-item" href="articles/multimodal-event-dashboard.html">Multimodal event dashboard</a></li>
-    <li><a class="dropdown-item" href="articles/plot-gallery.html">Plot gallery</a></li>
+    <li><a class="dropdown-item" href="articles/eda-scr-visual-diagnostics.html">EDA and SCR visual diagnostics</a></li>
+    <li><a class="dropdown-item" href="articles/ppg-hrv-workflow.html">PPG and HRV workflow</a></li>
     <li><a class="dropdown-item" href="articles/ppg-hrv-visual-diagnostics.html">PPG and HRV visual diagnostics</a></li>
-    <li><a class="dropdown-item" href="articles/ppg-hrv-workflow.html">PPG, IBI, HRV, and respiration workflow</a></li>
-    <li><a class="dropdown-item" href="articles/pupil-qc-workflow.html">Pupil and gaze quality-control workflow</a></li>
-    <li><a class="dropdown-item" href="articles/qc-workflow.html">Quality-control workflow</a></li>
-    <li><a class="dropdown-item" href="articles/reporting-reproducibility-workflow.html">Reporting and reproducibility workflow</a></li>
-    <li><a class="dropdown-item" href="articles/synthetic-data-showcase.html">Synthetic data showcase</a></li>
-    <li><a class="dropdown-item" href="articles/toolbox-bridges-workflow.html">External toolbox bridges workflow</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Events, AOIs, and multimodal workflows</h6></li>
+    <li><a class="dropdown-item" href="articles/event-alignment-aoi-workflow.html">Event alignment and AOI-linked biometric workflow</a></li>
+    <li><a class="dropdown-item" href="articles/multimodal-event-dashboard.html">Multimodal event dashboard</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Advanced analysis and toolbox crosschecks</h6></li>
+    <li><a class="dropdown-item" href="articles/cluster-permutation.html">Cluster-permutation workflow</a></li>
+    <li><a class="dropdown-item" href="articles/toolbox-bridges-workflow.html">Toolbox bridges workflow</a></li>
     <li><a class="dropdown-item" href="articles/toolbox-crosscheck-visuals.html">Toolbox crosscheck visuals</a></li>
-    <li><a class="dropdown-item" href="articles/visual-qc-dashboard-workflow.html">Visual QC dashboard workflow</a></li>
+    <li><a class="dropdown-item" href="articles/plot-gallery.html">Plot gallery</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="news/index.html">Changelog</a></li>
@@ -71,7 +80,7 @@
 <div class="page-header"><h1 id="gpbiometrics">gpbiometrics<a class="anchor" aria-label="anchor" href="#gpbiometrics"></a>
 </h1></div>
 <p><a href="https://lifecycle.r-lib.org/articles/stages.html#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a> <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.3.0" class="external-link"><img src="https://img.shields.io/badge/version-0.3.0-blue.svg" alt="Version"></a></p>
-<p><a href="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://doi.org/10.5281/zenodo.20836724" class="external-link">DOI: 10.5281/zenodo.20836724</a></p>
+<p><a href="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://doi.org/10.5281/zenodo.20836724" class="external-link"><img src="https://img.shields.io/badge/DOI-Zenodo-blue.svg" alt="DOI"></a></p>
 <p><code>gpbiometrics</code> provides reproducible tools for importing, checking, preprocessing, summarising, modelling, and reporting Gazepoint Biometrics and Gazepoint GP3 biometric exports. It is designed for researchers working with electrodermal activity, pulse/heart-rate channels, interbeat intervals, TTL markers, stimulus/event timing, and multimodal Gazepoint workflows.</p>
 <p>The package focuses on transparent preprocessing, quality control, analysis-ready tables, reporting outputs, and conservative physiological interpretation. It does not infer emotion, stress, cognition, preference, health status, or diagnosis directly from biometric signals.</p>
 <div class="section level2">
