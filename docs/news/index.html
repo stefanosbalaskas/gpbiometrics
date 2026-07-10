@@ -18,25 +18,34 @@
       <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/article-roadmap.html">Article roadmap</a></li>
-    <li><a class="dropdown-item" href="../articles/cluster-permutation.html">Cluster-permutation workflow</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><h6 class="dropdown-header" data-toc-skip>Start here</h6></li>
+    <li><a class="dropdown-item" href="../articles/article-roadmap.html">Article roadmap</a></li>
+    <li><a class="dropdown-item" href="../articles/gpbiometrics-workflow.html">gpbiometrics workflow</a></li>
+    <li><a class="dropdown-item" href="../articles/synthetic-data-showcase.html">Synthetic data showcase</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Quality control and reporting</h6></li>
+    <li><a class="dropdown-item" href="../articles/qc-workflow.html">QC workflow</a></li>
+    <li><a class="dropdown-item" href="../articles/visual-qc-dashboard-workflow.html">Visual QC dashboard workflow</a></li>
+    <li><a class="dropdown-item" href="../articles/reporting-reproducibility-workflow.html">Reporting and reproducibility workflow</a></li>
     <li><a class="dropdown-item" href="../articles/design-audit-workflow.html">Design audit workflow</a></li>
     <li><a class="dropdown-item" href="../articles/design-release-visual-audit.html">Design release visual audit</a></li>
-    <li><a class="dropdown-item" href="../articles/eda-scr-visual-diagnostics.html">EDA and SCR visual diagnostics</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Signal-specific workflows</h6></li>
+    <li><a class="dropdown-item" href="../articles/pupil-qc-workflow.html">Pupil QC workflow</a></li>
     <li><a class="dropdown-item" href="../articles/eda-scr-workflow.html">EDA, GSR, and SCR workflow</a></li>
-    <li><a class="dropdown-item" href="../articles/event-alignment-aoi-workflow.html">Event alignment and AOI-linked biometric workflow</a></li>
-    <li><a class="dropdown-item" href="../articles/gpbiometrics-workflow.html">gpbiometrics workflow</a></li>
-    <li><a class="dropdown-item" href="../articles/multimodal-event-dashboard.html">Multimodal event dashboard</a></li>
-    <li><a class="dropdown-item" href="../articles/plot-gallery.html">Plot gallery</a></li>
+    <li><a class="dropdown-item" href="../articles/eda-scr-visual-diagnostics.html">EDA and SCR visual diagnostics</a></li>
+    <li><a class="dropdown-item" href="../articles/ppg-hrv-workflow.html">PPG and HRV workflow</a></li>
     <li><a class="dropdown-item" href="../articles/ppg-hrv-visual-diagnostics.html">PPG and HRV visual diagnostics</a></li>
-    <li><a class="dropdown-item" href="../articles/ppg-hrv-workflow.html">PPG, IBI, HRV, and respiration workflow</a></li>
-    <li><a class="dropdown-item" href="../articles/pupil-qc-workflow.html">Pupil and gaze quality-control workflow</a></li>
-    <li><a class="dropdown-item" href="../articles/qc-workflow.html">Quality-control workflow</a></li>
-    <li><a class="dropdown-item" href="../articles/reporting-reproducibility-workflow.html">Reporting and reproducibility workflow</a></li>
-    <li><a class="dropdown-item" href="../articles/synthetic-data-showcase.html">Synthetic data showcase</a></li>
-    <li><a class="dropdown-item" href="../articles/toolbox-bridges-workflow.html">External toolbox bridges workflow</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Events, AOIs, and multimodal workflows</h6></li>
+    <li><a class="dropdown-item" href="../articles/event-alignment-aoi-workflow.html">Event alignment and AOI-linked biometric workflow</a></li>
+    <li><a class="dropdown-item" href="../articles/multimodal-event-dashboard.html">Multimodal event dashboard</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Advanced analysis and toolbox crosschecks</h6></li>
+    <li><a class="dropdown-item" href="../articles/cluster-permutation.html">Cluster-permutation workflow</a></li>
+    <li><a class="dropdown-item" href="../articles/toolbox-bridges-workflow.html">Toolbox bridges workflow</a></li>
     <li><a class="dropdown-item" href="../articles/toolbox-crosscheck-visuals.html">Toolbox crosscheck visuals</a></li>
-    <li><a class="dropdown-item" href="../articles/visual-qc-dashboard-workflow.html">Visual QC dashboard workflow</a></li>
+    <li><a class="dropdown-item" href="../articles/plot-gallery.html">Plot gallery</a></li>
   </ul></li>
 <li class="active nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><a class="external-link nav-link" href="https://github.com/stefanosbalaskas/gpbiometrics/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
@@ -55,6 +64,7 @@
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.0.9000" id="gpbiometrics-0309000">gpbiometrics 0.3.0.9000<a class="anchor" aria-label="anchor" href="#gpbiometrics-0309000"></a></h2>
 <ul><li><p>Development version.</p></li>
+<li><p>Polished the pkgdown home-page DOI badge and grouped article navigation into workflow categories.</p></li>
 <li><p>Added a plot-rich toolbox-crosscheck visuals article with executable synthetic native-versus-toolbox comparison, EDA event-count, PPG peak/IBI, HRV-feature, Bland-Altman-style, rank-sensitivity, decision-map, and dashboard figures.</p></li>
 <li><p>Added a plot-rich design-release visual audit article with executable synthetic condition-balance, coverage, schema, channel, sampling, timebase, readiness, and dashboard figures.</p></li>
 <li><p>Added a plot-rich multimodal event-dashboard article with executable synthetic event-timeline, alignment, event-locked, AOI-linked, synchronization-lag, coverage, and dashboard figures.</p></li>

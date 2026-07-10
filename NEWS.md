@@ -1,6 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
 * Development version.
+* Polished the pkgdown home-page DOI badge and grouped article navigation into workflow categories.
 * Added a plot-rich toolbox-crosscheck visuals article with executable synthetic native-versus-toolbox comparison, EDA event-count, PPG peak/IBI, HRV-feature, Bland-Altman-style, rank-sensitivity, decision-map, and dashboard figures.
 * Added a plot-rich design-release visual audit article with executable synthetic condition-balance, coverage, schema, channel, sampling, timebase, readiness, and dashboard figures.
 * Added a plot-rich multimodal event-dashboard article with executable synthetic event-timeline, alignment, event-locked, AOI-linked, synchronization-lag, coverage, and dashboard figures.
