@@ -509,6 +509,7 @@ reference:
   - detect_gazepoint_nonwear
   - summarize_gazepoint_nonwear
   - filter_gazepoint_signal
+  - downsample_gazepoint_data
   - upsample_gazepoint_data
   - audit_gazepoint_beats
   - correct_gazepoint_beats
