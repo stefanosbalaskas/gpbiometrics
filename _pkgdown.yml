@@ -122,6 +122,8 @@ reference:
   - detect_gazepoint_pupil_blinks
   - clean_gazepoint_pupil_signal
   - filter_gazepoint_gaze
+  - detect_gazepoint_fixations
+  - detect_gazepoint_saccades
   - summarize_gazepoint_fixations
 - title: EDA, SCR, RR, and engagement indices
   contents:
