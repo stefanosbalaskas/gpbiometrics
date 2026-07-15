@@ -124,6 +124,7 @@ reference:
   - filter_gazepoint_gaze
   - detect_gazepoint_fixations
   - detect_gazepoint_saccades
+  - assign_gazepoint_aoi
   - summarize_gazepoint_fixations
 - title: EDA, SCR, RR, and engagement indices
   contents:
