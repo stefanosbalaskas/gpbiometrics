@@ -198,6 +198,7 @@ reference:
   - prepare_gazepoint_pspm_input
   - prepare_gazepoint_pyppg_input
   - prepare_gazepoint_rhrv_input
+  - prepare_gazepoint_pyhrv_input
   - prepare_gazepoint_scr_hurdle_model_data
   - preprocess_gazepoint_scr_pspm_style
   - process_gazepoint_ppg_heartpy_style
