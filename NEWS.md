@@ -1,5 +1,6 @@
 # gpbiometrics 0.3.0.9000
 
+- Added `export_gazepoint_to_bids()` for standards-oriented BIDS 1.11.1 eye-tracking export with headerless compressed physiological tables, JSON sidecars, screen-metadata enforcement, dry-run path previews, and overwrite protection.
 - Added `prepare_gazepoint_biosppy_input()` for auditable preparation of grouped Gazepoint EDA/GSR and PPG/BVP waveform vectors with timebase validation, explicit missing-data handling, and optional Python-ready CSV export.
 - Added `prepare_gazepoint_pyhrv_input()` for auditable conversion of Gazepoint IBI/RR data into grouped millisecond NN-interval vectors and optional Python-ready CSV files.
 - Added `assign_gazepoint_aoi()` for auditable rectangular and polygonal AOI assignment with context matching, boundary control, and explicit overlap resolution.
