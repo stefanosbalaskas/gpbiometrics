@@ -1,5 +1,6 @@
 # gpbiometrics 0.3.0.9000
 
+- Added `assign_gazepoint_aoi()` for auditable rectangular and polygonal AOI assignment with context matching, boundary control, and explicit overlap resolution.
 - Added `detect_gazepoint_fixations()` and `detect_gazepoint_saccades()` for auditable I-VT-style classification of raw Gazepoint gaze samples and extraction of fixation and saccade event properties.
 - Added `downsample_gazepoint_data()` for auditable fixed-width aggregation of grouped Gazepoint gaze and biometric time series.
 * Development version.
