@@ -1,5 +1,6 @@
 # gpbiometrics 0.3.0.9000
 
+- Added `prepare_gazepoint_biosppy_input()` for auditable preparation of grouped Gazepoint EDA/GSR and PPG/BVP waveform vectors with timebase validation, explicit missing-data handling, and optional Python-ready CSV export.
 - Added `prepare_gazepoint_pyhrv_input()` for auditable conversion of Gazepoint IBI/RR data into grouped millisecond NN-interval vectors and optional Python-ready CSV files.
 - Added `assign_gazepoint_aoi()` for auditable rectangular and polygonal AOI assignment with context matching, boundary control, and explicit overlap resolution.
 - Added `detect_gazepoint_fixations()` and `detect_gazepoint_saccades()` for auditable I-VT-style classification of raw Gazepoint gaze samples and extraction of fixation and saccade event properties.

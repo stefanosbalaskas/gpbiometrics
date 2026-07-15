@@ -204,6 +204,7 @@ reference:
   - process_gazepoint_ppg_heartpy_style
   - run_gazepoint_biosppy_eda
   - run_gazepoint_biosppy_ppg
+  - prepare_gazepoint_biosppy_input
   - run_gazepoint_heartpy_crosscheck
   - run_gazepoint_neurokit_eda_crosscheck
   - run_gazepoint_pyhrv_style
