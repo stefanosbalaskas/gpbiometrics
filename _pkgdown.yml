@@ -208,6 +208,12 @@ reference:
   - prepare_gazepoint_eyetrackingr_input
   - prepare_gazepoint_pupillometryr_input
   - prepare_gazepoint_gazer_input
+  - prepare_gazepoint_mne_events
+  - prepare_gazepoint_mne_input
+  - align_gazepoint_to_eeg
+  - sync_gazepoint_signals_via_lsl
+  - create_gazepoint_eye_methods_text
+  - session_info_gazepoint
   - run_gazepoint_heartpy_crosscheck
   - run_gazepoint_neurokit_eda_crosscheck
   - run_gazepoint_pyhrv_style
