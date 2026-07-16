@@ -214,6 +214,13 @@ reference:
   - sync_gazepoint_signals_via_lsl
   - create_gazepoint_eye_methods_text
   - session_info_gazepoint
+  - validate_gazepoint_gaze
+  - summarise_gazepoint_fixations_by_aoi
+  - summarize_gazepoint_fixations_by_aoi
+  - prepare_gazepoint_bids_eye
+  - prepare_gazepoint_bids_physio
+  - write_gazepoint_mne_fif
+  - estimate_gazepoint_lsl_clock_offsets
   - run_gazepoint_heartpy_crosscheck
   - run_gazepoint_neurokit_eda_crosscheck
   - run_gazepoint_pyhrv_style
