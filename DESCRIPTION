@@ -26,7 +26,8 @@ Suggests:
     jsonlite,
     ggplot2,
     shiny,
-    eyetrackingR
+    eyetrackingR,
+    PupillometryR
 Config/testthat/edition: 3
 Config/roxygen2/version: 8.0.0
 VignetteBuilder: knitr
