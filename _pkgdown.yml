@@ -207,6 +207,7 @@ reference:
   - prepare_gazepoint_biosppy_input
   - prepare_gazepoint_eyetrackingr_input
   - prepare_gazepoint_pupillometryr_input
+  - prepare_gazepoint_gazer_input
   - run_gazepoint_heartpy_crosscheck
   - run_gazepoint_neurokit_eda_crosscheck
   - run_gazepoint_pyhrv_style
