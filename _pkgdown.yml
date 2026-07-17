@@ -37,6 +37,8 @@ navbar:
       - text: Quality control and reporting
       - text: QC workflow
         href: articles/qc-workflow.html
+      - text: Troubleshooting and real-data readiness
+        href: articles/troubleshooting-readiness.html
       - text: Visual QC dashboard workflow
         href: articles/visual-qc-dashboard-workflow.html
       - text: Reporting and reproducibility workflow
@@ -65,6 +67,14 @@ navbar:
         href: articles/gp3tools-compatibility.html
       - text: Multimodal event dashboard
         href: articles/multimodal-event-dashboard.html
+      - text: --------
+      - text: Interoperability and data exchange
+      - text: MNE, EEG, and LSL interoperability
+        href: articles/mne-eeg-lsl-workflow.html
+      - text: BIDS export and data sharing
+        href: articles/bids-export-workflow.html
+      - text: Eye-tracking ecosystem bridges
+        href: articles/eye-tracking-ecosystem-bridges.html
       - text: --------
       - text: Advanced analysis and toolbox crosschecks
       - text: Cluster-permutation workflow
@@ -571,6 +581,7 @@ articles:
   desc: Dataset checks, visual QC, reproducibility reporting, and release-readiness audits.
   contents:
   - "`articles/qc-workflow`"
+  - "`articles/troubleshooting-readiness`"
   - "`articles/visual-qc-dashboard-workflow`"
   - "`articles/reporting-reproducibility-workflow`"
   - "`articles/design-audit-workflow`"
@@ -591,6 +602,13 @@ articles:
   - "`articles/event-alignment-aoi-workflow`"
   - "`articles/gp3tools-compatibility`"
   - "`articles/multimodal-event-dashboard`"
+
+- title: Interoperability and data exchange
+  desc: MNE, EEG, LSL, BIDS, and optional eye-tracking ecosystem workflows.
+  contents:
+  - "`articles/mne-eeg-lsl-workflow`"
+  - "`articles/bids-export-workflow`"
+  - "`articles/eye-tracking-ecosystem-bridges`"
 
 - title: Advanced analysis and toolbox crosschecks
   desc: Cluster-permutation workflows, external-toolbox bridges, sensitivity checks, and plot galleries.

@@ -1,5 +1,6 @@
 # gpbiometrics 0.3.0.9000
 
+- Added four workflow articles covering MNE/EEG/LSL interoperability, BIDS export and data sharing, eyetrackingR/PupillometryR/gazeR bridges, and troubleshooting and real-data readiness.
 - Added reciprocal gp3tools compatibility documentation describing the   cross-package biometric schema, time-unit requirements, synchronization   ownership boundary, audit expectations, and interpretation guardrails.
 
 - Closed the remaining roadmap gaps with `validate_gazepoint_gaze()`, `summarise_gazepoint_fixations_by_aoi()` and its American-spelling alias, modality-specific BIDS convenience wrappers, optional native MNE FIF writing through a local Python/MNE installation, and optional live LSL clock-offset estimation through pylsl.
