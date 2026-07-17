@@ -69,6 +69,7 @@
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Events, AOIs, and multimodal workflows</h6></li>
     <li><a class="dropdown-item" href="articles/event-alignment-aoi-workflow.html">Event alignment and AOI-linked biometric workflow</a></li>
+    <li><a class="dropdown-item" href="articles/gp3tools-compatibility.html">gp3tools compatibility</a></li>
     <li><a class="dropdown-item" href="articles/multimodal-event-dashboard.html">Multimodal event dashboard</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Advanced analysis and toolbox crosschecks</h6></li>
@@ -370,6 +371,13 @@
 <p>These tools are intended for advanced users who understand the data requirements and assumptions of each method. Several functions are interoperability bridges or dependency-light approximations, not complete reimplementations of external modelling frameworks.</p>
 </div>
 <div class="section level2">
+<h2 id="compatibility-with-gp3tools">Compatibility with gp3tools<a class="anchor" aria-label="anchor" href="#compatibility-with-gp3tools"></a>
+</h2>
+<p><code>gpbiometrics</code> outputs can be handed to the cross-package integration workflow implemented in <code>gp3tools</code>. A compatible table should retain a participant identifier, a trial or media identifier where applicable, a time field in documented seconds or milliseconds, one or more numeric biometric signals, and an optional event-marker column.</p>
+<p><code>gp3tools</code> owns nearest-time synchronization, tolerance handling, and the cross-package alignment audit. <code>gpbiometrics</code> does not duplicate that implementation. The existing <code><a href="reference/join_gazepoint_biometrics_to_gp3tools.html">join_gazepoint_biometrics_to_gp3tools()</a></code> helper remains available for an explicit package-local join.</p>
+<p>See the <a href="articles/gp3tools-compatibility.html">gp3tools compatibility article</a> for the schema contract, ownership boundary, and reporting guardrails.</p>
+</div>
+<div class="section level2">
 <h2 id="interpretation-guardrails">Interpretation guardrails<a class="anchor" aria-label="anchor" href="#interpretation-guardrails"></a>
 </h2>
 <p>Biometric signals require conservative interpretation.</p>
@@ -429,7 +437,7 @@
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/check.html" class="external-link">check</a></span><span class="op">(</span>args <span class="op">=</span> <span class="st">"--as-cran"</span><span class="op">)</span></span>
 <span><span class="co"># 0 errors | 0 warnings | 0 notes</span></span>
 <span></span>
-<span><span class="fu">urlchecker</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/urlchecker/man/url_check.html" class="external-link">url_check</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu">urlchecker</span><span class="fu">::</span><span class="fu"><a href="https://urlchecker.r-lib.org/reference/url_check.html" class="external-link">url_check</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co"># All URLs are correct</span></span></code></pre>
 <p>The recurring Quarto/TMPDIR message can appear during local checks. It is treated as harmless only when the final <code>R CMD check</code> summary reports 0 errors, 0 warnings, and 0 notes.</p>
 </div>
