@@ -61,6 +61,8 @@ navbar:
       - text: Events, AOIs, and multimodal workflows
       - text: Event alignment and AOI-linked biometric workflow
         href: articles/event-alignment-aoi-workflow.html
+      - text: gp3tools compatibility
+        href: articles/gp3tools-compatibility.html
       - text: Multimodal event dashboard
         href: articles/multimodal-event-dashboard.html
       - text: --------
@@ -587,6 +589,7 @@ articles:
   desc: Event alignment, AOI-linked biometric summaries, and multimodal dashboards.
   contents:
   - "`articles/event-alignment-aoi-workflow`"
+  - "`articles/gp3tools-compatibility`"
   - "`articles/multimodal-event-dashboard`"
 
 - title: Advanced analysis and toolbox crosschecks

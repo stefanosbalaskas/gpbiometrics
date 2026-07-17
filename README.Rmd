@@ -314,6 +314,23 @@ Advanced helpers are included for specialised workflows such as:
 
 These tools are intended for advanced users who understand the data requirements and assumptions of each method. Several functions are interoperability bridges or dependency-light approximations, not complete reimplementations of external modelling frameworks.
 
+## Compatibility with gp3tools
+
+`gpbiometrics` outputs can be handed to the cross-package integration
+workflow implemented in `gp3tools`. A compatible table should retain a
+participant identifier, a trial or media identifier where applicable, a
+time field in documented seconds or milliseconds, one or more numeric
+biometric signals, and an optional event-marker column.
+
+`gp3tools` owns nearest-time synchronization, tolerance handling, and the
+cross-package alignment audit. `gpbiometrics` does not duplicate that
+implementation. The existing `join_gazepoint_biometrics_to_gp3tools()`
+helper remains available for an explicit package-local join.
+
+See the
+[gp3tools compatibility article](vignettes/articles/gp3tools-compatibility.Rmd)
+for the schema contract, ownership boundary, and reporting guardrails.
+
 ## Interpretation guardrails
 
 Biometric signals require conservative interpretation.
