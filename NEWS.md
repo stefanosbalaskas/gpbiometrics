@@ -1,5 +1,7 @@
 # gpbiometrics 0.3.0.9000
 
+- Added reciprocal gp3tools compatibility documentation describing the   cross-package biometric schema, time-unit requirements, synchronization   ownership boundary, audit expectations, and interpretation guardrails.
+
 - Closed the remaining roadmap gaps with `validate_gazepoint_gaze()`, `summarise_gazepoint_fixations_by_aoi()` and its American-spelling alias, modality-specific BIDS convenience wrappers, optional native MNE FIF writing through a local Python/MNE installation, and optional live LSL clock-offset estimation through pylsl.
 - Added an integrated MNE/EEG/LSL interoperability module with `prepare_gazepoint_mne_events()`, `prepare_gazepoint_mne_input()`, `align_gazepoint_to_eeg()`, `sync_gazepoint_signals_via_lsl()`, `create_gazepoint_eye_methods_text()`, and `session_info_gazepoint()` for auditable event conversion, channel-matrix preparation, offset and drift correction, post-import LSL/XDF synchronization, standardized eye-tracking methods reporting, and reproducibility metadata.
 - Added `prepare_gazepoint_gazer_input()` for auditable conversion of long-form Gazepoint gaze and pupil samples into gazeR-compatible subject, trial, millisecond-time, monocular or binocular coordinate, pupil, validity, and blink columns, with optional runtime construction through a locally installed GitHub version of `gazer`.
