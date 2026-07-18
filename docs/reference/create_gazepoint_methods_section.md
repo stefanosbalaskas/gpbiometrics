@@ -71,7 +71,7 @@ A character vector with class `"gazepoint_report_text"`.
 ``` r
 log <- create_gazepoint_analysis_decision_log(study_id = "demo")
 create_gazepoint_methods_section(decision_log = log)
-#> Gazepoint biometric workflow processing was conducted using gpbiometrics 0.3.0.9000, an R package designed for importing, checking, preprocessing, summarising, and reporting Gazepoint Biometrics and GP3-derived biometric exports.
+#> Gazepoint biometric workflow processing was conducted using gpbiometrics 2.0.0, an R package designed for importing, checking, preprocessing, summarising, and reporting Gazepoint Biometrics and GP3-derived biometric exports.
 #>
 #> Workflow decisions were recorded in a structured analysis decision log. The log contained 0 decision record(s), covering exclusions, preprocessing choices, quality-control decisions, analysis settings, or reviewer-facing notes where applicable.
 #>

@@ -1,5 +1,6 @@
-# gpbiometrics 0.3.0.9000
+# gpbiometrics 2.0.0
 
+- Version 2.0.0 consolidates the expanded gpbiometrics workflow for Gazepoint import, validation, quality control, preprocessing, multimodal alignment, external interoperability, reporting, reproducibility, and privacy-safe validation.
 - Added workflow articles for auditing interoperability across external package versions and for running privacy-safe smoke tests on genuine Gazepoint exports stored outside the repository.
 - Added a privacy-safe real-data smoke-test harness with external-directory protection, anonymous dataset identifiers, sanitized conditions, aggregate workflow and diagnostic summaries, repository-safe CSV reporting, and local command-line tools for running and combining private-data audits.
 - Added a machine-readable interoperability version-testing framework with declared bridge contracts, minimum-tested Python versions, dependency and runtime audits, privacy-safe CSV reports, and a dedicated GitHub Actions matrix covering R eye-tracking bridges and floor/current Python environments.
@@ -17,7 +18,6 @@
 - Added `assign_gazepoint_aoi()` for auditable rectangular and polygonal AOI assignment with context matching, boundary control, and explicit overlap resolution.
 - Added `detect_gazepoint_fixations()` and `detect_gazepoint_saccades()` for auditable I-VT-style classification of raw Gazepoint gaze samples and extraction of fixation and saccade event properties.
 - Added `downsample_gazepoint_data()` for auditable fixed-width aggregation of grouped Gazepoint gaze and biometric time series.
-* Development version.
 * Polished the pkgdown home-page DOI badge and grouped article navigation into workflow categories.
 * Added a plot-rich toolbox-crosscheck visuals article with executable synthetic native-versus-toolbox comparison, EDA event-count, PPG peak/IBI, HRV-feature, Bland-Altman-style, rank-sensitivity, decision-map, and dashboard figures.
 * Added a plot-rich design-release visual audit article with executable synthetic condition-balance, coverage, schema, channel, sampling, timebase, readiness, and dashboard figures.

@@ -1,7 +1,7 @@
 Package: gpbiometrics
 Type: Package
 Title: Process and Report Gazepoint Biometrics Data
-Version: 0.3.0.9000
+Version: 2.0.0
 Authors@R: person(given = "Stefanos", family = "Balaskas", email = "s.balaskas@ac.upatras.gr", role = c("aut", "cre"))
 Description: Gazepoint-native tools for reproducible analysis and reporting of Gazepoint
     Biometrics and GP3-derived physiological, gaze, pupil, fixation, AOI,

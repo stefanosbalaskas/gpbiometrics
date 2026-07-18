@@ -18,12 +18,22 @@ release-readiness audits.
 
 - [Quality-control
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/qc-workflow.md):
+
+- [Diagnosing common Gazepoint export and workflow
+  problems](https://stefanosbalaskas.github.io/gpbiometrics/articles/troubleshooting-readiness.md):
+
+  A structured troubleshooting and real-data-readiness workflow for
+  Gazepoint biometric, gaze, timing, and synchronization problems.
+
 - [Visual QC dashboard
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/visual-qc-dashboard-workflow.md):
+
 - [Reporting and reproducibility
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/reporting-reproducibility-workflow.md):
+
 - [Design audit
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/design-audit-workflow.md):
+
 - [Design release visual
   audit](https://stefanosbalaskas.github.io/gpbiometrics/articles/design-release-visual-audit.md):
 
@@ -49,8 +59,32 @@ dashboards.
 
 - [Event alignment and AOI-linked biometric
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/event-alignment-aoi-workflow.md):
+- [gp3tools compatibility and cross-package
+  handoff](https://stefanosbalaskas.github.io/gpbiometrics/articles/gp3tools-compatibility.md):
 - [Multimodal event
   dashboard](https://stefanosbalaskas.github.io/gpbiometrics/articles/multimodal-event-dashboard.md):
+
+### Interoperability and data exchange
+
+MNE, EEG, LSL, BIDS, and optional eye-tracking ecosystem workflows.
+
+- [MNE, EEG, and LSL interoperability
+  workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/mne-eeg-lsl-workflow.md):
+
+  Prepare Gazepoint events and signal channels for MNE, align Gazepoint
+  and EEG clocks, and document LSL/XDF synchronization.
+
+- [Exporting Gazepoint eye-tracking and physiology to
+  BIDS](https://stefanosbalaskas.github.io/gpbiometrics/articles/bids-export-workflow.md):
+
+  Preview, audit, and write standards-oriented Gazepoint eye-tracking
+  and physiological data exports.
+
+- [Using gpbiometrics with eyetrackingR, PupillometryR, and
+  gazeR](https://stefanosbalaskas.github.io/gpbiometrics/articles/eye-tracking-ecosystem-bridges.md):
+
+  Compare and prepare Gazepoint data for three optional R eye-tracking
+  and pupillometry ecosystems.
 
 ### Advanced analysis and toolbox crosschecks
 
@@ -70,3 +104,13 @@ checks, and plot galleries.
   gallery](https://stefanosbalaskas.github.io/gpbiometrics/articles/plot-gallery.md):
 
   Rendered examples of all exported gpbiometrics plot helpers.
+
+### Validation and private-data readiness
+
+Audit external-package compatibility and validate genuine private
+exports without retaining source or participant data.
+
+- [Testing interoperability across external package
+  versions](https://stefanosbalaskas.github.io/gpbiometrics/articles/interoperability-version-testing.md):
+- [Running private real-data smoke tests
+  safely](https://stefanosbalaskas.github.io/gpbiometrics/articles/private-real-data-smoke-testing.md):
