@@ -1,27 +1,34 @@
-pandoc: 3.8.3
+pandoc: '3.10'
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   articles/article-roadmap: article-roadmap.html
+  articles/bids-export-workflow: bids-export-workflow.html
   articles/cluster-permutation: cluster-permutation.html
   articles/design-audit-workflow: design-audit-workflow.html
   articles/design-release-visual-audit: design-release-visual-audit.html
   articles/eda-scr-visual-diagnostics: eda-scr-visual-diagnostics.html
   articles/eda-scr-workflow: eda-scr-workflow.html
   articles/event-alignment-aoi-workflow: event-alignment-aoi-workflow.html
+  articles/eye-tracking-ecosystem-bridges: eye-tracking-ecosystem-bridges.html
+  articles/gp3tools-compatibility: gp3tools-compatibility.html
   gpbiometrics-workflow: gpbiometrics-workflow.html
+  articles/interoperability-version-testing: interoperability-version-testing.html
+  articles/mne-eeg-lsl-workflow: mne-eeg-lsl-workflow.html
   articles/multimodal-event-dashboard: multimodal-event-dashboard.html
   articles/plot-gallery: plot-gallery.html
   articles/ppg-hrv-visual-diagnostics: ppg-hrv-visual-diagnostics.html
   articles/ppg-hrv-workflow: ppg-hrv-workflow.html
+  articles/private-real-data-smoke-testing: private-real-data-smoke-testing.html
   articles/pupil-qc-workflow: pupil-qc-workflow.html
   articles/qc-workflow: qc-workflow.html
   articles/reporting-reproducibility-workflow: reporting-reproducibility-workflow.html
   articles/synthetic-data-showcase: synthetic-data-showcase.html
   articles/toolbox-bridges-workflow: toolbox-bridges-workflow.html
   articles/toolbox-crosscheck-visuals: toolbox-crosscheck-visuals.html
+  articles/troubleshooting-readiness: troubleshooting-readiness.html
   articles/visual-qc-dashboard-workflow: visual-qc-dashboard-workflow.html
-last_built: 2026-07-11T00:16Z
+last_built: 2026-07-18T11:03Z
 urls:
   reference: https://stefanosbalaskas.github.io/gpbiometrics/reference
   article: https://stefanosbalaskas.github.io/gpbiometrics/articles

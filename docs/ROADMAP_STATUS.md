@@ -11,7 +11,7 @@ version 0.2.0.
 - Validation target:
   [`devtools::test()`](https://devtools.r-lib.org/reference/test.html),
   `devtools::check(args = "--as-cran")`, and
-  [`urlchecker::url_check()`](https://rdrr.io/pkg/urlchecker/man/url_check.html)
+  [`urlchecker::url_check()`](https://urlchecker.r-lib.org/reference/url_check.html)
 - Latest local validation before release preparation: 0 errors, 0
   warnings, 0 notes; all URLs correct
 

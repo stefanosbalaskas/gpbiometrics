@@ -1,8 +1,112 @@
 # Changelog
 
-## gpbiometrics 0.3.0.9000
+## gpbiometrics 2.0.0
 
-- Development version.
+- Version 2.0.0 consolidates the expanded gpbiometrics workflow for
+  Gazepoint import, validation, quality control, preprocessing,
+  multimodal alignment, external interoperability, reporting,
+  reproducibility, and privacy-safe validation.
+
+- Added workflow articles for auditing interoperability across external
+  package versions and for running privacy-safe smoke tests on genuine
+  Gazepoint exports stored outside the repository.
+
+- Added a privacy-safe real-data smoke-test harness with
+  external-directory protection, anonymous dataset identifiers,
+  sanitized conditions, aggregate workflow and diagnostic summaries,
+  repository-safe CSV reporting, and local command-line tools for
+  running and combining private-data audits.
+
+- Added a machine-readable interoperability version-testing framework
+  with declared bridge contracts, minimum-tested Python versions,
+  dependency and runtime audits, privacy-safe CSV reports, and a
+  dedicated GitHub Actions matrix covering R eye-tracking bridges and
+  floor/current Python environments.
+
+- Added four workflow articles covering MNE/EEG/LSL interoperability,
+  BIDS export and data sharing, eyetrackingR/PupillometryR/gazeR
+  bridges, and troubleshooting and real-data readiness.
+
+- Added reciprocal gp3tools compatibility documentation describing the
+  cross-package biometric schema, time-unit requirements,
+  synchronization ownership boundary, audit expectations, and
+  interpretation guardrails.
+
+- Closed the remaining roadmap gaps with
+  [`validate_gazepoint_gaze()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_gaze.md),
+  [`summarise_gazepoint_fixations_by_aoi()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_fixations_by_aoi.md)
+  and its American-spelling alias, modality-specific BIDS convenience
+  wrappers, optional native MNE FIF writing through a local Python/MNE
+  installation, and optional live LSL clock-offset estimation through
+  pylsl.
+
+- Added an integrated MNE/EEG/LSL interoperability module with
+  [`prepare_gazepoint_mne_events()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_mne_events.md),
+  [`prepare_gazepoint_mne_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_mne_input.md),
+  [`align_gazepoint_to_eeg()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/align_gazepoint_to_eeg.md),
+  [`sync_gazepoint_signals_via_lsl()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/sync_gazepoint_signals_via_lsl.md),
+  [`create_gazepoint_eye_methods_text()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_eye_methods_text.md),
+  and
+  [`session_info_gazepoint()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/session_info_gazepoint.md)
+  for auditable event conversion, channel-matrix preparation, offset and
+  drift correction, post-import LSL/XDF synchronization, standardized
+  eye-tracking methods reporting, and reproducibility metadata.
+
+- Added
+  [`prepare_gazepoint_gazer_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_gazer_input.md)
+  for auditable conversion of long-form Gazepoint gaze and pupil samples
+  into gazeR-compatible subject, trial, millisecond-time, monocular or
+  binocular coordinate, pupil, validity, and blink columns, with
+  optional runtime construction through a locally installed GitHub
+  version of `gazer`.
+
+- Added
+  [`prepare_gazepoint_pupillometryr_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_pupillometryr_input.md)
+  for auditable conversion of long-form Gazepoint pupil samples into
+  PupillometryR-compatible subject, trial, millisecond-time, condition,
+  pupil, validity, and blink columns, with optional invalid-sample
+  masking and construction of a `PupillometryR` object.
+
+- Added
+  [`prepare_gazepoint_eyetrackingr_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_eyetrackingr_input.md)
+  for auditable conversion of sample-level Gazepoint gaze and AOI data
+  into eyetrackingR-compatible participant, trial, millisecond-time,
+  track-loss, and logical AOI columns, with optional construction of an
+  `eyetrackingR_data` object.
+
+- Added
+  [`export_gazepoint_to_bids()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_to_bids.md)
+  for standards-oriented BIDS 1.11.1 eye-tracking export with headerless
+  compressed physiological tables, JSON sidecars, screen-metadata
+  enforcement, dry-run path previews, and overwrite protection.
+
+- Added
+  [`prepare_gazepoint_biosppy_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_biosppy_input.md)
+  for auditable preparation of grouped Gazepoint EDA/GSR and PPG/BVP
+  waveform vectors with timebase validation, explicit missing-data
+  handling, and optional Python-ready CSV export.
+
+- Added
+  [`prepare_gazepoint_pyhrv_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_pyhrv_input.md)
+  for auditable conversion of Gazepoint IBI/RR data into grouped
+  millisecond NN-interval vectors and optional Python-ready CSV files.
+
+- Added
+  [`assign_gazepoint_aoi()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/assign_gazepoint_aoi.md)
+  for auditable rectangular and polygonal AOI assignment with context
+  matching, boundary control, and explicit overlap resolution.
+
+- Added
+  [`detect_gazepoint_fixations()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_fixations.md)
+  and
+  [`detect_gazepoint_saccades()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_saccades.md)
+  for auditable I-VT-style classification of raw Gazepoint gaze samples
+  and extraction of fixation and saccade event properties.
+
+- Added
+  [`downsample_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/downsample_gazepoint_data.md)
+  for auditable fixed-width aggregation of grouped Gazepoint gaze and
+  biometric time series.
 
 - Polished the pkgdown home-page DOI badge and grouped article
   navigation into workflow categories.

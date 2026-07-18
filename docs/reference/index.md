@@ -88,6 +88,12 @@ validated advanced inferential engines.
   : Clean Gazepoint pupil signal
 - [`filter_gazepoint_gaze()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/filter_gazepoint_gaze.md)
   : Filter implausible Gazepoint gaze samples
+- [`detect_gazepoint_fixations()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_fixations.md)
+  : Detect fixations and saccades in Gazepoint gaze samples
+- [`detect_gazepoint_saccades()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/detect_gazepoint_saccades.md)
+  : Detect saccades in Gazepoint gaze samples
+- [`assign_gazepoint_aoi()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/assign_gazepoint_aoi.md)
+  : Assign Gazepoint coordinates to areas of interest
 - [`summarize_gazepoint_fixations()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_fixations.md)
   : Summarize Gazepoint fixation metrics
 
@@ -231,6 +237,8 @@ validated advanced inferential engines.
   : Prepare Gazepoint HRP/PPG waveform input for pyPPG
 - [`prepare_gazepoint_rhrv_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_rhrv_input.md)
   : Prepare Gazepoint IBI/RR data for RHRV
+- [`prepare_gazepoint_pyhrv_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_pyhrv_input.md)
+  : Prepare Gazepoint intervals for Python pyHRV
 - [`prepare_gazepoint_scr_hurdle_model_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_scr_hurdle_model_data.md)
   : Prepare Gazepoint SCR hurdle-model data
 - [`preprocess_gazepoint_scr_pspm_style()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/preprocess_gazepoint_scr_pspm_style.md)
@@ -241,6 +249,40 @@ validated advanced inferential engines.
   : Run BioSPPy-style Gazepoint EDA processing
 - [`run_gazepoint_biosppy_ppg()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_biosppy_ppg.md)
   : Run BioSPPy-style Gazepoint PPG/BVP processing
+- [`prepare_gazepoint_biosppy_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_biosppy_input.md)
+  : Prepare Gazepoint signals for Python BioSPPy
+- [`prepare_gazepoint_eyetrackingr_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_eyetrackingr_input.md)
+  : Prepare Gazepoint data for eyetrackingR
+- [`prepare_gazepoint_pupillometryr_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_pupillometryr_input.md)
+  : Prepare Gazepoint pupil data for PupillometryR
+- [`prepare_gazepoint_gazer_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_gazer_input.md)
+  : Prepare Gazepoint data for gazeR
+- [`prepare_gazepoint_mne_events()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_mne_events.md)
+  : Prepare Gazepoint events for MNE-Python
+- [`prepare_gazepoint_mne_input()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_mne_input.md)
+  : Prepare Gazepoint channels for an MNE RawArray
+- [`align_gazepoint_to_eeg()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/align_gazepoint_to_eeg.md)
+  : Align Gazepoint timestamps to an EEG clock
+- [`sync_gazepoint_signals_via_lsl()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/sync_gazepoint_signals_via_lsl.md)
+  : Synchronize imported Gazepoint LSL/XDF streams
+- [`create_gazepoint_eye_methods_text()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/create_gazepoint_eye_methods_text.md)
+  : Create reproducible Gazepoint eye-tracking methods text
+- [`session_info_gazepoint()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/session_info_gazepoint.md)
+  : Record gpbiometrics session information
+- [`validate_gazepoint_gaze()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/validate_gazepoint_gaze.md)
+  : Validate Gazepoint gaze data
+- [`summarise_gazepoint_fixations_by_aoi()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarise_gazepoint_fixations_by_aoi.md)
+  : Summarise Gazepoint fixations by area of interest
+- [`summarize_gazepoint_fixations_by_aoi()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/summarize_gazepoint_fixations_by_aoi.md)
+  : American-spelling alias for fixation summaries by AOI
+- [`prepare_gazepoint_bids_eye()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_bids_eye.md)
+  : Prepare an eye-tracking-only BIDS export
+- [`prepare_gazepoint_bids_physio()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/prepare_gazepoint_bids_physio.md)
+  : Prepare a physiology-only BIDS export
+- [`write_gazepoint_mne_fif()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_mne_fif.md)
+  : Write prepared Gazepoint data to an MNE FIF file
+- [`estimate_gazepoint_lsl_clock_offsets()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_lsl_clock_offsets.md)
+  : Estimate live LSL clock offsets through pylsl
 - [`run_gazepoint_heartpy_crosscheck()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_heartpy_crosscheck.md)
   : Run a Gazepoint pulse/PPG cross-check against HeartPy when available
 - [`run_gazepoint_neurokit_eda_crosscheck()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_neurokit_eda_crosscheck.md)
@@ -828,6 +870,8 @@ missingness visualization, and metadata validation.
   : Summarize signal-dropout detections
 - [`filter_gazepoint_signal()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/filter_gazepoint_signal.md)
   : Apply lightweight preprocessing to signal columns
+- [`downsample_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/downsample_gazepoint_data.md)
+  : Downsample Gazepoint time-series data
 - [`upsample_gazepoint_data()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/upsample_gazepoint_data.md)
   : Regularize signal data to an evenly spaced time grid
 - [`audit_gazepoint_beats()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_beats.md)
@@ -874,5 +918,31 @@ missingness visualization, and metadata validation.
   : Create a gpbiometrics release checklist
 - [`check_gazepoint_bids()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/check_gazepoint_bids.md)
   : Check a Gazepoint dataset for a BIDS-like layout
+- [`export_gazepoint_to_bids()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/export_gazepoint_to_bids.md)
+  : Export Gazepoint eye-tracking data to BIDS
 - [`pipeline_comparison_dashboard()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/pipeline_comparison_dashboard.md)
   : Create a static Gazepoint pipeline comparison dashboard
+
+## Interoperability testing and compatibility
+
+Audit external bridge contracts, installed versions, runtime
+availability, and compatibility-report metadata.
+
+- [`gazepoint_interoperability_manifest()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/gazepoint_interoperability_manifest.md)
+  : Define gpbiometrics interoperability targets
+- [`audit_gazepoint_interoperability_versions()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_interoperability_versions.md)
+  : Audit external interoperability versions
+- [`write_gazepoint_interoperability_audit()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_interoperability_audit.md)
+  : Write an interoperability audit
+
+## Private real-data smoke testing
+
+Run aggregate workflow checks on private exports without retaining
+source paths, filenames, participant identifiers, or raw data.
+
+- [`run_gazepoint_real_data_smoke()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/run_gazepoint_real_data_smoke.md)
+  : Run privacy-safe smoke tests on private Gazepoint exports
+- [`audit_gazepoint_smoke_privacy()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/audit_gazepoint_smoke_privacy.md)
+  : Audit a smoke-test result for private information
+- [`write_gazepoint_real_data_smoke()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/write_gazepoint_real_data_smoke.md)
+  : Write privacy-safe real-data smoke-test summaries
