@@ -569,6 +569,13 @@ reference:
   - export_gazepoint_to_bids
   - pipeline_comparison_dashboard
 
+- title: Interoperability testing and compatibility
+  desc: Audit external bridge contracts, installed versions, runtime availability, and compatibility-report metadata.
+  contents:
+  - gazepoint_interoperability_manifest
+  - audit_gazepoint_interoperability_versions
+  - write_gazepoint_interoperability_audit
+
 articles:
 - title: Start here
   desc: Orientation, package scope, and reproducible demonstration data.

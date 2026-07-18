@@ -1,0 +1,190 @@
+name: Interoperability version tests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 1 * *"
+  pull_request:
+    paths:
+      - "DESCRIPTION"
+      - "R/interoperability-version-testing.R"
+      - "R/eyetrackingr-input.R"
+      - "R/pupillometryr-input.R"
+      - "R/gazer-input.R"
+      - "R/mne-eeg-lsl-interoperability.R"
+      - "R/biosppy-input.R"
+      - "R/heartpy-bridge.R"
+      - "R/pyhrv-input.R"
+      - "R/roadmap-final-gaps.R"
+      - "tests/testthat/test-interoperability-version-testing.R"
+      - "tests/testthat/test-eyetrackingr-input.R"
+      - "tests/testthat/test-pupillometryr-input.R"
+      - "tests/testthat/test-gazer-input.R"
+      - "tests/testthat/test-mne-eeg-lsl-interoperability.R"
+      - "tests/testthat/test-biosppy-input.R"
+      - "tests/testthat/test-heartpy-bridge.R"
+      - "tests/testthat/test-pyhrv-input.R"
+      - "tools/run-interoperability-version-audit.R"
+      - ".github/workflows/interoperability-version-tests.yaml"
+
+permissions:
+  contents: read
+
+jobs:
+  r-bridge-contracts:
+    name: R bridge contracts (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install R dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::devtools
+            local::.
+
+      - name: Run R bridge contract tests
+        shell: Rscript {0}
+        run: |
+          devtools::test(filter = "eyetrackingr-input")
+          devtools::test(filter = "pupillometryr-input")
+          devtools::test(filter = "gazer-input")
+          devtools::test(filter = "interoperability-version-testing")
+
+      - name: Write R compatibility report
+        shell: Rscript {0}
+        run: |
+          audit <- gpbiometrics::audit_gazepoint_interoperability_versions(
+            include_python = FALSE,
+            strict = TRUE
+          )
+
+          gpbiometrics::write_gazepoint_interoperability_audit(
+            audit,
+            output_dir = file.path(
+              "artifacts",
+              paste0("r-", Sys.info()[["sysname"]])
+            ),
+            overwrite = TRUE
+          )
+
+      - name: Upload R compatibility report
+        uses: actions/upload-artifact@v7
+        with:
+          name: r-interoperability-${{ matrix.os }}
+          path: artifacts/
+          if-no-files-found: error
+          retention-days: 30
+
+  python-bridge-contracts:
+    name: Python bridges (${{ matrix.profile }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - profile: floor
+            python-version: "3.10"
+            packages: >-
+              mne==1.11.0
+              pylsl==1.16.2
+              biosppy==2.1.0
+              heartpy==1.2.7
+              pyhrv==0.4.1
+              numpy==1.26.4
+              pandas==2.2.3
+
+          - profile: current
+            python-version: "3.12"
+            packages: >-
+              mne
+              pylsl
+              biosppy
+              heartpy
+              pyhrv
+              numpy
+              pandas
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install Python interoperability environment
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install ${{ matrix.packages }}
+          echo "RETICULATE_PYTHON=$(python -c 'import sys; print(sys.executable)')" >> "$GITHUB_ENV"
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install R dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::devtools
+            any::reticulate
+            local::.
+
+      - name: Run Python bridge contract tests
+        shell: Rscript {0}
+        run: |
+          devtools::test(filter = "mne-eeg-lsl-interoperability")
+          devtools::test(filter = "biosppy-input")
+          devtools::test(filter = "heartpy-bridge")
+          devtools::test(filter = "pyhrv-input")
+          devtools::test(filter = "interoperability-version-testing")
+
+      - name: Write Python compatibility report
+        shell: Rscript {0}
+        run: |
+          audit <- gpbiometrics::audit_gazepoint_interoperability_versions(
+            include_python = TRUE,
+            strict = TRUE
+          )
+
+          gpbiometrics::write_gazepoint_interoperability_audit(
+            audit,
+            output_dir = file.path(
+              "artifacts",
+              paste0(
+                "python-",
+                "${{ matrix.profile }}"
+              )
+            ),
+            overwrite = TRUE
+          )
+
+      - name: Upload Python compatibility report
+        uses: actions/upload-artifact@v7
+        with:
+          name: python-interoperability-${{ matrix.profile }}
+          path: artifacts/
+          if-no-files-found: error
+          retention-days: 30
