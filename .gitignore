@@ -20,3 +20,11 @@ Thumbs.db
 *.bak_*
 *.Rcheck/
 dev/
+
+# Private real-data smoke testing
+real-data/
+private-data/
+smoke-test-output/
+local-smoke-results/
+*.private.csv
+*.private.rds
