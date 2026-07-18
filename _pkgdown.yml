@@ -576,6 +576,13 @@ reference:
   - audit_gazepoint_interoperability_versions
   - write_gazepoint_interoperability_audit
 
+- title: Private real-data smoke testing
+  desc: Run aggregate workflow checks on private exports without retaining source paths, filenames, participant identifiers, or raw data.
+  contents:
+  - run_gazepoint_real_data_smoke
+  - audit_gazepoint_smoke_privacy
+  - write_gazepoint_real_data_smoke
+
 articles:
 - title: Start here
   desc: Orientation, package scope, and reproducible demonstration data.

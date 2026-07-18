@@ -365,15 +365,24 @@ test_that("audit writer creates only aggregate machine-readable files", {
     include_python = FALSE
   )
 
-  output_dir <- file.path(
-    tempdir(),
-    paste0(
-      "gpbiometrics-interoperability-",
-      sample.int(
-        1000000L,
-        1L
-      )
-    )
+  output_dir <- tempfile(
+    "gpbiometrics-interoperability-"
+  )
+
+  on.exit(
+    unlink(
+      output_dir,
+      recursive = TRUE,
+      force = TRUE
+    ),
+    add = TRUE
+  )
+
+  # Guarantee a clean first-write contract even after repeated tests.
+  unlink(
+    output_dir,
+    recursive = TRUE,
+    force = TRUE
   )
 
   files <- write_gazepoint_interoperability_audit(
