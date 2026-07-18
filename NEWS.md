@@ -1,5 +1,6 @@
 # gpbiometrics 0.3.0.9000
 
+- Added workflow articles for auditing interoperability across external package versions and for running privacy-safe smoke tests on genuine Gazepoint exports stored outside the repository.
 - Added a privacy-safe real-data smoke-test harness with external-directory protection, anonymous dataset identifiers, sanitized conditions, aggregate workflow and diagnostic summaries, repository-safe CSV reporting, and local command-line tools for running and combining private-data audits.
 - Added a machine-readable interoperability version-testing framework with declared bridge contracts, minimum-tested Python versions, dependency and runtime audits, privacy-safe CSV reports, and a dedicated GitHub Actions matrix covering R eye-tracking bridges and floor/current Python environments.
 - Added four workflow articles covering MNE/EEG/LSL interoperability, BIDS export and data sharing, eyetrackingR/PupillometryR/gazeR bridges, and troubleshooting and real-data readiness.

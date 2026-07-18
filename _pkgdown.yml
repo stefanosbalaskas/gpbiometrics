@@ -631,3 +631,9 @@ articles:
   - "`articles/toolbox-bridges-workflow`"
   - "`articles/toolbox-crosscheck-visuals`"
   - "`articles/plot-gallery`"
+
+- title: Validation and private-data readiness
+  desc: Audit external-package compatibility and validate genuine private exports without retaining source or participant data.
+  contents:
+  - articles/interoperability-version-testing
+  - articles/private-real-data-smoke-testing
