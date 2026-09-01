@@ -6,6 +6,7 @@
 [![R-CMD-check](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/gpbiometrics?color=blue)](https://r-pkg.org/pkg/gpbiometrics)
 [![DOI](https://img.shields.io/badge/DOI-Zenodo-blue.svg)](https://doi.org/10.5281/zenodo.20836724)
+[![Paper](https://img.shields.io/badge/paper-10.3390%2Fsignals7050086-blue.svg)](https://doi.org/10.3390/signals7050086)
 
 `gpbiometrics` provides reproducible tools for importing, checking,
 preprocessing, summarising, modelling, and reporting Gazepoint
@@ -384,14 +385,13 @@ is treated as harmless only when the final `R CMD check` summary reports
 
 Current release tag: [`v0.3.0`](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.3.0).
 
-If you use `gpbiometrics`, cite the package version, repository or
-archive DOI if available, and the specific Gazepoint hardware/software
-context used in your study. Also cite the original methodological
-sources for specialised analyses such as cvxEDA, Ledalab, PsPM, RHRV,
-entropy, point-process, or signal-decomposition methods when those
-helpers are used.
+The peer-reviewed package paper is:
 
-If you use `gpbiometrics`, please cite the package with:
+> Balaskas, S. **gpbiometrics: An R Package for Reproducible Analysis and Reporting of Gazepoint Biometrics Exports.** *Signals* **2026**, *7*, 86. [https://doi.org/10.3390/signals7050086](https://doi.org/10.3390/signals7050086)
+
+If you use `gpbiometrics`, please cite the package paper and the exact software version used in your analysis. Also report the specific Gazepoint hardware/software context and cite original methodological sources for specialised analyses such as cvxEDA, Ledalab, PsPM, RHRV, entropy, point-process, or signal-decomposition methods when those helpers are used.
+
+R can provide the package's registered article and software citations with:
 
 ``` r
 citation("gpbiometrics")

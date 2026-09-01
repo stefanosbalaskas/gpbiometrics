@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use gpbiometrics, please cite it as below."
+message: "If you use gpbiometrics, please cite the package paper and the software version used in your analysis."
 title: "gpbiometrics: Process and Report Gazepoint Biometrics Data"
 type: software
 authors:
@@ -29,3 +29,15 @@ keywords:
   - IBI
   - TTL
   - reproducible research
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Balaskas"
+      given-names: "Stefanos"
+  title: "gpbiometrics: An R Package for Reproducible Analysis and Reporting of Gazepoint Biometrics Exports"
+  journal: "Signals"
+  year: 2026
+  volume: 7
+  issue: 5
+  doi: "10.3390/signals7050086"
+  url: "https://doi.org/10.3390/signals7050086"
