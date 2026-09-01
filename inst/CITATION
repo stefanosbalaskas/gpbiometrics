@@ -1,4 +1,20 @@
 bibentry(
+  bibtype = "Article",
+  title = "gpbiometrics: An R Package for Reproducible Analysis and Reporting of Gazepoint Biometrics Exports",
+  author = person(
+    given = "Stefanos",
+    family = "Balaskas"
+  ),
+  journal = "Signals",
+  year = "2026",
+  volume = "7",
+  number = "5",
+  pages = "86",
+  doi = "10.3390/signals7050086",
+  url = "https://doi.org/10.3390/signals7050086"
+)
+
+bibentry(
   bibtype = "Manual",
   title = "gpbiometrics: Process and Report Gazepoint Biometrics Data",
   author = person(
