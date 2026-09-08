@@ -1,172 +1,59 @@
 # gpbiometrics <img src="man/figures/logo.png" align="right" height="139" alt="gpbiometrics logo" />
-[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0)
+
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/gpbiometrics?color=blue)](https://r-pkg.org/pkg/gpbiometrics)
 [![DOI](https://img.shields.io/badge/DOI-Zenodo-blue.svg)](https://doi.org/10.5281/zenodo.20836724)
 [![Paper](https://img.shields.io/badge/paper-10.3390%2Fsignals7050086-blue.svg)](https://doi.org/10.3390/signals7050086)
 
-`gpbiometrics` provides reproducible tools for importing, checking, preprocessing, summarising, modelling, and reporting Gazepoint Biometrics and Gazepoint GP3 biometric exports. It is designed for researchers working with electrodermal activity, pulse/heart-rate channels, interbeat intervals, TTL markers, stimulus/event timing, and multimodal Gazepoint workflows.
+`gpbiometrics` provides reproducible Gazepoint-native infrastructure for importing, validating, quality-checking, preprocessing, synchronising, summarising, modelling, plotting, and reporting physiological and eye-tracking exports. It covers EDA/GSR/SCR, PPG, HR, IBI/HRV, pupil, gaze, fixations, AOIs, TTL/event timing, multimodal alignment, interoperability, reporting, and privacy-safe validation.
 
-The package focuses on transparent preprocessing, quality control, analysis-ready tables, reporting outputs, and conservative physiological interpretation. It does not infer emotion, stress, cognition, preference, health status, or diagnosis directly from biometric signals.
+**Current GitHub release:** **2.0.0** (`v2.0.0`, 18 July 2026)
 
-## When to use gpbiometrics
+[Website](https://stefanosbalaskas.github.io/gpbiometrics/) · [Reference](https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html) · [Articles](https://stefanosbalaskas.github.io/gpbiometrics/articles/index.html) · [Release](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0) · [Signals paper](https://doi.org/10.3390/signals7050086)
 
-Use `gpbiometrics` when you need to:
+## What gpbiometrics provides
 
-* import Gazepoint biometric exports from a file or folder;
-* inspect signal availability, missingness, time ordering, and TTL markers;
-* prepare EDA/GSR, SCR, HR, IBI, HRV, PPG, pupil, and multimodal features;
-* align biometric signals with experimental windows or TTL events;
-* create model-ready tables for GLM, mixed-model, or Bayesian workflows;
-* export reproducible report bundles and readiness summaries;
-* run optional advanced signal-processing and interoperability checks.
+- Gazepoint biometric, gaze, pupil, fixation, AOI, EDA/GSR/SCR, PPG, HR, IBI, and HRV workflows;
+- explicit schema, sampling, missingness, timebase, TTL, synchronization, and quality audits;
+- event-locked, AOI-linked, trial-level, and model-ready summaries;
+- HeartPy-style, pyHRV-style, BioSPPy-style, and PsPM-style Gazepoint-native workflows without claiming exact external-toolbox equivalence;
+- MNE/EEG/LSL, BIDS, eyetrackingR, PupillometryR, gazeR, BioSPPy, pyHRV, and gp3tools interoperability helpers;
+- reproducibility manifests, reporting bundles, reviewer-facing audits, release-readiness checks, and privacy-safe real-data smoke testing.
 
+## September 2026 measurement-accountability additions
 
-## HeartPy-style pulse and PPG workflows
+The current development branch adds four conservative diagnostics motivated by the September 2026 methods-surveillance tranche:
 
-`gpbiometrics` includes native HeartPy-style helpers for Gazepoint pulse/PPG
-exports. These functions are designed for reproducible preprocessing,
-peak detection, peak rejection, HR/IBI-style summary measures, breathing-rate
-estimation from interval frequency content, plotting, and optional cross-checking
-against the Python `heartpy` package when it is available through `reticulate`.
+- `compare_hrv_prv_devices()` reports ICC(A,1), Lin's CCC, Bland–Altman bias, and 95% limits **for one derived metric at a time**, while retaining signal-source and sensor-site provenance. It does not create a global ECG/PPG interchangeability decision.
+- `scr_responsivity_sensitivity()` preserves the conventional SCR non-responder flag, estimates a Beta-Binomial posterior response probability, and retains low-reactive participants for model-based sensitivity analysis instead of imposing irreversible preprocessing deletion.
+- `physiology_validation_ladder()` separates acquisition QC, analytical QC, construct evidence, within-person evidence, and held-out-person generalization. Population/generalization claims require held-out-person validation to pass.
+- `ppg_topology_features()` is opt-in and experimental. It summarizes H0 persistence lifetimes from a delay embedding as a **structural waveform descriptor**, not a direct physiological surrogate, and carries a participant-grouped validation guardrail.
 
-The implementation is Gazepoint-aware and conservative. It prepares and checks
-pulse/PPG-style biometric exports, but it does not make clinical or diagnostic
-claims.
+These are post-2.0.0 development additions and do not alter the immutable `v2.0.0` release archive.
 
-Key helpers include:
+See the [Measurement accountability for Gazepoint physiology article](https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.html).
 
-- `prepare_gazepoint_heartpy_input()`
-- `export_gazepoint_heartpy_input()`
-- `detect_gazepoint_ppg_peaks()`
-- `reject_gazepoint_ppg_peaks()`
-- `compute_gazepoint_ppg_measures()`
-- `plot_gazepoint_ppg_peak_detection()`
-- `estimate_gazepoint_breathing_rate_from_ibi()`
-- `reconstruct_gazepoint_ppg_clipping()`
-- `enhance_gazepoint_ppg_peaks()`
-- `filter_gazepoint_ppg_butterworth()`
-- `correct_gazepoint_ppg_hampel()`
-- `create_gazepoint_heartpy_report()`
-- `run_gazepoint_heartpy_crosscheck()`
+## Installation
 
-```{r heartpy-style-pulse-demo, eval=FALSE}
-fs <- 100
-time_s <- seq(0, 20, by = 1 / fs)
-pulse <- sin(2 * pi * 1.2 * time_s)^8
+Install the exact GitHub 2.0.0 release:
 
-pulse_data <- data.frame(
-  participant = "P01",
-  trial = "T01",
-  time_s = time_s,
-  pulse = pulse
-)
-
-heartpy_input <- prepare_gazepoint_heartpy_input(
-  pulse_data,
-  signal_col = "pulse",
-  time_col = "time_s",
-  group_cols = c("participant", "trial")
-)
-
-detected <- detect_gazepoint_ppg_peaks(
-  pulse_data,
-  signal_col = "pulse",
-  time_col = "time_s",
-  group_cols = c("participant", "trial"),
-  sampling_rate_hz = fs
-)
-
-accepted_peaks <- reject_gazepoint_ppg_peaks(detected$peaks)
-measures <- compute_gazepoint_ppg_measures(accepted_peaks)
-
-report <- create_gazepoint_heartpy_report(
-  detected,
-  output_dir = file.path(tempdir(), "gpbiometrics_heartpy_report")
-)
+```r
+install.packages("remotes")
+remotes::install_github("stefanosbalaskas/gpbiometrics", ref = "v2.0.0")
 ```
 
+For the current development branch, including the September measurement-accountability additions:
 
-<!-- gpbiometrics-recent-additions-start -->
-## Recent additions
+```r
+remotes::install_github("stefanosbalaskas/gpbiometrics")
+```
 
-`gpbiometrics` now includes a broader Gazepoint-native workflow layer for
-session import, missing-value imputation, pupil/blink preprocessing, gaze
-filtering, fixation summaries, SCR epoching, RR outlier flagging, engagement
-dial summaries, trial-level regressors, data-quality reports, full-session
-preprocessing, and synthetic eye-data generation.
+## Quick start
 
 ```r
 library(gpbiometrics)
 
-# Import a Gazepoint session folder
-session <- import_gazepoint_data("path/to/session", session = "P01")
-
-# Run a conservative beginner-friendly preprocessing pass
-cleaned <- preprocess_gazepoint_all(session)
-
-# Generate reviewer-friendly quality summaries
-qc <- report_gazepoint_data_quality(cleaned, output_dir = "gp_quality_report")
-
-# Create trial-level regressors for downstream GLM/LMM workflows
-trial_features <- create_gazepoint_trial_regressors(
-  data = cleaned[[1]],
-  design = data.frame(trial = "T1", onset = 5),
-  pre = 1,
-  post = 5
-)
-```
-<!-- gpbiometrics-recent-additions-end -->
-
-
-<!-- gpbiometrics-function-map-start -->
-## Function map
-
-| Task | Main helpers |
-|---|---|
-| Import Gazepoint session folders | `import_gazepoint_data()` |
-| Impute short missing signal gaps | `impute_gazepoint_missing()` |
-| Detect and clean pupil blinks | `detect_gazepoint_pupil_blinks()`, `clean_gazepoint_pupil_signal()` |
-| Filter gaze samples and summarize fixations | `filter_gazepoint_gaze()`, `summarize_gazepoint_fixations()` |
-| Event-related SCR analysis | `epoch_gazepoint_scr()`, `normalize_gazepoint_scr()` |
-| RR/IBI quality control | `flag_gazepoint_rr_outliers()` |
-| Engagement-dial summaries | `compute_gazepoint_engagement_index()` |
-| Trial-level modeling tables | `create_gazepoint_trial_regressors()` |
-| Quality reports and beginner pipeline | `report_gazepoint_data_quality()`, `preprocess_gazepoint_all()` |
-| Synthetic eye-tracking fixtures | `simulate_gazepoint_eye_data()` |
-| Toolbox-style workflows | HeartPy-style, pyHRV-style, BioSPPy-style, and PsPM-style Gazepoint-native helpers |
-
-The toolbox-style helpers are workflow-inspired interfaces for Gazepoint-derived
-exports; they are not intended to be full clones of external packages.
-<!-- gpbiometrics-function-map-end -->
-
-
-## Release status
-
-`gpbiometrics` 0.2.0 is the current roadmap-closure release. It adds
-standalone roadmap helpers, compatibility aliases, documentation updates,
-pkgdown pages, and release-readiness notes while keeping the package
-Gazepoint-native and conservative in physiological interpretation.
-## Installation
-
-```{r install, eval = FALSE}
-# Install from the local package folder during development
-# install.packages("devtools")
-devtools::load_all()
-```
-
-After release, installation can use the package source or repository location selected by the maintainer.
-
-## Quick start
-
-```{r quick-start, eval = FALSE}
-library(gpbiometrics)
-
 folder <- "path/to/gazepoint_exports"
-
-dat <- import_gazepoint_biometric_folder(folder)
-
-readiness <- run_gazepoint_biometrics_real_data_readiness(dat)
-
 workflow <- run_gazepoint_biometrics_workflow(
   path = folder,
   include_all_gaze = TRUE,
@@ -175,247 +62,68 @@ workflow <- run_gazepoint_biometrics_workflow(
   expected_sampling_rate_hz = 60
 )
 
-summary <- summarise_gazepoint_biometrics_workflow(workflow)
-summary
+summarise_gazepoint_biometrics_workflow(workflow)
 ```
 
 For private real data, keep source exports and generated smoke-test outputs outside the package repository.
 
-## Built-in synthetic kiosk demo
-
-`gpbiometrics` includes a public, fully synthetic Gazepoint-like demo dataset for examples, vignettes, and reproducible workflow checks. The dataset simulates a public-service touchscreen kiosk task and is not derived from real participants.
-
-The synthetic design contains 36 participants, four kiosk tasks per participant, 60 Hz sampling, and 69,120 rows. The task design crosses interface complexity (`simple` vs. `dense`) with feedback clarity (`clear` vs. `ambiguous`). The exports include gaze, AOI labels, pupil diameter, GSR/EDA, HR, IBI, pulse waveform, engagement dial, TTL markers, and task metadata.
-
-```{r kiosk-demo, eval = FALSE}
-demo_dir <- system.file(
-  "extdata",
-  "gazepoint_biometrics_kiosk_demo_exports",
-  package = "gpbiometrics"
-)
-
-workflow <- run_gazepoint_biometrics_workflow(
-  path = demo_dir,
-  include_all_gaze = TRUE,
-  include_fixations = FALSE,
-  include_other_csv = FALSE,
-  expected_sampling_rate_hz = 60
-)
-
-summarise_gazepoint_biometrics_workflow(workflow)
-```
-
-The synthetic kiosk data are intended for package demonstration only. They should not be interpreted as real physiology, emotion, stress, cognition, health status, or diagnosis.
-
-
 ## Main workflow
 
-A typical workflow is:
-
 ```text
-Import exports
-  -> inspect schema and signal availability
-  -> audit quality, timing, TTL markers, and missingness
-  -> preprocess EDA / pulse / IBI / pupil channels
-  -> extract SCR, HRV, respiration, AOI, or multimodal features
-  -> create analysis-ready windows or model tables
-  -> export tables, plots, and report bundles
+Gazepoint / external exports
+  -> schema + signal availability audit
+  -> timing / TTL / missingness / quality checks
+  -> EDA / PPG / IBI / pupil / gaze preprocessing
+  -> fixation / AOI / event / multimodal alignment
+  -> physiological and process feature extraction
+  -> model-ready tables
+  -> plots + reports + reproducibility evidence
+  -> optional external-toolbox cross-checks
 ```
 
-The package is intentionally modular: users can run the full workflow or call individual helpers for a specific signal, window, or quality-control task.
+The package is intentionally modular: researchers can run a complete workflow or call individual helpers while keeping preprocessing and interpretation decisions explicit.
 
-## Core function map
+## Release validation
 
-| Task                             | Main helpers                                                                                              |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Import Gazepoint biometric files | `import_gazepoint_biometrics()`, `import_gazepoint_biometric_folder()`, `import_gazepoint_data_summary()` |
-| Diagnose workflow readiness      | `diagnose_gazepoint_biometrics_workflow()`, `run_gazepoint_biometrics_real_data_readiness()`              |
-| Run full workflow                | `run_gazepoint_biometrics_workflow()`, `summarise_gazepoint_biometrics_workflow()`                        |
-| Export report outputs            | `create_gazepoint_biometrics_report()`, `export_gazepoint_biometrics_report_bundle()`                     |
-| Inspect package coverage         | `create_gazepoint_biometrics_feature_inventory()`, `gpbiometrics_feature_inventory_table()`               |
-| Plot report dashboard            | `plot_gazepoint_biometric_report_dashboard()`                                                             |
+The `v2.0.0` release record reports:
 
-## EDA, GSR, and SCR tools
+- **3,515 package tests passed**;
+- **49 release-readiness tests passed**;
+- **40 interoperability-version tests passed**;
+- **55 private smoke-harness tests passed**;
+- `R CMD check`: **0 errors, 0 warnings, 0 notes**; and
+- pkgdown configuration: **no problems found**.
 
-`gpbiometrics` includes tools for EDA/GSR preprocessing, artifact checks, SCR detection, threshold sensitivity, baseline correction, response windows, multiverse checks, and report-ready summaries.
-
-Representative helpers include:
-
-```{r eda-functions, eval = FALSE}
-audit_gazepoint_gsr_units()
-standardise_gazepoint_adaptive_ema()
-classify_gazepoint_scr_intervals()
-flag_kleckner_eda_artifacts()
-run_gazepoint_scr_multiverse()
-extract_gazepoint_scr_recovery_times()
-correct_gazepoint_eda_temperature()
-```
-
-Specialised EDA helpers are also available for bilateral EDA asymmetry, skin-potential recordings, AC EDA admittance/susceptance, EDA-gram-style visualisation, cvxEDA/PsPM/Ledalab/cvxEDA-style bridges, and CTSI input preparation. These are optional method-specific helpers and should only be used when the required signal type is actually present.
-
-## Pulse, IBI, HR, HRV, and respiration tools
-
-The package supports pulse and heartbeat workflows, including IBI/HR summaries, HRV features, nonlinear descriptors, respiration proxies, point-process summaries, and advanced signal-processing bridges.
-
-Representative helpers include:
-
-```{r hrv-functions, eval = FALSE}
-extract_gazepoint_hrv_features()
-summarise_gazepoint_hrv_features()
-prepare_gazepoint_rhrv_input()
-extract_gazepoint_hrv_nonlinear()
-extract_gazepoint_hrv_rqa()
-extract_gazepoint_hrv_geometric()
-extract_gazepoint_hrv_rcmse()
-extract_gazepoint_hrv_fuzzy_csi()
-model_gazepoint_hrv_ipfm()
-extract_gazepoint_beats_kmeans()
-```
-
-Respiration-related helpers include PPG-derived respiration, ECG-derived respiration PCA bridges, CEEMDAN-style respiration extraction, RSA proxies, and Kalman fusion of multiple respiration proxy streams. These outputs are signal-derived respiratory proxies, not replacements for direct respiratory-belt recordings unless externally validated.
-
-## Timing, TTL, windows, and multimodal alignment
-
-Gazepoint biometric exports are often used together with stimulus timing, TTL markers, AOIs, and event windows. `gpbiometrics` provides tools for alignment, chunking, and model-ready table creation.
-
-```{r timing-functions, eval = FALSE}
-extract_gazepoint_ttl_events()
-align_gazepoint_biometrics_to_ttl()
-chunk_gazepoint_biometrics()
-prepare_gazepoint_biometrics_lme_data()
-plot_gazepoint_multimodal_timeline()
-```
-
-## Quality control and reporting
-
-The package emphasises explicit quality-control outputs rather than silent deletion or hidden preprocessing. Readiness checks and report bundles help users document what was inspected, what was retained, and what requires caution.
-
-```{r reporting-functions, eval = FALSE}
-run_gazepoint_biometrics_real_data_readiness()
-export_gazepoint_biometrics_report_bundle()
-create_gazepoint_biometrics_report_tables()
-plot_gazepoint_biometric_report_dashboard()
-create_gazepoint_preregistration_template()
-```
-
-## Advanced optional methods
-
-Advanced helpers are included for specialised workflows such as:
-
-* artifact SVM feature preparation;
-* optional autoencoder denoising bridges;
-* wavelet and adaptive smoothing;
-* entropy, RQA, FuzzyEn, RCMSE, and Lorenz/Poincare-style HRV descriptors;
-* point-process summaries for EDA and heartbeat timing;
-* Granger-style cardiorespiratory directionality;
-* EDA-gram-style visualisation;
-* AC EDA, skin potential, and bilateral EDA modality support;
-* online design-optimisation decision support;
-* surrogate nonlinearity testing;
-* synthetic biometric signal simulation.
-
-These tools are intended for advanced users who understand the data requirements and assumptions of each method. Several functions are interoperability bridges or dependency-light approximations, not complete reimplementations of external modelling frameworks.
-
-## Compatibility with gp3tools
-
-`gpbiometrics` outputs can be handed to the cross-package integration
-workflow implemented in `gp3tools`. A compatible table should retain a
-participant identifier, a trial or media identifier where applicable, a
-time field in documented seconds or milliseconds, one or more numeric
-biometric signals, and an optional event-marker column.
-
-`gp3tools` owns nearest-time synchronization, tolerance handling, and the
-cross-package alignment audit. `gpbiometrics` does not duplicate that
-implementation. The existing `join_gazepoint_biometrics_to_gp3tools()`
-helper remains available for an explicit package-local join.
-
-See the
-[gp3tools compatibility article](vignettes/articles/gp3tools-compatibility.Rmd)
-for the schema contract, ownership boundary, and reporting guardrails.
+The September 2026 additions are development functionality layered on top of this qualified release baseline.
 
 ## Interpretation guardrails
 
-Biometric signals require conservative interpretation.
+`gpbiometrics` treats biometric outputs as physiological descriptors, quality-control evidence, or analysis-ready measurements. It does not infer emotion, stress, cognition, preference, attention quality, health status, diagnosis, or another psychological/clinical state directly from EDA, HRV/PRV, PPG, pupil, gaze, or multimodal signals.
 
-* EDA/GSR/SCR features describe electrodermal activity and arousal-related physiology; they do not directly identify emotion, stress, preference, cognition, or diagnosis.
-* HR, IBI, HRV, PPG, and respiration-proxy features describe cardiovascular or signal-derived dynamics; they do not directly identify psychological or clinical states.
-* Pupil features are strongly affected by luminance and visual context; luminance-adjusted residuals are not proof of cognitive-load-only effects.
-* Eye-tracking or AOI timing features describe visual allocation and timing; they do not directly prove attention quality, scrutiny, or comprehension.
-* Advanced models, bridges, and automated statistics should be reviewed against the experimental design before confirmatory use.
+Metric agreement does not imply sensor interchangeability; retention-first responsivity does not diagnose participant state; held-out prediction does not establish construct validity; and experimental topology features are not physiological surrogates without independent validation.
 
-## Feature inventory
+## Documentation
 
-The package includes a programmatic inventory of available functions.
-
-```{r feature-inventory, eval = FALSE}
-inventory <- create_gazepoint_biometrics_feature_inventory()
-formatted_inventory <- format_gazepoint_biometrics_feature_inventory(inventory)
-inventory_summary <- summarise_gazepoint_biometrics_feature_inventory(formatted_inventory)
-
-inventory$overview
-inventory_summary$domain_summary
-head(formatted_inventory)
-```
-
-This is useful for checking which workflows are available and for documenting package coverage in reports or manuscripts.
-
-## Private real-data workflow
-
-For private Gazepoint exports, keep raw data outside the package repository.
-
-```{r private-workflow, eval = FALSE}
-private_folder <- "path/to/private_gazepoint_exports"
-private_output <- file.path(tempdir(), "gpbiometrics_real_check")
-
-workflow <- run_gazepoint_biometrics_workflow(
-  path = private_folder,
-  include_all_gaze = TRUE,
-  include_fixations = FALSE,
-  include_other_csv = FALSE,
-  expected_sampling_rate_hz = 60
-)
-
-summarise_gazepoint_biometrics_workflow(workflow)
-
-export_gazepoint_biometrics_report_bundle(
-  workflow,
-  output_dir = private_output
-)
-```
-
-Do not commit private Gazepoint exports or private smoke-test outputs.
-
-## Validation status
-
-Current local validation for the v0.2.0 roadmap-closure release:
-
-```text
-devtools::test()
-# FAIL 0 | WARN 0 | SKIP 0 | PASS 2113
-
-devtools::check(args = "--as-cran")
-# 0 errors | 0 warnings | 0 notes
-
-urlchecker::url_check()
-# All URLs are correct
-```
-
-The recurring Quarto/TMPDIR message can appear during local checks. It is treated as harmless only when the final `R CMD check` summary reports 0 errors, 0 warnings, and 0 notes.
+- [Article roadmap](https://stefanosbalaskas.github.io/gpbiometrics/articles/article-roadmap.html)
+- [EDA/GSR/SCR workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/eda-scr-workflow.html)
+- [PPG/HRV workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/ppg-hrv-workflow.html)
+- [Pupil QC workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/pupil-qc-workflow.html)
+- [Event alignment and AOI workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/event-alignment-aoi-workflow.html)
+- [MNE/EEG/LSL interoperability](https://stefanosbalaskas.github.io/gpbiometrics/articles/mne-eeg-lsl-workflow.html)
+- [Measurement accountability](https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.html)
+- [Complete function reference](https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html)
 
 ## Citation
 
-Current release tag: [`v0.2.0`](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.2.0).
-
-The peer-reviewed package paper is:
-
-> Balaskas, S. **gpbiometrics: An R Package for Reproducible Analysis and Reporting of Gazepoint Biometrics Exports.** *Signals* **2026**, *7*, 86. [https://doi.org/10.3390/signals7050086](https://doi.org/10.3390/signals7050086)
-
-If you use `gpbiometrics`, please cite the package paper and the exact software version used in your analysis. Also report the specific Gazepoint hardware/software context and cite original methodological sources for specialised analyses such as cvxEDA, Ledalab, PsPM, RHRV, entropy, point-process, or signal-decomposition methods when those helpers are used.
-
-R can provide the package's registered article and software citations with:
+For the installed package citation:
 
 ```r
 citation("gpbiometrics")
+packageVersion("gpbiometrics")
 ```
 
-The archived software release is available at DOI: `10.5281/zenodo.20836725`.
+The package paper is **“gpbiometrics: An R Package for Reproducible Analysis and Reporting of Gazepoint Biometrics Exports”**, *Signals* (2026), DOI [`10.3390/signals7050086`](https://doi.org/10.3390/signals7050086).
+
+## License
+
+MIT License.
