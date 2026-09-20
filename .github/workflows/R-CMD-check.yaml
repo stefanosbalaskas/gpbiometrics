@@ -44,15 +44,20 @@ jobs:
           r-version: ${{ matrix.r }}
           use-public-rspm: true
 
+      - name: Force source dependency resolution on macOS
+        if: runner.os == 'macOS'
+        shell: bash
+        run: echo "PKG_PLATFORMS=source" >> "$GITHUB_ENV"
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
+          cache: ${{ runner.os == 'macOS' && 'false' || 'true' }}
           extra-packages: |
             any::rcmdcheck
             any::devtools
             any::testthat
             any::rmarkdown
-            ${{ runner.os == 'macOS' && 'knitr=?source' || 'any::knitr' }}
-            ${{ runner.os == 'macOS' && 'xfun=?source' || 'any::xfun' }}
+            any::knitr
           needs: check
 
       - uses: r-lib/actions/check-r-package@v2
