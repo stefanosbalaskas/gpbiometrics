@@ -52,6 +52,7 @@ jobs:
             any::testthat
             any::rmarkdown
             ${{ runner.os == 'macOS' && 'knitr=?source' || 'any::knitr' }}
+            ${{ runner.os == 'macOS' && 'xfun=?source' || 'any::xfun' }}
           needs: check
 
       - uses: r-lib/actions/check-r-package@v2
