@@ -1,7 +1,7 @@
 Package: gpbiometrics
 Type: Package
 Title: Process and Report Gazepoint Biometrics Data
-Version: 2.0.0
+Version: 2.1.0
 Authors@R: person(given = "Stefanos", family = "Balaskas", email = "s.balaskas@ac.upatras.gr", role = c("aut", "cre"))
 Description: Gazepoint-native tools for reproducible analysis and reporting of Gazepoint
     Biometrics and GP3-derived physiological, gaze, pupil, fixation, AOI,
@@ -29,7 +29,7 @@ Suggests:
     eyetrackingR,
     PupillometryR
 Config/testthat/edition: 3
-Config/roxygen2/version: 8.0.0
+Config/roxygen2/version: 8.1.0
 VignetteBuilder: knitr
 URL: https://github.com/stefanosbalaskas/gpbiometrics,
     https://stefanosbalaskas.github.io/gpbiometrics/

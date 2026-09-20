@@ -8,6 +8,8 @@ Orientation, package scope, and reproducible demonstration data.
   roadmap](https://stefanosbalaskas.github.io/gpbiometrics/articles/article-roadmap.md):
 - [gpbiometrics
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/gpbiometrics-workflow.md):
+- [Ecosystem update — September
+  2026](https://stefanosbalaskas.github.io/gpbiometrics/articles/ecosystem-update-2026-09.md):
 - [Synthetic data
   showcase](https://stefanosbalaskas.github.io/gpbiometrics/articles/synthetic-data-showcase.md):
 
@@ -30,6 +32,9 @@ release-readiness audits.
 
 - [Reporting and reproducibility
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/reporting-reproducibility-workflow.md):
+
+- [Measurement accountability for Gazepoint
+  physiology](https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.md):
 
 - [Design audit
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/design-audit-workflow.md):

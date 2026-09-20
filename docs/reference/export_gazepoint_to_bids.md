@@ -340,11 +340,11 @@ preview$files
 #> 2         events_json
 #> 3         physio_json
 #> 4       physio_tsv_gz
-#>                                                                                                                           path
-#> 1                                    C:/Users/STEFAN~1/AppData/Local/Temp/Rtmp0IUFbV/bids-84a03a77c96/dataset_description.json
-#> 2                  C:/Users/STEFAN~1/AppData/Local/Temp/Rtmp0IUFbV/bids-84a03a77c96/sub-01/beh/sub-01_task-viewing_events.json
-#> 3   C:/Users/STEFAN~1/AppData/Local/Temp/Rtmp0IUFbV/bids-84a03a77c96/sub-01/beh/sub-01_task-viewing_recording-eye1_physio.json
-#> 4 C:/Users/STEFAN~1/AppData/Local/Temp/Rtmp0IUFbV/bids-84a03a77c96/sub-01/beh/sub-01_task-viewing_recording-eye1_physio.tsv.gz
+#>                                                                                                                            path
+#> 1                                    C:/Users/STEFAN~1/AppData/Local/Temp/RtmpwBYr9H/bids-5b107e5b1c61/dataset_description.json
+#> 2                  C:/Users/STEFAN~1/AppData/Local/Temp/RtmpwBYr9H/bids-5b107e5b1c61/sub-01/beh/sub-01_task-viewing_events.json
+#> 3   C:/Users/STEFAN~1/AppData/Local/Temp/RtmpwBYr9H/bids-5b107e5b1c61/sub-01/beh/sub-01_task-viewing_recording-eye1_physio.json
+#> 4 C:/Users/STEFAN~1/AppData/Local/Temp/RtmpwBYr9H/bids-5b107e5b1c61/sub-01/beh/sub-01_task-viewing_recording-eye1_physio.tsv.gz
 #>   exists action
 #> 1  FALSE  write
 #> 2  FALSE  write

@@ -766,6 +766,21 @@ and exploratory PPG-derived respiration estimation.
 - [`estimate_gazepoint_respiration_from_ppg()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/estimate_gazepoint_respiration_from_ppg.md)
   : Estimate respiration rate from PPG
 
+## Measurement accountability and validation
+
+Metric-specific agreement, responsivity sensitivity, validation-ladder,
+and experimental structural-waveform helpers with conservative
+interpretation and explicit generalization guardrails.
+
+- [`compare_hrv_prv_devices()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_hrv_prv_devices.md)
+  : Compare ECG-HRV and PPG-PRV devices for one derived metric
+- [`scr_responsivity_sensitivity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/scr_responsivity_sensitivity.md)
+  : Retention-first SCR responsivity sensitivity
+- [`physiology_validation_ladder()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/physiology_validation_ladder.md)
+  : Build a multimodal physiology validation ladder
+- [`ppg_topology_features()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/ppg_topology_features.md)
+  : Experimental topology-aware PPG morphology features
+
 ## Bootstrap condition comparisons
 
 Lightweight percentile-bootstrap comparisons for Gazepoint-derived

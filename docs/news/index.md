@@ -1,5 +1,38 @@
 # Changelog
 
+## gpbiometrics 2.1.0
+
+### Measurement accountability and validation
+
+- Added
+  [`compare_hrv_prv_devices()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_hrv_prv_devices.md)
+  for metric-specific ECG-HRV versus PPG-PRV agreement summaries using
+  ICC(A,1), Lin’s concordance correlation coefficient, and Bland-Altman
+  limits, without implying global interchangeability.
+- Added
+  [`scr_responsivity_sensitivity()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/scr_responsivity_sensitivity.md)
+  for retention-first SCR responsivity summaries that preserve
+  conventional non-responder flags while retaining participants for
+  sensitivity modelling.
+- Added
+  [`physiology_validation_ladder()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/physiology_validation_ladder.md)
+  for explicit acquisition, analytical, construct, within-person, and
+  held-out-person validation-status reporting.
+- Added experimental
+  [`ppg_topology_features()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/ppg_topology_features.md)
+  structural waveform descriptors with explicit interpretation and
+  participant-grouped validation guardrails.
+
+### Documentation and interoperability
+
+- Added the physiology measurement-accountability vignette and the
+  September 2026 Python ecosystem update.
+- Updated package citation metadata for the published Signals article
+  and synchronized release-version metadata.
+- Preserved the established Gazepoint import, QC, preprocessing,
+  EDA/SCR, PPG/HRV, pupil/gaze, interoperability, reporting, and
+  privacy-safe validation contracts from 2.0.0.
+
 ## gpbiometrics 2.0.0
 
 - Version 2.0.0 consolidates the expanded gpbiometrics workflow for

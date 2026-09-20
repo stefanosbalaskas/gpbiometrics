@@ -56,7 +56,7 @@ summarise_gazepoint_decision_log(log)
 #> Gazepoint analysis decision log summary
 #> ---------------------------------------
 #>    study_id analyst description               created_at package_version
-#>  demo_study analyst        <NA> 2026-07-18 14:05:09 EEST           2.0.0
+#>  demo_study analyst        <NA> 2026-09-20 10:34:56 EEST           2.1.0
 #>  n_decisions
 #>            1
 #>

@@ -1,5 +1,5 @@
 pandoc: '3.10'
-pkgdown: 2.2.0
+pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
   articles/article-roadmap: article-roadmap.html
@@ -7,6 +7,7 @@ articles:
   articles/cluster-permutation: cluster-permutation.html
   articles/design-audit-workflow: design-audit-workflow.html
   articles/design-release-visual-audit: design-release-visual-audit.html
+  ecosystem-update-2026-09: ecosystem-update-2026-09.html
   articles/eda-scr-visual-diagnostics: eda-scr-visual-diagnostics.html
   articles/eda-scr-workflow: eda-scr-workflow.html
   articles/event-alignment-aoi-workflow: event-alignment-aoi-workflow.html
@@ -14,6 +15,7 @@ articles:
   articles/gp3tools-compatibility: gp3tools-compatibility.html
   gpbiometrics-workflow: gpbiometrics-workflow.html
   articles/interoperability-version-testing: interoperability-version-testing.html
+  measurement-accountability: measurement-accountability.html
   articles/mne-eeg-lsl-workflow: mne-eeg-lsl-workflow.html
   articles/multimodal-event-dashboard: multimodal-event-dashboard.html
   articles/plot-gallery: plot-gallery.html
@@ -28,7 +30,7 @@ articles:
   articles/toolbox-crosscheck-visuals: toolbox-crosscheck-visuals.html
   articles/troubleshooting-readiness: troubleshooting-readiness.html
   articles/visual-qc-dashboard-workflow: visual-qc-dashboard-workflow.html
-last_built: 2026-07-18T11:03Z
+last_built: 2026-09-20T07:34Z
 urls:
   reference: https://stefanosbalaskas.github.io/gpbiometrics/reference
   article: https://stefanosbalaskas.github.io/gpbiometrics/articles

@@ -35,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="index.html">gpbiometrics</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,12 +52,14 @@
     <li><a class="dropdown-item" href="articles/article-roadmap.html">Article roadmap</a></li>
     <li><a class="dropdown-item" href="articles/gpbiometrics-workflow.html">gpbiometrics workflow</a></li>
     <li><a class="dropdown-item" href="articles/synthetic-data-showcase.html">Synthetic data showcase</a></li>
+    <li><a class="dropdown-item" href="articles/ecosystem-update-2026-09.html">Ecosystem update - September 2026</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Quality control and reporting</h6></li>
     <li><a class="dropdown-item" href="articles/qc-workflow.html">QC workflow</a></li>
     <li><a class="dropdown-item" href="articles/troubleshooting-readiness.html">Troubleshooting and real-data readiness</a></li>
     <li><a class="dropdown-item" href="articles/visual-qc-dashboard-workflow.html">Visual QC dashboard workflow</a></li>
     <li><a class="dropdown-item" href="articles/reporting-reproducibility-workflow.html">Reporting and reproducibility workflow</a></li>
+    <li><a class="dropdown-item" href="articles/measurement-accountability.html">Measurement accountability</a></li>
     <li><a class="dropdown-item" href="articles/design-audit-workflow.html">Design audit workflow</a></li>
     <li><a class="dropdown-item" href="articles/design-release-visual-audit.html">Design release visual audit</a></li>
     <li><hr class="dropdown-divider"></li>
@@ -101,109 +103,57 @@
 <img src="logo.png" class="logo" alt=""><h1 id="gpbiometrics-">gpbiometrics <a class="anchor" aria-label="anchor" href="#gpbiometrics-"></a>
 </h1>
 </div>
-<p><a href="https://lifecycle.r-lib.org/articles/stages.html#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a> <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.3.0" class="external-link"><img src="https://img.shields.io/badge/version-0.3.0-blue.svg" alt="Version"></a></p>
-<p><a href="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/stefanosbalaskas/gpbiometrics/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://doi.org/10.5281/zenodo.20836724" class="external-link"><img src="https://img.shields.io/badge/DOI-Zenodo-blue.svg" alt="DOI"></a></p>
-<p><code>gpbiometrics</code> provides reproducible tools for importing, checking, preprocessing, summarising, modelling, and reporting Gazepoint Biometrics and Gazepoint GP3 biometric exports. It is designed for researchers working with electrodermal activity, pulse/heart-rate channels, interbeat intervals, TTL markers, stimulus/event timing, and multimodal Gazepoint workflows.</p>
-<p>The package focuses on transparent preprocessing, quality control, analysis-ready tables, reporting outputs, and conservative physiological interpretation. It does not infer emotion, stress, cognition, preference, health status, or diagnosis directly from biometric signals.</p>
+<p><a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0" class="external-link"><img src="https://img.shields.io/badge/version-2.0.0-blue.svg" alt="Version"></a> <a href="https://r-pkg.org/pkg/gpbiometrics" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/gpbiometrics?color=blue" alt="CRAN RStudio mirror downloads"></a> <a href="https://doi.org/10.5281/zenodo.20836724" class="external-link"><img src="https://img.shields.io/badge/DOI-Zenodo-blue.svg" alt="DOI"></a> <a href="https://doi.org/10.3390/signals7050086" class="external-link"><img src="https://img.shields.io/badge/paper-10.3390%2Fsignals7050086-blue.svg" alt="Paper"></a></p>
+<p><code>gpbiometrics</code> provides reproducible Gazepoint-native infrastructure for importing, validating, quality-checking, preprocessing, synchronising, summarising, modelling, plotting, and reporting physiological and eye-tracking exports. It covers EDA/GSR/SCR, PPG, HR, IBI/HRV, pupil, gaze, fixations, AOIs, TTL/event timing, multimodal alignment, interoperability, reporting, and privacy-safe validation.</p>
+<p><strong>Current GitHub release:</strong> <strong>2.0.0</strong> (<code>v2.0.0</code>, 18 July 2026)</p>
+<p><a href="https://stefanosbalaskas.github.io/gpbiometrics/">Website</a> · <a href="https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html">Reference</a> · <a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/index.html">Articles</a> · <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0" class="external-link">Release</a> · <a href="https://doi.org/10.3390/signals7050086" class="external-link">Signals paper</a></p>
 <div class="section level2">
-<h2 id="when-to-use-gpbiometrics">When to use gpbiometrics<a class="anchor" aria-label="anchor" href="#when-to-use-gpbiometrics"></a>
+<h2 id="what-gpbiometrics-provides">What gpbiometrics provides<a class="anchor" aria-label="anchor" href="#what-gpbiometrics-provides"></a>
 </h2>
-<p>Use <code>gpbiometrics</code> when you need to:</p>
 <ul>
-<li>import Gazepoint biometric exports from a file or folder;</li>
-<li>inspect signal availability, missingness, time ordering, and TTL markers;</li>
-<li>prepare EDA/GSR, SCR, HR, IBI, HRV, PPG, pupil, and multimodal features;</li>
-<li>align biometric signals with experimental windows or TTL events;</li>
-<li>create model-ready tables for GLM, mixed-model, or Bayesian workflows;</li>
-<li>export reproducible report bundles and readiness summaries;</li>
-<li>run optional advanced signal-processing and interoperability checks.</li>
+<li>Gazepoint biometric, gaze, pupil, fixation, AOI, EDA/GSR/SCR, PPG, HR, IBI, and HRV workflows;</li>
+<li>explicit schema, sampling, missingness, timebase, TTL, synchronization, and quality audits;</li>
+<li>event-locked, AOI-linked, trial-level, and model-ready summaries;</li>
+<li>HeartPy-style, pyHRV-style, BioSPPy-style, and PsPM-style Gazepoint-native workflows without claiming exact external-toolbox equivalence;</li>
+<li>MNE/EEG/LSL, BIDS, eyetrackingR, PupillometryR, gazeR, BioSPPy, pyHRV, and gp3tools interoperability helpers;</li>
+<li>reproducibility manifests, reporting bundles, reviewer-facing audits, release-readiness checks, and privacy-safe real-data smoke testing.</li>
 </ul>
-<!-- gpbiometrics-extended-workflows-start -->
 </div>
 <div class="section level2">
-<h2 id="extended-physiology-toolbox-style-workflows">Extended physiology-toolbox-style workflows<a class="anchor" aria-label="anchor" href="#extended-physiology-toolbox-style-workflows"></a>
+<h2 id="september-2026-measurement-accountability-additions">September 2026 measurement-accountability additions<a class="anchor" aria-label="anchor" href="#september-2026-measurement-accountability-additions"></a>
 </h2>
-<p><code>gpbiometrics</code> now includes Gazepoint-native helpers inspired by several widely used physiological-analysis toolchains. These helpers are implemented in R for Gazepoint-style exports and should be described as toolbox-style workflows, not as exact clones or wrappers around the original packages.</p>
-<table class="table">
-<colgroup>
-<col width="33%">
-<col width="33%">
-<col width="33%">
-</colgroup>
-<thead><tr>
-<th>Workflow layer</th>
-<th>Main helpers</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>HeartPy-style PPG/pulse workflows</td>
-<td>
-<code><a href="reference/prepare_gazepoint_heartpy_input.html">prepare_gazepoint_heartpy_input()</a></code>, <code><a href="reference/detect_gazepoint_ppg_peaks.html">detect_gazepoint_ppg_peaks()</a></code>, <code><a href="reference/process_gazepoint_ppg_heartpy_style.html">process_gazepoint_ppg_heartpy_style()</a></code>, <code><a href="reference/process_gazepoint_ppg_segmentwise.html">process_gazepoint_ppg_segmentwise()</a></code>, <code><a href="reference/create_gazepoint_heartpy_report.html">create_gazepoint_heartpy_report()</a></code>
-</td>
-<td>Pulse/PPG preparation, filtering, peak detection, segmentwise processing, quality checks, plots, and reports.</td>
-</tr>
-<tr>
-<td>pyHRV-style HRV workflows</td>
-<td>
-<code><a href="reference/run_gazepoint_pyhrv_style.html">run_gazepoint_pyhrv_style()</a></code>, <code><a href="reference/compute_gazepoint_pyhrv_time_domain.html">compute_gazepoint_pyhrv_time_domain()</a></code>, <code><a href="reference/compute_gazepoint_pyhrv_frequency_domain.html">compute_gazepoint_pyhrv_frequency_domain()</a></code>, <code><a href="reference/compute_gazepoint_pyhrv_nonlinear.html">compute_gazepoint_pyhrv_nonlinear()</a></code>, <code><a href="reference/compute_gazepoint_pyhrv_poincare.html">compute_gazepoint_pyhrv_poincare()</a></code>, <code><a href="reference/compute_gazepoint_pyhrv_sample_entropy.html">compute_gazepoint_pyhrv_sample_entropy()</a></code>, <code><a href="reference/compute_gazepoint_pyhrv_dfa.html">compute_gazepoint_pyhrv_dfa()</a></code>
-</td>
-<td>Time-domain, frequency-domain, nonlinear, Poincare, entropy, DFA, PSD, tachogram, and export/import HRV helpers.</td>
-</tr>
-<tr>
-<td>BioSPPy-style biosignal workflows</td>
-<td>
-<code><a href="reference/run_gazepoint_biosppy_eda.html">run_gazepoint_biosppy_eda()</a></code>, <code><a href="reference/run_gazepoint_biosppy_ppg.html">run_gazepoint_biosppy_ppg()</a></code>, <code><a href="reference/extract_gazepoint_eda_events_biosppy_style.html">extract_gazepoint_eda_events_biosppy_style()</a></code>, <code><a href="reference/extract_gazepoint_ppg_templates.html">extract_gazepoint_ppg_templates()</a></code>, <code><a href="reference/detect_gazepoint_ppg_onsets.html">detect_gazepoint_ppg_onsets()</a></code>, <code><a href="reference/correct_gazepoint_rri_artifacts_local.html">correct_gazepoint_rri_artifacts_local()</a></code>
-</td>
-<td>EDA events and recovery, PPG onsets/templates, RRI correction/detrending, and generic signal tools.</td>
-</tr>
-<tr>
-<td>PsPM-style preprocessing and GLM workflows</td>
-<td>
-<code><a href="reference/extract_gazepoint_markerinfo_pspm_style.html">extract_gazepoint_markerinfo_pspm_style()</a></code>, <code><a href="reference/combine_gazepoint_marker_channels_pspm_style.html">combine_gazepoint_marker_channels_pspm_style()</a></code>, <code><a href="reference/preprocess_gazepoint_scr_pspm_style.html">preprocess_gazepoint_scr_pspm_style()</a></code>, <code><a href="reference/extract_gazepoint_segments_pspm_style.html">extract_gazepoint_segments_pspm_style()</a></code>, <code><a href="reference/create_gazepoint_pspm_glm_design.html">create_gazepoint_pspm_glm_design()</a></code>, <code><a href="reference/fit_gazepoint_convolution_glm.html">fit_gazepoint_convolution_glm()</a></code>, <code><a href="reference/export_gazepoint_pspm_model_estimates.html">export_gazepoint_pspm_model_estimates()</a></code>
-</td>
-<td>Marker extraction, marker-channel combination, SCR preprocessing/QC, segment extraction, and compact event-related convolution GLM modelling.</td>
-</tr>
-<tr>
-<td>Generic signal tools</td>
-<td>
-<code><a href="reference/compute_gazepoint_signal_power_spectrum.html">compute_gazepoint_signal_power_spectrum()</a></code>, <code><a href="reference/compute_gazepoint_signal_band_power.html">compute_gazepoint_signal_band_power()</a></code>, <code><a href="reference/compute_gazepoint_signal_phase_locking.html">compute_gazepoint_signal_phase_locking()</a></code>, <code><a href="reference/compute_gazepoint_signal_correlation.html">compute_gazepoint_signal_correlation()</a></code>
-</td>
-<td>Power spectra, band power, phase locking, lagged correlation, and multimodal synchrony checks.</td>
-</tr>
-</tbody>
-</table>
-<p>Recommended wording: <code>gpbiometrics</code> provides Gazepoint-native HeartPy-style, pyHRV-style, BioSPPy-style, and PsPM-style workflows for reproducible physiological preprocessing, feature extraction, modelling, and reporting. Avoid claiming that the package implements all functions from those external toolboxes.</p>
-<!-- gpbiometrics-extended-workflows-end -->
-</div>
-<div class="section level2">
-<h2 id="release-status">Release status<a class="anchor" aria-label="anchor" href="#release-status"></a>
-</h2>
-<p><code>gpbiometrics</code> 0.3.0 is the current release. It adds standalone roadmap helpers, compatibility aliases, documentation updates, pkgdown pages, and release-readiness notes while keeping the package Gazepoint-native and conservative in physiological interpretation. ## Lifecycle</p>
-<p><code>gpbiometrics</code> is currently in a maturing development stage. The main Gazepoint-native import, validation, preprocessing, quality-control, physiology, gaze/pupil, event-alignment, reporting, and roadmap-closure helpers are implemented and tested, but the exported API may still receive minor refinements before a formal CRAN submission.</p>
-<p>See <a href="ROADMAP_STATUS.html"><code>ROADMAP_STATUS.md</code></a> for the current roadmap-closure and release-readiness summary.</p>
+<p>The current development branch adds four conservative diagnostics motivated by the September 2026 methods-surveillance tranche:</p>
+<ul>
+<li>
+<code><a href="reference/compare_hrv_prv_devices.html">compare_hrv_prv_devices()</a></code> reports ICC(A,1), Lin’s CCC, Bland–Altman bias, and 95% limits <strong>for one derived metric at a time</strong>, while retaining signal-source and sensor-site provenance. It does not create a global ECG/PPG interchangeability decision.</li>
+<li>
+<code><a href="reference/scr_responsivity_sensitivity.html">scr_responsivity_sensitivity()</a></code> preserves the conventional SCR non-responder flag, estimates a Beta-Binomial posterior response probability, and retains low-reactive participants for model-based sensitivity analysis instead of imposing irreversible preprocessing deletion.</li>
+<li>
+<code><a href="reference/physiology_validation_ladder.html">physiology_validation_ladder()</a></code> separates acquisition QC, analytical QC, construct evidence, within-person evidence, and held-out-person generalization. Population/generalization claims require held-out-person validation to pass.</li>
+<li>
+<code><a href="reference/ppg_topology_features.html">ppg_topology_features()</a></code> is opt-in and experimental. It summarizes H0 persistence lifetimes from a delay embedding as a <strong>structural waveform descriptor</strong>, not a direct physiological surrogate, and carries a participant-grouped validation guardrail.</li>
+</ul>
+<p>These are post-2.0.0 development additions and do not alter the immutable <code>v2.0.0</code> release archive.</p>
+<p>See the <a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.html">Measurement accountability for Gazepoint physiology article</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
+<p>Install the exact GitHub 2.0.0 release:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Install from the local package folder during development</span></span>
-<span><span class="co"># install.packages("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>After release, installation can use the package source or repository location selected by the maintainer.</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"stefanosbalaskas/gpbiometrics"</span>, ref <span class="op">=</span> <span class="st">"v2.0.0"</span><span class="op">)</span></span></code></pre></div>
+<p>For the current development branch, including the September measurement-accountability additions:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"stefanosbalaskas/gpbiometrics"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="quick-start">Quick start<a class="anchor" aria-label="anchor" href="#quick-start"></a>
 </h2>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/stefanosbalaskas/gpbiometrics" class="external-link">gpbiometrics</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">folder</span> <span class="op">&lt;-</span> <span class="st">"path/to/gazepoint_exports"</span></span>
-<span></span>
-<span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/import_gazepoint_biometric_folder.html">import_gazepoint_biometric_folder</a></span><span class="op">(</span><span class="va">folder</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">readiness</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/run_gazepoint_biometrics_real_data_readiness.html">run_gazepoint_biometrics_real_data_readiness</a></span><span class="op">(</span><span class="va">dat</span><span class="op">)</span></span>
-<span></span>
 <span><span class="va">workflow</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/run_gazepoint_biometrics_workflow.html">run_gazepoint_biometrics_workflow</a></span><span class="op">(</span></span>
 <span>  path <span class="op">=</span> <span class="va">folder</span>,</span>
 <span>  include_all_gaze <span class="op">=</span> <span class="cn">TRUE</span>,</span>
@@ -212,250 +162,75 @@
 <span>  expected_sampling_rate_hz <span class="op">=</span> <span class="fl">60</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">summary</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/summarise_gazepoint_biometrics_workflow.html">summarise_gazepoint_biometrics_workflow</a></span><span class="op">(</span><span class="va">workflow</span><span class="op">)</span></span>
-<span><span class="va">summary</span></span></code></pre></div>
-<p>For private real data, keep source exports and generated smoke-test outputs outside the package repository.</p>
-</div>
-<div class="section level2">
-<h2 id="built-in-synthetic-kiosk-demo">Built-in synthetic kiosk demo<a class="anchor" aria-label="anchor" href="#built-in-synthetic-kiosk-demo"></a>
-</h2>
-<p><code>gpbiometrics</code> includes a public, fully synthetic Gazepoint-like demo dataset for examples, vignettes, and reproducible workflow checks. The dataset simulates a public-service touchscreen kiosk task and is not derived from real participants.</p>
-<p>The synthetic design contains 36 participants, four kiosk tasks per participant, 60 Hz sampling, and 69,120 rows. The task design crosses interface complexity (<code>simple</code> vs. <code>dense</code>) with feedback clarity (<code>clear</code> vs. <code>ambiguous</code>). The exports include gaze, AOI labels, pupil diameter, GSR/EDA, HR, IBI, pulse waveform, engagement dial, TTL markers, and task metadata.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">demo_dir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
-<span>  <span class="st">"extdata"</span>,</span>
-<span>  <span class="st">"gazepoint_biometrics_kiosk_demo_exports"</span>,</span>
-<span>  package <span class="op">=</span> <span class="st">"gpbiometrics"</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">workflow</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/run_gazepoint_biometrics_workflow.html">run_gazepoint_biometrics_workflow</a></span><span class="op">(</span></span>
-<span>  path <span class="op">=</span> <span class="va">demo_dir</span>,</span>
-<span>  include_all_gaze <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  include_fixations <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  include_other_csv <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  expected_sampling_rate_hz <span class="op">=</span> <span class="fl">60</span></span>
-<span><span class="op">)</span></span>
-<span></span>
 <span><span class="fu"><a href="reference/summarise_gazepoint_biometrics_workflow.html">summarise_gazepoint_biometrics_workflow</a></span><span class="op">(</span><span class="va">workflow</span><span class="op">)</span></span></code></pre></div>
-<p>The synthetic kiosk data are intended for package demonstration only. They should not be interpreted as real physiology, emotion, stress, cognition, health status, or diagnosis.</p>
+<p>For private real data, keep source exports and generated smoke-test outputs outside the package repository.</p>
 </div>
 <div class="section level2">
 <h2 id="main-workflow">Main workflow<a class="anchor" aria-label="anchor" href="#main-workflow"></a>
 </h2>
-<p>A typical workflow is:</p>
-<pre class="text"><code>Import exports
-  -&gt; inspect schema and signal availability
-  -&gt; audit quality, timing, TTL markers, and missingness
-  -&gt; preprocess EDA / pulse / IBI / pupil channels
-  -&gt; extract SCR, HRV, respiration, AOI, or multimodal features
-  -&gt; create analysis-ready windows or model tables
-  -&gt; export tables, plots, and report bundles</code></pre>
-<p>The package is intentionally modular: users can run the full workflow or call individual helpers for a specific signal, window, or quality-control task.</p>
+<pre class="text"><code>Gazepoint / external exports
+  -&gt; schema + signal availability audit
+  -&gt; timing / TTL / missingness / quality checks
+  -&gt; EDA / PPG / IBI / pupil / gaze preprocessing
+  -&gt; fixation / AOI / event / multimodal alignment
+  -&gt; physiological and process feature extraction
+  -&gt; model-ready tables
+  -&gt; plots + reports + reproducibility evidence
+  -&gt; optional external-toolbox cross-checks</code></pre>
+<p>The package is intentionally modular: researchers can run a complete workflow or call individual helpers while keeping preprocessing and interpretation decisions explicit.</p>
 </div>
 <div class="section level2">
-<h2 id="core-function-map">Core function map<a class="anchor" aria-label="anchor" href="#core-function-map"></a>
+<h2 id="release-validation">Release validation<a class="anchor" aria-label="anchor" href="#release-validation"></a>
 </h2>
-<table class="table">
-<colgroup>
-<col width="50%">
-<col width="50%">
-</colgroup>
-<thead><tr>
-<th>Task</th>
-<th>Main helpers</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>Import Gazepoint biometric files</td>
-<td>
-<code><a href="reference/import_gazepoint_biometrics.html">import_gazepoint_biometrics()</a></code>, <code><a href="reference/import_gazepoint_biometric_folder.html">import_gazepoint_biometric_folder()</a></code>, <code><a href="reference/import_gazepoint_data_summary.html">import_gazepoint_data_summary()</a></code>
-</td>
-</tr>
-<tr>
-<td>Diagnose workflow readiness</td>
-<td>
-<code><a href="reference/diagnose_gazepoint_biometrics_workflow.html">diagnose_gazepoint_biometrics_workflow()</a></code>, <code><a href="reference/run_gazepoint_biometrics_real_data_readiness.html">run_gazepoint_biometrics_real_data_readiness()</a></code>
-</td>
-</tr>
-<tr>
-<td>Run full workflow</td>
-<td>
-<code><a href="reference/run_gazepoint_biometrics_workflow.html">run_gazepoint_biometrics_workflow()</a></code>, <code><a href="reference/summarise_gazepoint_biometrics_workflow.html">summarise_gazepoint_biometrics_workflow()</a></code>
-</td>
-</tr>
-<tr>
-<td>Export report outputs</td>
-<td>
-<code><a href="reference/create_gazepoint_biometrics_report.html">create_gazepoint_biometrics_report()</a></code>, <code><a href="reference/export_gazepoint_biometrics_report_bundle.html">export_gazepoint_biometrics_report_bundle()</a></code>
-</td>
-</tr>
-<tr>
-<td>Inspect package coverage</td>
-<td>
-<code><a href="reference/create_gazepoint_biometrics_feature_inventory.html">create_gazepoint_biometrics_feature_inventory()</a></code>, <code>gpbiometrics_feature_inventory_table()</code>
-</td>
-</tr>
-<tr>
-<td>Plot report dashboard</td>
-<td><code><a href="reference/plot_gazepoint_biometric_report_dashboard.html">plot_gazepoint_biometric_report_dashboard()</a></code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section level2">
-<h2 id="eda-gsr-and-scr-tools">EDA, GSR, and SCR tools<a class="anchor" aria-label="anchor" href="#eda-gsr-and-scr-tools"></a>
-</h2>
-<p><code>gpbiometrics</code> includes tools for EDA/GSR preprocessing, artifact checks, SCR detection, threshold sensitivity, baseline correction, response windows, multiverse checks, and report-ready summaries.</p>
-<p>Representative helpers include:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/audit_gazepoint_gsr_units.html">audit_gazepoint_gsr_units</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/standardise_gazepoint_adaptive_ema.html">standardise_gazepoint_adaptive_ema</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/classify_gazepoint_scr_intervals.html">classify_gazepoint_scr_intervals</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/flag_kleckner_eda_artifacts.html">flag_kleckner_eda_artifacts</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/run_gazepoint_scr_multiverse.html">run_gazepoint_scr_multiverse</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/extract_gazepoint_scr_recovery_times.html">extract_gazepoint_scr_recovery_times</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/correct_gazepoint_eda_temperature.html">correct_gazepoint_eda_temperature</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Specialised EDA helpers are also available for bilateral EDA asymmetry, skin-potential recordings, AC EDA admittance/susceptance, EDA-gram-style visualisation, cvxEDA/PsPM/Ledalab/cvxEDA-style bridges, and CTSI input preparation. These are optional method-specific helpers and should only be used when the required signal type is actually present.</p>
-</div>
-<div class="section level2">
-<h2 id="pulse-ibi-hr-hrv-and-respiration-tools">Pulse, IBI, HR, HRV, and respiration tools<a class="anchor" aria-label="anchor" href="#pulse-ibi-hr-hrv-and-respiration-tools"></a>
-</h2>
-<p>The package supports pulse and heartbeat workflows, including IBI/HR summaries, HRV features, nonlinear descriptors, respiration proxies, point-process summaries, and advanced signal-processing bridges.</p>
-<p>Representative helpers include:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/extract_gazepoint_hrv_features.html">extract_gazepoint_hrv_features</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/summarise_gazepoint_hrv_features.html">summarise_gazepoint_hrv_features</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/prepare_gazepoint_rhrv_input.html">prepare_gazepoint_rhrv_input</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/extract_gazepoint_hrv_nonlinear.html">extract_gazepoint_hrv_nonlinear</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/extract_gazepoint_hrv_rqa.html">extract_gazepoint_hrv_rqa</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/extract_gazepoint_hrv_geometric.html">extract_gazepoint_hrv_geometric</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/extract_gazepoint_hrv_rcmse.html">extract_gazepoint_hrv_rcmse</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/extract_gazepoint_hrv_fuzzy_csi.html">extract_gazepoint_hrv_fuzzy_csi</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/model_gazepoint_hrv_ipfm.html">model_gazepoint_hrv_ipfm</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/extract_gazepoint_beats_kmeans.html">extract_gazepoint_beats_kmeans</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Respiration-related helpers include PPG-derived respiration, ECG-derived respiration PCA bridges, CEEMDAN-style respiration extraction, RSA proxies, and Kalman fusion of multiple respiration proxy streams. These outputs are signal-derived respiratory proxies, not replacements for direct respiratory-belt recordings unless externally validated.</p>
-</div>
-<div class="section level2">
-<h2 id="timing-ttl-windows-and-multimodal-alignment">Timing, TTL, windows, and multimodal alignment<a class="anchor" aria-label="anchor" href="#timing-ttl-windows-and-multimodal-alignment"></a>
-</h2>
-<p>Gazepoint biometric exports are often used together with stimulus timing, TTL markers, AOIs, and event windows. <code>gpbiometrics</code> provides tools for alignment, chunking, and model-ready table creation.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/extract_gazepoint_ttl_events.html">extract_gazepoint_ttl_events</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/align_gazepoint_biometrics_to_ttl.html">align_gazepoint_biometrics_to_ttl</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/chunk_gazepoint_biometrics.html">chunk_gazepoint_biometrics</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/prepare_gazepoint_biometrics_lme_data.html">prepare_gazepoint_biometrics_lme_data</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/plot_gazepoint_multimodal_timeline.html">plot_gazepoint_multimodal_timeline</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="quality-control-and-reporting">Quality control and reporting<a class="anchor" aria-label="anchor" href="#quality-control-and-reporting"></a>
-</h2>
-<p>The package emphasises explicit quality-control outputs rather than silent deletion or hidden preprocessing. Readiness checks and report bundles help users document what was inspected, what was retained, and what requires caution.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/run_gazepoint_biometrics_real_data_readiness.html">run_gazepoint_biometrics_real_data_readiness</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/export_gazepoint_biometrics_report_bundle.html">export_gazepoint_biometrics_report_bundle</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/create_gazepoint_biometrics_report_tables.html">create_gazepoint_biometrics_report_tables</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/plot_gazepoint_biometric_report_dashboard.html">plot_gazepoint_biometric_report_dashboard</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/create_gazepoint_preregistration_template.html">create_gazepoint_preregistration_template</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="advanced-optional-methods">Advanced optional methods<a class="anchor" aria-label="anchor" href="#advanced-optional-methods"></a>
-</h2>
-<p>Advanced helpers are included for specialised workflows such as:</p>
+<p>The <code>v2.0.0</code> release record reports:</p>
 <ul>
-<li>artifact SVM feature preparation;</li>
-<li>optional autoencoder denoising bridges;</li>
-<li>wavelet and adaptive smoothing;</li>
-<li>entropy, RQA, FuzzyEn, RCMSE, and Lorenz/Poincare-style HRV descriptors;</li>
-<li>point-process summaries for EDA and heartbeat timing;</li>
-<li>Granger-style cardiorespiratory directionality;</li>
-<li>EDA-gram-style visualisation;</li>
-<li>AC EDA, skin potential, and bilateral EDA modality support;</li>
-<li>online design-optimisation decision support;</li>
-<li>surrogate nonlinearity testing;</li>
-<li>synthetic biometric signal simulation.</li>
+<li>
+<strong>3,515 package tests passed</strong>;</li>
+<li>
+<strong>49 release-readiness tests passed</strong>;</li>
+<li>
+<strong>40 interoperability-version tests passed</strong>;</li>
+<li>
+<strong>55 private smoke-harness tests passed</strong>;</li>
+<li>
+<code>R CMD check</code>: <strong>0 errors, 0 warnings, 0 notes</strong>; and</li>
+<li>pkgdown configuration: <strong>no problems found</strong>.</li>
 </ul>
-<p>These tools are intended for advanced users who understand the data requirements and assumptions of each method. Several functions are interoperability bridges or dependency-light approximations, not complete reimplementations of external modelling frameworks.</p>
-</div>
-<div class="section level2">
-<h2 id="compatibility-with-gp3tools">Compatibility with gp3tools<a class="anchor" aria-label="anchor" href="#compatibility-with-gp3tools"></a>
-</h2>
-<p><code>gpbiometrics</code> outputs can be handed to the cross-package integration workflow implemented in <code>gp3tools</code>. A compatible table should retain a participant identifier, a trial or media identifier where applicable, a time field in documented seconds or milliseconds, one or more numeric biometric signals, and an optional event-marker column.</p>
-<p><code>gp3tools</code> owns nearest-time synchronization, tolerance handling, and the cross-package alignment audit. <code>gpbiometrics</code> does not duplicate that implementation. The existing <code><a href="reference/join_gazepoint_biometrics_to_gp3tools.html">join_gazepoint_biometrics_to_gp3tools()</a></code> helper remains available for an explicit package-local join.</p>
-<p>See the <a href="vignettes/articles/gp3tools-compatibility.Rmd">gp3tools compatibility article</a> for the schema contract, ownership boundary, and reporting guardrails.</p>
+<p>The September 2026 additions are development functionality layered on top of this qualified release baseline.</p>
 </div>
 <div class="section level2">
 <h2 id="interpretation-guardrails">Interpretation guardrails<a class="anchor" aria-label="anchor" href="#interpretation-guardrails"></a>
 </h2>
-<p>Biometric signals require conservative interpretation.</p>
+<p><code>gpbiometrics</code> treats biometric outputs as physiological descriptors, quality-control evidence, or analysis-ready measurements. It does not infer emotion, stress, cognition, preference, attention quality, health status, diagnosis, or another psychological/clinical state directly from EDA, HRV/PRV, PPG, pupil, gaze, or multimodal signals.</p>
+<p>Metric agreement does not imply sensor interchangeability; retention-first responsivity does not diagnose participant state; held-out prediction does not establish construct validity; and experimental topology features are not physiological surrogates without independent validation.</p>
+</div>
+<div class="section level2">
+<h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
+</h2>
 <ul>
-<li>EDA/GSR/SCR features describe electrodermal activity and arousal-related physiology; they do not directly identify emotion, stress, preference, cognition, or diagnosis.</li>
-<li>HR, IBI, HRV, PPG, and respiration-proxy features describe cardiovascular or signal-derived dynamics; they do not directly identify psychological or clinical states.</li>
-<li>Pupil features are strongly affected by luminance and visual context; luminance-adjusted residuals are not proof of cognitive-load-only effects.</li>
-<li>Eye-tracking or AOI timing features describe visual allocation and timing; they do not directly prove attention quality, scrutiny, or comprehension.</li>
-<li>Advanced models, bridges, and automated statistics should be reviewed against the experimental design before confirmatory use.</li>
+<li><a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/article-roadmap.html">Article roadmap</a></li>
+<li><a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/eda-scr-workflow.html">EDA/GSR/SCR workflow</a></li>
+<li><a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/ppg-hrv-workflow.html">PPG/HRV workflow</a></li>
+<li><a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/pupil-qc-workflow.html">Pupil QC workflow</a></li>
+<li><a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/event-alignment-aoi-workflow.html">Event alignment and AOI workflow</a></li>
+<li><a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/mne-eeg-lsl-workflow.html">MNE/EEG/LSL interoperability</a></li>
+<li><a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.html">Measurement accountability</a></li>
+<li><a href="https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html">Complete function reference</a></li>
 </ul>
-</div>
-<div class="section level2">
-<h2 id="feature-inventory">Feature inventory<a class="anchor" aria-label="anchor" href="#feature-inventory"></a>
-</h2>
-<p>The package includes a programmatic inventory of available functions.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">inventory</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/create_gazepoint_biometrics_feature_inventory.html">create_gazepoint_biometrics_feature_inventory</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="va">formatted_inventory</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/format_gazepoint_biometrics_feature_inventory.html">format_gazepoint_biometrics_feature_inventory</a></span><span class="op">(</span><span class="va">inventory</span><span class="op">)</span></span>
-<span><span class="va">inventory_summary</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/summarise_gazepoint_biometrics_feature_inventory.html">summarise_gazepoint_biometrics_feature_inventory</a></span><span class="op">(</span><span class="va">formatted_inventory</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">inventory</span><span class="op">$</span><span class="va">overview</span></span>
-<span><span class="va">inventory_summary</span><span class="op">$</span><span class="va">domain_summary</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">formatted_inventory</span><span class="op">)</span></span></code></pre></div>
-<p>This is useful for checking which workflows are available and for documenting package coverage in reports or manuscripts.</p>
-</div>
-<div class="section level2">
-<h2 id="private-real-data-workflow">Private real-data workflow<a class="anchor" aria-label="anchor" href="#private-real-data-workflow"></a>
-</h2>
-<p>For private Gazepoint exports, keep raw data outside the package repository.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">private_folder</span> <span class="op">&lt;-</span> <span class="st">"path/to/private_gazepoint_exports"</span></span>
-<span><span class="va">private_output</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"gpbiometrics_real_check"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">workflow</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/run_gazepoint_biometrics_workflow.html">run_gazepoint_biometrics_workflow</a></span><span class="op">(</span></span>
-<span>  path <span class="op">=</span> <span class="va">private_folder</span>,</span>
-<span>  include_all_gaze <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  include_fixations <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  include_other_csv <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  expected_sampling_rate_hz <span class="op">=</span> <span class="fl">60</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="reference/summarise_gazepoint_biometrics_workflow.html">summarise_gazepoint_biometrics_workflow</a></span><span class="op">(</span><span class="va">workflow</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="reference/export_gazepoint_biometrics_report_bundle.html">export_gazepoint_biometrics_report_bundle</a></span><span class="op">(</span></span>
-<span>  <span class="va">workflow</span>,</span>
-<span>  output_dir <span class="op">=</span> <span class="va">private_output</span></span>
-<span><span class="op">)</span></span></code></pre></div>
-<p>Do not commit private Gazepoint exports or private smoke-test outputs.</p>
-</div>
-<div class="section level2">
-<h2 id="validation-status">Validation status<a class="anchor" aria-label="anchor" href="#validation-status"></a>
-</h2>
-<p>Current local validation for the v0.3.0 release:</p>
-<pre class="text"><code><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/test.html" class="external-link">test</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co"># FAIL 0 | WARN 0 | SKIP 0 | PASS 2966</span></span>
-<span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/check.html" class="external-link">check</a></span><span class="op">(</span>args <span class="op">=</span> <span class="st">"--as-cran"</span><span class="op">)</span></span>
-<span><span class="co"># 0 errors | 0 warnings | 0 notes</span></span>
-<span></span>
-<span><span class="fu">urlchecker</span><span class="fu">::</span><span class="fu"><a href="https://urlchecker.r-lib.org/reference/url_check.html" class="external-link">url_check</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co"># All URLs are correct</span></span></code></pre>
-<p>The recurring Quarto/TMPDIR message can appear during local checks. It is treated as harmless only when the final <code>R CMD check</code> summary reports 0 errors, 0 warnings, and 0 notes.</p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
-<p>Current release tag: <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v0.3.0" class="external-link"><code>v0.3.0</code></a>.</p>
-<p>If you use <code>gpbiometrics</code>, cite the package version, repository or archive DOI if available, and the specific Gazepoint hardware/software context used in your study. Also cite the original methodological sources for specialised analyses such as cvxEDA, Ledalab, PsPM, RHRV, entropy, point-process, or signal-decomposition methods when those helpers are used.</p>
-<p>If you use <code>gpbiometrics</code>, please cite the package with:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"gpbiometrics"</span><span class="op">)</span></span></code></pre></div>
-<p>The archived software release is available at DOI: <code>10.5281/zenodo.20836725</code>.</p>
+<p>For the installed package citation:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"gpbiometrics"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/packageDescription.html" class="external-link">packageVersion</a></span><span class="op">(</span><span class="st">"gpbiometrics"</span><span class="op">)</span></span></code></pre></div>
+<p>The package paper is <strong>“gpbiometrics: An R Package for Reproducible Analysis and Reporting of Gazepoint Biometrics Exports”</strong>, <em>Signals</em> (2026), DOI <a href="https://doi.org/10.3390/signals7050086" class="external-link"><code>10.3390/signals7050086</code></a>.</p>
+</div>
+<div class="section level2">
+<h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
+</h2>
+<p>MIT License.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -501,7 +276,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer>

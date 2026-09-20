@@ -69,9 +69,9 @@ aligned to biometric observations by participant, trial, and nearest
 timestamp, and summarized with an explicit synchronization audit. The
 relevant functions are:
 
-- `gp3tools::prepare_gazepoint_gpbiometrics_bridge()`;
-- `gp3tools::run_gazepoint_gpbiometrics_workflow()`;
-- `gp3tools::create_gazepoint_cross_package_report()`.
+- [`gp3tools::prepare_gazepoint_gpbiometrics_bridge()`](https://stefanosbalaskas.github.io/gp3tools/reference/prepare_gazepoint_gpbiometrics_bridge.html);
+- [`gp3tools::run_gazepoint_gpbiometrics_workflow()`](https://stefanosbalaskas.github.io/gp3tools/reference/run_gazepoint_gpbiometrics_workflow.html);
+- [`gp3tools::create_gazepoint_cross_package_report()`](https://stefanosbalaskas.github.io/gp3tools/reference/create_gazepoint_cross_package_report.html).
 
 Consult the installed `gp3tools` documentation for the exact arguments
 and supported Gazepoint column-name detection rules.

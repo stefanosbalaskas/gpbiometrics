@@ -33,6 +33,8 @@ navbar:
         href: articles/gpbiometrics-workflow.html
       - text: Synthetic data showcase
         href: articles/synthetic-data-showcase.html
+      - text: Ecosystem update - September 2026
+        href: articles/ecosystem-update-2026-09.html
       - text: --------
       - text: Quality control and reporting
       - text: QC workflow
@@ -43,6 +45,8 @@ navbar:
         href: articles/visual-qc-dashboard-workflow.html
       - text: Reporting and reproducibility workflow
         href: articles/reporting-reproducibility-workflow.html
+      - text: Measurement accountability
+        href: articles/measurement-accountability.html
       - text: Design audit workflow
         href: articles/design-audit-workflow.html
       - text: Design release visual audit
@@ -480,6 +484,17 @@ reference:
   - compute_gazepoint_scr_latency
   - compute_gazepoint_signal_lag_matrix
   - estimate_gazepoint_respiration_from_ppg
+- title: Measurement accountability and validation
+  desc: >
+    Metric-specific agreement, responsivity sensitivity, validation-ladder,
+    and experimental structural-waveform helpers with conservative
+    interpretation and explicit generalization guardrails.
+  contents:
+  - compare_hrv_prv_devices
+  - scr_responsivity_sensitivity
+  - physiology_validation_ladder
+  - ppg_topology_features
+
 - title: Bootstrap condition comparisons
   desc: Lightweight percentile-bootstrap comparisons for Gazepoint-derived outcomes.
   contents: compare_gazepoint_conditions_bootstrap
@@ -589,6 +604,7 @@ articles:
   contents:
   - "`articles/article-roadmap`"
   - "`gpbiometrics-workflow`"
+  - "`ecosystem-update-2026-09`"
   - "`articles/synthetic-data-showcase`"
 
 - title: Quality control and reporting
@@ -598,6 +614,7 @@ articles:
   - "`articles/troubleshooting-readiness`"
   - "`articles/visual-qc-dashboard-workflow`"
   - "`articles/reporting-reproducibility-workflow`"
+  - "`measurement-accountability`"
   - "`articles/design-audit-workflow`"
   - "`articles/design-release-visual-audit`"
 
