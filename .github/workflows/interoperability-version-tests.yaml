@@ -2,6 +2,30 @@ name: Interoperability version tests
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - "DESCRIPTION"
+      - "R/interoperability-version-testing.R"
+      - "R/eyetrackingr-input.R"
+      - "R/pupillometryr-input.R"
+      - "R/gazer-input.R"
+      - "R/mne-eeg-lsl-interoperability.R"
+      - "R/biosppy-input.R"
+      - "R/heartpy-bridge.R"
+      - "R/pyhrv-input.R"
+      - "R/roadmap-final-gaps.R"
+      - "tests/testthat/test-interoperability-version-testing.R"
+      - "tests/testthat/test-eyetrackingr-input.R"
+      - "tests/testthat/test-pupillometryr-input.R"
+      - "tests/testthat/test-gazer-input.R"
+      - "tests/testthat/test-mne-eeg-lsl-interoperability.R"
+      - "tests/testthat/test-biosppy-input.R"
+      - "tests/testthat/test-heartpy-bridge.R"
+      - "tests/testthat/test-pyhrv-input.R"
+      - "tools/run-interoperability-version-audit.R"
+      - ".github/workflows/interoperability-version-tests.yaml"
   schedule:
     - cron: "17 4 1 * *"
   pull_request:
@@ -57,6 +81,9 @@ jobs:
         with:
           packages: |
             any::devtools
+            ${{ runner.os == 'macOS' && 'knitr=?source' || 'any::knitr' }}
+            ${{ runner.os == 'macOS' && 'xfun=?source' || 'any::xfun' }}
+            ${{ runner.os == 'macOS' && 'usethis=?source' || 'any::usethis' }}
             local::.
 
       - name: Run R bridge contract tests
