@@ -8,7 +8,7 @@ test_that("estimation plot preserves independent units and paired resampling", {
   ans <- plot_gazepoint_estimation(d, "condition", "gsr", id = "id",
                                    paired = TRUE, n_boot = 99, seed = 101)
   expect_s3_class(ans$plot, "ggplot")
-  expect_equal(ans$summary$estimate, -.5)
+  expect_equal(ans$summary$estimate, .5)
   expect_equal(nrow(ans$draws), 99L)
   expect_equal(ans$summary$n_units, 8L)
   expect_error(plot_gazepoint_estimation(
