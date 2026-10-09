@@ -83,3 +83,26 @@ print(g2$plot)
 ```
 
 This is delegated to the maintained [official R dabestr package](https://acclab.github.io/dabestr/), whereas `plot_gazepoint_estimation()` is a self-contained alternative with simpler percentile intervals. Both require a defensible participant-level estimand.
+
+
+## Rendered official DABEST demonstration (synthetic only)
+
+```{r official-dabest-render, eval=requireNamespace("dabestr", quietly=TRUE), fig.width=8, fig.height=5}
+set.seed(2026)
+synthetic <- data.frame(
+  participant_id = rep(seq_len(24), each = 2),
+  condition = rep(c("before", "after"), times = 24),
+  pupil_change = rep(rnorm(24, 0, 0.3), each = 2) +
+    rep(c(0, 0.15), times = 24) + rnorm(48, sd = 0.04)
+)
+official_plot <- plot_gazepoint_dabest(
+  synthetic, "condition", "pupil_change",
+  id = "participant_id", paired = TRUE,
+  float_contrast = FALSE, resamples = 200
+)
+print(official_plot$plot)
+```
+
+The figure demonstrates a **paired Cumming estimation plot** using
+official `dabestr`. The illustrative records were generated synthetically
+for site reproducibility and must not be interpreted as study evidence.
