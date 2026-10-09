@@ -9,10 +9,11 @@ vignette: >
 
 The [DABEST Python toolkit](https://acclab.github.io/DABEST-python/) popularises the Gardner–Altman and Cumming estimation-plot grammar: show **all observations**, show **effect size and uncertainty**, and connect **paired observations** when the design requires it. The R package [dabestr](https://acclab.github.io/dabestr/) already offers the canonical DABEST-style graphics; the helper here is a package-native, deliberately narrower alternative for participant-level Gazepoint experiments.
 
-For standard BCa estimation plots, use \`dabestr\` directly. The native helper below uses **percentile** bootstrap intervals and is not a numerical replacement for dabestr.
+For standard BCa estimation plots, use `dabestr` directly. The native helper below uses **percentile** bootstrap intervals and is not a numerical replacement for dabestr.
 
-\`\`\`{r example, eval=FALSE}
+```{r example, eval=requireNamespace('ggplot2', quietly=TRUE)}
 library(gpbiometrics)
+set.seed(2026)
 d <- data.frame(
   participant = rep(seq_len(30), each = 2),
   condition = rep(c("baseline", "stimulus"), 30),
@@ -24,7 +25,7 @@ result <- plot_gazepoint_estimation(
 )
 print(result$plot)
 result$summary
-\`\`\`
+```
 
 **Design contract:** only a single participant-level outcome per condition is accepted; repeated eye samples and SCR peaks are not treated as independent replicates. A two-arm between-person comparison must not share IDs across groups. The plots are descriptive and do not infer treatment causality, significance, equivalent devices or physiological stress.
 
@@ -34,7 +35,7 @@ result$summary
 The measurement-validation audit deliberately treats *correlation*,
 *agreement* and *condition/nuisance sensitivity* as distinct evidence types.
 
-\`\`\`{r measurement, eval=FALSE}
+```{r measurement, eval=FALSE}
 audit <- audit_gazepoint_measurement_equivalence(
   paired_device_measurements,
   reference = "ReferenceSCR",
@@ -47,7 +48,7 @@ audit$agreement
 plots <- plot_gazepoint_measurement_comparison(audit)
 plots$association
 plots$agreement
-\`\`\`
+```
 
 The agreement plot uses **descriptive** participant-phase limits; with
 longitudinal recordings it is not a substitute for hierarchical
@@ -58,11 +59,11 @@ interchangeability.
 
 ## Official Gardner–Altman and Cumming plots using dabestr
 
-Install the optional CRAN package \`dabestr\` for the original DABEST R
+Install the optional CRAN package `dabestr` for the original DABEST R
 resampling engine (including its BCa intervals). The guarded adapter
 applies participant independence checks and forwards a standardized table.
 
-\`\`\`{r official-dabest, eval=FALSE}
+```{r official-dabest, eval=FALSE}
 # install.packages("dabestr")
 g <- plot_gazepoint_dabest(
   data = participant_level_data,
@@ -79,6 +80,6 @@ g2 <- plot_gazepoint_dabest(
   float_contrast = FALSE, resamples = 5000
 )
 print(g2$plot)
-\`\`\`
+```
 
-This is delegated to the maintained [official R dabestr package](https://acclab.github.io/dabestr/), whereas \`plot_gazepoint_estimation()\` is a self-contained alternative with simpler percentile intervals. Both require a defensible participant-level estimand.
+This is delegated to the maintained [official R dabestr package](https://acclab.github.io/dabestr/), whereas `plot_gazepoint_estimation()` is a self-contained alternative with simpler percentile intervals. Both require a defensible participant-level estimand.
