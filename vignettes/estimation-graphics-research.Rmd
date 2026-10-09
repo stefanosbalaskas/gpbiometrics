@@ -1,0 +1,29 @@
+---
+title: "Participant-aware estimation plots for eye tracking and biometrics"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Participant-aware estimation plots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The [DABEST Python toolkit](https://acclab.github.io/DABEST-python/) popularises the Gardner–Altman and Cumming estimation-plot grammar: show **all observations**, show **effect size and uncertainty**, and connect **paired observations** when the design requires it. The R package [dabestr](https://acclab.github.io/dabestr/) already offers the canonical DABEST-style graphics; the helper here is a package-native, deliberately narrower alternative for participant-level Gazepoint experiments.
+
+For standard BCa estimation plots, use \`dabestr\` directly. The native helper below uses **percentile** bootstrap intervals and is not a numerical replacement for dabestr.
+
+\`\`\`{r example, eval=FALSE}
+library(gpbiometrics)
+d <- data.frame(
+  participant = rep(seq_len(30), each = 2),
+  condition = rep(c("baseline", "stimulus"), 30),
+  scr = rnorm(60)
+)
+result <- plot_gazepoint_estimation(
+  d, "condition", "scr", id = "participant",
+  paired = TRUE, n_boot = 2000, seed = 2026
+)
+print(result$plot)
+result$summary
+\`\`\`
+
+**Design contract:** only a single participant-level outcome per condition is accepted; repeated eye samples and SCR peaks are not treated as independent replicates. A two-arm between-person comparison must not share IDs across groups. The plots are descriptive and do not infer treatment causality, significance, equivalent devices or physiological stress.
