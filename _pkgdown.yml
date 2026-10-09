@@ -650,6 +650,7 @@ articles:
   - "`articles/toolbox-bridges-workflow`"
   - "`articles/toolbox-crosscheck-visuals`"
   - "`articles/plot-gallery`"
+  - "dabest-estimation-gallery"
 
 - title: Validation and private-data readiness
   desc: Audit external-package compatibility and validate genuine private exports without retaining source or participant data.
