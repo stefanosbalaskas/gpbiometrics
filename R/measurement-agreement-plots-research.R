@@ -1,3 +1,5 @@
+utils::globalVariables(c("reference", "candidate", "average", "difference"))
+
 #' Plot paired association and agreement as distinct figures
 #'
 #' @param audit Output of audit_gazepoint_measurement_equivalence().
