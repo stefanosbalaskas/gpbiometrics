@@ -1,3 +1,5 @@
+utils::globalVariables(c("Group", "ID", "Measurement"))
+
 #' Produce canonical DABEST estimation graphics from Gazepoint summaries
 #'
 #' Optional, design-guarded adapter to the maintained R dabestr package.
