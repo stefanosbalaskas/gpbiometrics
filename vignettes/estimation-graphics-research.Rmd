@@ -54,3 +54,31 @@ longitudinal recordings it is not a substitute for hierarchical
 repeated-measures limits, a defensible equivalence margin, or nuisance-by-device
 interaction modeling. Do not present a strong Pearson correlation as sensor
 interchangeability.
+
+
+## Official Gardner–Altman and Cumming plots using dabestr
+
+Install the optional CRAN package \`dabestr\` for the original DABEST R
+resampling engine (including its BCa intervals). The guarded adapter
+applies participant independence checks and forwards a standardized table.
+
+\`\`\`{r official-dabest, eval=FALSE}
+# install.packages("dabestr")
+g <- plot_gazepoint_dabest(
+  data = participant_level_data,
+  group = "condition", outcome = "scr",
+  id = "participant_id", paired = TRUE,
+  float_contrast = TRUE, resamples = 5000
+)
+print(g$plot)
+
+# Cumming layout:
+g2 <- plot_gazepoint_dabest(
+  participant_level_data, "condition", "scr",
+  id = "participant_id", paired = TRUE,
+  float_contrast = FALSE, resamples = 5000
+)
+print(g2$plot)
+\`\`\`
+
+This is delegated to the maintained [official R dabestr package](https://acclab.github.io/dabestr/), whereas \`plot_gazepoint_estimation()\` is a self-contained alternative with simpler percentile intervals. Both require a defensible participant-level estimand.
