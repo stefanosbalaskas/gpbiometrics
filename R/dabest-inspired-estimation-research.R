@@ -1,3 +1,5 @@
+utils::globalVariables(c("condition", "value", "participant_id", "panel", "low", "high"))
+
 #' Estimation graphics for two-group biometric comparisons
 #'
 #' Design-aware, original ggplot interpretation of DABEST's Cumming estimation
