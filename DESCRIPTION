@@ -25,6 +25,7 @@ Suggests:
     reticulate,
     jsonlite,
     ggplot2,
+    dabestr,
     shiny,
     eyetrackingR,
     PupillometryR
