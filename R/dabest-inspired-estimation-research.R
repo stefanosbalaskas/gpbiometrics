@@ -49,10 +49,10 @@ plot_gazepoint_estimation <- function(
       any(!nzchar(d$participant_id))) {
     stop("Complete finite measurements and IDs required.", call. = FALSE)
   }
-  levels <- if (is.factor(data[[group]])) {
+  group_levels <- if (is.factor(data[[group]])) {
     levels(droplevels(data[[group]]))
   } else unique(d$condition)
-  if (length(levels) != 2L) {
+  if (length(group_levels) != 2L) {
     stop("Exactly two observed conditions required.", call. = FALSE)
   }
   if (any(duplicated(d[c("condition", "participant_id")]))) {
@@ -61,19 +61,19 @@ plot_gazepoint_estimation <- function(
   ids <- split(d$condition, d$participant_id)
   if (paired) {
     if (length(ids) < 3L ||
-        any(!vapply(ids, function(x) setequal(x, levels), logical(1)))) {
+        any(!vapply(ids, function(x) setequal(x, group_levels), logical(1)))) {
       stop("At least three complete participant pairs are required.", call. = FALSE)
     }
     unique_ids <- unique(d$participant_id)
     keys <- paste(d$participant_id, d$condition, sep = "\r")
-    x <- d$value[match(paste(unique_ids, levels[1L], sep = "\r"), keys)]
-    y <- d$value[match(paste(unique_ids, levels[2L], sep = "\r"), keys)]
+    x <- d$value[match(paste(unique_ids, group_levels[1L], sep = "\r"), keys)]
+    y <- d$value[match(paste(unique_ids, group_levels[2L], sep = "\r"), keys)]
   } else {
     if (any(vapply(ids, length, integer(1)) != 1L)) {
       stop("IDs in both groups require paired=TRUE.", call. = FALSE)
     }
-    x <- d$value[d$condition == levels[1L]]
-    y <- d$value[d$condition == levels[2L]]
+    x <- d$value[d$condition == group_levels[1L]]
+    y <- d$value[d$condition == group_levels[2L]]
     if (length(x) < 3L || length(y) < 3L) {
       stop("At least three independent units per group required.", call. = FALSE)
     }
@@ -100,7 +100,7 @@ plot_gazepoint_estimation <- function(
   limits <- as.numeric(stats::quantile(draws, c(.025, .975), names = FALSE))
   raw <- data.frame(
     panel = "Participant observations",
-    condition = factor(d$condition, levels = c(levels, "Difference")),
+    condition = factor(d$condition, levels = c(group_levels, "Difference")),
     value = d$value,
     participant_id = d$participant_id
   )
@@ -137,7 +137,7 @@ plot_gazepoint_estimation <- function(
     ggplot2::facet_wrap(~panel, ncol = 1L, scales = "free") +
     ggplot2::labs(
       title = "Participant-level estimation plot",
-      subtitle = paste(levels[2L], "minus", levels[1L],
+      subtitle = paste(group_levels[2L], "minus", group_levels[1L],
                        "with percentile bootstrap interval"),
       x = NULL, y = outcome
     ) + ggplot2::theme_minimal()
@@ -151,7 +151,7 @@ plot_gazepoint_estimation <- function(
   list(
     plot = g,
     summary = data.frame(
-      comparison = paste(levels[2L], "minus", levels[1L]),
+      comparison = paste(group_levels[2L], "minus", group_levels[1L]),
       estimate = difference, lower = limits[1L], upper = limits[2L],
       n_units = if (paired) length(x) else length(x) + length(y),
       paired = paired, interval = "percentile_bootstrap"
