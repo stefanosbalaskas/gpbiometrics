@@ -341,10 +341,10 @@ preview$files
 #> 3         physio_json
 #> 4       physio_tsv_gz
 #>                                                                                            path
-#> 1                                    /tmp/RtmpKQke8g/bids-1ad15783471c/dataset_description.json
-#> 2                  /tmp/RtmpKQke8g/bids-1ad15783471c/sub-01/beh/sub-01_task-viewing_events.json
-#> 3   /tmp/RtmpKQke8g/bids-1ad15783471c/sub-01/beh/sub-01_task-viewing_recording-eye1_physio.json
-#> 4 /tmp/RtmpKQke8g/bids-1ad15783471c/sub-01/beh/sub-01_task-viewing_recording-eye1_physio.tsv.gz
+#> 1                                    /tmp/Rtmp7meZIM/bids-1f0670230827/dataset_description.json
+#> 2                  /tmp/Rtmp7meZIM/bids-1f0670230827/sub-01/beh/sub-01_task-viewing_events.json
+#> 3   /tmp/Rtmp7meZIM/bids-1f0670230827/sub-01/beh/sub-01_task-viewing_recording-eye1_physio.json
+#> 4 /tmp/Rtmp7meZIM/bids-1f0670230827/sub-01/beh/sub-01_task-viewing_recording-eye1_physio.tsv.gz
 #>   exists action
 #> 1  FALSE  write
 #> 2  FALSE  write
