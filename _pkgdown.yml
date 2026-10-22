@@ -49,6 +49,8 @@ navbar:
         href: articles/reporting-reproducibility-workflow.html
       - text: Measurement accountability
         href: articles/measurement-accountability.html
+      - text: October 2026 synthetic acquisition availability
+        href: articles/october-2026-acquisition-availability.html
       - text: Design audit workflow
         href: articles/design-audit-workflow.html
       - text: Design release visual audit
