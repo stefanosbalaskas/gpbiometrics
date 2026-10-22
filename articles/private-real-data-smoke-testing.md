@@ -284,7 +284,7 @@ mock_smoke$results[
 #> 2  smoke_002       1           1    120              2        4        8
 #>        detected_schema smoke_status n_warnings elapsed_seconds
 #> 1 Gazepoint Biometrics         pass          0           0.001
-#> 2 Gazepoint Biometrics         pass          0           0.013
+#> 2 Gazepoint Biometrics         pass          0           0.014
 ```
 
 Neither the original subdirectory names nor the source filename is
