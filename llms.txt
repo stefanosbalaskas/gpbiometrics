@@ -1,6 +1,6 @@
 # gpbiometrics
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0)
+[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.1.0)
 [![CRAN RStudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/gpbiometrics?color=blue)](https://r-pkg.org/pkg/gpbiometrics)
 [![DOI](https://img.shields.io/badge/DOI-Zenodo-blue.svg)](https://doi.org/10.5281/zenodo.20836724)
@@ -13,14 +13,15 @@ eye-tracking exports. It covers EDA/GSR/SCR, PPG, HR, IBI/HRV, pupil,
 gaze, fixations, AOIs, TTL/event timing, multimodal alignment,
 interoperability, reporting, and privacy-safe validation.
 
-**Current GitHub release:** **2.0.0** (`v2.0.0`, 18 July 2026)
+**Current GitHub release:** **2.1.0** (`v2.1.0`, 20 September 2026) ·
+**CRAN:** 0.1.0 (verified October 2026)
 
 [Website](https://stefanosbalaskas.github.io/gpbiometrics/) ·
 [Reference](https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html)
 ·
 [Articles](https://stefanosbalaskas.github.io/gpbiometrics/articles/index.html)
 ·
-[Release](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0)
+[Release](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.1.0)
 · [Signals paper](https://doi.org/10.3390/signals7050086)
 
 ## What gpbiometrics provides
@@ -40,7 +41,7 @@ interoperability, reporting, and privacy-safe validation.
 
 ## September 2026 measurement-accountability additions
 
-The current development branch adds four conservative diagnostics
+The published GitHub 2.1.0 release added four conservative diagnostics
 motivated by the September 2026 methods-surveillance tranche:
 
 - [`compare_hrv_prv_devices()`](https://stefanosbalaskas.github.io/gpbiometrics/reference/compare_hrv_prv_devices.md)
@@ -64,24 +65,26 @@ motivated by the September 2026 methods-surveillance tranche:
   direct physiological surrogate, and carries a participant-grouped
   validation guardrail.
 
-These are post-2.0.0 development additions and do not alter the
-immutable `v2.0.0` release archive.
+These are published in immutable GitHub `v2.1.0`, and do not change the
+historical `v2.0.0` archive. The October 2026 synthetic
+acquisition-availability article is a subsequent source/documentation
+addition, not a new stable release or clinical validation.
 
 See the [Measurement accountability for Gazepoint physiology
 article](https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.html).
 
 ## Installation
 
-Install the exact GitHub 2.0.0 release:
+Install the exact published GitHub 2.1.0 release:
 
 ``` r
 
 install.packages("remotes")
-remotes::install_github("stefanosbalaskas/gpbiometrics", ref = "v2.0.0")
+remotes::install_github("stefanosbalaskas/gpbiometrics", ref = "v2.1.0")
 ```
 
-For the current development branch, including the September
-measurement-accountability additions:
+For current development sources, including October documentation
+changes:
 
 ``` r
 
@@ -1194,6 +1197,9 @@ release-readiness audits.
 
 - [Measurement accountability for Gazepoint
   physiology](https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.md):
+
+- [Acquisition availability before physiological
+  inference](https://stefanosbalaskas.github.io/gpbiometrics/articles/october-2026-acquisition-availability.md):
 
 - [Design audit
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/design-audit-workflow.md):

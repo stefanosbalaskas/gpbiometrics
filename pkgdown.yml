@@ -19,6 +19,7 @@ articles:
   measurement-accountability: measurement-accountability.html
   articles/mne-eeg-lsl-workflow: mne-eeg-lsl-workflow.html
   articles/multimodal-event-dashboard: multimodal-event-dashboard.html
+  october-2026-acquisition-availability: october-2026-acquisition-availability.html
   articles/plot-gallery: plot-gallery.html
   articles/ppg-hrv-visual-diagnostics: ppg-hrv-visual-diagnostics.html
   articles/ppg-hrv-workflow: ppg-hrv-workflow.html
@@ -31,7 +32,7 @@ articles:
   articles/toolbox-crosscheck-visuals: toolbox-crosscheck-visuals.html
   articles/troubleshooting-readiness: troubleshooting-readiness.html
   articles/visual-qc-dashboard-workflow: visual-qc-dashboard-workflow.html
-last_built: 2026-10-09T20:37Z
+last_built: 2026-10-22T10:12Z
 urls:
   reference: https://stefanosbalaskas.github.io/gpbiometrics/reference
   article: https://stefanosbalaskas.github.io/gpbiometrics/articles

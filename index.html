@@ -61,6 +61,7 @@
     <li><a class="dropdown-item" href="articles/visual-qc-dashboard-workflow.html">Visual QC dashboard workflow</a></li>
     <li><a class="dropdown-item" href="articles/reporting-reproducibility-workflow.html">Reporting and reproducibility workflow</a></li>
     <li><a class="dropdown-item" href="articles/measurement-accountability.html">Measurement accountability</a></li>
+    <li><a class="dropdown-item" href="articles/october-2026-acquisition-availability.html">October 2026 synthetic acquisition availability</a></li>
     <li><a class="dropdown-item" href="articles/design-audit-workflow.html">Design audit workflow</a></li>
     <li><a class="dropdown-item" href="articles/design-release-visual-audit.html">Design release visual audit</a></li>
     <li><hr class="dropdown-divider"></li>
@@ -104,10 +105,10 @@
 <img src="logo.png" class="logo" alt=""><h1 id="gpbiometrics-">gpbiometrics <a class="anchor" aria-label="anchor" href="#gpbiometrics-"></a>
 </h1>
 </div>
-<p><a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0" class="external-link"><img src="https://img.shields.io/badge/version-2.0.0-blue.svg" alt="Version"></a> <a href="https://r-pkg.org/pkg/gpbiometrics" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/gpbiometrics?color=blue" alt="CRAN RStudio mirror downloads"></a> <a href="https://doi.org/10.5281/zenodo.20836724" class="external-link"><img src="https://img.shields.io/badge/DOI-Zenodo-blue.svg" alt="DOI"></a> <a href="https://doi.org/10.3390/signals7050086" class="external-link"><img src="https://img.shields.io/badge/paper-10.3390%2Fsignals7050086-blue.svg" alt="Paper"></a></p>
+<p><a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.1.0" class="external-link"><img src="https://img.shields.io/badge/version-2.1.0-blue.svg" alt="Version"></a> <a href="https://r-pkg.org/pkg/gpbiometrics" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/gpbiometrics?color=blue" alt="CRAN RStudio mirror downloads"></a> <a href="https://doi.org/10.5281/zenodo.20836724" class="external-link"><img src="https://img.shields.io/badge/DOI-Zenodo-blue.svg" alt="DOI"></a> <a href="https://doi.org/10.3390/signals7050086" class="external-link"><img src="https://img.shields.io/badge/paper-10.3390%2Fsignals7050086-blue.svg" alt="Paper"></a></p>
 <p><code>gpbiometrics</code> provides reproducible Gazepoint-native infrastructure for importing, validating, quality-checking, preprocessing, synchronising, summarising, modelling, plotting, and reporting physiological and eye-tracking exports. It covers EDA/GSR/SCR, PPG, HR, IBI/HRV, pupil, gaze, fixations, AOIs, TTL/event timing, multimodal alignment, interoperability, reporting, and privacy-safe validation.</p>
-<p><strong>Current GitHub release:</strong> <strong>2.0.0</strong> (<code>v2.0.0</code>, 18 July 2026)</p>
-<p><a href="https://stefanosbalaskas.github.io/gpbiometrics/">Website</a> · <a href="https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html">Reference</a> · <a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/index.html">Articles</a> · <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0" class="external-link">Release</a> · <a href="https://doi.org/10.3390/signals7050086" class="external-link">Signals paper</a></p>
+<p><strong>Current GitHub release:</strong> <strong>2.1.0</strong> (<code>v2.1.0</code>, 20 September 2026) · <strong>CRAN:</strong> 0.1.0 (verified October 2026)</p>
+<p><a href="https://stefanosbalaskas.github.io/gpbiometrics/">Website</a> · <a href="https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html">Reference</a> · <a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/index.html">Articles</a> · <a href="https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.1.0" class="external-link">Release</a> · <a href="https://doi.org/10.3390/signals7050086" class="external-link">Signals paper</a></p>
 <div class="section level2">
 <h2 id="what-gpbiometrics-provides">What gpbiometrics provides<a class="anchor" aria-label="anchor" href="#what-gpbiometrics-provides"></a>
 </h2>
@@ -123,7 +124,7 @@
 <div class="section level2">
 <h2 id="september-2026-measurement-accountability-additions">September 2026 measurement-accountability additions<a class="anchor" aria-label="anchor" href="#september-2026-measurement-accountability-additions"></a>
 </h2>
-<p>The current development branch adds four conservative diagnostics motivated by the September 2026 methods-surveillance tranche:</p>
+<p>The published GitHub 2.1.0 release added four conservative diagnostics motivated by the September 2026 methods-surveillance tranche:</p>
 <ul>
 <li>
 <code><a href="reference/compare_hrv_prv_devices.html">compare_hrv_prv_devices()</a></code> reports ICC(A,1), Lin’s CCC, Bland–Altman bias, and 95% limits <strong>for one derived metric at a time</strong>, while retaining signal-source and sensor-site provenance. It does not create a global ECG/PPG interchangeability decision.</li>
@@ -134,17 +135,17 @@
 <li>
 <code><a href="reference/ppg_topology_features.html">ppg_topology_features()</a></code> is opt-in and experimental. It summarizes H0 persistence lifetimes from a delay embedding as a <strong>structural waveform descriptor</strong>, not a direct physiological surrogate, and carries a participant-grouped validation guardrail.</li>
 </ul>
-<p>These are post-2.0.0 development additions and do not alter the immutable <code>v2.0.0</code> release archive.</p>
+<p>These are published in immutable GitHub <code>v2.1.0</code>, and do not change the historical <code>v2.0.0</code> archive. The October 2026 synthetic acquisition-availability article is a subsequent source/documentation addition, not a new stable release or clinical validation.</p>
 <p>See the <a href="https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.html">Measurement accountability for Gazepoint physiology article</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>Install the exact GitHub 2.0.0 release:</p>
+<p>Install the exact published GitHub 2.1.0 release:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"stefanosbalaskas/gpbiometrics"</span>, ref <span class="op">=</span> <span class="st">"v2.0.0"</span><span class="op">)</span></span></code></pre></div>
-<p>For the current development branch, including the September measurement-accountability additions:</p>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"stefanosbalaskas/gpbiometrics"</span>, ref <span class="op">=</span> <span class="st">"v2.1.0"</span><span class="op">)</span></span></code></pre></div>
+<p>For current development sources, including October documentation changes:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"stefanosbalaskas/gpbiometrics"</span><span class="op">)</span></span></code></pre></div>
 </div>

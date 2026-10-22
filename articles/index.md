@@ -36,6 +36,9 @@ release-readiness audits.
 - [Measurement accountability for Gazepoint
   physiology](https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.md):
 
+- [Acquisition availability before physiological
+  inference](https://stefanosbalaskas.github.io/gpbiometrics/articles/october-2026-acquisition-availability.md):
+
 - [Design audit
   workflow](https://stefanosbalaskas.github.io/gpbiometrics/articles/design-audit-workflow.md):
 
