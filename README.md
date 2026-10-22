@@ -1,15 +1,15 @@
 # gpbiometrics <img src="man/figures/logo.png" align="right" height="139" alt="gpbiometrics logo" />
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0)
+[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.1.0)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/gpbiometrics?color=blue)](https://r-pkg.org/pkg/gpbiometrics)
 [![DOI](https://img.shields.io/badge/DOI-Zenodo-blue.svg)](https://doi.org/10.5281/zenodo.20836724)
 [![Paper](https://img.shields.io/badge/paper-10.3390%2Fsignals7050086-blue.svg)](https://doi.org/10.3390/signals7050086)
 
 `gpbiometrics` provides reproducible Gazepoint-native infrastructure for importing, validating, quality-checking, preprocessing, synchronising, summarising, modelling, plotting, and reporting physiological and eye-tracking exports. It covers EDA/GSR/SCR, PPG, HR, IBI/HRV, pupil, gaze, fixations, AOIs, TTL/event timing, multimodal alignment, interoperability, reporting, and privacy-safe validation.
 
-**Current GitHub release:** **2.0.0** (`v2.0.0`, 18 July 2026)
+**Current GitHub release:** **2.1.0** (`v2.1.0`, 20 September 2026) · **CRAN:** 0.1.0 (verified October 2026)
 
-[Website](https://stefanosbalaskas.github.io/gpbiometrics/) · [Reference](https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html) · [Articles](https://stefanosbalaskas.github.io/gpbiometrics/articles/index.html) · [Release](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.0.0) · [Signals paper](https://doi.org/10.3390/signals7050086)
+[Website](https://stefanosbalaskas.github.io/gpbiometrics/) · [Reference](https://stefanosbalaskas.github.io/gpbiometrics/reference/index.html) · [Articles](https://stefanosbalaskas.github.io/gpbiometrics/articles/index.html) · [Release](https://github.com/stefanosbalaskas/gpbiometrics/releases/tag/v2.1.0) · [Signals paper](https://doi.org/10.3390/signals7050086)
 
 ## What gpbiometrics provides
 
@@ -22,27 +22,27 @@
 
 ## September 2026 measurement-accountability additions
 
-The current development branch adds four conservative diagnostics motivated by the September 2026 methods-surveillance tranche:
+The published GitHub 2.1.0 release added four conservative diagnostics motivated by the September 2026 methods-surveillance tranche:
 
 - `compare_hrv_prv_devices()` reports ICC(A,1), Lin's CCC, Bland–Altman bias, and 95% limits **for one derived metric at a time**, while retaining signal-source and sensor-site provenance. It does not create a global ECG/PPG interchangeability decision.
 - `scr_responsivity_sensitivity()` preserves the conventional SCR non-responder flag, estimates a Beta-Binomial posterior response probability, and retains low-reactive participants for model-based sensitivity analysis instead of imposing irreversible preprocessing deletion.
 - `physiology_validation_ladder()` separates acquisition QC, analytical QC, construct evidence, within-person evidence, and held-out-person generalization. Population/generalization claims require held-out-person validation to pass.
 - `ppg_topology_features()` is opt-in and experimental. It summarizes H0 persistence lifetimes from a delay embedding as a **structural waveform descriptor**, not a direct physiological surrogate, and carries a participant-grouped validation guardrail.
 
-These are post-2.0.0 development additions and do not alter the immutable `v2.0.0` release archive.
+These are published in immutable GitHub `v2.1.0`, and do not change the historical `v2.0.0` archive. The October 2026 synthetic acquisition-availability article is a subsequent source/documentation addition, not a new stable release or clinical validation.
 
 See the [Measurement accountability for Gazepoint physiology article](https://stefanosbalaskas.github.io/gpbiometrics/articles/measurement-accountability.html).
 
 ## Installation
 
-Install the exact GitHub 2.0.0 release:
+Install the exact published GitHub 2.1.0 release:
 
 ```r
 install.packages("remotes")
-remotes::install_github("stefanosbalaskas/gpbiometrics", ref = "v2.0.0")
+remotes::install_github("stefanosbalaskas/gpbiometrics", ref = "v2.1.0")
 ```
 
-For the current development branch, including the September measurement-accountability additions:
+For current development sources, including October documentation changes:
 
 ```r
 remotes::install_github("stefanosbalaskas/gpbiometrics")
