@@ -10,33 +10,9 @@ vignette: >
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 
-package_candidates <- c(
-  getwd(),
-  file.path(getwd(), ".."),
-  file.path(getwd(), "..", "..")
-)
-
-valid_root <-
-  file.exists(file.path(package_candidates, "DESCRIPTION")) &
-  dir.exists(file.path(package_candidates, "R"))
-
-package_root <- package_candidates[valid_root][1L]
-
-if (length(package_root) == 0L || is.na(package_root)) {
-  stop("Could not locate the gpbiometrics package root.", call. = FALSE)
-}
-
-package_root <- normalizePath(
-  package_root,
-  winslash = "/",
-  mustWork = TRUE
-)
-
-if (!requireNamespace("devtools", quietly = TRUE)) {
-  stop("Rendering from source requires devtools.", call. = FALSE)
-}
-
-devtools::load_all(package_root, quiet = TRUE)
+# Use the installed package namespace, as in R CMD check and pkgdown builds.
+# Avoid depending on devtools or the repository working directory.
+library(gpbiometrics)
 ```
 
 ## Purpose
