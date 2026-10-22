@@ -22,3 +22,4 @@
 ^pkgdown$
 ^ROADMAP_STATUS[.]md$
 ^ROADMAP_COVERAGE\.md$
+^cran-comments\.md$
